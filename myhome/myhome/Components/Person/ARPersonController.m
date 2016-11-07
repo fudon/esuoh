@@ -64,6 +64,10 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if (indexPath.row == 0) {
         [self showShareView];
+    }else if (indexPath.row == 1){
+        [[FSShareManager shareInstance] mailShareWithSubject:@"App反馈" messageBody:@"反馈内容" recipients:@[@"1245102331@qq.com"] fileData:nil fileName:nil controller:self];
+    }else if (indexPath.row == 2){
+        
     }
 }
 
