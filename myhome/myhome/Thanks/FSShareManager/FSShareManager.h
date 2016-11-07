@@ -19,15 +19,15 @@
 
 @class WTShareContentItem;
 
-typedef NS_ENUM(NSInteger, WTShareType) {
-    WTShareTypeWeiXinSession = 0,   // 微信朋友
-    WTShareTypeWeiXinTimeline,      // 朋友圈
-    WTShareTypeQQ,                  // QQ好友
-    WTShareTypeQQZone,              // QQ空间
-    WTShareTypeWeiXinFavorite,      // 微信收藏
-    WTShareTypeWeiBo,               // 新浪微博
-    WTShareTypeWeiMessage,          // 短信
-    WTShareTypeWeiEmail,            // 邮件
+typedef NS_ENUM(NSInteger, FSShareType) {
+    FSShareTypeQQ = 0,      //  QQ好友
+    FSShareTypeQQZone,      //  QQ空间
+    FSShareTypeWechat,      //  微信好友
+    FSShareTypeWXFriends,   //  微信朋友圈
+    FSShareTypeWXStore,     //  微信收藏
+    FSShareTypeWeibo,       //  微博
+    FSShareTypeMessage,     //  短信
+    FSShareTypeEmail        //  电子邮件
 };
 
 typedef NS_ENUM(NSInteger, WTShareWeiXinErrCode) {
@@ -40,11 +40,12 @@ typedef void(^WTShareResultlBlock)(NSString * shareResult);
 
 @interface FSShareManager : NSObject <WBHttpRequestDelegate,WeiboSDKDelegate,WXApiDelegate,TencentSessionDelegate>
 
+@property (nonatomic,weak) UIViewController *callController;
 
 + (instancetype)shareInstance;
 // 判断QQ分享是否成功
 + (void)didReceiveTencentUrl:(NSURL *)url;
-+ (void)wt_shareWithContent:(FSShareEntity *)contentObj shareType:(WTShareType)shareType shareResult:(WTShareResultlBlock)shareResult;
++ (void)wt_shareWithContent:(FSShareEntity *)contentObj shareType:(FSShareType)shareType shareResult:(WTShareResultlBlock)shareResult;
 
 // 短信分享
 - (void)messageShareWithMessage:(NSString *)message     // 短信内容

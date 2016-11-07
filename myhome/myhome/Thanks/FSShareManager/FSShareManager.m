@@ -53,7 +53,7 @@ static FSShareManager *manager = nil;
 }
 
 #pragma mark - 分享方法------
-+ (void)wt_shareWithContent:(FSShareEntity *)contentObj shareType:(WTShareType)shareType shareResult:(WTShareResultlBlock)shareResult
++ (void)wt_shareWithContent:(FSShareEntity *)contentObj shareType:(FSShareType)shareType shareResult:(WTShareResultlBlock)shareResult
 {
     FSShareManager * shareManager = [FSShareManager shareInstance];
     shareManager.shareResultlBlock = shareResult;
@@ -61,12 +61,17 @@ static FSShareManager *manager = nil;
     [self wt_shareWithContent:contentObj shareType:shareType];
 }
 
-+ (void)wt_shareWithContent:(FSShareEntity *)contentObj shareType:(WTShareType)shareType
++ (void)wt_shareWithContent:(FSShareEntity *)contentObj shareType:(FSShareType)shareType
 {
     [FSShareManager shareInstance];
     
+    BOOL canStep = [self canSupportShare:shareType];
+    if (!canStep) {
+        return;
+    }
+    
     switch (shareType) {
-        case WTShareTypeWeiBo:
+        case FSShareTypeWeibo:
         {
             WBMessageObject *message = [WBMessageObject message];
             message.text = contentObj.sinaSummary;
@@ -83,7 +88,7 @@ static FSShareManager *manager = nil;
             [WeiboSDK sendRequest:request];
             break;
         }
-        case WTShareTypeQQ:
+        case FSShareTypeQQ:
         {
             NSString * shareTitle = [NSString string];
             shareTitle = contentObj.qqTitle ? contentObj.qqTitle : contentObj.title;
@@ -107,7 +112,7 @@ static FSShareManager *manager = nil;
             [QQApiInterface sendReq:req];
             break;
         }
-        case WTShareTypeQQZone:
+        case FSShareTypeQQZone:
         {
             //分享跳转URL
             NSString *urlt = contentObj.urlString;
@@ -131,7 +136,7 @@ static FSShareManager *manager = nil;
             
             break;
         }
-        case WTShareTypeWeiXinTimeline: // 微信朋友圈
+        case FSShareTypeWXFriends: // 微信朋友圈
         {
             WXMediaMessage * message = [WXMediaMessage message];
             message.title = contentObj.weixinPyqtitle.length >0 ? contentObj.weixinPyqtitle : contentObj.title;
@@ -149,7 +154,7 @@ static FSShareManager *manager = nil;
             
             break;
         }
-        case WTShareTypeWeiXinSession:
+        case FSShareTypeWechat:
         {
             WXMediaMessage * message = [WXMediaMessage message];
             message.title = contentObj.title;
@@ -168,7 +173,7 @@ static FSShareManager *manager = nil;
             
             break;
         }
-        case WTShareTypeWeiXinFavorite:
+        case FSShareTypeWXStore:
         {
             WXMediaMessage * message = [WXMediaMessage message];
             message.title = contentObj.title;
@@ -192,6 +197,52 @@ static FSShareManager *manager = nil;
     }
 }
 
++ (BOOL)canSupportShare:(FSShareType)shareType
+{
+    if (shareType == FSShareTypeWechat || shareType == FSShareTypeWXFriends || shareType == FSShareTypeWXStore) {
+        return [self canSupportShareWX];
+    }
+    if (shareType == FSShareTypeWeibo) {
+        return [self canSupportShareWB];
+    }
+    if (shareType == FSShareTypeQQ || shareType == FSShareTypeQQZone) {
+        return [self canSupportShareQQ];
+    }
+    return NO;
+}
+
++ (BOOL)canSupportShareWX
+{
+    if ([WXApi isWXAppInstalled] && [WXApi isWXAppSupportApi]) {
+        return YES;
+    }
+    [FuData alertViewAtController:[FSShareManager shareInstance].callController title:@"未安装最新版微信" message:@"是否去下载最新版微信" cancelTitle:@"取消" handler:nil okTitle:@"下载" handler:^(UIAlertAction *action) {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[WXApi getWXAppInstallUrl]]];
+    } completion:nil];
+    return NO;
+}
+
++ (BOOL)canSupportShareWB
+{
+    if ([WeiboSDK isCanShareInWeiboAPP]) {
+        return YES;
+    }
+    [FuData alertViewAtController:[FSShareManager shareInstance].callController title:@"未安装最新版微博" message:@"是否去下载最新版微博" cancelTitle:@"取消" handler:nil okTitle:@"下载" handler:^(UIAlertAction *action) {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[WeiboSDK getWeiboAppInstallUrl]]];
+    } completion:nil];
+    return NO;
+}
+
++ (BOOL)canSupportShareQQ
+{
+    if ([QQApiInterface isQQSupportApi]) {
+        return YES;
+    }
+    [FuData alertViewAtController:[FSShareManager shareInstance].callController title:@"未安装最新版QQ" message:@"是否去下载最新版QQ" cancelTitle:@"取消" handler:nil okTitle:@"下载" handler:^(UIAlertAction *action) {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[QQApiInterface getQQInstallUrl]]];
+    } completion:nil];
+    return NO;
+}
 
 #pragma mark - WeiboSDKDelegate 从新浪微博那边分享过来传回一些数据调用的方法
 /**
@@ -357,7 +408,7 @@ static FSShareManager *manager = nil;
 
 {
     if (![MFMailComposeViewController canSendMail]) {
-        [FuData showTipWithMessage:@"设备不支持发送邮件"];
+        [FuData showTipOnTopWithMessage:@"设备不支持发送邮件"];
         return;
     }
     MFMailComposeViewController *picker = [[MFMailComposeViewController alloc] init];

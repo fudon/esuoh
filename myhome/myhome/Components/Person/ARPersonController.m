@@ -8,9 +8,8 @@
 
 #import "ARPersonController.h"
 #import "FSShareView.h"
-#import <MessageUI/MessageUI.h>
 
-@interface ARPersonController ()<UITableViewDelegate,UITableViewDataSource,MFMailComposeViewControllerDelegate,MFMessageComposeViewControllerDelegate>
+@interface ARPersonController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic,strong) NSArray    *titles;
 
@@ -70,86 +69,8 @@
 
 - (void)showShareView
 {
-    __weak ARPersonController *this = self;
     FSShareView *shareView = [[FSShareView alloc] initWithFrame:[UIScreen mainScreen].bounds controller:self];
     [self.navigationController.tabBarController.view addSubview:shareView];
-    shareView.block = ^ (FSShareView *bView,NSInteger bTag){
-        [this shareTo:bTag];
-    };
-}
-
-- (void)shareTo:(NSInteger)tag
-{
-    if (tag == WTShareTypeWeiBo) {
-        [FSShareManager wt_shareWithContent:[FSShareEntity shareWTShareContentItem] shareType:WTShareTypeWeiBo shareResult:^(NSString *shareResult) {
-            [FuData showAlertViewWithTitle:shareResult];
-        }];
-        
-    }else if (tag == WTShareTypeQQ){
-        [FSShareManager wt_shareWithContent:[FSShareEntity shareWTShareContentItem] shareType:WTShareTypeQQ shareResult:^(NSString *shareResult) {
-            [FuData showAlertViewWithTitle:shareResult];
-        }];
-    }else if (tag == WTShareTypeQQZone){
-        [FSShareManager wt_shareWithContent:[FSShareEntity shareWTShareContentItem] shareType:WTShareTypeQQZone shareResult:^(NSString *shareResult) {
-            [FuData showAlertViewWithTitle:shareResult];
-        }];
-    }else if (tag == WTShareTypeWeiXinTimeline){
-        [FSShareManager wt_shareWithContent:[FSShareEntity shareWTShareContentItem] shareType:WTShareTypeWeiXinTimeline shareResult:^(NSString *shareResult) {
-            [FuData showAlertViewWithTitle:shareResult];
-        }];
-    }else if (tag == WTShareTypeWeiXinSession){
-        [FSShareManager wt_shareWithContent:[FSShareEntity shareWTShareContentItem] shareType:WTShareTypeWeiXinSession shareResult:^(NSString *shareResult) {
-            [FuData showAlertViewWithTitle:shareResult];
-        }];
-    }else if (tag == WTShareTypeWeiXinFavorite){
-        [FSShareManager wt_shareWithContent:[FSShareEntity shareWTShareContentItem] shareType:WTShareTypeWeiXinFavorite shareResult:^(NSString *shareResult) {
-            [FuData showAlertViewWithTitle:shareResult];
-        }];
-    }else if (tag == WTShareTypeWeiMessage){
-        MFMessageComposeViewController *picker = [[MFMessageComposeViewController alloc] init];
-        picker.messageComposeDelegate = self;
-        picker.body =  @"分享的短信内容吗？";
-        if (picker) {
-            [self presentViewController:picker animated:YES completion:nil];
-        }
-    }else if (tag == WTShareTypeWeiEmail){
-        MFMailComposeViewController *picker = [[MFMailComposeViewController alloc] init];
-        if (!picker) {
-            [self showTitle:@"设备不支持发送邮件"];
-            return;
-        }
-        picker.mailComposeDelegate = self;
-        [picker setSubject:@"最好的软件"];
-        [picker setMessageBody:@"分享的内容" isHTML:NO];
-        [self presentViewController:picker animated:YES completion:nil];
-    }
-}
-
-- (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error
-{
-    if (result == MFMailComposeResultSent) {
-        [FuData showAlertViewWithTitle:@"发送成功" message:@"谢谢您的支持"];
-    }
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-
--(void)messageComposeViewController:(MFMessageComposeViewController *)controller didFinishWithResult:(MessageComposeResult)result
-{
-    switch (result) {
-        case MessageComposeResultCancelled:
-            break;
-        case MessageComposeResultSent:
-        {
-            [FuData showAlertViewWithTitle:@"发送成功"];
-        }
-            break;
-            
-        case MessageComposeResultFailed:
-            break;
-        default:
-            break;
-    }
-    [controller dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {

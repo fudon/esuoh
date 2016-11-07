@@ -56,11 +56,12 @@
     
     CGFloat width = (self.bounds.size.width - 100) / 4;
     NSArray *array = @[@"微信",@"朋友圈",@"QQ",@"QQ空间",@"微信收藏",@"微博",@"短信",@"邮件"];
+    NSArray *tags = @[@(FSShareTypeWechat),@(FSShareTypeWXFriends),@(FSShareTypeQQ),@(FSShareTypeQQZone),@(FSShareTypeWXStore),@(FSShareTypeWeibo),@(FSShareTypeMessage),@(FSShareTypeEmail)];
     NSArray *picArray = @[@"fsshare_wechat",@"fsshare_wxfriend",@"fsshare_qq",@"fsshare_qqzone",@"fsshare_wechat",@"fsshare_weibo",@"fsshare_msg",@"fsshare_email"];
     for (int x = 0; x < array.count; x ++) {
         FSImageLabelView *imageLabel = [FSImageLabelView imageLabelViewWithFrame:CGRectMake(20 + (x % 4) * (width + 20), 10 + (x / 4) * (width + 40), width, width + 25) imageName:picArray[x] text:array[x]];
         [_mainView addSubview:imageLabel];
-        imageLabel.tag = 1000 + x;
+        imageLabel.tag = 1000 + [tags[x] integerValue];
         imageLabel.block = ^ (FSImageLabelView *bImageLabelView){
             [this imageLabelAction:bImageLabelView];
         };
@@ -74,9 +75,7 @@
 
 - (void)imageLabelAction:(FSImageLabelView *)imageView
 {
-    if (_block) {
-        _block(self,imageView.tag - 1000);
-    }
+    [self shareTo:imageView.tag - 1000];
 }
 
 - (void)releaseView
@@ -92,34 +91,36 @@
 
 - (void)shareTo:(NSInteger)tag
 {
-    if (tag == WTShareTypeWeiBo) {
-        [FSShareManager wt_shareWithContent:[FSShareEntity shareWTShareContentItem] shareType:WTShareTypeWeiBo shareResult:^(NSString *shareResult) {
+    [FSShareManager shareInstance].callController = self.callController;
+    
+    if (tag == FSShareTypeWeibo) {
+        [FSShareManager wt_shareWithContent:[FSShareEntity shareWTShareContentItem] shareType:FSShareTypeWeibo shareResult:^(NSString *shareResult) {
             [FuData showAlertViewWithTitle:shareResult];
         }];
         
-    }else if (tag == WTShareTypeQQ){
-        [FSShareManager wt_shareWithContent:[FSShareEntity shareWTShareContentItem] shareType:WTShareTypeQQ shareResult:^(NSString *shareResult) {
+    }else if (tag == FSShareTypeQQ){
+        [FSShareManager wt_shareWithContent:[FSShareEntity shareWTShareContentItem] shareType:FSShareTypeQQ shareResult:^(NSString *shareResult) {
             [FuData showAlertViewWithTitle:shareResult];
         }];
-    }else if (tag == WTShareTypeQQZone){
-        [FSShareManager wt_shareWithContent:[FSShareEntity shareWTShareContentItem] shareType:WTShareTypeQQZone shareResult:^(NSString *shareResult) {
+    }else if (tag == FSShareTypeQQZone){
+        [FSShareManager wt_shareWithContent:[FSShareEntity shareWTShareContentItem] shareType:FSShareTypeQQZone shareResult:^(NSString *shareResult) {
             [FuData showAlertViewWithTitle:shareResult];
         }];
-    }else if (tag == WTShareTypeWeiXinTimeline){
-        [FSShareManager wt_shareWithContent:[FSShareEntity shareWTShareContentItem] shareType:WTShareTypeWeiXinTimeline shareResult:^(NSString *shareResult) {
+    }else if (tag == FSShareTypeWXFriends){
+        [FSShareManager wt_shareWithContent:[FSShareEntity shareWTShareContentItem] shareType:FSShareTypeWXFriends shareResult:^(NSString *shareResult) {
             [FuData showAlertViewWithTitle:shareResult];
         }];
-    }else if (tag == WTShareTypeWeiXinSession){
-        [FSShareManager wt_shareWithContent:[FSShareEntity shareWTShareContentItem] shareType:WTShareTypeWeiXinSession shareResult:^(NSString *shareResult) {
+    }else if (tag == FSShareTypeWechat){
+        [FSShareManager wt_shareWithContent:[FSShareEntity shareWTShareContentItem] shareType:FSShareTypeWechat shareResult:^(NSString *shareResult) {
             [FuData showAlertViewWithTitle:shareResult];
         }];
-    }else if (tag == WTShareTypeWeiXinFavorite){
-        [FSShareManager wt_shareWithContent:[FSShareEntity shareWTShareContentItem] shareType:WTShareTypeWeiXinFavorite shareResult:^(NSString *shareResult) {
+    }else if (tag == FSShareTypeWXStore){
+        [FSShareManager wt_shareWithContent:[FSShareEntity shareWTShareContentItem] shareType:FSShareTypeWXStore shareResult:^(NSString *shareResult) {
             [FuData showAlertViewWithTitle:shareResult];
         }];
-    }else if (tag == WTShareTypeWeiMessage){
+    }else if (tag == FSShareTypeMessage){
         [[FSShareManager shareInstance] messageShareWithMessage:@"分享的内容" recipients:nil controller:self.callController];
-    }else if (tag == WTShareTypeWeiEmail){
+    }else if (tag == FSShareTypeEmail){
         [[FSShareManager shareInstance] mailShareWithSubject:@"最好的软件" messageBody:@"分享的内容" recipients:nil fileData:nil fileName:nil controller:self.callController];
     }
 }
