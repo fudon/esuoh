@@ -8,6 +8,8 @@
 
 #import "FSShareManager.h"
 #import "FSShareEntity.h"
+#import <MessageUI/MessageUI.h>
+#import "FuSoft.h"
 
 #define kAppKey         @"2045436852"           // 微博
 #define kRedirectURI    @"http://www.sina.com"
@@ -17,7 +19,7 @@
 #define kWTShareQQSuccess @"0"
 #define kWTShareQQFail      @"-4"
 
-@interface FSShareManager ()
+@interface FSShareManager ()<MFMailComposeViewControllerDelegate,MFMessageComposeViewControllerDelegate>
 {
     TencentOAuth *_tencentOAuth;
 }
@@ -304,5 +306,86 @@ static FSShareManager *manager = nil;
 {
     
 }
+
+- (void)messageShareWithMessage:(NSString *)message     // 短信内容
+                     recipients:(NSArray *)recipients   // 短信接收者
+                     controller:(UIViewController *)controller
+{
+    if (![MFMessageComposeViewController canSendText]) {
+        [FuData showTipWithMessage:@"设备不支持发送短信"];
+        return;
+    }
+    MFMessageComposeViewController *picker = [[MFMessageComposeViewController alloc] init];
+    picker.messageComposeDelegate = self;
+    if (recipients) {
+        picker.recipients = recipients;
+    }
+
+    if (message) {
+        picker.body = message;
+    }
+    if (picker) {
+        [controller presentViewController:picker animated:YES completion:nil];
+    }
+}
+
+-(void)messageComposeViewController:(MFMessageComposeViewController *)controller didFinishWithResult:(MessageComposeResult)result
+{
+    switch (result) {
+        case MessageComposeResultCancelled:
+            break;
+        case MessageComposeResultSent:
+        {
+            [FuData showTipWithMessage:@"发送成功"];
+        }
+            break;
+            
+        case MessageComposeResultFailed:
+            break;
+        default:
+            break;
+    }
+    [controller dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)mailShareWithSubject:(NSString *)subject    // 邮件主题
+                 messageBody:(NSString *)message    // 邮件正文
+                  recipients:(NSArray *)recipients  // 邮件接收者
+                    fileData:(NSData *)fileData     // 附件，比如图片
+                    fileName:(NSString *)fileName   // 文件名，包含扩展名,eg,account.sqlite
+                  controller:(UIViewController *)controller
+
+{
+    if (![MFMailComposeViewController canSendMail]) {
+        [FuData showTipWithMessage:@"设备不支持发送邮件"];
+        return;
+    }
+    MFMailComposeViewController *picker = [[MFMailComposeViewController alloc] init];
+    picker.mailComposeDelegate = self;
+    if (recipients) {
+        [picker setCcRecipients:recipients];
+    }
+    if (subject) {
+        [picker setSubject:subject];
+    }
+    if (fileData) {
+        [picker addAttachmentData:fileData mimeType:@"" fileName:fileName?fileName:[[NSDate date] description]];
+    }
+    if (message) {
+        [picker setMessageBody:message isHTML:NO];
+    }
+    [controller presentViewController:picker animated:YES completion:nil];
+}
+
+- (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error
+{
+    if (result == MFMailComposeResultSent) {
+        [FuData showTipWithMessage:@"邮件发送成功"];
+    }else if (result == MFMailComposeResultFailed){
+        [FuData showTipWithMessage:@"邮件发送失败"];
+    }
+    [controller dismissViewControllerAnimated:YES completion:nil];
+}
+
 
 @end

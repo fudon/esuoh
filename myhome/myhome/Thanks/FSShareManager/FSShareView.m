@@ -27,13 +27,14 @@
 
 - (void)dealloc
 {
-    NSLog(@"%s",__FUNCTION__);
+    FSLog();
 }
 
-- (instancetype)initWithFrame:(CGRect)frame
+- (instancetype)initWithFrame:(CGRect)frame controller:(UIViewController *)callController
 {
     self = [super initWithFrame:frame];
     if (self) {
+        self.callController = callController;
         [self shareDesignViews];
     }
     return self;
@@ -87,6 +88,40 @@
     } completion:^(BOOL finished) {
         [self removeFromSuperview];
     }];
+}
+
+- (void)shareTo:(NSInteger)tag
+{
+    if (tag == WTShareTypeWeiBo) {
+        [FSShareManager wt_shareWithContent:[FSShareEntity shareWTShareContentItem] shareType:WTShareTypeWeiBo shareResult:^(NSString *shareResult) {
+            [FuData showAlertViewWithTitle:shareResult];
+        }];
+        
+    }else if (tag == WTShareTypeQQ){
+        [FSShareManager wt_shareWithContent:[FSShareEntity shareWTShareContentItem] shareType:WTShareTypeQQ shareResult:^(NSString *shareResult) {
+            [FuData showAlertViewWithTitle:shareResult];
+        }];
+    }else if (tag == WTShareTypeQQZone){
+        [FSShareManager wt_shareWithContent:[FSShareEntity shareWTShareContentItem] shareType:WTShareTypeQQZone shareResult:^(NSString *shareResult) {
+            [FuData showAlertViewWithTitle:shareResult];
+        }];
+    }else if (tag == WTShareTypeWeiXinTimeline){
+        [FSShareManager wt_shareWithContent:[FSShareEntity shareWTShareContentItem] shareType:WTShareTypeWeiXinTimeline shareResult:^(NSString *shareResult) {
+            [FuData showAlertViewWithTitle:shareResult];
+        }];
+    }else if (tag == WTShareTypeWeiXinSession){
+        [FSShareManager wt_shareWithContent:[FSShareEntity shareWTShareContentItem] shareType:WTShareTypeWeiXinSession shareResult:^(NSString *shareResult) {
+            [FuData showAlertViewWithTitle:shareResult];
+        }];
+    }else if (tag == WTShareTypeWeiXinFavorite){
+        [FSShareManager wt_shareWithContent:[FSShareEntity shareWTShareContentItem] shareType:WTShareTypeWeiXinFavorite shareResult:^(NSString *shareResult) {
+            [FuData showAlertViewWithTitle:shareResult];
+        }];
+    }else if (tag == WTShareTypeWeiMessage){
+        [[FSShareManager shareInstance] messageShareWithMessage:@"分享的内容" recipients:nil controller:self.callController];
+    }else if (tag == WTShareTypeWeiEmail){
+        [[FSShareManager shareInstance] mailShareWithSubject:@"最好的软件" messageBody:@"分享的内容" recipients:nil fileData:nil fileName:nil controller:self.callController];
+    }
 }
 
 /*

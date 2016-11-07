@@ -144,6 +144,9 @@
 		5CB3A0331DCA04D400564280 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CB3A0321DCA04D400564280 /* CoreVideo.framework */; };
 		5CB3A0351DCA04F400564280 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CB3A0341DCA04F400564280 /* CoreMedia.framework */; };
 		5CDBCDAF1DD057EA001CFC39 /* FSShareEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CDBCDAE1DD057EA001CFC39 /* FSShareEntity.m */; };
+		5CDBCDB31DD05D87001CFC39 /* GZSFloatView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CDBCDB21DD05D87001CFC39 /* GZSFloatView.m */; };
+		5CDBCDBA1DD05DCC001CFC39 /* POViewFrameBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CDBCDB71DD05DCC001CFC39 /* POViewFrameBuilder.m */; };
+		5CDBCDBB1DD05DCC001CFC39 /* UIView+POViewFrameBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CDBCDB91DD05DCC001CFC39 /* UIView+POViewFrameBuilder.m */; };
 		5CFE601A1DC75B9C003640A4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CFE60191DC75B9C003640A4 /* main.m */; };
 		5CFE601D1DC75B9C003640A4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CFE601C1DC75B9C003640A4 /* AppDelegate.m */; };
 		5CFE60231DC75B9C003640A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CFE60211DC75B9C003640A4 /* Main.storyboard */; };
@@ -420,6 +423,13 @@
 		5CB3A0341DCA04F400564280 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		5CDBCDAD1DD057EA001CFC39 /* FSShareEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSShareEntity.h; sourceTree = "<group>"; };
 		5CDBCDAE1DD057EA001CFC39 /* FSShareEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSShareEntity.m; sourceTree = "<group>"; };
+		5CDBCDB11DD05D87001CFC39 /* GZSFloatView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GZSFloatView.h; sourceTree = "<group>"; };
+		5CDBCDB21DD05D87001CFC39 /* GZSFloatView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GZSFloatView.m; sourceTree = "<group>"; };
+		5CDBCDB51DD05DCC001CFC39 /* POGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POGeometry.h; sourceTree = "<group>"; };
+		5CDBCDB61DD05DCC001CFC39 /* POViewFrameBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POViewFrameBuilder.h; sourceTree = "<group>"; };
+		5CDBCDB71DD05DCC001CFC39 /* POViewFrameBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POViewFrameBuilder.m; sourceTree = "<group>"; };
+		5CDBCDB81DD05DCC001CFC39 /* UIView+POViewFrameBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+POViewFrameBuilder.h"; sourceTree = "<group>"; };
+		5CDBCDB91DD05DCC001CFC39 /* UIView+POViewFrameBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+POViewFrameBuilder.m"; sourceTree = "<group>"; };
 		5CFE60151DC75B9C003640A4 /* myhome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myhome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CFE60191DC75B9C003640A4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5CFE601B1DC75B9C003640A4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -947,6 +957,7 @@
 		5C50E9141DD03A0600658DCF /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				5CDBCDB01DD05D87001CFC39 /* GZSFloatView */,
 				5C50E9151DD03A0600658DCF /* FSWebUrl.h */,
 				5C50E9161DD03A0600658DCF /* FuData.h */,
 				5C50E9171DD03A0600658DCF /* FuData.m */,
@@ -1067,6 +1078,28 @@
 				5C9337D41DCB447B0091D3D8 /* FSShareManager */,
 			);
 			path = Thanks;
+			sourceTree = "<group>";
+		};
+		5CDBCDB01DD05D87001CFC39 /* GZSFloatView */ = {
+			isa = PBXGroup;
+			children = (
+				5CDBCDB41DD05DCC001CFC39 /* POViewFrameBuilder */,
+				5CDBCDB11DD05D87001CFC39 /* GZSFloatView.h */,
+				5CDBCDB21DD05D87001CFC39 /* GZSFloatView.m */,
+			);
+			path = GZSFloatView;
+			sourceTree = "<group>";
+		};
+		5CDBCDB41DD05DCC001CFC39 /* POViewFrameBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				5CDBCDB51DD05DCC001CFC39 /* POGeometry.h */,
+				5CDBCDB61DD05DCC001CFC39 /* POViewFrameBuilder.h */,
+				5CDBCDB71DD05DCC001CFC39 /* POViewFrameBuilder.m */,
+				5CDBCDB81DD05DCC001CFC39 /* UIView+POViewFrameBuilder.h */,
+				5CDBCDB91DD05DCC001CFC39 /* UIView+POViewFrameBuilder.m */,
+			);
+			path = POViewFrameBuilder;
 			sourceTree = "<group>";
 		};
 		5CFE600C1DC75B9C003640A4 = {
@@ -1291,6 +1324,7 @@
 				5C50E94D1DD03A0600658DCF /* FIWebView.m in Sources */,
 				5C50E9781DD03A0600658DCF /* SDImageCache.m in Sources */,
 				5C50E9891DD03A0600658DCF /* FuSing.m in Sources */,
+				5CDBCDBB1DD05DCC001CFC39 /* UIView+POViewFrameBuilder.m in Sources */,
 				5C50E93B1DD03A0600658DCF /* FSLeftItem.m in Sources */,
 				5C50E9271DD03A0600658DCF /* FIBaseEntity.m in Sources */,
 				5C50E91D1DD03A0600658DCF /* FSAccountDoorController.m in Sources */,
@@ -1319,6 +1353,7 @@
 				5C50E9351DD03A0600658DCF /* UIView+Addition.m in Sources */,
 				5C50E9601DD03A0600658DCF /* README.md in Sources */,
 				5C50E93D1DD03A0600658DCF /* UIView+ViewController.m in Sources */,
+				5CDBCDBA1DD05DCC001CFC39 /* POViewFrameBuilder.m in Sources */,
 				5C50E9361DD03A0600658DCF /* UIViewExt.m in Sources */,
 				5C50E97A1DD03A0600658DCF /* SDWebImageCompat.m in Sources */,
 				5C50E9291DD03A0600658DCF /* ExhaustiveCalendar.m in Sources */,
@@ -1329,6 +1364,7 @@
 				5C50E92B1DD03A0600658DCF /* FSCCHeadView.m in Sources */,
 				5C50E98A1DD03A0600658DCF /* FuWeb.m in Sources */,
 				5C50E9461DD03A0600658DCF /* FSTapScrollView.m in Sources */,
+				5CDBCDB31DD05D87001CFC39 /* GZSFloatView.m in Sources */,
 				5CA360DF1DC8ADD800523FF5 /* ARToolController.m in Sources */,
 				5C50E9771DD03A0600658DCF /* NSImage+WebCache.m in Sources */,
 				5CFE601A1DC75B9C003640A4 /* main.m in Sources */,

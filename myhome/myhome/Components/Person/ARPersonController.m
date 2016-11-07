@@ -71,7 +71,7 @@
 - (void)showShareView
 {
     __weak ARPersonController *this = self;
-    FSShareView *shareView = [[FSShareView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    FSShareView *shareView = [[FSShareView alloc] initWithFrame:[UIScreen mainScreen].bounds controller:self];
     [self.navigationController.tabBarController.view addSubview:shareView];
     shareView.block = ^ (FSShareView *bView,NSInteger bTag){
         [this shareTo:bTag];

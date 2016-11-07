@@ -31,6 +31,8 @@ typedef enum : NSInteger {
 
 @interface FSShareView : UIView
 
+- (instancetype)initWithFrame:(CGRect)frame controller:(UIViewController *)callController;
+
 @property (nonatomic,copy) void (^block)(FSShareView *bShareView,NSInteger bType);
 
 @end
