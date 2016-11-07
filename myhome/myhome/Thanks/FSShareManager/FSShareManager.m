@@ -414,7 +414,7 @@ static FSShareManager *manager = nil;
     MFMailComposeViewController *picker = [[MFMailComposeViewController alloc] init];
     picker.mailComposeDelegate = self;
     if (recipients) {
-        [picker setCcRecipients:recipients];
+        [picker setToRecipients:recipients];
     }
     if (subject) {
         [picker setSubject:subject];
