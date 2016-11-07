@@ -15,6 +15,7 @@
 #import <TencentOpenAPI/TencentOAuth.h>
 #import <TencentOpenAPI/QQApiInterfaceObject.h>
 #import <TencentOpenAPI/QQApiInterface.h>
+#import "FSShareEntity.h"
 
 @class WTShareContentItem;
 
@@ -43,6 +44,6 @@ typedef void(^WTShareResultlBlock)(NSString * shareResult);
 + (instancetype)shareInstance;
 // 判断QQ分享是否成功
 + (void)didReceiveTencentUrl:(NSURL *)url;
-+ (void)wt_shareWithContent:(WTShareContentItem *)contentObj shareType:(WTShareType)shareType shareResult:(WTShareResultlBlock)shareResult;
++ (void)wt_shareWithContent:(FSShareEntity *)contentObj shareType:(WTShareType)shareType shareResult:(WTShareResultlBlock)shareResult;
 
 @end

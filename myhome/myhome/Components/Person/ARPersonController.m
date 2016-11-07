@@ -81,28 +81,28 @@
 - (void)shareTo:(NSInteger)tag
 {
     if (tag == WTShareTypeWeiBo) {
-        [FSShareManager wt_shareWithContent:[WTShareContentItem shareWTShareContentItem] shareType:WTShareTypeWeiBo shareResult:^(NSString *shareResult) {
+        [FSShareManager wt_shareWithContent:[FSShareEntity shareWTShareContentItem] shareType:WTShareTypeWeiBo shareResult:^(NSString *shareResult) {
             [FuData showAlertViewWithTitle:shareResult];
         }];
         
     }else if (tag == WTShareTypeQQ){
-        [FSShareManager wt_shareWithContent:[WTShareContentItem shareWTShareContentItem] shareType:WTShareTypeQQ shareResult:^(NSString *shareResult) {
+        [FSShareManager wt_shareWithContent:[FSShareEntity shareWTShareContentItem] shareType:WTShareTypeQQ shareResult:^(NSString *shareResult) {
             [FuData showAlertViewWithTitle:shareResult];
         }];
     }else if (tag == WTShareTypeQQZone){
-        [FSShareManager wt_shareWithContent:[WTShareContentItem shareWTShareContentItem] shareType:WTShareTypeQQZone shareResult:^(NSString *shareResult) {
+        [FSShareManager wt_shareWithContent:[FSShareEntity shareWTShareContentItem] shareType:WTShareTypeQQZone shareResult:^(NSString *shareResult) {
             [FuData showAlertViewWithTitle:shareResult];
         }];
     }else if (tag == WTShareTypeWeiXinTimeline){
-        [FSShareManager wt_shareWithContent:[WTShareContentItem shareWTShareContentItem] shareType:WTShareTypeWeiXinTimeline shareResult:^(NSString *shareResult) {
+        [FSShareManager wt_shareWithContent:[FSShareEntity shareWTShareContentItem] shareType:WTShareTypeWeiXinTimeline shareResult:^(NSString *shareResult) {
             [FuData showAlertViewWithTitle:shareResult];
         }];
     }else if (tag == WTShareTypeWeiXinSession){
-        [FSShareManager wt_shareWithContent:[WTShareContentItem shareWTShareContentItem] shareType:WTShareTypeWeiXinSession shareResult:^(NSString *shareResult) {
+        [FSShareManager wt_shareWithContent:[FSShareEntity shareWTShareContentItem] shareType:WTShareTypeWeiXinSession shareResult:^(NSString *shareResult) {
             [FuData showAlertViewWithTitle:shareResult];
         }];
     }else if (tag == WTShareTypeWeiXinFavorite){
-        [FSShareManager wt_shareWithContent:[WTShareContentItem shareWTShareContentItem] shareType:WTShareTypeWeiXinFavorite shareResult:^(NSString *shareResult) {
+        [FSShareManager wt_shareWithContent:[FSShareEntity shareWTShareContentItem] shareType:WTShareTypeWeiXinFavorite shareResult:^(NSString *shareResult) {
             [FuData showAlertViewWithTitle:shareResult];
         }];
     }else if (tag == WTShareTypeWeiMessage){
@@ -114,6 +114,10 @@
         }
     }else if (tag == WTShareTypeWeiEmail){
         MFMailComposeViewController *picker = [[MFMailComposeViewController alloc] init];
+        if (!picker) {
+            [self showTitle:@"设备不支持发送邮件"];
+            return;
+        }
         picker.mailComposeDelegate = self;
         [picker setSubject:@"最好的软件"];
         [picker setMessageBody:@"分享的内容" isHTML:NO];

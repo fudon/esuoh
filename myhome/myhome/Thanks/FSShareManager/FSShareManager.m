@@ -7,7 +7,7 @@
 //
 
 #import "FSShareManager.h"
-#import "WTShareContentItem.h"
+#import "FSShareEntity.h"
 
 #define kAppKey         @"2045436852"           // 微博
 #define kRedirectURI    @"http://www.sina.com"
@@ -51,7 +51,7 @@ static FSShareManager *manager = nil;
 }
 
 #pragma mark - 分享方法------
-+ (void)wt_shareWithContent:(WTShareContentItem *)contentObj shareType:(WTShareType)shareType shareResult:(WTShareResultlBlock)shareResult
++ (void)wt_shareWithContent:(FSShareEntity *)contentObj shareType:(WTShareType)shareType shareResult:(WTShareResultlBlock)shareResult
 {
     FSShareManager * shareManager = [FSShareManager shareInstance];
     shareManager.shareResultlBlock = shareResult;
@@ -59,7 +59,7 @@ static FSShareManager *manager = nil;
     [self wt_shareWithContent:contentObj shareType:shareType];
 }
 
-+ (void)wt_shareWithContent:(WTShareContentItem *)contentObj shareType:(WTShareType)shareType
++ (void)wt_shareWithContent:(FSShareEntity *)contentObj shareType:(WTShareType)shareType
 {
     [FSShareManager shareInstance];
     

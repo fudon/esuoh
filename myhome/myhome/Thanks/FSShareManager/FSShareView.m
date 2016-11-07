@@ -9,6 +9,8 @@
 #import "FSShareView.h"
 #import "FSTouchView.h"
 #import "FSImageLabelView.h"
+#import "FuSoft.h"
+#import "FSShareEntity.h"
 
 #define MainHeight  200
 
@@ -16,6 +18,8 @@
 
 @property (nonatomic,strong) FSTouchView        *touchView;
 @property (nonatomic,strong) UIView             *mainView;
+@property (nonatomic,weak)   UIViewController   *callController;
+@property (nonatomic, strong) FSShareEntity     *shareData;
 
 @end
 

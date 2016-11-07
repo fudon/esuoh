@@ -1,15 +1,15 @@
 //
-//  WTShareContentItem.h
-//  WTShare
+//  FSShareEntity.h
+//  myhome
 //
-//  Created by Mac on 16/7/1.
-//  Copyright © 2016年 wutong. All rights reserved.
+//  Created by fudon on 2016/11/7.
+//  Copyright © 2016年 fuhope. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface WTShareContentItem : NSObject
+@interface FSShareEntity : NSObject
+
 @property (strong, nonatomic) UIImage *thumbImage;
 @property (strong, nonatomic) UIImage *bigImage;
 @property (strong, nonatomic) NSString *imageType;
@@ -27,7 +27,6 @@
 @property (nonatomic, assign)BOOL isImageShareQQ; // yes 代表用图片 NO代表用URL
 @property (nonatomic, strong)NSString * sinaSummary;
 
-
-+ (WTShareContentItem *)shareWTShareContentItem;
++ (FSShareEntity *)shareWTShareContentItem;
 
 @end
