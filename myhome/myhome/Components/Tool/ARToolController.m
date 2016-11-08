@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = NSStringFromClass([self class]);
+    self.title = @"支持服务";
 }
 
 - (void)didReceiveMemoryWarning {
