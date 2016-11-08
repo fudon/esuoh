@@ -7,6 +7,7 @@
 //
 
 #import "ARHomeController.h"
+#import "FuSoft.h"
 
 @interface ARHomeController ()
 
@@ -25,7 +26,7 @@
 
 - (void)leftBBIAction
 {
-    
+    [FuData showMessage:@"北京北京"];
 }
 
 - (void)didReceiveMemoryWarning {

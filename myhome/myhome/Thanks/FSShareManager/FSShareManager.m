@@ -363,7 +363,7 @@ static FSShareManager *manager = nil;
                      controller:(UIViewController *)controller
 {
     if (![MFMessageComposeViewController canSendText]) {
-        [FuData showTipWithMessage:@"设备不支持发送短信"];
+        [FuData showMessage:@"设备不支持发送短信"];
         return;
     }
     MFMessageComposeViewController *picker = [[MFMessageComposeViewController alloc] init];
@@ -387,7 +387,7 @@ static FSShareManager *manager = nil;
             break;
         case MessageComposeResultSent:
         {
-            [FuData showTipWithMessage:@"发送成功"];
+            [FuData showMessage:@"发送成功"];
         }
             break;
             
@@ -408,7 +408,7 @@ static FSShareManager *manager = nil;
 
 {
     if (![MFMailComposeViewController canSendMail]) {
-        [FuData showTipOnTopWithMessage:@"设备不支持发送邮件"];
+        [FuData showMessage:@"设备不支持发送邮件"];
         return;
     }
     MFMailComposeViewController *picker = [[MFMailComposeViewController alloc] init];
@@ -431,9 +431,9 @@ static FSShareManager *manager = nil;
 - (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error
 {
     if (result == MFMailComposeResultSent) {
-        [FuData showTipWithMessage:@"邮件发送成功"];
+        [FuData showMessage:@"邮件发送成功"];
     }else if (result == MFMailComposeResultFailed){
-        [FuData showTipWithMessage:@"邮件发送失败"];
+        [FuData showMessage:@"邮件发送失败"];
     }
     [controller dismissViewControllerAnimated:YES completion:nil];
 }
