@@ -7,6 +7,7 @@
 //
 
 #import "AROfferController.h"
+#import "FSViewManager.h"
 
 @interface AROfferController ()
 
@@ -16,7 +17,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = NSStringFromClass([self class]);
+    self.title = @"发布";
+    
+    NSArray *texts = @[@"小区",@"楼栋",@"楼层",@"合同面积",@"实际面积",@"",@"",@"",@"",@""];
+    NSArray *units = @[@"",@"",@"",@"",@"",@"",@"",@"",@"",@""];
+    for (int x = 0; x < texts.count; x ++) {
+        UILabel *label = [FSViewManager labelWithFrame:CGRectMake(10, 10 + 40.5 * x, 100, 40) text:texts[x] textColor:[UIColor lightGrayColor] backColor:nil font:FONTFC(14) textAlignment:NSTextAlignmentLeft];
+        [self.scrollView addSubview:label];
+        [self.scrollView addSubview:[FSViewManager seprateViewWithFrame:CGRectMake(0, label.bottom, WIDTHFC - 10, FS_LineThickness)]];
+    }
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {

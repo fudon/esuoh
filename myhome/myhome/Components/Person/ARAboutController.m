@@ -1,31 +1,22 @@
 //
-//  ARHomeController.m
+//  ARAboutController.m
 //  myhome
 //
-//  Created by fudon on 2016/11/1.
+//  Created by fudon on 2016/11/8.
 //  Copyright © 2016年 fuhope. All rights reserved.
 //
 
-#import "ARHomeController.h"
-#import "FuSoft.h"
+#import "ARAboutController.h"
 
-@interface ARHomeController ()
+@interface ARAboutController ()
 
 @end
 
-@implementation ARHomeController
+@implementation ARAboutController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
-    
-    UIBarButtonItem *leftBBI = [[UIBarButtonItem alloc] initWithTitle:@"北京" style:UIBarButtonItemStylePlain target:self action:@selector(leftBBIAction)];
-    self.navigationItem.leftBarButtonItem = leftBBI;
-    
-}
-
-- (void)leftBBIAction
-{
+    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {

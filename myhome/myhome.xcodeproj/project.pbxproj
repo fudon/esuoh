@@ -118,6 +118,7 @@
 		5C7C38D61DD17DA600D68C3B /* FuData.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C385C1DD17DA500D68C3B /* FuData.m */; };
 		5C7C38D71DD17DA600D68C3B /* FuSing.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C385E1DD17DA500D68C3B /* FuSing.m */; };
 		5C7C38D81DD17DA600D68C3B /* FuWeb.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C38601DD17DA500D68C3B /* FuWeb.m */; };
+		5C7C38DE1DD1D14600D68C3B /* ARAboutController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C38DD1DD1D14600D68C3B /* ARAboutController.m */; };
 		5C9337B31DCB3F800091D3D8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C9337B21DCB3F800091D3D8 /* Security.framework */; };
 		5C9337B81DCB3FA80091D3D8 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C9337B71DCB3FA80091D3D8 /* libiconv.tbd */; };
 		5C9337BA1DCB3FAE0091D3D8 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C9337B91DCB3FAE0091D3D8 /* SystemConfiguration.framework */; };
@@ -372,6 +373,8 @@
 		5C7C385E1DD17DA500D68C3B /* FuSing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FuSing.m; sourceTree = "<group>"; };
 		5C7C385F1DD17DA500D68C3B /* FuWeb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FuWeb.h; sourceTree = "<group>"; };
 		5C7C38601DD17DA500D68C3B /* FuWeb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FuWeb.m; sourceTree = "<group>"; };
+		5C7C38DC1DD1D14600D68C3B /* ARAboutController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARAboutController.h; sourceTree = "<group>"; };
+		5C7C38DD1DD1D14600D68C3B /* ARAboutController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARAboutController.m; sourceTree = "<group>"; };
 		5C9337B21DCB3F800091D3D8 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		5C9337B71DCB3FA80091D3D8 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
 		5C9337B91DCB3FAE0091D3D8 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -1032,6 +1035,8 @@
 			children = (
 				5CA360DA1DC8ADCE00523FF5 /* ARPersonController.h */,
 				5CA360DB1DC8ADCE00523FF5 /* ARPersonController.m */,
+				5C7C38DC1DD1D14600D68C3B /* ARAboutController.h */,
+				5C7C38DD1DD1D14600D68C3B /* ARAboutController.m */,
 			);
 			path = Person;
 			sourceTree = "<group>";
@@ -1230,6 +1235,7 @@
 				5C7C387B1DD17DA500D68C3B /* FSChineseCalendarController.m in Sources */,
 				5C7C387E1DD17DA500D68C3B /* FSLunarCalendar.m in Sources */,
 				5C7C38801DD17DA500D68C3B /* fishhook.c in Sources */,
+				5C7C38DE1DD1D14600D68C3B /* ARAboutController.m in Sources */,
 				5C7C387F1DD17DA500D68C3B /* ClipPictureController.m in Sources */,
 				5C7C38C91DD17DA600D68C3B /* SDWebImageDecoder.m in Sources */,
 				5C7C38991DD17DA500D68C3B /* FSSelectSectionController.m in Sources */,

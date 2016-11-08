@@ -8,6 +8,7 @@
 
 #import "ARPersonController.h"
 #import "FSShareView.h"
+#import "FSWebController.h"
 
 @interface ARPersonController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -68,6 +69,9 @@
         [[FSShareManager shareInstance] mailShareWithSubject:@"App反馈" messageBody:@"反馈内容" recipients:@[@"1245102331@qq.com"] fileData:nil fileName:nil controller:self];
     }else if (indexPath.row == 2){
         
+    }else if (indexPath.row == 3){
+//        FSWebController *webController = [[FSWebController alloc] init];
+//        [self.navigationController pushViewController:webController animated:YES];
     }
 }
 
