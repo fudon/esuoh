@@ -1472,7 +1472,7 @@
 					"$(PROJECT_DIR)/myhome/Thanks/FSShareManager/Lib/WeChatSDK_1.7.1",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = cn.com.fuchina.share;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fuhope.myhome;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -1497,7 +1497,7 @@
 					"$(PROJECT_DIR)/myhome/Thanks/FSShareManager/Lib/WeChatSDK_1.7.1",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = cn.com.fuchina.share;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fuhope.myhome;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
