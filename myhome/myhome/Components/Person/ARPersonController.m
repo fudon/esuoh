@@ -68,7 +68,8 @@
     }else if (indexPath.row == 1){
         [[FSShareManager shareInstance] mailShareWithSubject:@"App反馈" messageBody:@"反馈内容" recipients:@[@"1245102331@qq.com"] fileData:nil fileName:nil controller:self];
     }else if (indexPath.row == 2){
-        
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"ARAbout" ofType:@"html"];
+        [FuData pushToViewControllerWithClass:@"FSHTMLController" navigationController:self.navigationController param:@{@"localUrlString":path,@"title":@"关于"} configBlock:nil];
     }else if (indexPath.row == 3){
 //        FSWebController *webController = [[FSWebController alloc] init];
 //        [self.navigationController pushViewController:webController animated:YES];

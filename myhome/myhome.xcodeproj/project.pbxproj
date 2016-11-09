@@ -152,6 +152,8 @@
 		71DC24751DD2011B00BEB193 /* FuData.m in Sources */ = {isa = PBXBuildFile; fileRef = 71DC24041DD2011B00BEB193 /* FuData.m */; };
 		71DC24761DD2011B00BEB193 /* FuSing.m in Sources */ = {isa = PBXBuildFile; fileRef = 71DC24061DD2011B00BEB193 /* FuSing.m */; };
 		71DC24771DD2011B00BEB193 /* FuWeb.m in Sources */ = {isa = PBXBuildFile; fileRef = 71DC24081DD2011B00BEB193 /* FuWeb.m */; };
+		71DC25E41DD3616C00BEB193 /* FSH5.html in Resources */ = {isa = PBXBuildFile; fileRef = 71DC25E31DD3616C00BEB193 /* FSH5.html */; };
+		71DC25E61DD3624D00BEB193 /* ARAbout.html in Resources */ = {isa = PBXBuildFile; fileRef = 71DC25E51DD3624D00BEB193 /* ARAbout.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -434,6 +436,8 @@
 		71DC24061DD2011B00BEB193 /* FuSing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FuSing.m; sourceTree = "<group>"; };
 		71DC24071DD2011B00BEB193 /* FuWeb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FuWeb.h; sourceTree = "<group>"; };
 		71DC24081DD2011B00BEB193 /* FuWeb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FuWeb.m; sourceTree = "<group>"; };
+		71DC25E31DD3616C00BEB193 /* FSH5.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = FSH5.html; sourceTree = "<group>"; };
+		71DC25E51DD3624D00BEB193 /* ARAbout.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ARAbout.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -597,6 +601,7 @@
 		5CFE60171DC75B9C003640A4 /* myhome */ = {
 			isa = PBXGroup;
 			children = (
+				71DC25E21DD3616C00BEB193 /* H5 */,
 				5CB39FE61DC9FCEB00564280 /* Thanks */,
 				5CFE61A11DC75C67003640A4 /* Components */,
 				5CFE61A21DC75C67003640A4 /* PublicBase */,
@@ -1141,6 +1146,15 @@
 			path = Tool;
 			sourceTree = "<group>";
 		};
+		71DC25E21DD3616C00BEB193 /* H5 */ = {
+			isa = PBXGroup;
+			children = (
+				71DC25E51DD3624D00BEB193 /* ARAbout.html */,
+				71DC25E31DD3616C00BEB193 /* FSH5.html */,
+			);
+			path = H5;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1200,6 +1214,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71DC25E41DD3616C00BEB193 /* FSH5.html in Resources */,
 				5CFE60281DC75B9C003640A4 /* LaunchScreen.storyboard in Resources */,
 				5C9337FE1DCB447B0091D3D8 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				71DC24401DD2011B00BEB193 /* fsqr2.png in Resources */,
@@ -1208,6 +1223,7 @@
 				71DC244C1DD2011B00BEB193 /* Note.txt in Resources */,
 				5CFE60251DC75B9C003640A4 /* Assets.xcassets in Resources */,
 				71DC24471DD2011B00BEB193 /* fsqrmsg.wav in Resources */,
+				71DC25E61DD3624D00BEB193 /* ARAbout.html in Resources */,
 				71DC24411DD2011B00BEB193 /* fsqr3.png in Resources */,
 				71DC24421DD2011B00BEB193 /* fsqr4.png in Resources */,
 				71DC24451DD2011B00BEB193 /* fsqrlighton.png in Resources */,
