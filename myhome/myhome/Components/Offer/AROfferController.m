@@ -17,9 +17,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"我是房东";
+    
     [self addKeyboardNotificationWithBaseOn:650];
-    self.navigationItem.rightBarButtonItem = [FSViewManager bbiWithTitle:@"发布" target:self action:@selector(offerAction)];
+//    self.navigationItem.rightBarButtonItem = [FSViewManager bbiWithTitle:@"发布" target:self action:@selector(offerAction)];
+    self.navigationItem.rightBarButtonItem = [FSViewManager bbiWithSystemType:UIBarButtonSystemItemAction target:self action:@selector(offerAction)];
+    self.navigationItem.titleView = [FSViewManager segmentedControlWithTitles:@[@"发布租房",@"发布售房"] target:self action:@selector(segmentControllerAction:)];
     
     UIView *whiteView = [[UIView alloc] initWithFrame:CGRectMake(0, 10, WIDTHFC, HEIGHTFC)];
     whiteView.backgroundColor = [UIColor whiteColor];
@@ -53,6 +55,11 @@
     }
     whiteView.height = texts.count * (50 + FS_LineThickness);
     self.scrollView.contentSize = CGSizeMake(WIDTHFC, 74 + texts.count * (50 + FS_LineThickness));
+}
+
+- (void)segmentControllerAction:(UISegmentedControl *)control
+{
+    NSLog(@"%@",@(control.selectedSegmentIndex));
 }
 
 - (void)tapLabelAction:(FSTapLabel *)label
