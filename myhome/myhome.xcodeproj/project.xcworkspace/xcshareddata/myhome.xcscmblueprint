@@ -10,8 +10,8 @@
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "178286EE-EB8F-43DB-8355-FB8213858C58",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "8A6891D59F97357B3FE4A49F961297DD8BF8929E" : "HA\/FS\/",
-    "6CA977209A5322125D3CB9526D703914B4CECDA8" : "HA\/",
+    "8A6891D59F97357B3FE4A49F961297DD8BF8929E" : "HomeApp\/FS\/",
+    "6CA977209A5322125D3CB9526D703914B4CECDA8" : "HomeApp\/",
     "05C6E486526A287875E448BD4E7B4246C83F1B5E" : "emohym\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "myhome",
