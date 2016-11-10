@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "6CA977209A5322125D3CB9526D703914B4CECDA8",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "8A6891D59F97357B3FE4A49F961297DD8BF8929E" : 9223372036854775807,
+    "6CA977209A5322125D3CB9526D703914B4CECDA8" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "867DE0F5-4CF1-45B9-81ED-1F6C542D6763",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "8A6891D59F97357B3FE4A49F961297DD8BF8929E" : "HomeApp\/FS\/",
+    "6CA977209A5322125D3CB9526D703914B4CECDA8" : "HomeApp\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "myhome",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "myhome\/myhome.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/fudon\/esuoh.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "6CA977209A5322125D3CB9526D703914B4CECDA8"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/fudon\/FuSoft.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "8A6891D59F97357B3FE4A49F961297DD8BF8929E"
+    }
+  ]
+}
