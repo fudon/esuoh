@@ -26,6 +26,9 @@
 
 - (void)leftBBIAction
 {
+    [FuData pushToViewControllerWithClass:@"HACityController" navigationController:self.navigationController param:@{} configBlock:^(UIViewController *vc) {
+        
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1FD3E4DD471F75164753B4C1 /* libPods-myhome.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AED98BB851B3E5659CC617B6 /* libPods-myhome.a */; };
+		5C3B33B91DD4448D000B620A /* HACityController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3B33B81DD4448D000B620A /* HACityController.m */; };
 		5C7C38DE1DD1D14600D68C3B /* ARAboutController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C38DD1DD1D14600D68C3B /* ARAboutController.m */; };
 		5C9337B31DCB3F800091D3D8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C9337B21DCB3F800091D3D8 /* Security.framework */; };
 		5C9337B81DCB3FA80091D3D8 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C9337B71DCB3FA80091D3D8 /* libiconv.tbd */; };
@@ -120,6 +121,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5C3B33B71DD4448D000B620A /* HACityController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HACityController.h; sourceTree = "<group>"; };
+		5C3B33B81DD4448D000B620A /* HACityController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HACityController.m; sourceTree = "<group>"; };
 		5C7C38DC1DD1D14600D68C3B /* ARAboutController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARAboutController.h; sourceTree = "<group>"; };
 		5C7C38DD1DD1D14600D68C3B /* ARAboutController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARAboutController.m; sourceTree = "<group>"; };
 		5C9337B21DCB3F800091D3D8 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
@@ -429,6 +432,8 @@
 			children = (
 				5CA360D41DC8AD7600523FF5 /* ARHomeController.h */,
 				5CA360D51DC8AD7600523FF5 /* ARHomeController.m */,
+				5C3B33B71DD4448D000B620A /* HACityController.h */,
+				5C3B33B81DD4448D000B620A /* HACityController.m */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -1110,6 +1115,7 @@
 				5CFE601A1DC75B9C003640A4 /* main.m in Sources */,
 				71DC24201DD2011B00BEB193 /* FlowCollector.m in Sources */,
 				5C9337FA1DCB447B0091D3D8 /* FSTouchView.m in Sources */,
+				5C3B33B91DD4448D000B620A /* HACityController.m in Sources */,
 				71DC24291DD2011B00BEB193 /* FSNavigationController.m in Sources */,
 				71DC240C1DD2011B00BEB193 /* FSFMAccountController.m in Sources */,
 				71DC24321DD2011B00BEB193 /* FSTapLabel.m in Sources */,
