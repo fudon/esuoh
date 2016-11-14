@@ -44,7 +44,7 @@
     UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, WIDTHFC, HEIGHTFC - 64 - 49) style:UITableViewStylePlain];
     tableView.delegate = self;
     tableView.dataSource = self;
-    [self.scrollView addSubview:tableView];
+    [self.view addSubview:tableView];
     
     tableView.tableHeaderView = headView;
 }
