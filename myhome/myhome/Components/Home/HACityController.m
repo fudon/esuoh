@@ -14,6 +14,8 @@
 @property (nonatomic,strong) NSArray *cityArray;
 @property (nonatomic,strong) NSArray *titlesArray;
 
+@property (nonatomic,strong) UILabel *latterLabel;
+
 @end
 
 @implementation HACityController
@@ -41,6 +43,17 @@
     tableView.sectionIndexColor = RGBCOLOR(34, 172, 56, 1);
     tableView.sectionIndexBackgroundColor = [UIColor clearColor];
     [self.view addSubview:tableView];
+    
+    _latterLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 80, 80)];
+    _latterLabel.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.5];
+    _latterLabel.alpha = 0;
+    _latterLabel.font = [UIFont boldSystemFontOfSize:28];
+    _latterLabel.center = CGPointMake(WIDTHFC / 2, HEIGHTFC/2 - 40);
+    _latterLabel.textColor = [UIColor whiteColor];
+    _latterLabel.textAlignment = NSTextAlignmentCenter;
+    _latterLabel.layer.masksToBounds = YES;
+    _latterLabel.layer.cornerRadius = 5;
+    [self.view addSubview:_latterLabel];
 }
 
 - (void)searchCity
@@ -91,12 +104,9 @@
 
 - (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index
 {
-    [FuData showMessage:title];
-    
-//    _latterLabel.alpha = 1.0;
-//    _latterLabel.text = title;
+    _latterLabel.alpha = 1.0;
+    _latterLabel.text = title;
     [self performSelector:@selector(selectCityPageShowZimuRemove) withObject:nil afterDelay:1.0];
-    
     return index;
 }
 
@@ -115,15 +125,16 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     NSDictionary *dic = self.cityArray[indexPath.section];
     NSArray *array = [dic objectForKey:@"data_list"];
-//    if (_block) {
-//        _block(self,array[indexPath.row]);
-//    }
+    if (_selectedCityBlock) {
+        _selectedCityBlock(array[indexPath.row]);
+    }
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)selectCityPageShowZimuRemove{
     WEAKSELF(weakSelf);
     [UIView animateWithDuration:0.5 animations:^{
-//        weakSelf.latterLabel.alpha = 0;
+        weakSelf.latterLabel.alpha = 0;
     }];
 }
 

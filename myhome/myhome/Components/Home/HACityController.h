@@ -10,4 +10,6 @@
 
 @interface HACityController : FSBaseController
 
+@property (nonatomic,copy) void (^selectedCityBlock)(NSDictionary *bCityDictionary);
+
 @end

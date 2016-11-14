@@ -8,6 +8,7 @@
 
 #import "ARHomeController.h"
 #import "FuSoft.h"
+#import "HACityController.h"
 
 @interface ARHomeController ()
 
@@ -26,8 +27,10 @@
 
 - (void)leftBBIAction
 {
-    [FuData pushToViewControllerWithClass:@"HACityController" navigationController:self.navigationController param:@{} configBlock:^(UIViewController *vc) {
-        
+    [FuData pushToViewControllerWithClass:@"HACityController" navigationController:self.navigationController param:@{} configBlock:^(HACityController *vc) {
+        vc.selectedCityBlock = ^ (NSDictionary *bCity){
+            NSLog(@"%@",bCity);
+        };
     }];
 }
 
