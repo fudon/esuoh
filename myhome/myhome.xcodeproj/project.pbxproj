@@ -43,6 +43,7 @@
 		5CFE60281DC75B9C003640A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CFE60261DC75B9C003640A4 /* LaunchScreen.storyboard */; };
 		5CFE61A01DC75C11003640A4 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CFE619F1DC75C11003640A4 /* libsqlite3.0.tbd */; };
 		71474B6A1DCABB1C0063DA08 /* ARTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71474B691DCABB1C0063DA08 /* ARTabBarController.m */; };
+		71A66E7B1DEF1250002C28B9 /* HAShopController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71A66E7A1DEF1250002C28B9 /* HAShopController.m */; };
 		71DC24091DD2011B00BEB193 /* FSDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 71DC23131DD2011A00BEB193 /* FSDBManager.m */; };
 		71DC240A1DD2011B00BEB193 /* FSAccountDoorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71DC23161DD2011A00BEB193 /* FSAccountDoorController.m */; };
 		71DC240B1DD2011B00BEB193 /* FSFinancesManagerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71DC23181DD2011A00BEB193 /* FSFinancesManagerController.m */; };
@@ -185,6 +186,8 @@
 		6584AD39FD918E283A90C913 /* Pods-myhome.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myhome.release.xcconfig"; path = "Pods/Target Support Files/Pods-myhome/Pods-myhome.release.xcconfig"; sourceTree = "<group>"; };
 		71474B681DCABB1C0063DA08 /* ARTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTabBarController.h; sourceTree = "<group>"; };
 		71474B691DCABB1C0063DA08 /* ARTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTabBarController.m; sourceTree = "<group>"; };
+		71A66E791DEF1250002C28B9 /* HAShopController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HAShopController.h; sourceTree = "<group>"; };
+		71A66E7A1DEF1250002C28B9 /* HAShopController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HAShopController.m; sourceTree = "<group>"; };
 		71DC23121DD2011A00BEB193 /* FSDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSDBManager.h; sourceTree = "<group>"; };
 		71DC23131DD2011A00BEB193 /* FSDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSDBManager.m; sourceTree = "<group>"; };
 		71DC23151DD2011A00BEB193 /* FSAccountDoorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSAccountDoorController.h; sourceTree = "<group>"; };
@@ -443,6 +446,8 @@
 			children = (
 				5CA360D71DC8ADC300523FF5 /* AROfferController.h */,
 				5CA360D81DC8ADC300523FF5 /* AROfferController.m */,
+				71A66E791DEF1250002C28B9 /* HAShopController.h */,
+				71A66E7A1DEF1250002C28B9 /* HAShopController.m */,
 			);
 			path = Offer;
 			sourceTree = "<group>";
@@ -1090,6 +1095,7 @@
 				71DC24761DD2011B00BEB193 /* FuSing.m in Sources */,
 				71DC243D1DD2011B00BEB193 /* FSWebViewController.m in Sources */,
 				71DC24231DD2011B00BEB193 /* UIViewExt.m in Sources */,
+				71A66E7B1DEF1250002C28B9 /* HAShopController.m in Sources */,
 				71DC24481DD2011B00BEB193 /* FSAddTaxModelController.m in Sources */,
 				71DC24381DD2011B00BEB193 /* FSSelectSectionController.m in Sources */,
 				71DC24111DD2011B00BEB193 /* FSFMSelectController.m in Sources */,

@@ -19,7 +19,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    UIBarButtonItem *leftBBI = [[UIBarButtonItem alloc] initWithTitle:@"北京" style:UIBarButtonItemStylePlain target:self action:@selector(leftBBIAction)];
+    self.title = @"我要装修";
+    
+    UIBarButtonItem *leftBBI = [[UIBarButtonItem alloc] initWithTitle:@"长沙" style:UIBarButtonItemStylePlain target:self action:@selector(leftBBIAction)];
     self.navigationItem.leftBarButtonItem = leftBBI;
     
     CGFloat width = (self.view.width - 20 * 4) / 3;

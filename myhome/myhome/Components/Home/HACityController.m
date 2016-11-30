@@ -23,9 +23,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"选择城市";
-    self.navigationItem.rightBarButtonItem = [FSViewManager bbiWithSystemType:UIBarButtonSystemItemSearch target:self action:@selector(searchCity)];
     
-    self.cityArray = [self cityArrayDataSource];
+    self.cityArray = [self cityArrays];
     
     NSMutableArray *array = [[NSMutableArray alloc] initWithCapacity:_cityArray.count];
     for (int x = 0; x < self.cityArray.count; x ++) {
@@ -56,11 +55,6 @@
     [self.view addSubview:_latterLabel];
 }
 
-- (void)searchCity
-{
-    
-}
-
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return self.cityArray.count;
@@ -79,7 +73,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
-        cell.textLabel.font = FONTFC(14);
+//        cell.textLabel.font = FONTFC(14);
 //        cell.textLabel.textColor = GZS_TextColor_Normal;
     }
     
@@ -97,10 +91,10 @@
     return [dic objectForKey:@"common_name"];
 }
 
--(NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView
-{
-    return self.titlesArray;
-}
+//-(NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView
+//{
+//    return self.titlesArray;
+//}
 
 - (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index
 {
@@ -138,10 +132,20 @@
     }];
 }
 
+- (NSArray *)cityArrays
+{
+    return @[
+             @{@"common_name":@"目前开通服务城市",
+               @"data_list":@[
+                       @{@"name":@"长沙"},
+                       ]},
+             ];
+}
+
 - (NSArray *)cityArrayDataSource//https://zhidao.baidu.com/question/368493711.html
 {
     return @[
-             @{@"common_name":@"热点",
+             @{@"common_name":@"目前开通服务城市",
                @"data_list":@[
                        @{@"name":@"北京"},
                        @{@"name":@"深圳"},
