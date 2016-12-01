@@ -104,10 +104,12 @@
     CGFloat alpha = scrollView.contentOffset.y / 200;
     alpha = MIN(MAX(alpha, 0), 1);
     _barImageView.alpha = alpha;
-    BOOL margin = (alpha > 0.5);
-    self.navigationItem.leftBarButtonItem.tintColor = margin?RGBCOLOR(21, 126, 251, 1):[UIColor whiteColor];
-    self.navigationItem.rightBarButtonItem.tintColor = margin?RGBCOLOR(21, 126, 251, 1):[UIColor whiteColor];
-    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName:margin?RGBCOLOR(21, 126, 251, 1):[UIColor whiteColor]};
+    BOOL margin = (alpha > 0.7);
+    UIColor *systemBlue = RGBCOLOR(21, 126, 251, 1);
+    UIColor *whiteColor = [UIColor whiteColor];
+    self.navigationItem.leftBarButtonItem.tintColor = margin?systemBlue:whiteColor;
+    self.navigationItem.rightBarButtonItem.tintColor = margin?systemBlue:whiteColor;
+    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName:margin?systemBlue:whiteColor};
 }
 
 - (void)didReceiveMemoryWarning {
