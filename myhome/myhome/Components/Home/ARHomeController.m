@@ -9,52 +9,54 @@
 #import "ARHomeController.h"
 #import "FuSoft.h"
 #import "HACityController.h"
-#import "UINavigationBar+Background.h"
 
 @interface ARHomeController ()<UITableViewDelegate,UITableViewDataSource>
 
-@property (nonatomic,assign) CGFloat halfHeight;
-@property (nonatomic, strong) UIView *descriptionView;
+@property (nonatomic,strong) UIView     *alphaView;
+@property (nonatomic,strong) UILabel    *titleLabel;
 
 @end
 
 @implementation ARHomeController
 
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.title = @"我要装修";
+    _titleLabel = [FSViewManager labelWithFrame:CGRectMake(0, 0, WIDTHFC / 3, 44) text:@"我要装修" textColor:[UIColor whiteColor] backColor:nil font:nil textAlignment:NSTextAlignmentCenter];
+    self.navigationItem.titleView = _titleLabel;
     
-    // 4、设置导航栏半透明
     self.navigationController.navigationBar.translucent = YES;
-    // 5、设置导航栏背景图片
     [self.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
-    // 6、设置导航栏阴影图片
     self.navigationController.navigationBar.shadowImage = [UIImage new];
     
     CGRect frame = self.navigationController.navigationBar.frame;
-    UIView *alphaView = [[UIView alloc] initWithFrame:CGRectMake(0, -20, frame.size.width, frame.size.height+20)];
-    alphaView.backgroundColor = [UIColor clearColor];
-    alphaView.userInteractionEnabled = NO;
-    [self.navigationController.navigationBar insertSubview: alphaView atIndex:0];
-    
-    [self.navigationController.navigationBar cnSetBackgroundColor:[UIColor clearColor]];
-    
-    UIBarButtonItem *leftBBI = [[UIBarButtonItem alloc] initWithTitle:@"长沙" style:UIBarButtonItemStylePlain target:self action:@selector(leftBBIAction)];
+    _alphaView = [[UIView alloc] initWithFrame:CGRectMake(0, -20, frame.size.width, frame.size.height+20)];
+    _alphaView.backgroundColor = [UIColor whiteColor];
+    _alphaView.alpha = 0;
+    _alphaView.userInteractionEnabled = NO;
+    [self.navigationController.navigationBar insertSubview:_alphaView atIndex:0];
+        
+    UIBarButtonItem *leftBBI = [[UIBarButtonItem alloc] initWithTitle:@"沙" style:UIBarButtonItemStylePlain target:self action:@selector(leftBBIAction)];
+    leftBBI.tintColor = [UIColor whiteColor];
     self.navigationItem.leftBarButtonItem = leftBBI;
     
     UIBarButtonItem *rightBBI = [[UIBarButtonItem alloc] initWithTitle:@"参考" style:UIBarButtonItemStylePlain target:self action:@selector(leftBBIAction)];
+    rightBBI.tintColor = [UIColor whiteColor];
     self.navigationItem.rightBarButtonItem = rightBBI;
     
     CGFloat width = (self.view.width - 20 * 4) / 3;
-    NSArray *picTitles = @[@"新",@"二",@"楼"];
-    NSArray *titles = @[@"新房",@"二手房",@"楼盘信息"];
+    NSArray *picTitles = @[@"A",@"B",@"C"];
+    NSArray *titles = @[@"新",@"二",@"楼"];
     
-    UIView *headView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, WIDTHFC, width + 10)];
-    headView.backgroundColor = [UIColor redColor];
+    UIView *headView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, WIDTHFC, HEIGHTFC / 2)];
     
     for (int x = 0; x < 3; x ++) {
-        UIButton *mainButton = [FSViewManager buttonWithFrame:CGRectMake(20 + (width + 20) * x, 10, width, width) title:nil titleColor:nil backColor:nil fontInt:0 tag:TAGBUTTON + x target:self selector:@selector(buttonClick:)];
+        UIButton *mainButton = [FSViewManager buttonWithFrame:CGRectMake(20 + (width + 20) * x, headView.height - width, width, width) title:nil titleColor:nil backColor:nil fontInt:0 tag:TAGBUTTON + x target:self selector:@selector(buttonClick:)];
         [headView addSubview:mainButton];
         
         UILabel *label = [FSViewManager labelWithFrame:CGRectMake(width / 2 - (width - 40) / 2, 0, width - 40, width - 40) text:picTitles[x] textColor:[UIColor whiteColor] backColor:[UIColor redColor] font:FONTBOLD(15) textAlignment:NSTextAlignmentCenter];
@@ -66,20 +68,15 @@
         [mainButton addSubview:bottomLabel];
     }
     
-    UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, WIDTHFC, HEIGHTFC - 64 - 49) style:UITableViewStylePlain];
+    UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, WIDTHFC, HEIGHTFC - 49) style:UITableViewStylePlain];
     tableView.delegate = self;
     tableView.dataSource = self;
     tableView.backgroundColor = [UIColor clearColor];
     [self.view addSubview:tableView];
-    
+    tableView.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"navi_back_image"]];
     tableView.tableHeaderView = headView;
     
-    _halfHeight = HEIGHTFC * 0.5 - 64;
-    [tableView setContentInset:UIEdgeInsetsMake(_halfHeight, 0, 0, 0)];
-    
-    _descriptionView.frame = CGRectMake(0, 64, CGRectGetWidth([UIScreen mainScreen].bounds), 42);
-    //[[DescriptionView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth([UIScreen mainScreen].bounds), 42)];
-    [self.view addSubview:_descriptionView];
+    //    [tableView setContentInset:UIEdgeInsetsMake(_halfHeight, 0, 0, 0)];
 }
 
 - (void)buttonClick:(UIButton *)button
@@ -119,16 +116,14 @@
 #pragma mark UIScrollViewDelegate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-    UIColor *color = [UIColor colorWithRed:45/255.0 green:45/255.0 blue:45/255.0 alpha:1];
-    CGFloat offsetY = scrollView.contentOffset.y;
-    if (offsetY >= - _halfHeight - 64) {
-        CGFloat alpha = MIN(1, (_halfHeight + 64 + offsetY)/_halfHeight);
-        [self.navigationController.navigationBar cnSetBackgroundColor:[color colorWithAlphaComponent:alpha]];
-        
-        _descriptionView.alpha = 1 - alpha;
-    } else {
-        [self.navigationController.navigationBar cnSetBackgroundColor:[color colorWithAlphaComponent:0]];
-    }
+    CGFloat alpha = scrollView.contentOffset.y / 64;
+    _alphaView.alpha = MIN(MAX(alpha, 0), 1);
+    BOOL margin = _alphaView.alpha > 0.5;
+    self.navigationItem.leftBarButtonItem.tintColor = margin?nil:[UIColor whiteColor];
+    self.navigationItem.rightBarButtonItem.tintColor = margin?nil:[UIColor whiteColor];
+    self.titleLabel.textColor = margin?RGBCOLOR(21, 126, 251, 1):[UIColor whiteColor];
+    
+    [self setNeedsStatusBarAppearanceUpdate];
 }
 
 
