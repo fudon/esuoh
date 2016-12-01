@@ -12,35 +12,21 @@
 
 @interface ARHomeController ()<UITableViewDelegate,UITableViewDataSource>
 
-@property (nonatomic,strong) UIView     *alphaView;
-@property (nonatomic,strong) UILabel    *titleLabel;
+@property (nonatomic,strong) UIView         *barImageView;
 
 @end
 
 @implementation ARHomeController
 
-- (UIStatusBarStyle)preferredStatusBarStyle
-{
-    return UIStatusBarStyleLightContent;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    _titleLabel = [FSViewManager labelWithFrame:CGRectMake(0, 0, WIDTHFC / 3, 44) text:@"我要装修" textColor:[UIColor whiteColor] backColor:nil font:nil textAlignment:NSTextAlignmentCenter];
-    self.navigationItem.titleView = _titleLabel;
+    self.title = @"我要装修";
+    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor whiteColor],NSFontAttributeName : [UIFont boldSystemFontOfSize:18]};
     
-    self.navigationController.navigationBar.translucent = YES;
-    [self.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
-    self.navigationController.navigationBar.shadowImage = [UIImage new];
+    _barImageView = self.navigationController.navigationBar.subviews.firstObject;
+    _barImageView.alpha = 0;
     
-    CGRect frame = self.navigationController.navigationBar.frame;
-    _alphaView = [[UIView alloc] initWithFrame:CGRectMake(0, -20, frame.size.width, frame.size.height+20)];
-    _alphaView.backgroundColor = [UIColor whiteColor];
-    _alphaView.alpha = 0;
-    _alphaView.userInteractionEnabled = NO;
-    [self.navigationController.navigationBar insertSubview:_alphaView atIndex:0];
-        
     UIBarButtonItem *leftBBI = [[UIBarButtonItem alloc] initWithTitle:@"沙" style:UIBarButtonItemStylePlain target:self action:@selector(leftBBIAction)];
     leftBBI.tintColor = [UIColor whiteColor];
     self.navigationItem.leftBarButtonItem = leftBBI;
@@ -71,7 +57,6 @@
     UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, WIDTHFC, HEIGHTFC - 49) style:UITableViewStylePlain];
     tableView.delegate = self;
     tableView.dataSource = self;
-    tableView.backgroundColor = [UIColor clearColor];
     [self.view addSubview:tableView];
     tableView.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"navi_back_image"]];
     tableView.tableHeaderView = headView;
@@ -116,16 +101,14 @@
 #pragma mark UIScrollViewDelegate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-    CGFloat alpha = scrollView.contentOffset.y / 64;
-    _alphaView.alpha = MIN(MAX(alpha, 0), 1);
-    BOOL margin = _alphaView.alpha > 0.5;
-    self.navigationItem.leftBarButtonItem.tintColor = margin?nil:[UIColor whiteColor];
-    self.navigationItem.rightBarButtonItem.tintColor = margin?nil:[UIColor whiteColor];
-    self.titleLabel.textColor = margin?RGBCOLOR(21, 126, 251, 1):[UIColor whiteColor];
-    
-    [self setNeedsStatusBarAppearanceUpdate];
+    CGFloat alpha = scrollView.contentOffset.y / 200;
+    alpha = MIN(MAX(alpha, 0), 1);
+    _barImageView.alpha = alpha;
+    BOOL margin = (alpha > 0.5);
+    self.navigationItem.leftBarButtonItem.tintColor = margin?RGBCOLOR(21, 126, 251, 1):[UIColor whiteColor];
+    self.navigationItem.rightBarButtonItem.tintColor = margin?RGBCOLOR(21, 126, 251, 1):[UIColor whiteColor];
+    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName:margin?RGBCOLOR(21, 126, 251, 1):[UIColor whiteColor]};
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
