@@ -10,7 +10,7 @@
 #import "FuSoft.h"
 #import "HACityController.h"
 
-@interface ARHomeController ()<UITableViewDelegate,UITableViewDataSource>
+@interface ARHomeController ()
 
 @property (nonatomic,strong) UIView             *barImageView;
 @property (nonatomic,strong) UIImageView        *headImageView;
@@ -38,48 +38,53 @@
 //    _barImageView = self.navigationController.navigationBar.subviews.firstObject;
 //    _barImageView.alpha = 0;
     
-    UIBarButtonItem *leftBBI = [[UIBarButtonItem alloc] initWithTitle:@"沙" style:UIBarButtonItemStylePlain target:self action:@selector(leftBBIAction)];
+    UIBarButtonItem *leftBBI = [[UIBarButtonItem alloc] initWithTitle:@"长沙" style:UIBarButtonItemStylePlain target:self action:@selector(leftBBIAction)];
     leftBBI.tintColor = [UIColor whiteColor];
     self.navigationItem.leftBarButtonItem = leftBBI;
     
-    UIBarButtonItem *rightBBI = [[UIBarButtonItem alloc] initWithTitle:@"参考" style:UIBarButtonItemStylePlain target:self action:@selector(leftBBIAction)];
+    UIBarButtonItem *rightBBI = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemOrganize target:self action:@selector(leftBBIAction)];
     rightBBI.tintColor = [UIColor whiteColor];
     self.navigationItem.rightBarButtonItem = rightBBI;
-    
-    //    CGFloat width = (self.view.width - 20 * 4) / 3;
-    //    NSArray *picTitles = @[@"A",@"B",@"C"];
-    //    NSArray *titles = @[@"新",@"二",@"楼"];
     
     _headImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, WIDTHFC, WIDTHFC * .625)];
     _headImageView.image = [UIImage imageNamed:@"home_backImage"];
     [self.scrollView addSubview:_headImageView];
     self.headTransform = _headImageView.transform;
     
-//    self.scrollView.delegate = self;
     self.scrollView.frame = CGRectMake(0, 0, self.view.width, self.view.height - 49);
     self.scrollView.showsVerticalScrollIndicator = NO;
     
-    //    UIView *headView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, WIDTHFC, HEIGHTFC / 2)];
-    //
-    //    for (int x = 0; x < 3; x ++) {
-    //        UIButton *mainButton = [FSViewManager buttonWithFrame:CGRectMake(20 + (width + 20) * x, headView.height - width, width, width) title:nil titleColor:nil backColor:nil fontInt:0 tag:TAGBUTTON + x target:self selector:@selector(buttonClick:)];
-    //        [headView addSubview:mainButton];
-    //
-    //        UILabel *label = [FSViewManager labelWithFrame:CGRectMake(width / 2 - (width - 40) / 2, 0, width - 40, width - 40) text:picTitles[x] textColor:[UIColor whiteColor] backColor:[UIColor redColor] font:FONTBOLD(15) textAlignment:NSTextAlignmentCenter];
-    //        label.layer.masksToBounds = YES;
-    //        label.layer.cornerRadius = label.height / 2;
-    //        [mainButton addSubview:label];
-    //
-    //        UILabel *bottomLabel = [FSViewManager labelWithFrame:CGRectMake(0, width - 30, width, 30) text:titles[x] textColor:nil backColor:nil font:FONTFC(14) textAlignment:NSTextAlignmentCenter];
-    //        [mainButton addSubview:bottomLabel];
-    //    }
-    //
-    //    UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, WIDTHFC, HEIGHTFC - 49) style:UITableViewStylePlain];
-    //    tableView.delegate = self;
-    //    tableView.dataSource = self;
-    //    [self.view addSubview:tableView];
-    //    tableView.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"home_backImage"]];
-    //    tableView.tableHeaderView = headView;
+    UILabel *callLabel = [FSViewManager labelWithFrame:CGRectMake(10, _headImageView.bottom, WIDTHFC - 10, 50) text:@"报价查询" textColor:FS_TextColor_Normal backColor:nil font:FONTFC(18) textAlignment:NSTextAlignmentLeft];
+    [self.scrollView addSubview:callLabel];
+    
+    UITextField *textField = [FSViewManager textFieldWithFrame:CGRectMake(10, callLabel.bottom, WIDTHFC - 20, 50) placeholder:@"您的房屋面积/平米" textColor:FS_TextColor_Normal backColor:nil];
+    [self.scrollView addSubview:textField];
+    [textField addSubview:[FSViewManager seprateViewWithFrame:CGRectMake(0, textField.height - FS_LineThickness, textField.width, FS_LineThickness)]];
+    
+    UIButton *queryButton = [FSViewManager buttonWithFrame:CGRectMake(10, textField.bottom + 20, WIDTHFC - 20, 44) title:@"点我查询" titleColor:[UIColor whiteColor] backColor:APPCOLOR fontInt:16 tag:0 target:self selector:@selector(buttonClick:)];
+    [self.scrollView addSubview:queryButton];
+    
+    CGFloat width = (self.view.width - 20) / 4;
+    NSArray *picTitles = @[@"A",@"B",@"C",@"D"];
+    NSArray *titles = @[@"豪华",@"品牌",@"精致",@"简单"];
+
+    for (int x = 0; x < 4; x ++) {
+        UIButton *mainButton = [FSViewManager buttonWithFrame:CGRectMake(10 + width * x, queryButton.bottom + 40, width, width) title:nil titleColor:nil backColor:nil fontInt:0 tag:TAGBUTTON + x target:self selector:@selector(buttonClick:)];
+        [self.scrollView addSubview:mainButton];
+
+        UILabel *label = [FSViewManager labelWithFrame:CGRectMake(width / 2 - (width - 40) / 2, 0, width - 40, width - 40) text:picTitles[x] textColor:[UIColor whiteColor] backColor:APPCOLOR font:FONTBOLD(15) textAlignment:NSTextAlignmentCenter];
+        label.layer.masksToBounds = YES;
+        label.layer.cornerRadius = label.height / 2;
+        [mainButton addSubview:label];
+
+        UILabel *bottomLabel = [FSViewManager labelWithFrame:CGRectMake(0, width - 30, width, 30) text:titles[x] textColor:nil backColor:nil font:FONTFC(14) textAlignment:NSTextAlignmentCenter];
+        [mainButton addSubview:bottomLabel];
+    }
+
+    UILabel *flowLabel = [FSViewManager labelWithFrame:CGRectMake(10, queryButton.bottom + 40 + width + 20, WIDTHFC - 10, 50) text:@"流程图" textColor:FS_TextColor_Normal backColor:nil font:FONTFC(18) textAlignment:NSTextAlignmentLeft];
+    [self.scrollView addSubview:flowLabel];
+    
+    // 勘房-设计-签约-装修-验收-完成
     
     //    [tableView setContentInset:UIEdgeInsetsMake(_halfHeight, 0, 0, 0)];
 }
