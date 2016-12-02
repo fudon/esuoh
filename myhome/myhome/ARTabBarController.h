@@ -10,6 +10,6 @@
 
 @interface ARTabBarController : UITabBarController
 
-- (instancetype)initWithClasses:(NSArray<NSString*>*)classes titles:(NSArray<NSString*>*)titles types:(NSArray<NSNumber*>*)types;
+- (instancetype)initWithClasses:(NSArray<NSString*>*)classes titles:(NSArray<NSString*>*)titles types:(NSArray<NSNumber*>*)types selectedColor:(UIColor *)selectedColor;
 
 @end

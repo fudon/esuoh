@@ -15,7 +15,7 @@
 
 @implementation ARTabBarController
 
-- (instancetype)initWithClasses:(NSArray<NSString*>*)classes titles:(NSArray<NSString*>*)titles types:(NSArray<NSNumber*>*)types
+- (instancetype)initWithClasses:(NSArray<NSString*>*)classes titles:(NSArray<NSString*>*)titles types:(NSArray<NSNumber*>*)types selectedColor:(UIColor *)selectedColor
 {
     self = [super init];
     if (self) {
@@ -26,6 +26,10 @@
             FSNavigationController *navi = [[FSNavigationController alloc] initWithRootViewController:controller];
             UITabBarItem *tbi = [[UITabBarItem alloc] initWithTabBarSystemItem:[types[x] integerValue] tag:x];
             [tbi setValue:titles[x] forKeyPath:@"_title"];
+            if ([selectedColor isKindOfClass:[UIColor class]]) {
+                [[UITabBar appearance] setTintColor:selectedColor];
+                [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:selectedColor,NSForegroundColorAttributeName,nil] forState:UIControlStateSelected];
+            }
             navi.tabBarItem = tbi;
             [vcs addObject:navi];
         }
