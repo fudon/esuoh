@@ -43,6 +43,7 @@
 		5CFE60281DC75B9C003640A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CFE60261DC75B9C003640A4 /* LaunchScreen.storyboard */; };
 		5CFE61A01DC75C11003640A4 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CFE619F1DC75C11003640A4 /* libsqlite3.0.tbd */; };
 		71474B6A1DCABB1C0063DA08 /* ARTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71474B691DCABB1C0063DA08 /* ARTabBarController.m */; };
+		714F6EAD1DF2FC1A00E96EED /* HAToolController.m in Sources */ = {isa = PBXBuildFile; fileRef = 714F6EAC1DF2FC1A00E96EED /* HAToolController.m */; };
 		71A66E7B1DEF1250002C28B9 /* HAShopController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71A66E7A1DEF1250002C28B9 /* HAShopController.m */; };
 		71DC24091DD2011B00BEB193 /* FSDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 71DC23131DD2011A00BEB193 /* FSDBManager.m */; };
 		71DC240A1DD2011B00BEB193 /* FSAccountDoorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71DC23161DD2011A00BEB193 /* FSAccountDoorController.m */; };
@@ -186,6 +187,8 @@
 		6584AD39FD918E283A90C913 /* Pods-myhome.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myhome.release.xcconfig"; path = "Pods/Target Support Files/Pods-myhome/Pods-myhome.release.xcconfig"; sourceTree = "<group>"; };
 		71474B681DCABB1C0063DA08 /* ARTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTabBarController.h; sourceTree = "<group>"; };
 		71474B691DCABB1C0063DA08 /* ARTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTabBarController.m; sourceTree = "<group>"; };
+		714F6EAB1DF2FC1A00E96EED /* HAToolController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HAToolController.h; sourceTree = "<group>"; };
+		714F6EAC1DF2FC1A00E96EED /* HAToolController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HAToolController.m; sourceTree = "<group>"; };
 		71A66E791DEF1250002C28B9 /* HAShopController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HAShopController.h; sourceTree = "<group>"; };
 		71A66E7A1DEF1250002C28B9 /* HAShopController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HAShopController.m; sourceTree = "<group>"; };
 		71DC23121DD2011A00BEB193 /* FSDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSDBManager.h; sourceTree = "<group>"; };
@@ -437,6 +440,8 @@
 				5CA360D51DC8AD7600523FF5 /* ARHomeController.m */,
 				5C3B33B71DD4448D000B620A /* HACityController.h */,
 				5C3B33B81DD4448D000B620A /* HACityController.m */,
+				714F6EAB1DF2FC1A00E96EED /* HAToolController.h */,
+				714F6EAC1DF2FC1A00E96EED /* HAToolController.m */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -1069,6 +1074,7 @@
 				71DC24151DD2011B00BEB193 /* ChineseCalendarView.m in Sources */,
 				71DC244D1DD2011B00BEB193 /* README.md in Sources */,
 				71DC24091DD2011B00BEB193 /* FSDBManager.m in Sources */,
+				714F6EAD1DF2FC1A00E96EED /* HAToolController.m in Sources */,
 				71DC243C1DD2011B00BEB193 /* FSWebController.m in Sources */,
 				71DC244A1DD2011B00BEB193 /* FSTaxOfIncomeController.m in Sources */,
 				71DC24241DD2011B00BEB193 /* FSBaseController.m in Sources */,

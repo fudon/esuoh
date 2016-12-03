@@ -42,7 +42,7 @@
     leftBBI.tintColor = [UIColor whiteColor];
     self.navigationItem.leftBarButtonItem = leftBBI;
     
-    UIBarButtonItem *rightBBI = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemOrganize target:self action:@selector(leftBBIAction)];
+    UIBarButtonItem *rightBBI = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemOrganize target:self action:@selector(rightBBIAction)];
     rightBBI.tintColor = [UIColor whiteColor];
     self.navigationItem.rightBarButtonItem = rightBBI;
     
@@ -57,7 +57,7 @@
     UILabel *callLabel = [FSViewManager labelWithFrame:CGRectMake(10, _headImageView.bottom, WIDTHFC - 10, 50) text:@"报价查询" textColor:FS_TextColor_Normal backColor:nil font:FONTFC(18) textAlignment:NSTextAlignmentLeft];
     [self.scrollView addSubview:callLabel];
     
-    UITextField *textField = [FSViewManager textFieldWithFrame:CGRectMake(10, callLabel.bottom, WIDTHFC - 20, 50) placeholder:@"您的房屋面积/平米" textColor:FS_TextColor_Normal backColor:nil];
+    UITextField *textField = [FSViewManager textFieldWithFrame:CGRectMake(10, callLabel.bottom, WIDTHFC - 20, 50) placeholder:@"您的房屋面积•平米" textColor:FS_TextColor_Normal backColor:nil];
     [self.scrollView addSubview:textField];
     [textField addSubview:[FSViewManager seprateViewWithFrame:CGRectMake(0, textField.height - FS_LineThickness, textField.width, FS_LineThickness)]];
     
@@ -101,6 +101,11 @@
             NSLog(@"%@",bCity);
         };
     }];
+}
+
+- (void)rightBBIAction
+{
+    [FuData pushToViewControllerWithClass:@"HAToolController" navigationController:self.navigationController param:nil configBlock:nil];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
