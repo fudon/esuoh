@@ -64,12 +64,13 @@
     UIButton *queryButton = [FSViewManager buttonWithFrame:CGRectMake(10, textField.bottom + 20, WIDTHFC - 20, 44) title:@"点我查询" titleColor:[UIColor whiteColor] backColor:APPCOLOR fontInt:16 tag:0 target:self selector:@selector(buttonClick:)];
     [self.scrollView addSubview:queryButton];
     
-    CGFloat width = (self.view.width - 20) / 4;
-    NSArray *picTitles = @[@"A",@"B",@"C",@"D"];
-    NSArray *titles = @[@"豪华",@"品牌",@"精致",@"简单"];
+    CGFloat width = 90;
+    CGFloat space = (self.view.width - 20 - 3 * width) / 2;
+    NSArray *picTitles = @[@"A",@"B",@"C"];
+    NSArray *titles = @[@"豪装",@"精装",@"简装"];
 
-    for (int x = 0; x < 4; x ++) {
-        UIButton *mainButton = [FSViewManager buttonWithFrame:CGRectMake(10 + width * x, queryButton.bottom + 40, width, width) title:nil titleColor:nil backColor:nil fontInt:0 tag:TAGBUTTON + x target:self selector:@selector(buttonClick:)];
+    for (int x = 0; x < 3; x ++) {
+        UIButton *mainButton = [FSViewManager buttonWithFrame:CGRectMake(10 + (space + width) * x, queryButton.bottom + 40, width, width) title:nil titleColor:nil backColor:nil fontInt:0 tag:TAGBUTTON + x target:self selector:@selector(buttonClick:)];
         [self.scrollView addSubview:mainButton];
 
         UILabel *label = [FSViewManager labelWithFrame:CGRectMake(width / 2 - (width - 40) / 2, 0, width - 40, width - 40) text:picTitles[x] textColor:[UIColor whiteColor] backColor:APPCOLOR font:FONTBOLD(15) textAlignment:NSTextAlignmentCenter];
