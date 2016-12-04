@@ -59,6 +59,7 @@
     [self.scrollView addSubview:callLabel];
     
     UITextField *textField = [FSViewManager textFieldWithFrame:CGRectMake(10, callLabel.bottom, WIDTHFC - 20, 50) placeholder:@"您的房屋面积•平米" textColor:FS_TextColor_Normal backColor:nil];
+    textField.keyboardType = UIKeyboardTypeDecimalPad;
     [self.scrollView addSubview:textField];
     [textField addSubview:[FSViewManager seprateViewWithFrame:CGRectMake(0, textField.height - FS_LineThickness, textField.width, FS_LineThickness)]];
     
@@ -88,8 +89,9 @@
     FSFlowView *flowView = [[FSFlowView alloc] initWithFrame:CGRectMake(0, flowLabel.bottom, WIDTHFC, WIDTHFC) titles:@[@"勘房",@"设计",@"签约",@"完成",@"验收",@"装修"] titleColor:[UIColor whiteColor] btnBackColor:APPCOLOR lineColor:APPCOLOR];
     [self.scrollView addSubview:flowView];
     
+    [self addKeyboardNotificationWithBaseOn:flowView.bottom];
     self.scrollView.contentSize = CGSizeMake(WIDTHFC, flowView.bottom);
-        
+    
     //    [tableView setContentInset:UIEdgeInsetsMake(_halfHeight, 0, 0, 0)];
 }
 
