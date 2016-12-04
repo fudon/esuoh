@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1FD3E4DD471F75164753B4C1 /* libPods-myhome.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AED98BB851B3E5659CC617B6 /* libPods-myhome.a */; };
-		5C3B33B91DD4448D000B620A /* HACityController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3B33B81DD4448D000B620A /* HACityController.m */; };
 		5C7C38DE1DD1D14600D68C3B /* ARAboutController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C38DD1DD1D14600D68C3B /* ARAboutController.m */; };
 		5C9337B31DCB3F800091D3D8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C9337B21DCB3F800091D3D8 /* Security.framework */; };
 		5C9337B81DCB3FA80091D3D8 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C9337B71DCB3FA80091D3D8 /* libiconv.tbd */; };
@@ -26,7 +25,6 @@
 		5C9337FE1DCB447B0091D3D8 /* TencentOpenApi_IOS_Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5C9337EE1DCB447B0091D3D8 /* TencentOpenApi_IOS_Bundle.bundle */; };
 		5C9337FF1DCB447B0091D3D8 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C9337F01DCB447B0091D3D8 /* libWeChatSDK.a */; };
 		5C9338001DCB447B0091D3D8 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5C9337F11DCB447B0091D3D8 /* README.txt */; };
-		5CA360D61DC8AD7600523FF5 /* ARHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CA360D51DC8AD7600523FF5 /* ARHomeController.m */; };
 		5CA360D91DC8ADC300523FF5 /* AROfferController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CA360D81DC8ADC300523FF5 /* AROfferController.m */; };
 		5CA360DC1DC8ADCE00523FF5 /* ARPersonController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CA360DB1DC8ADCE00523FF5 /* ARPersonController.m */; };
 		5CA360DF1DC8ADD800523FF5 /* ARToolController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CA360DE1DC8ADD800523FF5 /* ARToolController.m */; };
@@ -43,7 +41,10 @@
 		5CFE60281DC75B9C003640A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CFE60261DC75B9C003640A4 /* LaunchScreen.storyboard */; };
 		5CFE61A01DC75C11003640A4 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CFE619F1DC75C11003640A4 /* libsqlite3.0.tbd */; };
 		71474B6A1DCABB1C0063DA08 /* ARTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71474B691DCABB1C0063DA08 /* ARTabBarController.m */; };
-		714F6EAD1DF2FC1A00E96EED /* HAToolController.m in Sources */ = {isa = PBXBuildFile; fileRef = 714F6EAC1DF2FC1A00E96EED /* HAToolController.m */; };
+		714F6EB81DF3BC2B00E96EED /* ARHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 714F6EB01DF3BC2B00E96EED /* ARHomeController.m */; };
+		714F6EB91DF3BC2B00E96EED /* HACityController.m in Sources */ = {isa = PBXBuildFile; fileRef = 714F6EB21DF3BC2B00E96EED /* HACityController.m */; };
+		714F6EBA1DF3BC2B00E96EED /* HAToolController.m in Sources */ = {isa = PBXBuildFile; fileRef = 714F6EB41DF3BC2B00E96EED /* HAToolController.m */; };
+		714F6EBB1DF3BC2B00E96EED /* FSFlowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 714F6EB71DF3BC2B00E96EED /* FSFlowView.m */; };
 		71A66E7B1DEF1250002C28B9 /* HAShopController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71A66E7A1DEF1250002C28B9 /* HAShopController.m */; };
 		71DC24091DD2011B00BEB193 /* FSDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 71DC23131DD2011A00BEB193 /* FSDBManager.m */; };
 		71DC240A1DD2011B00BEB193 /* FSAccountDoorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71DC23161DD2011A00BEB193 /* FSAccountDoorController.m */; };
@@ -123,8 +124,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5C3B33B71DD4448D000B620A /* HACityController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HACityController.h; sourceTree = "<group>"; };
-		5C3B33B81DD4448D000B620A /* HACityController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HACityController.m; sourceTree = "<group>"; };
 		5C7C38DC1DD1D14600D68C3B /* ARAboutController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARAboutController.h; sourceTree = "<group>"; };
 		5C7C38DD1DD1D14600D68C3B /* ARAboutController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARAboutController.m; sourceTree = "<group>"; };
 		5C9337B21DCB3F800091D3D8 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
@@ -160,8 +159,6 @@
 		5C9337F21DCB447B0091D3D8 /* WechatAuthSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WechatAuthSDK.h; sourceTree = "<group>"; };
 		5C9337F31DCB447B0091D3D8 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
 		5C9337F41DCB447B0091D3D8 /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
-		5CA360D41DC8AD7600523FF5 /* ARHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARHomeController.h; sourceTree = "<group>"; };
-		5CA360D51DC8AD7600523FF5 /* ARHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARHomeController.m; sourceTree = "<group>"; };
 		5CA360D71DC8ADC300523FF5 /* AROfferController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AROfferController.h; sourceTree = "<group>"; };
 		5CA360D81DC8ADC300523FF5 /* AROfferController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AROfferController.m; sourceTree = "<group>"; };
 		5CA360DA1DC8ADCE00523FF5 /* ARPersonController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARPersonController.h; sourceTree = "<group>"; };
@@ -187,8 +184,14 @@
 		6584AD39FD918E283A90C913 /* Pods-myhome.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myhome.release.xcconfig"; path = "Pods/Target Support Files/Pods-myhome/Pods-myhome.release.xcconfig"; sourceTree = "<group>"; };
 		71474B681DCABB1C0063DA08 /* ARTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTabBarController.h; sourceTree = "<group>"; };
 		71474B691DCABB1C0063DA08 /* ARTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTabBarController.m; sourceTree = "<group>"; };
-		714F6EAB1DF2FC1A00E96EED /* HAToolController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HAToolController.h; sourceTree = "<group>"; };
-		714F6EAC1DF2FC1A00E96EED /* HAToolController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HAToolController.m; sourceTree = "<group>"; };
+		714F6EAF1DF3BC2B00E96EED /* ARHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARHomeController.h; sourceTree = "<group>"; };
+		714F6EB01DF3BC2B00E96EED /* ARHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARHomeController.m; sourceTree = "<group>"; };
+		714F6EB11DF3BC2B00E96EED /* HACityController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HACityController.h; sourceTree = "<group>"; };
+		714F6EB21DF3BC2B00E96EED /* HACityController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HACityController.m; sourceTree = "<group>"; };
+		714F6EB31DF3BC2B00E96EED /* HAToolController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HAToolController.h; sourceTree = "<group>"; };
+		714F6EB41DF3BC2B00E96EED /* HAToolController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HAToolController.m; sourceTree = "<group>"; };
+		714F6EB61DF3BC2B00E96EED /* FSFlowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSFlowView.h; sourceTree = "<group>"; };
+		714F6EB71DF3BC2B00E96EED /* FSFlowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSFlowView.m; sourceTree = "<group>"; };
 		71A66E791DEF1250002C28B9 /* HAShopController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HAShopController.h; sourceTree = "<group>"; };
 		71A66E7A1DEF1250002C28B9 /* HAShopController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HAShopController.m; sourceTree = "<group>"; };
 		71DC23121DD2011A00BEB193 /* FSDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSDBManager.h; sourceTree = "<group>"; };
@@ -436,12 +439,8 @@
 		5CA360D01DC8AD4700523FF5 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				5CA360D41DC8AD7600523FF5 /* ARHomeController.h */,
-				5CA360D51DC8AD7600523FF5 /* ARHomeController.m */,
-				5C3B33B71DD4448D000B620A /* HACityController.h */,
-				5C3B33B81DD4448D000B620A /* HACityController.m */,
-				714F6EAB1DF2FC1A00E96EED /* HAToolController.h */,
-				714F6EAC1DF2FC1A00E96EED /* HAToolController.m */,
+				714F6EAE1DF3BC2B00E96EED /* Controllers */,
+				714F6EB51DF3BC2B00E96EED /* Views */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -571,6 +570,28 @@
 			children = (
 			);
 			path = PublicBase;
+			sourceTree = "<group>";
+		};
+		714F6EAE1DF3BC2B00E96EED /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				714F6EAF1DF3BC2B00E96EED /* ARHomeController.h */,
+				714F6EB01DF3BC2B00E96EED /* ARHomeController.m */,
+				714F6EB11DF3BC2B00E96EED /* HACityController.h */,
+				714F6EB21DF3BC2B00E96EED /* HACityController.m */,
+				714F6EB31DF3BC2B00E96EED /* HAToolController.h */,
+				714F6EB41DF3BC2B00E96EED /* HAToolController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		714F6EB51DF3BC2B00E96EED /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				714F6EB61DF3BC2B00E96EED /* FSFlowView.h */,
+				714F6EB71DF3BC2B00E96EED /* FSFlowView.m */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		71A66E7C1DEF1E3F002C28B9 /* Other */ = {
@@ -1074,8 +1095,9 @@
 				71DC24151DD2011B00BEB193 /* ChineseCalendarView.m in Sources */,
 				71DC244D1DD2011B00BEB193 /* README.md in Sources */,
 				71DC24091DD2011B00BEB193 /* FSDBManager.m in Sources */,
-				714F6EAD1DF2FC1A00E96EED /* HAToolController.m in Sources */,
+				714F6EBA1DF3BC2B00E96EED /* HAToolController.m in Sources */,
 				71DC243C1DD2011B00BEB193 /* FSWebController.m in Sources */,
+				714F6EB81DF3BC2B00E96EED /* ARHomeController.m in Sources */,
 				71DC244A1DD2011B00BEB193 /* FSTaxOfIncomeController.m in Sources */,
 				71DC24241DD2011B00BEB193 /* FSBaseController.m in Sources */,
 				5C7C38DE1DD1D14600D68C3B /* ARAboutController.m in Sources */,
@@ -1116,7 +1138,6 @@
 				71DC24361DD2011B00BEB193 /* FSDatePickerView.m in Sources */,
 				5CFE601D1DC75B9C003640A4 /* AppDelegate.m in Sources */,
 				71DC240F1DD2011B00BEB193 /* FSFMListController.m in Sources */,
-				5CA360D61DC8AD7600523FF5 /* ARHomeController.m in Sources */,
 				71DC24771DD2011B00BEB193 /* FuWeb.m in Sources */,
 				71DC24141DD2011B00BEB193 /* FIBaseEntity.m in Sources */,
 				71DC242B1DD2011B00BEB193 /* FSCacheManager.m in Sources */,
@@ -1135,10 +1156,11 @@
 				5CFE601A1DC75B9C003640A4 /* main.m in Sources */,
 				71DC24201DD2011B00BEB193 /* FlowCollector.m in Sources */,
 				5C9337FA1DCB447B0091D3D8 /* FSTouchView.m in Sources */,
-				5C3B33B91DD4448D000B620A /* HACityController.m in Sources */,
 				71DC24291DD2011B00BEB193 /* FSNavigationController.m in Sources */,
 				71DC240C1DD2011B00BEB193 /* FSFMAccountController.m in Sources */,
 				71DC24321DD2011B00BEB193 /* FSTapLabel.m in Sources */,
+				714F6EB91DF3BC2B00E96EED /* HACityController.m in Sources */,
+				714F6EBB1DF3BC2B00E96EED /* FSFlowView.m in Sources */,
 				71DC243E1DD2011B00BEB193 /* FSMakeQRController.m in Sources */,
 				71DC24281DD2011B00BEB193 /* FSLeftItem.m in Sources */,
 				71DC24371DD2011B00BEB193 /* FSSelectController.m in Sources */,

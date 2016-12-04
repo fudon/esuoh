@@ -9,6 +9,7 @@
 #import "ARHomeController.h"
 #import "FuSoft.h"
 #import "HACityController.h"
+#import "FSFlowView.h"
 
 @interface ARHomeController ()
 
@@ -84,8 +85,11 @@
     UILabel *flowLabel = [FSViewManager labelWithFrame:CGRectMake(10, queryButton.bottom + 40 + width + 20, WIDTHFC - 10, 50) text:@"流程图" textColor:FS_TextColor_Normal backColor:nil font:FONTFC(18) textAlignment:NSTextAlignmentLeft];
     [self.scrollView addSubview:flowLabel];
     
-    // 勘房-设计-签约-装修-验收-完成
+    FSFlowView *flowView = [[FSFlowView alloc] initWithFrame:CGRectMake(0, flowLabel.bottom, WIDTHFC, WIDTHFC) titles:@[@"勘房",@"设计",@"签约",@"完成",@"验收",@"装修"] titleColor:[UIColor whiteColor] btnBackColor:APPCOLOR lineColor:APPCOLOR];
+    [self.scrollView addSubview:flowView];
     
+    self.scrollView.contentSize = CGSizeMake(WIDTHFC, flowView.bottom);
+        
     //    [tableView setContentInset:UIEdgeInsetsMake(_halfHeight, 0, 0, 0)];
 }
 
