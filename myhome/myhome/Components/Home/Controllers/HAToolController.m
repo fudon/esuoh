@@ -19,7 +19,7 @@
     [super viewDidLoad];
     self.title = @"应用";
     
-    self.backItemColor = [UIColor whiteColor];
+    self.backTintColor = [UIColor whiteColor];
 }
 
 - (void)didReceiveMemoryWarning {

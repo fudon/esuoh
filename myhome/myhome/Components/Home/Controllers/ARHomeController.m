@@ -31,9 +31,7 @@
 - (void)homeDeisgnViews
 {
     self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
-    
     self.navigationController.navigationBar.barTintColor = APPCOLOR;
-
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor whiteColor],NSFontAttributeName : [UIFont boldSystemFontOfSize:18]};
     
 //    _barImageView = self.navigationController.navigationBar.subviews.firstObject;
@@ -83,7 +81,7 @@
         [mainButton addSubview:bottomLabel];
     }
 
-    UILabel *flowLabel = [FSViewManager labelWithFrame:CGRectMake(10, queryButton.bottom + 40 + width + 20, WIDTHFC - 10, 50) text:@"流程图" textColor:FS_TextColor_Normal backColor:nil font:FONTFC(18) textAlignment:NSTextAlignmentLeft];
+    UILabel *flowLabel = [FSViewManager labelWithFrame:CGRectMake(10, queryButton.bottom + 40 + width + 20, WIDTHFC - 10, 50) text:@"流程六步走" textColor:FS_TextColor_Normal backColor:nil font:FONTFC(18) textAlignment:NSTextAlignmentLeft];
     [self.scrollView addSubview:flowLabel];
     
     FSFlowView *flowView = [[FSFlowView alloc] initWithFrame:CGRectMake(0, flowLabel.bottom, WIDTHFC, WIDTHFC) titles:@[@"勘房",@"设计",@"签约",@"完成",@"验收",@"装修"] titleColor:[UIColor whiteColor] btnBackColor:APPCOLOR lineColor:APPCOLOR];

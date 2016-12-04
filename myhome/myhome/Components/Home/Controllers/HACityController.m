@@ -22,6 +22,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.backTintColor = [UIColor whiteColor];
     self.title = @"选择城市";
     
     self.cityArray = [self cityArrays];
