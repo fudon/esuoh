@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1FD3E4DD471F75164753B4C1 /* libPods-myhome.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AED98BB851B3E5659CC617B6 /* libPods-myhome.a */; };
+		5C15E2881DF5140900BBBA5C /* FSLoanCounterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C15E2851DF5140900BBBA5C /* FSLoanCounterController.m */; };
+		5C15E2891DF5140900BBBA5C /* FSLoanResultController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C15E2871DF5140900BBBA5C /* FSLoanResultController.m */; };
 		5C7C38DE1DD1D14600D68C3B /* ARAboutController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C38DD1DD1D14600D68C3B /* ARAboutController.m */; };
 		5C9337B31DCB3F800091D3D8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C9337B21DCB3F800091D3D8 /* Security.framework */; };
 		5C9337B81DCB3FA80091D3D8 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C9337B71DCB3FA80091D3D8 /* libiconv.tbd */; };
@@ -128,6 +130,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5C15E2841DF5140900BBBA5C /* FSLoanCounterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSLoanCounterController.h; sourceTree = "<group>"; };
+		5C15E2851DF5140900BBBA5C /* FSLoanCounterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSLoanCounterController.m; sourceTree = "<group>"; };
+		5C15E2861DF5140900BBBA5C /* FSLoanResultController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSLoanResultController.h; sourceTree = "<group>"; };
+		5C15E2871DF5140900BBBA5C /* FSLoanResultController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSLoanResultController.m; sourceTree = "<group>"; };
 		5C7C38DC1DD1D14600D68C3B /* ARAboutController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARAboutController.h; sourceTree = "<group>"; };
 		5C7C38DD1DD1D14600D68C3B /* ARAboutController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARAboutController.m; sourceTree = "<group>"; };
 		5C9337B21DCB3F800091D3D8 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
@@ -381,6 +387,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C15E2831DF5140900BBBA5C /* LoanCounter */ = {
+			isa = PBXGroup;
+			children = (
+				5C15E2841DF5140900BBBA5C /* FSLoanCounterController.h */,
+				5C15E2851DF5140900BBBA5C /* FSLoanCounterController.m */,
+				5C15E2861DF5140900BBBA5C /* FSLoanResultController.h */,
+				5C15E2871DF5140900BBBA5C /* FSLoanResultController.m */,
+			);
+			path = LoanCounter;
+			sourceTree = "<group>";
+		};
 		5C9337D41DCB447B0091D3D8 /* FSShareManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -794,6 +811,7 @@
 		71DC23551DD2011A00BEB193 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				5C15E2831DF5140900BBBA5C /* LoanCounter */,
 				71DC23561DD2011A00BEB193 /* FSBase */,
 				71DC23651DD2011A00BEB193 /* FSCacheManager */,
 				71DC23681DD2011A00BEB193 /* FSCustomUI */,
@@ -1168,6 +1186,7 @@
 				71DC24111DD2011B00BEB193 /* FSFMSelectController.m in Sources */,
 				71DC24361DD2011B00BEB193 /* FSDatePickerView.m in Sources */,
 				5CFE601D1DC75B9C003640A4 /* AppDelegate.m in Sources */,
+				5C15E2891DF5140900BBBA5C /* FSLoanResultController.m in Sources */,
 				71DC240F1DD2011B00BEB193 /* FSFMListController.m in Sources */,
 				71DC24771DD2011B00BEB193 /* FuWeb.m in Sources */,
 				71DC24141DD2011B00BEB193 /* FIBaseEntity.m in Sources */,
@@ -1198,6 +1217,7 @@
 				71DC24371DD2011B00BEB193 /* FSSelectController.m in Sources */,
 				71DC24251DD2011B00BEB193 /* FSBaseView.m in Sources */,
 				71DC243B1DD2011B00BEB193 /* FSHTMLController.m in Sources */,
+				5C15E2881DF5140900BBBA5C /* FSLoanCounterController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
