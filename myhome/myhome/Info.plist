@@ -86,8 +86,12 @@
 	<string>需要您的同意，获取本地地址信息</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>请允许保存相片到图册</string>
+	<key>NSCameraUsageDescription</key>
+	<string>请允许打开相机，不然无法拍照或扫描</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>请您允许访问您的地址</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>
