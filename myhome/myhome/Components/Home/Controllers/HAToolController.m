@@ -23,9 +23,7 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-    [self qiniuAction];
-    
+    [super viewDidLoad];    
     self.title = @"小应用";
     self.backTintColor = [UIColor whiteColor];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(bbiAction)];
