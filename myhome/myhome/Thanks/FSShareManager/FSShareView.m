@@ -95,28 +95,28 @@
     
     if (tag == FSShareTypeWeibo) {
         [FSShareManager wt_shareWithContent:[FSShareEntity shareWTShareContentItem] shareType:FSShareTypeWeibo shareResult:^(NSString *shareResult) {
-            [FuData showAlertViewWithTitle:shareResult];
+            [FuData showAlertViewWithTitle:nil message:shareResult];
         }];
         
     }else if (tag == FSShareTypeQQ){
         [FSShareManager wt_shareWithContent:[FSShareEntity shareWTShareContentItem] shareType:FSShareTypeQQ shareResult:^(NSString *shareResult) {
-            [FuData showAlertViewWithTitle:shareResult];
+            [FuData showAlertViewWithTitle:nil message:shareResult];
         }];
     }else if (tag == FSShareTypeQQZone){
         [FSShareManager wt_shareWithContent:[FSShareEntity shareWTShareContentItem] shareType:FSShareTypeQQZone shareResult:^(NSString *shareResult) {
-            [FuData showAlertViewWithTitle:shareResult];
+            [FuData showAlertViewWithTitle:nil message:shareResult];
         }];
     }else if (tag == FSShareTypeWXFriends){
         [FSShareManager wt_shareWithContent:[FSShareEntity shareWTShareContentItem] shareType:FSShareTypeWXFriends shareResult:^(NSString *shareResult) {
-            [FuData showAlertViewWithTitle:shareResult];
+            [FuData showAlertViewWithTitle:nil message:shareResult];
         }];
     }else if (tag == FSShareTypeWechat){
         [FSShareManager wt_shareWithContent:[FSShareEntity shareWTShareContentItem] shareType:FSShareTypeWechat shareResult:^(NSString *shareResult) {
-            [FuData showAlertViewWithTitle:shareResult];
+            [FuData showAlertViewWithTitle:nil message:shareResult];
         }];
     }else if (tag == FSShareTypeWXStore){
         [FSShareManager wt_shareWithContent:[FSShareEntity shareWTShareContentItem] shareType:FSShareTypeWXStore shareResult:^(NSString *shareResult) {
-            [FuData showAlertViewWithTitle:shareResult];
+            [FuData showAlertViewWithTitle:nil message:shareResult];
         }];
     }else if (tag == FSShareTypeMessage){
         [[FSShareManager shareInstance] messageShareWithMessage:@"分享的内容" recipients:nil controller:self.callController];
