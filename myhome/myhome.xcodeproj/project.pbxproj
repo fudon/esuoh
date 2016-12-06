@@ -36,6 +36,7 @@
 		5CB3A0331DCA04D400564280 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CB3A0321DCA04D400564280 /* CoreVideo.framework */; };
 		5CB3A0351DCA04F400564280 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CB3A0341DCA04F400564280 /* CoreMedia.framework */; };
 		5CDBCDAF1DD057EA001CFC39 /* FSShareEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CDBCDAE1DD057EA001CFC39 /* FSShareEntity.m */; };
+		5CE70A651DF6CA2E001FA04B /* FSStoreManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CE70A641DF6CA2E001FA04B /* FSStoreManager.m */; };
 		5CFE601A1DC75B9C003640A4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CFE60191DC75B9C003640A4 /* main.m */; };
 		5CFE601D1DC75B9C003640A4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CFE601C1DC75B9C003640A4 /* AppDelegate.m */; };
 		5CFE60231DC75B9C003640A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CFE60211DC75B9C003640A4 /* Main.storyboard */; };
@@ -182,6 +183,8 @@
 		5CB3A0341DCA04F400564280 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		5CDBCDAD1DD057EA001CFC39 /* FSShareEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSShareEntity.h; sourceTree = "<group>"; };
 		5CDBCDAE1DD057EA001CFC39 /* FSShareEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSShareEntity.m; sourceTree = "<group>"; };
+		5CE70A631DF6CA2E001FA04B /* FSStoreManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSStoreManager.h; sourceTree = "<group>"; };
+		5CE70A641DF6CA2E001FA04B /* FSStoreManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSStoreManager.m; sourceTree = "<group>"; };
 		5CFE60151DC75B9C003640A4 /* myhome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myhome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CFE60191DC75B9C003640A4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5CFE601B1DC75B9C003640A4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -515,6 +518,15 @@
 			path = Thanks;
 			sourceTree = "<group>";
 		};
+		5CE70A621DF6CA2E001FA04B /* StoreManager */ = {
+			isa = PBXGroup;
+			children = (
+				5CE70A631DF6CA2E001FA04B /* FSStoreManager.h */,
+				5CE70A641DF6CA2E001FA04B /* FSStoreManager.m */,
+			);
+			path = StoreManager;
+			sourceTree = "<group>";
+		};
 		5CFE600C1DC75B9C003640A4 = {
 			isa = PBXGroup;
 			children = (
@@ -811,6 +823,7 @@
 		71DC23551DD2011A00BEB193 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				5CE70A621DF6CA2E001FA04B /* StoreManager */,
 				5C15E2831DF5140900BBBA5C /* LoanCounter */,
 				71DC23561DD2011A00BEB193 /* FSBase */,
 				71DC23651DD2011A00BEB193 /* FSCacheManager */,
@@ -1145,6 +1158,7 @@
 				71DC243C1DD2011B00BEB193 /* FSWebController.m in Sources */,
 				714F6EB81DF3BC2B00E96EED /* ARHomeController.m in Sources */,
 				71DC244A1DD2011B00BEB193 /* FSTaxOfIncomeController.m in Sources */,
+				5CE70A651DF6CA2E001FA04B /* FSStoreManager.m in Sources */,
 				71DC24241DD2011B00BEB193 /* FSBaseController.m in Sources */,
 				5C7C38DE1DD1D14600D68C3B /* ARAboutController.m in Sources */,
 				71DC24351DD2011B00BEB193 /* FSWebImageView.m in Sources */,
