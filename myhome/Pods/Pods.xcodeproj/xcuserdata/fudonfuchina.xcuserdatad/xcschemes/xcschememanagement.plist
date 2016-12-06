@@ -4,25 +4,56 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>AFNetworking.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+		<key>HappyDNS.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
 		<key>MJRefresh.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>1</integer>
 		</dict>
 		<key>Pods-myhome.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>Qiniu.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>6</integer>
 		</dict>
 		<key>SDWebImage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>3</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>2606512E4A9E50309CDD005B0BA18A4F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>49F45F69162E2EE6C6A039EDB1E82526</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5A61E696559ABE95A6E00217EB3E5D97</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -33,6 +64,21 @@
 			<true/>
 		</dict>
 		<key>7A21ABC6D0912958E2BC0BE31542DC05</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>928353533005A4198EBDA5B700D37B64</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AE249C5AA7FB11612395DE3DF161CF61</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D0EA7BD0DF7B64D1D22AE99C93B3613D</key>
 		<dict>
 			<key>primary</key>
 			<true/>

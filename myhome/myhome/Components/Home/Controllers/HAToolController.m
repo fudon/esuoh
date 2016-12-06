@@ -13,6 +13,7 @@
 #import "FSAccessController.h"
 #import "FSSameKindController.h"
 #import "FSChineseCalendarController.h"
+#import "FSStoreManager.h"
 
 @interface HAToolController ()
 
@@ -23,6 +24,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self qiniuAction];
+    
     self.title = @"小应用";
     self.backTintColor = [UIColor whiteColor];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(bbiAction)];
@@ -40,6 +43,14 @@
         imageView.tag = TAGIMAGEVIEW + x;
         [self.scrollView addSubview:imageView];
     }
+}
+
+- (void)qiniuAction
+{
+    NSData *data = [@"china" dataUsingEncoding:NSUTF8StringEncoding];
+    [FSStoreManager uploadUTF8Data:data key:@"china" completion:^{
+        
+    }];
 }
 
 - (void)bbiAction

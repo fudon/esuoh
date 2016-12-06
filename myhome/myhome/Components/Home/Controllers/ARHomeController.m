@@ -10,7 +10,6 @@
 #import "FuSoft.h"
 #import "HACityController.h"
 #import "FSFlowView.h"
-#import "FSStoreManager.h"
 
 @interface ARHomeController ()
 
@@ -27,17 +26,7 @@
     [super viewDidLoad];
     self.title = @"我要装修";
     
-    [self qiniuAction];
-    
     [self homeDeisgnViews];
-}
-
-- (void)qiniuAction
-{
-    NSData *data = [@"china" dataUsingEncoding:NSUTF8StringEncoding];
-    [FSStoreManager uploadUTF8Data:data key:@"china" completion:^{
-        
-    }];
 }
 
 - (void)homeDeisgnViews
