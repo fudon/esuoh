@@ -22,41 +22,42 @@
     if (_imageList != imageList) {
         _imageList = imageList;
         
+        if (!([imageList isKindOfClass:[NSArray class]] && imageList.count)) {
+            return;
+        }
+        
         if (!_scrollView) {
             _scrollView = [[UIScrollView alloc] initWithFrame:self.bounds];
             _scrollView.pagingEnabled = YES;
             _scrollView.delegate = self;
+            _scrollView.contentSize = CGSizeMake(3 * self.frame.size.width, self.frame.size.height);
             [self addSubview:_scrollView];
             
-            _pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(self.frame.size.width / 3, self.frame.size.height - 50, self.frame.size.width / 3, 50)];
+            for (int x = 0; x < 3; x ++) {
+                CGRect frame = CGRectMake(x * self.frame.size.width, 0, self.frame.size.width, self.frame.size.height);
+                UIImageView *imageView = [[UIImageView alloc] initWithFrame:frame];
+                imageView.clipsToBounds = YES;
+                imageView.tag = 1000 + x;
+                [_scrollView addSubview:imageView];
+                imageView.frame = frame;
+            }
+            _pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(self.frame.size.width / 3, self.frame.size.height - 30, self.frame.size.width / 3, 30)];
             _pageControl.hidesForSinglePage = YES;
             _pageControl.pageIndicatorTintColor = [UIColor whiteColor];
             _pageControl.currentPageIndicatorTintColor = [UIColor redColor];
             [self addSubview:_pageControl];
         }
+        _scrollView.contentOffset = CGPointMake(self.frame.size.width, 0);
         _pageControl.numberOfPages = imageList.count;
+        _pageControl.currentPage = 0;
         
-        for (UIImageView *imageView in _scrollView.subviews) {
-            if (imageView.tag >= 1000) {
-                imageView.hidden = YES;
+        NSArray *images = @[imageList[(imageList.count - 1) % imageList.count],imageList[0],imageList[1%imageList.count]];
+        [_scrollView.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            if ((obj.tag == 1000 + idx) && [obj isKindOfClass:[UIImageView class]]) {
+                UIImageView *imageView = obj;
+                imageView.image = images[idx];
             }
-        }
-        
-        for (int x = 0; x < imageList.count; x ++) {
-            CGRect frame = CGRectMake(x * self.frame.size.width, 0, self.frame.size.width, self.frame.size.height);
-            UIImageView *imageView = [_scrollView viewWithTag:1000 + x];
-            if (!imageView) {
-                imageView = [[UIImageView alloc] initWithFrame:frame];
-                imageView.clipsToBounds = YES;
-                imageView.tag = 1000 + x;
-                [_scrollView addSubview:imageView];
-            }
-            imageView.frame = frame;
-            imageView.image = imageList[x];
-        }
-        _scrollView.contentSize = CGSizeMake(imageList.count * self.frame.size.width, self.frame.size.height);
-        
-        
+        }];
     }
 }
 
