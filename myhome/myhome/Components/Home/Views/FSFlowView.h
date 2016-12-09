@@ -10,6 +10,8 @@
 
 @interface FSFlowView : UIView
 
+@property (nonatomic,copy) void (^btnClick)(UIButton *bButton);
+
 - (instancetype)initWithFrame:(CGRect)frame titles:(NSArray<NSString *> *)titles titleColor:(UIColor *)titleColor btnBackColor:(UIColor *)backColor lineColor:(UIColor *)lineColor;
 
 @end

@@ -26,7 +26,9 @@
         UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
         button.frame = CGRectMake(30 + (width + 50) * (x % 3), 20 + (width + 40) * (x / 3), width, width);
         button.backgroundColor = backColor;
+        [button addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
         [button setTitle:titles[x] forState:UIControlStateNormal];
+        button.tag = x;
         [button setTitleColor:titleColor forState:UIControlStateNormal];
         button.layer.cornerRadius = button.frame.size.width / 2;
         [self addSubview:button];
@@ -43,6 +45,13 @@
     }
     CGFloat height = 20 + width + 40 + width + 20;
     self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, height);
+}
+
+- (void)btnClick:(UIButton *)button
+{
+    if (self.btnClick) {
+        self.btnClick(button);
+    }
 }
 
 /*

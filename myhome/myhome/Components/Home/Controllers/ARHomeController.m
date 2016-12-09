@@ -10,12 +10,12 @@
 #import "FuSoft.h"
 #import "HACityController.h"
 #import "FSFlowView.h"
+#import "FSWebImageView.h"
 
 @interface ARHomeController ()
 
 @property (nonatomic,strong) UIView             *barImageView;
-@property (nonatomic,strong) UIImageView        *headImageView;
-@property (nonatomic,assign) CGAffineTransform  headTransform;
+@property (nonatomic,strong) FSWebImageView     *headImageView;
 
 @end
 
@@ -35,9 +35,6 @@
     self.navigationController.navigationBar.barTintColor = APPCOLOR;
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor whiteColor],NSFontAttributeName : [UIFont boldSystemFontOfSize:18]};
     
-//    _barImageView = self.navigationController.navigationBar.subviews.firstObject;
-//    _barImageView.alpha = 0;
-    
     UIBarButtonItem *leftBBI = [[UIBarButtonItem alloc] initWithTitle:@"长沙" style:UIBarButtonItemStylePlain target:self action:@selector(leftBBIAction)];
     leftBBI.tintColor = [UIColor whiteColor];
     self.navigationItem.leftBarButtonItem = leftBBI;
@@ -46,10 +43,13 @@
     rightBBI.tintColor = [UIColor whiteColor];
     self.navigationItem.rightBarButtonItem = rightBBI;
     
-    _headImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, WIDTHFC, WIDTHFC * .625)];
+    _headImageView = [[FSWebImageView alloc] initWithFrame:CGRectMake(0, 0, WIDTHFC, WIDTHFC * .625)];
     _headImageView.image = [UIImage imageNamed:@"home_backImage"];
     [self.scrollView addSubview:_headImageView];
-    self.headTransform = _headImageView.transform;
+    WEAKSELF(this);
+    [_headImageView setBlock:^(FSWebImageView *bView, FSWebImageViewAction bType) {
+        [FuData pushToViewControllerWithClass:@"HARewardPolicyController" navigationController:this.navigationController param:nil configBlock:nil];
+    }];
     
     self.scrollView.frame = CGRectMake(0, 0, self.view.width, self.view.height - 49);
     self.scrollView.showsVerticalScrollIndicator = NO;
@@ -88,11 +88,12 @@
     
     FSFlowView *flowView = [[FSFlowView alloc] initWithFrame:CGRectMake(0, flowLabel.bottom, WIDTHFC, WIDTHFC) titles:@[@"勘房",@"设计",@"签约",@"完成",@"验收",@"装修"] titleColor:[UIColor whiteColor] btnBackColor:APPCOLOR lineColor:APPCOLOR];
     [self.scrollView addSubview:flowView];
+    [flowView setBtnClick:^(UIButton *bButton) {
+        [FuData pushToViewControllerWithClass:@"HAFlowController" navigationController:this.navigationController param:@{@"type":@(bButton.tag)} configBlock:nil];
+    }];
     
     [self addKeyboardNotificationWithBaseOn:flowView.bottom];
     self.scrollView.contentSize = CGSizeMake(WIDTHFC, flowView.bottom);
-    
-    //    [tableView setContentInset:UIEdgeInsetsMake(_halfHeight, 0, 0, 0)];
 }
 
 - (void)buttonClick:(UIButton *)button
@@ -138,37 +139,6 @@
 {
     return 80;
 }
-
-#pragma mark UIScrollViewDelegate
-//- (void)scrollViewDidScroll:(UIScrollView *)scrollView
-//{
-//    CGFloat offsetY = scrollView.contentOffset.y;
-//    if (offsetY < 0) {
-//        NSLog(@"%f",offsetY);
-//        CGFloat absValue = - offsetY;
-//        CGFloat rate = absValue / HEIGHTFC;
-//        self.headImageView.transform = CGAffineTransformScale(self.headTransform, 1 + rate, 1 + rate);
-//    }else{
-//        self.headImageView.top = - MIN(offsetY, self.headImageView.height);
-//        self.headImageView.transform = self.headTransform;
-//    }
-//}
-
-//- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
-//{
-//    int offsetY = (int)scrollView.contentOffset.y;
-//    NSLog(@"%d",offsetY);
-//    if (offsetY == 0) {
-//        WEAKSELF(this);
-//        [UIView animateWithDuration:.3 animations:^{
-//            this.scrollView.contentOffset = CGPointMake(0, 0);
-//            this.headImageView.top = 0;
-//            this.barImageView.alpha = 0;
-//        }];
-//        
-//        NSLog(@"CALL HERE");
-//    }
-//}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
