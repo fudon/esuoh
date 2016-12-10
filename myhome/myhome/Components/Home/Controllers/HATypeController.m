@@ -24,7 +24,7 @@
 - (void)typeDesignViews
 {
     FSCyclicView *cycView = [[FSCyclicView alloc] initWithFrame:CGRectMake(0, 0, self.view.width, 200)];
-    cycView.imageList = @[[UIImage imageNamed:@"home_backImage"],[UIImage imageNamed:@"home_backImage"],[UIImage imageNamed:@"home_backImage"]];
+    cycView.imageList = @[[UIImage imageNamed:@"home_backImage"],[UIImage imageNamed:@"homeTest_placeholder"],[UIImage imageNamed:@"homeTest_image"]];
     [self.scrollView addSubview:cycView];
 }
 
