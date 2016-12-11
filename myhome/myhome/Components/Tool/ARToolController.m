@@ -7,6 +7,7 @@
 //
 
 #import "ARToolController.h"
+#import "FSButtonsView.h"
 
 @interface ARToolController ()
 
@@ -16,7 +17,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"支持服务";
+    self.title = @"装修案例";
+    [self toolDesignViews];
+}
+
+- (void)toolDesignViews
+{
+    FSButtonsView *buttons = [[FSButtonsView alloc] initWithFrame:CGRectMake(0, 64, self.view.width, 44) items:@[@"豪装",@"精装",@"简装"] normalColor:FS_TextColor_Normal selectedColor:APPCOLOR];
+    [self.view addSubview:buttons];
+    [buttons setClickBlock:^(FSButtonsView *bButtons, NSInteger bSelectedIndex) {
+        
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
