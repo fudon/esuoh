@@ -14,6 +14,7 @@
 #import "FSSameKindController.h"
 #import "FSChineseCalendarController.h"
 #import "FSStoreManager.h"
+#import "FSFutureAlertController.h"
 
 @interface HAToolController ()
 
@@ -25,11 +26,15 @@
 {
     [super viewDidLoad];    
     self.title = @"小应用";
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        [self checkFutureAlerts];
+    });
+    
     self.backTintColor = [UIColor whiteColor];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(bbiAction)];
     
-    NSArray *array = @[@"二维码",@"设备信息",@"导航",@"计算器"];
-    NSArray *picArray = @[@"saoma_too",@"deviceInfo",@"navigation_web",@"counter_logo"];
+    NSArray *array = @[@"二维码",@"设备信息",@"导航",@"计算器",@"提醒"];
+    NSArray *picArray = @[@"saoma_too",@"deviceInfo",@"navigation_web",@"counter_logo",@"counter_logo"];
     
     CGFloat width = (WIDTHFC - 100) / 4;
     WEAKSELF(this);
@@ -40,6 +45,18 @@
         };
         imageView.tag = TAGIMAGEVIEW + x;
         [self.scrollView addSubview:imageView];
+    }
+}
+
+- (void)checkFutureAlerts
+{
+    NSArray *array = [FSFutureAlertController futureSevenDaysTODO];
+    if (array.count) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [FuData alertViewAtController:self title:@"提示" message:@"未来七天内您有待办事项" cancelTitle:@"取消" handler:nil okTitle:@"查看" handler:^(UIAlertAction *action) {
+                [FuData pushToViewControllerWithClass:@"FSFutureAlertController" navigationController:self.navigationController param:nil configBlock:nil];
+            } completion:nil];
+        });
     }
 }
 
@@ -121,10 +138,7 @@
             break;
         case 4:
         {
-//            FSHTMLController *flowMetterController = [[FSHTMLController alloc] init];
-//            NSString *path = [[NSBundle mainBundle] pathForResource:@"FSH5" ofType:@"html"];
-//            flowMetterController.localUrlString = path;
-//            [self.navigationController pushViewController:flowMetterController animated:YES];
+            [FuData pushToViewControllerWithClass:@"FSFutureAlertController" navigationController:self.navigationController param:nil configBlock:nil];
         }
             break;
         case 8:
