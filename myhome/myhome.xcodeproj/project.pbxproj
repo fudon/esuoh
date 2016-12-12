@@ -10,6 +10,9 @@
 		1FD3E4DD471F75164753B4C1 /* libPods-myhome.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AED98BB851B3E5659CC617B6 /* libPods-myhome.a */; };
 		5C15E2881DF5140900BBBA5C /* FSLoanCounterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C15E2851DF5140900BBBA5C /* FSLoanCounterController.m */; };
 		5C15E2891DF5140900BBBA5C /* FSLoanResultController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C15E2871DF5140900BBBA5C /* FSLoanResultController.m */; };
+		5C68FE2D1DFEBA61003AA5F9 /* FSFutureAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C68FE2C1DFEBA61003AA5F9 /* FSFutureAlertController.m */; };
+		5C68FE301DFEBC55003AA5F9 /* FSNewFutureAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C68FE2F1DFEBC55003AA5F9 /* FSNewFutureAlertController.m */; };
+		5C68FE341DFEBFC5003AA5F9 /* PHTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C68FE331DFEBFC5003AA5F9 /* PHTextView.m */; };
 		5C7C38DE1DD1D14600D68C3B /* ARAboutController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C38DD1DD1D14600D68C3B /* ARAboutController.m */; };
 		5C9337B31DCB3F800091D3D8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C9337B21DCB3F800091D3D8 /* Security.framework */; };
 		5C9337B81DCB3FA80091D3D8 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C9337B71DCB3FA80091D3D8 /* libiconv.tbd */; };
@@ -141,6 +144,12 @@
 		5C15E2851DF5140900BBBA5C /* FSLoanCounterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSLoanCounterController.m; sourceTree = "<group>"; };
 		5C15E2861DF5140900BBBA5C /* FSLoanResultController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSLoanResultController.h; sourceTree = "<group>"; };
 		5C15E2871DF5140900BBBA5C /* FSLoanResultController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSLoanResultController.m; sourceTree = "<group>"; };
+		5C68FE2B1DFEBA61003AA5F9 /* FSFutureAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSFutureAlertController.h; sourceTree = "<group>"; };
+		5C68FE2C1DFEBA61003AA5F9 /* FSFutureAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSFutureAlertController.m; sourceTree = "<group>"; };
+		5C68FE2E1DFEBC55003AA5F9 /* FSNewFutureAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSNewFutureAlertController.h; sourceTree = "<group>"; };
+		5C68FE2F1DFEBC55003AA5F9 /* FSNewFutureAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSNewFutureAlertController.m; sourceTree = "<group>"; };
+		5C68FE321DFEBFC5003AA5F9 /* PHTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PHTextView.h; sourceTree = "<group>"; };
+		5C68FE331DFEBFC5003AA5F9 /* PHTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHTextView.m; sourceTree = "<group>"; };
 		5C7C38DC1DD1D14600D68C3B /* ARAboutController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARAboutController.h; sourceTree = "<group>"; };
 		5C7C38DD1DD1D14600D68C3B /* ARAboutController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARAboutController.m; sourceTree = "<group>"; };
 		5C9337B21DCB3F800091D3D8 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
@@ -417,6 +426,27 @@
 				5C15E2871DF5140900BBBA5C /* FSLoanResultController.m */,
 			);
 			path = LoanCounter;
+			sourceTree = "<group>";
+		};
+		5C68FE2A1DFEBA46003AA5F9 /* FutureAlert */ = {
+			isa = PBXGroup;
+			children = (
+				5C68FE2B1DFEBA61003AA5F9 /* FSFutureAlertController.h */,
+				5C68FE2C1DFEBA61003AA5F9 /* FSFutureAlertController.m */,
+				5C68FE2E1DFEBC55003AA5F9 /* FSNewFutureAlertController.h */,
+				5C68FE2F1DFEBC55003AA5F9 /* FSNewFutureAlertController.m */,
+			);
+			path = FutureAlert;
+			sourceTree = "<group>";
+		};
+		5C68FE311DFEBFC5003AA5F9 /* PHTextView */ = {
+			isa = PBXGroup;
+			children = (
+				5C68FE321DFEBFC5003AA5F9 /* PHTextView.h */,
+				5C68FE331DFEBFC5003AA5F9 /* PHTextView.m */,
+			);
+			name = PHTextView;
+			path = ../PHTextView;
 			sourceTree = "<group>";
 		};
 		5C9337D41DCB447B0091D3D8 /* FSShareManager */ = {
@@ -835,6 +865,7 @@
 		71DC23551DD2011A00BEB193 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				5C68FE2A1DFEBA46003AA5F9 /* FutureAlert */,
 				5CE70A621DF6CA2E001FA04B /* StoreManager */,
 				5C15E2831DF5140900BBBA5C /* LoanCounter */,
 				71DC23561DD2011A00BEB193 /* FSBase */,
@@ -853,6 +884,7 @@
 		71DC23561DD2011A00BEB193 /* FSBase */ = {
 			isa = PBXGroup;
 			children = (
+				5C68FE311DFEBFC5003AA5F9 /* PHTextView */,
 				714F6EC61DF4395F00E96EED /* FSSameKindController.h */,
 				714F6EC71DF4395F00E96EED /* FSSameKindController.m */,
 				714F6EC31DF4393400E96EED /* FSAccessController.h */,
@@ -1162,6 +1194,7 @@
 			files = (
 				71DC24391DD2011B00BEB193 /* FSViewManager.m in Sources */,
 				71DC24121DD2011B00BEB193 /* FSTwoMinusController.m in Sources */,
+				5C68FE2D1DFEBA61003AA5F9 /* FSFutureAlertController.m in Sources */,
 				71DC241F1DD2011B00BEB193 /* fishhook.c in Sources */,
 				71DC24271DD2011B00BEB193 /* FSHardwareInfoController.m in Sources */,
 				71DC240D1DD2011B00BEB193 /* FSFMExpectController.m in Sources */,
@@ -1174,6 +1207,8 @@
 				714F6EB81DF3BC2B00E96EED /* ARHomeController.m in Sources */,
 				71DC244A1DD2011B00BEB193 /* FSTaxOfIncomeController.m in Sources */,
 				5CE70A651DF6CA2E001FA04B /* FSStoreManager.m in Sources */,
+				5C68FE301DFEBC55003AA5F9 /* FSNewFutureAlertController.m in Sources */,
+				5C68FE341DFEBFC5003AA5F9 /* PHTextView.m in Sources */,
 				71DC24241DD2011B00BEB193 /* FSBaseController.m in Sources */,
 				5C7C38DE1DD1D14600D68C3B /* ARAboutController.m in Sources */,
 				71DC24351DD2011B00BEB193 /* FSWebImageView.m in Sources */,

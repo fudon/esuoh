@@ -74,29 +74,35 @@
 //    }
 }
 
+/*
+    显示的永远是中间那张图片
+ */
+
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
-    CGFloat offsetX = scrollView.contentOffset.x;
-    if (self.currentOffsetX == 0) {
-        self.currentOffsetX = self.bounds.size.width;
-    }
-    if (offsetX < self.currentOffsetX) {    // 向前滑
-        self.factIndex --;
-        if (self.factIndex < 0)
-            self.factIndex = _imageList.count - 1;
-    }else{                                  // 向后滑
-        self.factIndex ++;
-        if (self.factIndex > _imageList.count - 1)
-            self.factIndex = 0;
-    }
-    self.currentOffsetX = offsetX;
-    self.pageControl.currentPage = self.factIndex;
+//    CGFloat offsetX = scrollView.contentOffset.x;
+//    if (self.currentOffsetX == 0) {
+//        self.currentOffsetX = self.bounds.size.width;
+//    }
+//    if (offsetX < self.currentOffsetX) {    // 向前滑
+//        self.factIndex --;
+//        if (self.factIndex < 0)
+//            self.factIndex = _imageList.count - 1;
+//    }else{                                  // 向后滑
+//        self.factIndex ++;
+//        if (self.factIndex > _imageList.count - 1)
+//            self.factIndex = 0;
+//    }
+//    self.currentOffsetX = offsetX;
+//    self.pageControl.currentPage = self.factIndex;
+//    
+//    self.imageList = _imageList;
     
-    self.imageList = _imageList;
+    
+    CGFloat pageWidth = scrollView.frame.size.width;
+    NSInteger index = (NSInteger)floor((scrollView.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
     
     
-//    CGFloat pageWidth = scrollView.frame.size.width;
-//    NSInteger index = (NSInteger)floor((scrollView.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
 //    if (_pageControl.numberOfPages > index) {
 //        _pageControl.currentPage = index;
 //    }else{
