@@ -40,6 +40,7 @@
 		5CB3A0351DCA04F400564280 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CB3A0341DCA04F400564280 /* CoreMedia.framework */; };
 		5CDBCDAF1DD057EA001CFC39 /* FSShareEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CDBCDAE1DD057EA001CFC39 /* FSShareEntity.m */; };
 		5CE70A651DF6CA2E001FA04B /* FSStoreManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CE70A641DF6CA2E001FA04B /* FSStoreManager.m */; };
+		5CF522421DFFC6EF0013D7CE /* FSRelayoutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF522411DFFC6EF0013D7CE /* FSRelayoutCell.m */; };
 		5CFE601A1DC75B9C003640A4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CFE60191DC75B9C003640A4 /* main.m */; };
 		5CFE601D1DC75B9C003640A4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CFE601C1DC75B9C003640A4 /* AppDelegate.m */; };
 		5CFE60231DC75B9C003640A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CFE60211DC75B9C003640A4 /* Main.storyboard */; };
@@ -200,6 +201,8 @@
 		5CDBCDAE1DD057EA001CFC39 /* FSShareEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSShareEntity.m; sourceTree = "<group>"; };
 		5CE70A631DF6CA2E001FA04B /* FSStoreManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSStoreManager.h; sourceTree = "<group>"; };
 		5CE70A641DF6CA2E001FA04B /* FSStoreManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSStoreManager.m; sourceTree = "<group>"; };
+		5CF522401DFFC6EF0013D7CE /* FSRelayoutCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSRelayoutCell.h; sourceTree = "<group>"; };
+		5CF522411DFFC6EF0013D7CE /* FSRelayoutCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSRelayoutCell.m; sourceTree = "<group>"; };
 		5CFE60151DC75B9C003640A4 /* myhome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myhome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CFE60191DC75B9C003640A4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5CFE601B1DC75B9C003640A4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -433,6 +436,8 @@
 			children = (
 				5C68FE2B1DFEBA61003AA5F9 /* FSFutureAlertController.h */,
 				5C68FE2C1DFEBA61003AA5F9 /* FSFutureAlertController.m */,
+				5CF522401DFFC6EF0013D7CE /* FSRelayoutCell.h */,
+				5CF522411DFFC6EF0013D7CE /* FSRelayoutCell.m */,
 				5C68FE2E1DFEBC55003AA5F9 /* FSNewFutureAlertController.h */,
 				5C68FE2F1DFEBC55003AA5F9 /* FSNewFutureAlertController.m */,
 			);
@@ -1249,6 +1254,7 @@
 				71DC24481DD2011B00BEB193 /* FSAddTaxModelController.m in Sources */,
 				71DC24381DD2011B00BEB193 /* FSSelectSectionController.m in Sources */,
 				71DC24111DD2011B00BEB193 /* FSFMSelectController.m in Sources */,
+				5CF522421DFFC6EF0013D7CE /* FSRelayoutCell.m in Sources */,
 				71DC24361DD2011B00BEB193 /* FSDatePickerView.m in Sources */,
 				5CFE601D1DC75B9C003640A4 /* AppDelegate.m in Sources */,
 				5C15E2891DF5140900BBBA5C /* FSLoanResultController.m in Sources */,

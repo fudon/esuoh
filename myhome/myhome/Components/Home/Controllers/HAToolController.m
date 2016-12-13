@@ -53,7 +53,8 @@
     NSArray *array = [FSFutureAlertController futureSevenDaysTODO];
     if (array.count) {
         dispatch_async(dispatch_get_main_queue(), ^{
-            [FuData alertViewAtController:self title:@"提示" message:@"未来七天内您有待办事项" cancelTitle:@"取消" handler:nil okTitle:@"查看" handler:^(UIAlertAction *action) {
+            NSString *message = [[NSString alloc] initWithFormat:@"未来一周内您有%@件待办事项",@(array.count)];
+            [FuData alertViewAtController:self title:@"提示" message:message cancelTitle:@"取消" handler:nil okTitle:@"查看" handler:^(UIAlertAction *action) {
                 [FuData pushToViewControllerWithClass:@"FSFutureAlertController" navigationController:self.navigationController param:nil configBlock:nil];
             } completion:nil];
         });

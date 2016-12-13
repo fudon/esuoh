@@ -101,7 +101,7 @@
     
     CGFloat pageWidth = scrollView.frame.size.width;
     NSInteger index = (NSInteger)floor((scrollView.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
-    
+    NSLog(@"%@",@(index));
     
 //    if (_pageControl.numberOfPages > index) {
 //        _pageControl.currentPage = index;
