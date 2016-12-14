@@ -153,6 +153,7 @@
 		5C68FE331DFEBFC5003AA5F9 /* PHTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHTextView.m; sourceTree = "<group>"; };
 		5C7C38DC1DD1D14600D68C3B /* ARAboutController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARAboutController.h; sourceTree = "<group>"; };
 		5C7C38DD1DD1D14600D68C3B /* ARAboutController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARAboutController.m; sourceTree = "<group>"; };
+		5C8312361E0164ED00A23B07 /* FSFutureAlertHead.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSFutureAlertHead.h; sourceTree = "<group>"; };
 		5C9337B21DCB3F800091D3D8 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		5C9337B71DCB3FA80091D3D8 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
 		5C9337B91DCB3FAE0091D3D8 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -440,6 +441,7 @@
 				5CF522411DFFC6EF0013D7CE /* FSRelayoutCell.m */,
 				5C68FE2E1DFEBC55003AA5F9 /* FSNewFutureAlertController.h */,
 				5C68FE2F1DFEBC55003AA5F9 /* FSNewFutureAlertController.m */,
+				5C8312361E0164ED00A23B07 /* FSFutureAlertHead.h */,
 			);
 			path = FutureAlert;
 			sourceTree = "<group>";
