@@ -51,7 +51,7 @@
     [_headImageView setBlock:^(FSWebImageView *bView, FSWebImageViewAction bType) {
         [FuData pushToViewControllerWithClass:@"HARewardPolicyController" navigationController:this.navigationController param:nil configBlock:nil];
     }];
-    UILabel *policyLabel = [FSViewManager labelWithFrame:CGRectMake(_headImageView.width - 80, _headImageView.height - 25, 70, 25) text:@"奖励政策.." textColor:APPCOLOR backColor:nil font:FONTFC(12) textAlignment:NSTextAlignmentRight];
+    UILabel *policyLabel = [FSViewManager labelWithFrame:CGRectMake(_headImageView.width - 80, _headImageView.height - 25, 70, 25) text:@"奖励政策" textColor:APPCOLOR backColor:nil font:FONTFC(12) textAlignment:NSTextAlignmentRight];
     [self.scrollView addSubview:policyLabel];
     
     self.scrollView.frame = CGRectMake(0, 0, self.view.width, self.view.height - 49);
