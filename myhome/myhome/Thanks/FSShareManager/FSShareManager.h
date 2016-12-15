@@ -16,8 +16,7 @@
 #import <TencentOpenAPI/QQApiInterfaceObject.h>
 #import <TencentOpenAPI/QQApiInterface.h>
 #import "FSShareEntity.h"
-
-@class WTShareContentItem;
+#import <MessageUI/MessageUI.h>
 
 typedef NS_ENUM(NSInteger, FSShareType) {
     FSShareTypeQQ = 0,      //  QQ好友
@@ -38,7 +37,7 @@ typedef NS_ENUM(NSInteger, WTShareWeiXinErrCode) {
 
 typedef void(^WTShareResultlBlock)(NSString * shareResult);
 
-@interface FSShareManager : NSObject <WBHttpRequestDelegate,WeiboSDKDelegate,WXApiDelegate,TencentSessionDelegate>
+@interface FSShareManager : NSObject <WBHttpRequestDelegate,WeiboSDKDelegate,WXApiDelegate,TencentSessionDelegate,MFMailComposeViewControllerDelegate,MFMessageComposeViewControllerDelegate>
 
 @property (nonatomic,weak) UIViewController *callController;
 
@@ -46,6 +45,8 @@ typedef void(^WTShareResultlBlock)(NSString * shareResult);
 // 判断QQ分享是否成功
 + (void)didReceiveTencentUrl:(NSURL *)url;
 + (void)wt_shareWithContent:(FSShareEntity *)contentObj shareType:(FSShareType)shareType shareResult:(WTShareResultlBlock)shareResult;
+
++ (void)shareActionWithShareType:(FSShareType)type title:(NSString *)title description:(NSString *)description  thumbImage:(UIImage *)image url:(NSString *)url controller:(UIViewController *)controller result:(void(^)(NSString *bResult))completion;
 
 // 短信分享
 - (void)messageShareWithMessage:(NSString *)message     // 短信内容

@@ -19,6 +19,10 @@
 
 @interface FSShareView : UIView
 
+@property (nonatomic,strong) NSArray<NSNumber *>    *list;
+
 - (instancetype)initWithFrame:(CGRect)frame controller:(UIViewController *)callController;
+
++ (void)shareActionWithShareType:(FSShareType)tag title:(NSString *)shareTitle description:(NSString *)shareDesc  thumbImage:(UIImage *)shareImage url:(NSString *)url controller:(UIViewController *)controller result:(void(^)(NSString *bResult))completion;
 
 @end

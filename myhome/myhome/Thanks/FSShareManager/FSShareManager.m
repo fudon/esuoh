@@ -131,9 +131,7 @@ static FSShareManager *manager = nil;
             req.message = newsObj;
             req.type = ESENDMESSAGETOQQREQTYPE;
             
-            [QQApiInterface SendReqToQZone:req];
-            break;
-            
+            [QQApiInterface SendReqToQZone:req];            
             break;
         }
         case FSShareTypeWXFriends: // 微信朋友圈
@@ -192,6 +190,122 @@ static FSShareManager *manager = nil;
             break;
         }
             
+        default:
+            break;
+    }
+}
+
++ (void)shareActionWithShareType:(FSShareType)type title:(NSString *)title description:(NSString *)description  thumbImage:(UIImage *)image url:(NSString *)url controller:(UIViewController *)controller result:(void(^)(NSString *bResult))completion
+{
+    if (!FSValidateString(title)) {
+        return;
+    }
+    if (!FSValidateString(description)) {
+        return;
+    }
+    if (![image isKindOfClass:[UIImage class]]) {
+        return;
+    }
+    if (!FSValidateString(url)) {
+        return;
+    }
+    
+    FSShareManager *manager = [FSShareManager shareInstance];
+    BOOL canStep = [self canSupportShare:type];
+    if (!canStep) {
+        return;
+    }
+    
+    switch (type) {
+        case FSShareTypeWeibo:
+        {
+            WBMessageObject *message = [WBMessageObject message];
+            message.text = description;
+            if(image){
+                WBImageObject *webpage = [WBImageObject object];
+                webpage.imageData =  UIImageJPEGRepresentation([FuData compressImage:image targetWidth:100], 1.0f);
+                message.imageObject = webpage;
+            }
+            WBSendMessageToWeiboRequest *request = [WBSendMessageToWeiboRequest requestWithMessage:message];
+            [WeiboSDK sendRequest:request];
+            break;
+        }
+        case FSShareTypeQQ:
+        {
+            QQApiNewsObject * newsObj = [QQApiNewsObject objectWithURL:[NSURL URLWithString:url] title:title description:description previewImageData:UIImageJPEGRepresentation([FuData compressImage:image targetWidth:100], 1.0)];
+            SendMessageToQQReq *req = [[SendMessageToQQReq alloc] init];
+            req.message = newsObj;
+            req.type = ESENDMESSAGETOQQREQTYPE;
+            [QQApiInterface sendReq:req];
+            break;
+        }
+        case FSShareTypeQQZone:
+        {
+            QQApiNewsObject * newsObj = [QQApiNewsObject objectWithURL:[NSURL URLWithString:url] title:title description:description previewImageData:UIImageJPEGRepresentation([FuData compressImage:image targetWidth:100], 1.0)];
+            SendMessageToQQReq *req = [[SendMessageToQQReq alloc]init];
+            req.message = newsObj;
+            req.type = ESENDMESSAGETOQQREQTYPE;
+            [QQApiInterface SendReqToQZone:req];
+            break;
+        }
+        case FSShareTypeWXFriends: // 微信朋友圈
+        {
+            WXMediaMessage *message = [WXMediaMessage message];
+            [message setThumbImage:[FuData compressImage:image targetWidth:100]];
+            message.description = description;
+            WXWebpageObject *ext = [WXWebpageObject object];
+            ext.webpageUrl = url;
+            message.mediaObject = ext;
+            SendMessageToWXReq * req = [[SendMessageToWXReq alloc]init];
+            req.bText = NO;
+            req.message = message;
+            req.scene = WXSceneTimeline;
+            [WXApi sendReq:req];
+            break;
+        }
+        case FSShareTypeWechat:
+        {
+            WXMediaMessage *message = [WXMediaMessage message];
+            message.title = title;
+            [message setThumbImage:[FuData compressImage:image targetWidth:100]];
+            message.description = description;
+            WXWebpageObject *ext = [WXWebpageObject object];
+            ext.webpageUrl = url;
+            message.mediaObject = ext;
+            SendMessageToWXReq *req = [[SendMessageToWXReq alloc]init];
+            req.bText = NO;
+            req.message = message;
+            req.scene = WXSceneSession;
+            [WXApi sendReq:req];
+            break;
+        }
+        case FSShareTypeWXStore:
+        {
+            WXMediaMessage * message = [WXMediaMessage message];
+            message.title = title;
+            
+            [message setThumbImage:[FuData compressImage:image targetWidth:100]];
+            message.description = description;
+            WXWebpageObject *ext = [WXWebpageObject object];
+            ext.webpageUrl = url;
+            message.mediaObject = ext;
+            SendMessageToWXReq *req = [[SendMessageToWXReq alloc]init];
+            req.bText = NO;
+            req.message = message;
+            req.scene = WXSceneFavorite;
+            [WXApi sendReq:req];
+            break;
+        }
+            case FSShareTypeMessage:
+        {
+            [manager messageShareWithMessage:description recipients:nil controller:controller];
+        }
+            break;
+            case FSShareTypeEmail:
+        {
+            [manager mailShareWithSubject:title messageBody:description recipients:nil fileData:nil fileName:nil controller:controller];
+        }
+            break;
         default:
             break;
     }
