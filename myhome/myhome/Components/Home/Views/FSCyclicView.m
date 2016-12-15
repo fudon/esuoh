@@ -7,6 +7,7 @@
 //
 
 #import "FSCyclicView.h"
+#import "FuSoft.h"
 
 @interface FSCyclicView ()<UIScrollViewDelegate>
 
@@ -21,12 +22,17 @@
 
 @implementation FSCyclicView
 
-- (void)setImageList:(NSArray<UIImage *> *)imageList
+- (instancetype)initWithFrame:(CGRect)frame
 {
-    if (!([imageList isKindOfClass:[NSArray class]] && imageList.count)) {
-        return;
+    self = [super initWithFrame:frame];
+    if (self) {
+        [self cyclicDesignViews];
     }
-    
+    return self;
+}
+
+- (void)cyclicDesignViews
+{
     if (!_scrollView) {
         _scrollView = [[UIScrollView alloc] initWithFrame:self.bounds];
         _scrollView.pagingEnabled = YES;
@@ -38,7 +44,7 @@
             CGRect frame = CGRectMake(x * self.frame.size.width, 0, self.frame.size.width, self.frame.size.height);
             UIImageView *imageView = [[UIImageView alloc] initWithFrame:frame];
             imageView.clipsToBounds = YES;
-            imageView.tag = 1000 + x;
+            imageView.tag = TAGIMAGEVIEW + x;
             [_scrollView addSubview:imageView];
             imageView.frame = frame;
         }
@@ -48,31 +54,16 @@
         _pageControl.currentPageIndicatorTintColor = [UIColor redColor];
         [self addSubview:_pageControl];
     }
-    _scrollView.contentOffset = CGPointMake(self.frame.size.width, 0);
-    _pageControl.numberOfPages = imageList.count;
-    _pageControl.currentPage = 0;
-    
-    if (self.factIndex == 0) {
-        NSArray *images = @[imageList[(imageList.count - 1) % imageList.count],imageList[0],imageList[1%imageList.count]];
-        [_scrollView.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-            if ((obj.tag == 1000 + idx) && [obj isKindOfClass:[UIImageView class]]) {
-                UIImageView *imageView = obj;
-                imageView.image = images[idx];
-            }
-        }];
-    }else{
-        NSArray *images = @[imageList[(self.factIndex - 1) % imageList.count],imageList[self.factIndex],imageList[(self.factIndex + 1)%imageList.count]];
-        [_scrollView.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-            if ((obj.tag == 1000 + idx) && [obj isKindOfClass:[UIImageView class]]) {
-                UIImageView *imageView = obj;
-                imageView.image = images[idx];
-            }
-        }];
+}
+
+- (void)setImageList:(NSArray<UIImage *> *)imageList
+{
+    _imageList = imageList;
+    if (!FSValidateArray(imageList)) {
+        return;
     }
-//    if (_imageList != imageList) {
-//        _imageList = imageList;
-//        
-//    }
+    NSArray *images = @[imageList[(imageList.count - 1) % imageList.count],imageList[0],imageList[1%imageList.count]];
+    [self setScrollViewImageViewImage:images];
 }
 
 /*
@@ -91,11 +82,27 @@
         NSLog(@"%@",@(self.factIndex));
         self.currentIndex = index;
         
-        if (self.currentIndex != 1) {
-            scrollView.contentOffset = CGPointMake(scrollView.frame.size.width, 0);
-        }
-        self.imageList = self.imageList;
+        self.scrollView.contentOffset = CGPointMake(self.scrollView.width, 0);
+        self.currentIndex = 1;
+        NSLog(@"%f",self.scrollView.contentOffset.x);
+        
+        NSInteger count = _imageList.count;
+        NSInteger first = (_factIndex - 1) >= 0?(_factIndex - 1):(count - 1);
+        NSInteger last = (_factIndex + 1) > (count - 1)?0:(_factIndex + 1);
+        
+        NSArray *list = @[_imageList[first],_imageList[_factIndex % count],_imageList[last % count]];
+        [self setScrollViewImageViewImage:list];
     }
+}
+
+- (void)setScrollViewImageViewImage:(NSArray<UIImage *> *)list
+{
+    [_scrollView.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if ((obj.tag == TAGIMAGEVIEW + idx) && [obj isKindOfClass:[UIImageView class]]) {
+            UIImageView *imageView = obj;
+            imageView.image = list[idx];
+        }
+    }];
 }
 
 /*
