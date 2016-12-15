@@ -10,6 +10,7 @@
 		1FD3E4DD471F75164753B4C1 /* libPods-myhome.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AED98BB851B3E5659CC617B6 /* libPods-myhome.a */; };
 		5C15E2881DF5140900BBBA5C /* FSLoanCounterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C15E2851DF5140900BBBA5C /* FSLoanCounterController.m */; };
 		5C15E2891DF5140900BBBA5C /* FSLoanResultController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C15E2871DF5140900BBBA5C /* FSLoanResultController.m */; };
+		5C5BB56E1E02741000349D82 /* FSLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5BB56D1E02741000349D82 /* FSLocation.m */; };
 		5C68FE2D1DFEBA61003AA5F9 /* FSFutureAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C68FE2C1DFEBA61003AA5F9 /* FSFutureAlertController.m */; };
 		5C68FE301DFEBC55003AA5F9 /* FSNewFutureAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C68FE2F1DFEBC55003AA5F9 /* FSNewFutureAlertController.m */; };
 		5C68FE341DFEBFC5003AA5F9 /* PHTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C68FE331DFEBFC5003AA5F9 /* PHTextView.m */; };
@@ -145,6 +146,8 @@
 		5C15E2851DF5140900BBBA5C /* FSLoanCounterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSLoanCounterController.m; sourceTree = "<group>"; };
 		5C15E2861DF5140900BBBA5C /* FSLoanResultController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSLoanResultController.h; sourceTree = "<group>"; };
 		5C15E2871DF5140900BBBA5C /* FSLoanResultController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSLoanResultController.m; sourceTree = "<group>"; };
+		5C5BB56C1E02741000349D82 /* FSLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSLocation.h; sourceTree = "<group>"; };
+		5C5BB56D1E02741000349D82 /* FSLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSLocation.m; sourceTree = "<group>"; };
 		5C68FE2B1DFEBA61003AA5F9 /* FSFutureAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSFutureAlertController.h; sourceTree = "<group>"; };
 		5C68FE2C1DFEBA61003AA5F9 /* FSFutureAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSFutureAlertController.m; sourceTree = "<group>"; };
 		5C68FE2E1DFEBC55003AA5F9 /* FSNewFutureAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSNewFutureAlertController.h; sourceTree = "<group>"; };
@@ -430,6 +433,15 @@
 				5C15E2871DF5140900BBBA5C /* FSLoanResultController.m */,
 			);
 			path = LoanCounter;
+			sourceTree = "<group>";
+		};
+		5C5BB56B1E02741000349D82 /* FSLocation */ = {
+			isa = PBXGroup;
+			children = (
+				5C5BB56C1E02741000349D82 /* FSLocation.h */,
+				5C5BB56D1E02741000349D82 /* FSLocation.m */,
+			);
+			path = FSLocation;
 			sourceTree = "<group>";
 		};
 		5C68FE2A1DFEBA46003AA5F9 /* FutureAlert */ = {
@@ -872,6 +884,7 @@
 		71DC23551DD2011A00BEB193 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				5C5BB56B1E02741000349D82 /* FSLocation */,
 				5C68FE2A1DFEBA46003AA5F9 /* FutureAlert */,
 				5CE70A621DF6CA2E001FA04B /* StoreManager */,
 				5C15E2831DF5140900BBBA5C /* LoanCounter */,
@@ -1239,6 +1252,7 @@
 				71DC241D1DD2011B00BEB193 /* FSLunarCalendar.m in Sources */,
 				71DC24331DD2011B00BEB193 /* FSTapScrollView.m in Sources */,
 				71DC24211DD2011B00BEB193 /* GTMBase64.m in Sources */,
+				5C5BB56E1E02741000349D82 /* FSLocation.m in Sources */,
 				71DC24431DD2011B00BEB193 /* FSQRController.m in Sources */,
 				5CA360D91DC8ADC300523FF5 /* AROfferController.m in Sources */,
 				71DC241E1DD2011B00BEB193 /* ClipPictureController.m in Sources */,
