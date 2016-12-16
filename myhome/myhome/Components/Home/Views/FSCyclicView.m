@@ -7,8 +7,8 @@
 //
 
 #import "FSCyclicView.h"
-#import "FuSoft.h"
 #import <UIImageView+WebCache.h>
+#import "FuSoft.h"
 
 @interface FSCyclicView ()<UIScrollViewDelegate>
 
@@ -22,6 +22,11 @@
 @end
 
 @implementation FSCyclicView
+
+- (void)dealloc
+{
+    FSLog();
+}
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
@@ -73,6 +78,11 @@
 {
     CGFloat pageWidth = scrollView.frame.size.width;
     NSInteger index = (NSInteger)floor((scrollView.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
+    [self indexAction:index];
+}
+
+- (void)indexAction:(NSInteger)index
+{
     if (self.currentIndex != index) {
         NSInteger count = _urls.count;
         if (self.currentIndex > index){
@@ -89,8 +99,8 @@
         _pageControl.currentPage = self.factIndex;
         self.currentIndex = index;
         
-        NSInteger first = (_factIndex - 1) >= 0?(_factIndex - 1):(count - 1);
-        NSInteger last = (_factIndex + 1) > (count - 1)?0:(_factIndex + 1);
+        NSInteger first = _factIndex >= 1 ? (_factIndex - 1):(count - 1);
+        NSInteger last = _factIndex + 2 > count ? 0:(_factIndex + 1);
         
         NSArray *list = @[_urls[first % count],_urls[_factIndex % count],_urls[last % count]];
         [self setScrollViewImageViewImage:list];
@@ -104,10 +114,7 @@
     [_scrollView.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         if ((obj.tag == TAGIMAGEVIEW + idx) && [obj isKindOfClass:[UIImageView class]]) {
             UIImageView *imageView = obj;
-            [imageView sd_setImageWithURL:[NSURL URLWithString:list[idx]] placeholderImage:IMAGENAMED(@"") completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
-                imageView.image = [FuData componentForDate:nil];
-            }];
-//            imageView.image = list[idx];
+            [imageView sd_setImageWithURL:[NSURL URLWithString:list[idx]] placeholderImage:IMAGENAMED(@"home_backImage")];
         }
     }];
 }
