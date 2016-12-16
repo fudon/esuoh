@@ -8,6 +8,7 @@
 
 #import "FSCyclicView.h"
 #import "FuSoft.h"
+#import <UIImageView+WebCache.h>
 
 @interface FSCyclicView ()<UIScrollViewDelegate>
 
@@ -37,6 +38,7 @@
         _scrollView = [[UIScrollView alloc] initWithFrame:self.bounds];
         _scrollView.pagingEnabled = YES;
         _scrollView.delegate = self;
+        _scrollView.showsHorizontalScrollIndicator = NO;
         _scrollView.contentSize = CGSizeMake(3 * self.frame.size.width, self.frame.size.height);
         [self addSubview:_scrollView];
         
@@ -48,21 +50,18 @@
             [_scrollView addSubview:imageView];
             imageView.frame = frame;
         }
-        _pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(self.frame.size.width / 3, self.frame.size.height - 30, self.frame.size.width / 3, 30)];
-        _pageControl.hidesForSinglePage = YES;
-        _pageControl.pageIndicatorTintColor = [UIColor whiteColor];
-        _pageControl.currentPageIndicatorTintColor = [UIColor redColor];
-        [self addSubview:_pageControl];
     }
 }
 
-- (void)setImageList:(NSArray<UIImage *> *)imageList
+- (void)setUrls:(NSArray<NSString *> *)urls
 {
-    _imageList = imageList;
-    if (!FSValidateArray(imageList)) {
+    _urls = urls;
+    if (!FSValidateArray(urls)) {
         return;
     }
-    NSArray *images = @[imageList[(imageList.count - 1) % imageList.count],imageList[0],imageList[1%imageList.count]];
+    NSInteger count = urls.count;
+    _pageControl.numberOfPages = count;
+    NSArray *images = @[urls[(count - 1) % count],urls[0],urls[1 % count]];
     [self setScrollViewImageViewImage:images];
 }
 
@@ -75,34 +74,67 @@
     CGFloat pageWidth = scrollView.frame.size.width;
     NSInteger index = (NSInteger)floor((scrollView.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
     if (self.currentIndex != index) {
-        if (self.currentIndex > index)
+        NSInteger count = _urls.count;
+        if (self.currentIndex > index){
             self.factIndex --;
-        else
+            if (self.factIndex < 0) {
+                self.factIndex = count - 1;
+            }
+        }else{
             self.factIndex ++;
-        NSLog(@"%@",@(self.factIndex));
+            if (self.factIndex == count) {
+                self.factIndex = 0;
+            }
+        }
+        _pageControl.currentPage = self.factIndex;
         self.currentIndex = index;
         
-        self.scrollView.contentOffset = CGPointMake(self.scrollView.width, 0);
-        self.currentIndex = 1;
-        NSLog(@"%f",self.scrollView.contentOffset.x);
-        
-        NSInteger count = _imageList.count;
         NSInteger first = (_factIndex - 1) >= 0?(_factIndex - 1):(count - 1);
         NSInteger last = (_factIndex + 1) > (count - 1)?0:(_factIndex + 1);
         
-        NSArray *list = @[_imageList[first],_imageList[_factIndex % count],_imageList[last % count]];
+        NSArray *list = @[_urls[first % count],_urls[_factIndex % count],_urls[last % count]];
         [self setScrollViewImageViewImage:list];
     }
 }
 
-- (void)setScrollViewImageViewImage:(NSArray<UIImage *> *)list
+- (void)setScrollViewImageViewImage:(NSArray<NSString *> *)list
 {
+    self.scrollView.contentOffset = CGPointMake(self.scrollView.width, 0);
+    self.currentIndex = 1;
     [_scrollView.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         if ((obj.tag == TAGIMAGEVIEW + idx) && [obj isKindOfClass:[UIImageView class]]) {
             UIImageView *imageView = obj;
-            imageView.image = list[idx];
+            [imageView sd_setImageWithURL:[NSURL URLWithString:list[idx]] placeholderImage:IMAGENAMED(@"") completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+                imageView.image = [FuData componentForDate:nil];
+            }];
+//            imageView.image = list[idx];
         }
     }];
+}
+
+- (void)setNeedPageControl:(BOOL)needPageControl
+{
+    _needPageControl = needPageControl;
+    if (needPageControl) {
+        [self pageControl];
+    }else{
+        if (_pageControl) {
+            [_pageControl removeFromSuperview];
+            _pageControl = nil;
+        }
+    }
+}
+
+- (UIPageControl *)pageControl
+{
+    if (!_pageControl) {
+        _pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(self.frame.size.width / 3, self.frame.size.height - 30, self.frame.size.width / 3, 30)];
+        _pageControl.hidesForSinglePage = YES;
+        _pageControl.pageIndicatorTintColor = [UIColor whiteColor];
+        _pageControl.currentPageIndicatorTintColor = [UIColor redColor];
+        [self addSubview:_pageControl];
+    }
+    return _pageControl;
 }
 
 /*

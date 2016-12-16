@@ -10,6 +10,11 @@
 
 @interface FSCyclicView : UIView
 
-@property (nonatomic,strong) NSArray <UIImage *>    *imageList;
+@property (nonatomic,strong) NSArray <NSString *>    *urls;
+
+/*
+    1.一个分页显示器，默认没有
+ */
+@property (nonatomic,assign) BOOL       needPageControl;
 
 @end

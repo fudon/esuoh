@@ -10,6 +10,24 @@
 		1FD3E4DD471F75164753B4C1 /* libPods-myhome.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AED98BB851B3E5659CC617B6 /* libPods-myhome.a */; };
 		5C15E2881DF5140900BBBA5C /* FSLoanCounterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C15E2851DF5140900BBBA5C /* FSLoanCounterController.m */; };
 		5C15E2891DF5140900BBBA5C /* FSLoanResultController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C15E2871DF5140900BBBA5C /* FSLoanResultController.m */; };
+		5C1881521E03D02100D55E0E /* FSAllImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C18812D1E03D02100D55E0E /* FSAllImageController.m */; };
+		5C1881531E03D02100D55E0E /* FSCountButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C18812F1E03D02100D55E0E /* FSCountButton.m */; };
+		5C1881541E03D02100D55E0E /* FSImagePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C1881311E03D02100D55E0E /* FSImagePicker.m */; };
+		5C1881551E03D02100D55E0E /* FSImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C1881331E03D02100D55E0E /* FSImagePickerController.m */; };
+		5C1881561E03D02100D55E0E /* FSIPImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C1881351E03D02100D55E0E /* FSIPImageCell.m */; };
+		5C1881571E03D02100D55E0E /* FSIPModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C1881371E03D02100D55E0E /* FSIPModel.m */; };
+		5C1881581E03D02100D55E0E /* FSIPTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C1881391E03D02100D55E0E /* FSIPTool.m */; };
+		5C1881591E03D02100D55E0E /* FSBackButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C18813C1E03D02100D55E0E /* FSBackButton.m */; };
+		5C18815A1E03D02100D55E0E /* FSBeyondButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C18813E1E03D02100D55E0E /* FSBeyondButton.m */; };
+		5C18815B1E03D02100D55E0E /* FSButtonLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C1881401E03D02100D55E0E /* FSButtonLabel.m */; };
+		5C18815C1E03D02100D55E0E /* fsip_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C1881421E03D02100D55E0E /* fsip_selected.png */; };
+		5C18815D1E03D02100D55E0E /* fsip_unselected.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C1881431E03D02100D55E0E /* fsip_unselected.png */; };
+		5C18815E1E03D02100D55E0E /* FSMoreImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C1881451E03D02100D55E0E /* FSMoreImageCell.m */; };
+		5C18815F1E03D02100D55E0E /* FSMoreZoneImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C1881471E03D02100D55E0E /* FSMoreZoneImageCell.m */; };
+		5C1881601E03D02100D55E0E /* FSPreviewPhotoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C18814A1E03D02100D55E0E /* FSPreviewPhotoController.m */; };
+		5C1881611E03D02100D55E0E /* FSZoneImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C18814C1E03D02100D55E0E /* FSZoneImageController.m */; };
+		5C1881621E03D02100D55E0E /* FSSeeImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C18814F1E03D02100D55E0E /* FSSeeImageCell.m */; };
+		5C1881631E03D02100D55E0E /* FSSeeImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C1881511E03D02100D55E0E /* FSSeeImageView.m */; };
 		5C5BB56E1E02741000349D82 /* FSLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5BB56D1E02741000349D82 /* FSLocation.m */; };
 		5C5BB5711E02762F00349D82 /* FSBaseEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5BB5701E02762F00349D82 /* FSBaseEntity.m */; };
 		5C68FE2D1DFEBA61003AA5F9 /* FSFutureAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C68FE2C1DFEBA61003AA5F9 /* FSFutureAlertController.m */; };
@@ -146,6 +164,41 @@
 		5C15E2851DF5140900BBBA5C /* FSLoanCounterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSLoanCounterController.m; sourceTree = "<group>"; };
 		5C15E2861DF5140900BBBA5C /* FSLoanResultController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSLoanResultController.h; sourceTree = "<group>"; };
 		5C15E2871DF5140900BBBA5C /* FSLoanResultController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSLoanResultController.m; sourceTree = "<group>"; };
+		5C18812C1E03D02100D55E0E /* FSAllImageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSAllImageController.h; sourceTree = "<group>"; };
+		5C18812D1E03D02100D55E0E /* FSAllImageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSAllImageController.m; sourceTree = "<group>"; };
+		5C18812E1E03D02100D55E0E /* FSCountButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCountButton.h; sourceTree = "<group>"; };
+		5C18812F1E03D02100D55E0E /* FSCountButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCountButton.m; sourceTree = "<group>"; };
+		5C1881301E03D02100D55E0E /* FSImagePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSImagePicker.h; sourceTree = "<group>"; };
+		5C1881311E03D02100D55E0E /* FSImagePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSImagePicker.m; sourceTree = "<group>"; };
+		5C1881321E03D02100D55E0E /* FSImagePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSImagePickerController.h; sourceTree = "<group>"; };
+		5C1881331E03D02100D55E0E /* FSImagePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSImagePickerController.m; sourceTree = "<group>"; };
+		5C1881341E03D02100D55E0E /* FSIPImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSIPImageCell.h; sourceTree = "<group>"; };
+		5C1881351E03D02100D55E0E /* FSIPImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSIPImageCell.m; sourceTree = "<group>"; };
+		5C1881361E03D02100D55E0E /* FSIPModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSIPModel.h; sourceTree = "<group>"; };
+		5C1881371E03D02100D55E0E /* FSIPModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSIPModel.m; sourceTree = "<group>"; };
+		5C1881381E03D02100D55E0E /* FSIPTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSIPTool.h; sourceTree = "<group>"; };
+		5C1881391E03D02100D55E0E /* FSIPTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSIPTool.m; sourceTree = "<group>"; };
+		5C18813B1E03D02100D55E0E /* FSBackButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSBackButton.h; sourceTree = "<group>"; };
+		5C18813C1E03D02100D55E0E /* FSBackButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSBackButton.m; sourceTree = "<group>"; };
+		5C18813D1E03D02100D55E0E /* FSBeyondButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSBeyondButton.h; sourceTree = "<group>"; };
+		5C18813E1E03D02100D55E0E /* FSBeyondButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSBeyondButton.m; sourceTree = "<group>"; };
+		5C18813F1E03D02100D55E0E /* FSButtonLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSButtonLabel.h; sourceTree = "<group>"; };
+		5C1881401E03D02100D55E0E /* FSButtonLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSButtonLabel.m; sourceTree = "<group>"; };
+		5C1881421E03D02100D55E0E /* fsip_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fsip_selected.png; sourceTree = "<group>"; };
+		5C1881431E03D02100D55E0E /* fsip_unselected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fsip_unselected.png; sourceTree = "<group>"; };
+		5C1881441E03D02100D55E0E /* FSMoreImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSMoreImageCell.h; sourceTree = "<group>"; };
+		5C1881451E03D02100D55E0E /* FSMoreImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSMoreImageCell.m; sourceTree = "<group>"; };
+		5C1881461E03D02100D55E0E /* FSMoreZoneImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSMoreZoneImageCell.h; sourceTree = "<group>"; };
+		5C1881471E03D02100D55E0E /* FSMoreZoneImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSMoreZoneImageCell.m; sourceTree = "<group>"; };
+		5C1881481E03D02100D55E0E /* FSMoreImageHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSMoreImageHeader.h; sourceTree = "<group>"; };
+		5C1881491E03D02100D55E0E /* FSPreviewPhotoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSPreviewPhotoController.h; sourceTree = "<group>"; };
+		5C18814A1E03D02100D55E0E /* FSPreviewPhotoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSPreviewPhotoController.m; sourceTree = "<group>"; };
+		5C18814B1E03D02100D55E0E /* FSZoneImageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSZoneImageController.h; sourceTree = "<group>"; };
+		5C18814C1E03D02100D55E0E /* FSZoneImageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSZoneImageController.m; sourceTree = "<group>"; };
+		5C18814E1E03D02100D55E0E /* FSSeeImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSSeeImageCell.h; sourceTree = "<group>"; };
+		5C18814F1E03D02100D55E0E /* FSSeeImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSSeeImageCell.m; sourceTree = "<group>"; };
+		5C1881501E03D02100D55E0E /* FSSeeImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSSeeImageView.h; sourceTree = "<group>"; };
+		5C1881511E03D02100D55E0E /* FSSeeImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSSeeImageView.m; sourceTree = "<group>"; };
 		5C5BB56C1E02741000349D82 /* FSLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSLocation.h; sourceTree = "<group>"; };
 		5C5BB56D1E02741000349D82 /* FSLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSLocation.m; sourceTree = "<group>"; };
 		5C5BB56F1E02762F00349D82 /* FSBaseEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSBaseEntity.h; sourceTree = "<group>"; };
@@ -433,6 +486,72 @@
 				5C15E2871DF5140900BBBA5C /* FSLoanResultController.m */,
 			);
 			path = LoanCounter;
+			sourceTree = "<group>";
+		};
+		5C18812B1E03D02100D55E0E /* FSMoreImage */ = {
+			isa = PBXGroup;
+			children = (
+				5C18812C1E03D02100D55E0E /* FSAllImageController.h */,
+				5C18812D1E03D02100D55E0E /* FSAllImageController.m */,
+				5C18812E1E03D02100D55E0E /* FSCountButton.h */,
+				5C18812F1E03D02100D55E0E /* FSCountButton.m */,
+				5C1881301E03D02100D55E0E /* FSImagePicker.h */,
+				5C1881311E03D02100D55E0E /* FSImagePicker.m */,
+				5C1881321E03D02100D55E0E /* FSImagePickerController.h */,
+				5C1881331E03D02100D55E0E /* FSImagePickerController.m */,
+				5C1881341E03D02100D55E0E /* FSIPImageCell.h */,
+				5C1881351E03D02100D55E0E /* FSIPImageCell.m */,
+				5C1881361E03D02100D55E0E /* FSIPModel.h */,
+				5C1881371E03D02100D55E0E /* FSIPModel.m */,
+				5C1881381E03D02100D55E0E /* FSIPTool.h */,
+				5C1881391E03D02100D55E0E /* FSIPTool.m */,
+				5C18813A1E03D02100D55E0E /* FSIPViews */,
+				5C1881481E03D02100D55E0E /* FSMoreImageHeader.h */,
+				5C1881491E03D02100D55E0E /* FSPreviewPhotoController.h */,
+				5C18814A1E03D02100D55E0E /* FSPreviewPhotoController.m */,
+				5C18814B1E03D02100D55E0E /* FSZoneImageController.h */,
+				5C18814C1E03D02100D55E0E /* FSZoneImageController.m */,
+				5C18814D1E03D02100D55E0E /* SeeImage */,
+			);
+			path = FSMoreImage;
+			sourceTree = "<group>";
+		};
+		5C18813A1E03D02100D55E0E /* FSIPViews */ = {
+			isa = PBXGroup;
+			children = (
+				5C18813B1E03D02100D55E0E /* FSBackButton.h */,
+				5C18813C1E03D02100D55E0E /* FSBackButton.m */,
+				5C18813D1E03D02100D55E0E /* FSBeyondButton.h */,
+				5C18813E1E03D02100D55E0E /* FSBeyondButton.m */,
+				5C18813F1E03D02100D55E0E /* FSButtonLabel.h */,
+				5C1881401E03D02100D55E0E /* FSButtonLabel.m */,
+				5C1881411E03D02100D55E0E /* FSIPImages */,
+				5C1881441E03D02100D55E0E /* FSMoreImageCell.h */,
+				5C1881451E03D02100D55E0E /* FSMoreImageCell.m */,
+				5C1881461E03D02100D55E0E /* FSMoreZoneImageCell.h */,
+				5C1881471E03D02100D55E0E /* FSMoreZoneImageCell.m */,
+			);
+			path = FSIPViews;
+			sourceTree = "<group>";
+		};
+		5C1881411E03D02100D55E0E /* FSIPImages */ = {
+			isa = PBXGroup;
+			children = (
+				5C1881421E03D02100D55E0E /* fsip_selected.png */,
+				5C1881431E03D02100D55E0E /* fsip_unselected.png */,
+			);
+			path = FSIPImages;
+			sourceTree = "<group>";
+		};
+		5C18814D1E03D02100D55E0E /* SeeImage */ = {
+			isa = PBXGroup;
+			children = (
+				5C18814E1E03D02100D55E0E /* FSSeeImageCell.h */,
+				5C18814F1E03D02100D55E0E /* FSSeeImageCell.m */,
+				5C1881501E03D02100D55E0E /* FSSeeImageView.h */,
+				5C1881511E03D02100D55E0E /* FSSeeImageView.m */,
+			);
+			path = SeeImage;
 			sourceTree = "<group>";
 		};
 		5C5BB56B1E02741000349D82 /* FSLocation */ = {
@@ -884,6 +1003,7 @@
 		71DC23551DD2011A00BEB193 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				5C18812B1E03D02100D55E0E /* FSMoreImage */,
 				5C5BB56B1E02741000349D82 /* FSLocation */,
 				5C68FE2A1DFEBA46003AA5F9 /* FutureAlert */,
 				5CE70A621DF6CA2E001FA04B /* StoreManager */,
@@ -1139,6 +1259,7 @@
 			files = (
 				71DC25E41DD3616C00BEB193 /* FSH5.html in Resources */,
 				5CFE60281DC75B9C003640A4 /* LaunchScreen.storyboard in Resources */,
+				5C18815C1E03D02100D55E0E /* fsip_selected.png in Resources */,
 				5C9337FE1DCB447B0091D3D8 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				71DC24401DD2011B00BEB193 /* fsqr2.png in Resources */,
 				71DC24461DD2011B00BEB193 /* fsqrline.png in Resources */,
@@ -1146,6 +1267,7 @@
 				71DC244C1DD2011B00BEB193 /* Note.txt in Resources */,
 				5CFE60251DC75B9C003640A4 /* Assets.xcassets in Resources */,
 				71DC24471DD2011B00BEB193 /* fsqrmsg.wav in Resources */,
+				5C18815D1E03D02100D55E0E /* fsip_unselected.png in Resources */,
 				71DC25E61DD3624D00BEB193 /* ARAbout.html in Resources */,
 				71DC24411DD2011B00BEB193 /* fsqr3.png in Resources */,
 				71DC24421DD2011B00BEB193 /* fsqr4.png in Resources */,
@@ -1221,6 +1343,7 @@
 				71DC24151DD2011B00BEB193 /* ChineseCalendarView.m in Sources */,
 				71DC244D1DD2011B00BEB193 /* README.md in Sources */,
 				71DC24091DD2011B00BEB193 /* FSDBManager.m in Sources */,
+				5C18815B1E03D02100D55E0E /* FSButtonLabel.m in Sources */,
 				714F6ED41DFAF5D200E96EED /* HAFlowController.m in Sources */,
 				714F6EBA1DF3BC2B00E96EED /* HAToolController.m in Sources */,
 				71DC243C1DD2011B00BEB193 /* FSWebController.m in Sources */,
@@ -1236,6 +1359,9 @@
 				714F6EC81DF4395F00E96EED /* FSSameKindController.m in Sources */,
 				714F6EBF1DF3C87D00E96EED /* FSShopClassView.m in Sources */,
 				71DC24191DD2011B00BEB193 /* FSCCMainView.m in Sources */,
+				5C1881611E03D02100D55E0E /* FSZoneImageController.m in Sources */,
+				5C18815F1E03D02100D55E0E /* FSMoreZoneImageCell.m in Sources */,
+				5C1881541E03D02100D55E0E /* FSImagePicker.m in Sources */,
 				71DC241A1DD2011B00BEB193 /* FSChineseCalendarController.m in Sources */,
 				71DC24751DD2011B00BEB193 /* FuData.m in Sources */,
 				71DC24161DD2011B00BEB193 /* ExhaustiveCalendar.m in Sources */,
@@ -1248,6 +1374,9 @@
 				71DC24491DD2011B00BEB193 /* FSTaxDetailView.m in Sources */,
 				5C5BB5711E02762F00349D82 /* FSBaseEntity.m in Sources */,
 				714F6ED71DFAF82B00E96EED /* HARewardPolicyController.m in Sources */,
+				5C1881561E03D02100D55E0E /* FSIPImageCell.m in Sources */,
+				5C1881631E03D02100D55E0E /* FSSeeImageView.m in Sources */,
+				5C1881591E03D02100D55E0E /* FSBackButton.m in Sources */,
 				71DC242D1DD2011B00BEB193 /* FSBlockButton.m in Sources */,
 				714F6EC21DF3D3F100E96EED /* HAShopCollectionCell.m in Sources */,
 				71DC241D1DD2011B00BEB193 /* FSLunarCalendar.m in Sources */,
@@ -1278,6 +1407,7 @@
 				71DC240F1DD2011B00BEB193 /* FSFMListController.m in Sources */,
 				71DC24771DD2011B00BEB193 /* FuWeb.m in Sources */,
 				71DC242B1DD2011B00BEB193 /* FSCacheManager.m in Sources */,
+				5C1881571E03D02100D55E0E /* FSIPModel.m in Sources */,
 				71DC24311DD2011B00BEB193 /* FSTapCell.m in Sources */,
 				714F6ECE1DF854FF00E96EED /* HATypeController.m in Sources */,
 				71DC242E1DD2011B00BEB193 /* FSImageLabelView.m in Sources */,
@@ -1288,25 +1418,33 @@
 				714F6ED11DF857BF00E96EED /* FSCyclicView.m in Sources */,
 				71474B6A1DCABB1C0063DA08 /* ARTabBarController.m in Sources */,
 				71DC24181DD2011B00BEB193 /* FSCCHeadView.m in Sources */,
+				5C1881521E03D02100D55E0E /* FSAllImageController.m in Sources */,
+				5C1881621E03D02100D55E0E /* FSSeeImageCell.m in Sources */,
 				714F6EC51DF4393400E96EED /* FSAccessController.m in Sources */,
+				5C1881551E03D02100D55E0E /* FSImagePickerController.m in Sources */,
 				71DC240B1DD2011B00BEB193 /* FSFinancesManagerController.m in Sources */,
 				71DC243A1DD2011B00BEB193 /* FIWebView.m in Sources */,
 				5CA360DF1DC8ADD800523FF5 /* ARToolController.m in Sources */,
 				714F6ECB1DF8544800E96EED /* HAPriceController.m in Sources */,
+				5C1881531E03D02100D55E0E /* FSCountButton.m in Sources */,
 				71DC24131DD2011B00BEB193 /* SQLEntity.m in Sources */,
 				7153BDC01DFD955D00C43F97 /* FSButtonsView.m in Sources */,
+				5C18815E1E03D02100D55E0E /* FSMoreImageCell.m in Sources */,
 				5CFE601A1DC75B9C003640A4 /* main.m in Sources */,
 				71DC24201DD2011B00BEB193 /* FlowCollector.m in Sources */,
 				5C9337FA1DCB447B0091D3D8 /* FSTouchView.m in Sources */,
+				5C18815A1E03D02100D55E0E /* FSBeyondButton.m in Sources */,
 				71DC24291DD2011B00BEB193 /* FSNavigationController.m in Sources */,
 				71DC240C1DD2011B00BEB193 /* FSFMAccountController.m in Sources */,
 				71DC24321DD2011B00BEB193 /* FSTapLabel.m in Sources */,
 				714F6EB91DF3BC2B00E96EED /* HACityController.m in Sources */,
 				714F6EBB1DF3BC2B00E96EED /* FSFlowView.m in Sources */,
+				5C1881601E03D02100D55E0E /* FSPreviewPhotoController.m in Sources */,
 				71DC243E1DD2011B00BEB193 /* FSMakeQRController.m in Sources */,
 				71DC24281DD2011B00BEB193 /* FSLeftItem.m in Sources */,
 				71DC24371DD2011B00BEB193 /* FSSelectController.m in Sources */,
 				71DC24251DD2011B00BEB193 /* FSBaseView.m in Sources */,
+				5C1881581E03D02100D55E0E /* FSIPTool.m in Sources */,
 				71DC243B1DD2011B00BEB193 /* FSHTMLController.m in Sources */,
 				5C15E2881DF5140900BBBA5C /* FSLoanCounterController.m in Sources */,
 			);
