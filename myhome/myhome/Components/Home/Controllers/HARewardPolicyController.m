@@ -22,19 +22,24 @@
 
 - (void)policyDesignViews
 {
-    UILabel *timeLabel = [FSViewManager labelWithFrame:CGRectMake(WIDTHFC / 4, 10, WIDTHFC / 2, 30) text:@"2016年12月14日 22:25" textColor:[UIColor whiteColor] backColor:RGBCOLOR(220, 220, 220, 1) font:FONTFC(14) textAlignment:NSTextAlignmentCenter];
+    UILabel *timeLabel = [FSViewManager labelWithFrame:CGRectMake(WIDTHFC / 4, 30, WIDTHFC / 2, 30) text:@"2016年12月14日 22:25" textColor:[UIColor whiteColor] backColor:RGBCOLOR(220, 220, 220, 1) font:FONTFC(14) textAlignment:NSTextAlignmentCenter];
     [self.scrollView addSubview:timeLabel];
     self.scrollView.showsVerticalScrollIndicator = NO;
     
-    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(15, timeLabel.bottom + 30, 45, 45)];
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(15, timeLabel.bottom + 30, 30, 30)];
     imageView.image = IMAGENAMED(@"deviceInfo");
     [self.scrollView addSubview:imageView];
     
-    UILabel *label = [FSViewManager labelWithFrame:CGRectMake(imageView.right + 10, imageView.top, WIDTHFC - 100, 200) text:@"你知道吗？过去几个月的测试阶段，我已经和起晚个人类通过电话了，科幻电影吗？不，这已成现实，对我说【我要排队】" textColor:[UIColor blackColor] backColor:[UIColor whiteColor] font:FONTFC(14) textAlignment:NSTextAlignmentLeft];
+    UIView *whiteView = [[UIView alloc] initWithFrame:CGRectMake(imageView.right + 15, imageView.top, WIDTHFC - 120, 300)];
+    whiteView.backgroundColor = [UIColor whiteColor];
+    [self.scrollView addSubview:whiteView];
+    
+    UILabel *label = [FSViewManager labelWithFrame:CGRectMake(10, 5, whiteView.width - 20, whiteView.height - 10) text:@"尊敬的用户:\n\t从即日起，我们将对用户的推荐活动给予奖励：\n\n\t推荐简装客户，奖励2000元/人；\n\t推荐精装客户，奖励5000元/人；\n\t推荐豪装客户，奖励1万元/人。\n\n\t奖金将在客户完成装修后兑付;同时被推荐的客户减免等额的费用。\n\t呼朋唤友，对我说【我要推荐】" textColor:[UIColor blackColor] backColor:[UIColor whiteColor] font:FONTFC(14) textAlignment:NSTextAlignmentLeft];
     label.numberOfLines = 0;
     [label sizeToFit];
-    label.frame = CGRectMake(imageView.right + 10, imageView.top, WIDTHFC - 100, label.height + 20);
-    [self.scrollView addSubview:label];
+    label.frame = CGRectMake(10, 10, whiteView.width - 20,label.height);
+    [whiteView addSubview:label];
+    whiteView.height = label.height + 20;
 }
 
 
