@@ -33,8 +33,8 @@
     self.backTintColor = [UIColor whiteColor];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(bbiAction)];
     
-    NSArray *array = @[@"二维码",@"设备信息",@"导航",@"计算器",@"提醒"];
-    NSArray *picArray = @[@"saoma_too",@"deviceInfo",@"navigation_web",@"counter_logo",@"counter_logo"];
+    NSArray *array = @[@"二维码",@"设备信息",@"导航",@"计算器",@"提醒",@"目录"];
+    NSArray *picArray = @[@"saoma_too",@"deviceInfo",@"navigation_web",@"counter_logo",@"counter_logo",@"counter_logo"];
     
     CGFloat width = (WIDTHFC - 100) / 4;
     WEAKSELF(this);
@@ -140,6 +140,11 @@
         case 4:
         {
             [FuData pushToViewControllerWithClass:@"FSFutureAlertController" navigationController:self.navigationController param:nil configBlock:nil];
+        }
+            break;
+            case 5:
+        {
+            [FuData pushToViewControllerWithClass:@"FSAppDocumentController" navigationController:self.navigationController param:nil configBlock:nil];
         }
             break;
         case 8:
