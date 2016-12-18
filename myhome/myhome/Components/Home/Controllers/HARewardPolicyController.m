@@ -7,6 +7,7 @@
 //
 
 #import "HARewardPolicyController.h"
+#import "FSShareManager.h"
 
 @interface HARewardPolicyController ()
 
@@ -22,12 +23,15 @@
 
 - (void)bbiAction
 {
-    
+    [FSShareManager shareActionWithShareType:FSShareTypeWXStore title:@"抬头文字" description:@"描述文字" thumbImage:IMAGENAMED(@"home_backImage") url:@"https://www.baidu.com" controller:self result:^(NSString *bResult) {
+        [FuData showMessage:bResult];
+    }];
 }
 
 - (void)policyDesignViews
 {
-    UIBarButtonItem *bbi = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(bbiAction)];
+    UIBarButtonItem *bbi = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(bbiAction)];
+    bbi.tintColor = [UIColor whiteColor];
     self.navigationItem.rightBarButtonItem = bbi;
     
     UILabel *timeLabel = [FSViewManager labelWithFrame:CGRectMake(WIDTHFC / 4, 30, WIDTHFC / 2, 30) text:@"2016年12月14日 22:25" textColor:[UIColor whiteColor] backColor:RGBCOLOR(220, 220, 220, 1) font:FONTFC(14) textAlignment:NSTextAlignmentCenter];

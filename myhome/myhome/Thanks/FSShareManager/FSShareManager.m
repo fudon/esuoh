@@ -218,6 +218,7 @@ static FSShareManager *manager = nil;
     if (!canStep) {
         return;
     }
+    manager.shareResultlBlock = completion;
     
     switch (type) {
         case FSShareTypeWeibo:
@@ -313,6 +314,12 @@ static FSShareManager *manager = nil;
 {
     FSShareManager *manager = [FSShareManager shareInstance];
     [manager mailShareWithSubject:subject messageBody:body recipients:recipients fileData:data fileName:fileName controller:controller];
+}
+
++ (void)messageShareWithMessage:(NSString *)body recipients:(NSArray *)recipients fileData:(NSData *)data fileName:(NSString *)fileName controller:(UIViewController *)controller
+{
+    FSShareManager *manager = [FSShareManager shareInstance];
+    [manager messageShareWithMessage:body recipients:recipients controller:controller];
 }
 
 + (BOOL)canSupportShare:(FSShareType)shareType
@@ -429,15 +436,15 @@ static FSShareManager *manager = nil;
     // errCode -2
     // type 0
     
+    NSString *result = nil;
     if (resp.errCode == WTShareWeiXinErrCodeSuccess) {
-        //        NSLog(@"微信----分享成功!!");
-        self.shareResultlBlock(@"微信----分享成功!!");
+        result = @"分享微信成功";
     }else{
-        //        NSLog(@"微信----用户取消分享!!");
-        self.shareResultlBlock(@"微信----用户取消分享!!");
+        result = @"取消微信分享";
     }
-    //    NSLog(@"%@", resp);
-    
+    if (self.shareResultlBlock) {
+        self.shareResultlBlock(result);
+    }
 }
 
 #pragma mark - 判断qq是否分享成功

@@ -32,6 +32,17 @@
     FSLog();
 }
 
+- (instancetype)initWithFrame:(CGRect)frame list:(NSArray<NSNumber *> *)list controller:(UIViewController *)controller
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        self.callController = controller;
+        [self shareDesignViews];
+        self.list = list;
+    }
+    return self;
+}
+
 - (void)setList:(NSArray<NSNumber *> *)list
 {
     _list = list;
@@ -123,6 +134,7 @@
     _mainView.backgroundColor = [UIColor whiteColor];
     [self addSubview:_mainView];
     
+    /*
     CGFloat width = (self.bounds.size.width - 100) / 4;
     NSArray *array = @[@"微信",@"朋友圈",@"QQ",@"QQ空间",@"微信收藏",@"微博",@"短信",@"邮件"];
     NSArray *tags = @[@(FSShareTypeWechat),@(FSShareTypeWXFriends),@(FSShareTypeQQ),@(FSShareTypeQQZone),@(FSShareTypeWXStore),@(FSShareTypeWeibo),@(FSShareTypeMessage),@(FSShareTypeEmail)];
@@ -135,6 +147,7 @@
             [this imageLabelAction:bImageLabelView];
         };
     }
+    */
     
     [UIView animateWithDuration:.3 animations:^{
         this.touchView.alpha = .28;
@@ -213,9 +226,9 @@
             }
         }];
     }else if (tag == FSShareTypeMessage){
-        [[FSShareManager shareInstance] messageShareWithMessage:@"分享的内容" recipients:nil controller:controller];
+        //[[FSShareManager shareInstance] messageShareWithMessage:@"分享的内容" recipients:nil controller:controller];
     }else if (tag == FSShareTypeEmail){
-        [[FSShareManager shareInstance] mailShareWithSubject:@"最好的软件" messageBody:@"分享的内容" recipients:nil fileData:nil fileName:nil controller:controller];
+       // [[FSShareManager shareInstance] mailShareWithSubject:@"最好的软件" messageBody:@"分享的内容" recipients:nil fileData:nil fileName:nil controller:controller];
     }
 }
 
@@ -249,9 +262,9 @@
             [FuData showAlertViewWithTitle:nil message:shareResult];
         }];
     }else if (tag == FSShareTypeMessage){
-        [[FSShareManager shareInstance] messageShareWithMessage:@"分享的内容" recipients:nil controller:self.callController];
+        //[[FSShareManager shareInstance] messageShareWithMessage:@"分享的内容" recipients:nil controller:self.callController];
     }else if (tag == FSShareTypeEmail){
-        [[FSShareManager shareInstance] mailShareWithSubject:@"最好的软件" messageBody:@"分享的内容" recipients:nil fileData:nil fileName:nil controller:self.callController];
+       // [[FSShareManager shareInstance] mailShareWithSubject:@"最好的软件" messageBody:@"分享的内容" recipients:nil fileData:nil fileName:nil controller:self.callController];
     }
 }
 
