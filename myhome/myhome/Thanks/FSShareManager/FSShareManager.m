@@ -214,6 +214,7 @@ static FSShareManager *manager = nil;
     }
     
     FSShareManager *manager = [FSShareManager shareInstance];
+    manager.callController = controller;
     BOOL canStep = [self canSupportShare:type];
     if (!canStep) {
         return;
