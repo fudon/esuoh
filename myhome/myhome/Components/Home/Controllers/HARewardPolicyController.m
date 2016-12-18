@@ -20,8 +20,16 @@
     [self policyDesignViews];
 }
 
+- (void)bbiAction
+{
+    
+}
+
 - (void)policyDesignViews
 {
+    UIBarButtonItem *bbi = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(bbiAction)];
+    self.navigationItem.rightBarButtonItem = bbi;
+    
     UILabel *timeLabel = [FSViewManager labelWithFrame:CGRectMake(WIDTHFC / 4, 30, WIDTHFC / 2, 30) text:@"2016年12月14日 22:25" textColor:[UIColor whiteColor] backColor:RGBCOLOR(220, 220, 220, 1) font:FONTFC(14) textAlignment:NSTextAlignmentCenter];
     [self.scrollView addSubview:timeLabel];
     self.scrollView.showsVerticalScrollIndicator = NO;
