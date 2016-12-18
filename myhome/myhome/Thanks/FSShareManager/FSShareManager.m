@@ -197,6 +197,9 @@ static FSShareManager *manager = nil;
 
 + (void)shareActionWithShareType:(FSShareType)type title:(NSString *)title description:(NSString *)description  thumbImage:(UIImage *)image url:(NSString *)url controller:(UIViewController *)controller result:(void(^)(NSString *bResult))completion
 {
+    if (type == (FSShareTypeEmail | FSShareTypeMessage)) {
+        return;
+    }
     if (!FSValidateString(title)) {
         return;
     }
@@ -301,14 +304,15 @@ static FSShareManager *manager = nil;
             [manager messageShareWithMessage:description recipients:nil controller:controller];
         }
             break;
-            case FSShareTypeEmail:
-        {
-            [manager mailShareWithSubject:title messageBody:description recipients:nil fileData:nil fileName:nil controller:controller];
-        }
-            break;
         default:
             break;
     }
+}
+
++ (void)emailShareWithSubject:(NSString *)subject messageBody:(NSString *)body recipients:(NSArray *)recipients fileData:(NSData *)data fileName:(NSString *)fileName controller:(UIViewController *)controller
+{
+    FSShareManager *manager = [FSShareManager shareInstance];
+    [manager mailShareWithSubject:subject messageBody:body recipients:recipients fileData:data fileName:fileName controller:controller];
 }
 
 + (BOOL)canSupportShare:(FSShareType)shareType

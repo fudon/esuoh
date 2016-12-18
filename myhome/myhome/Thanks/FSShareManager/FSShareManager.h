@@ -48,6 +48,8 @@ typedef void(^WTShareResultlBlock)(NSString * shareResult);
 
 + (void)shareActionWithShareType:(FSShareType)type title:(NSString *)title description:(NSString *)description  thumbImage:(UIImage *)image url:(NSString *)url controller:(UIViewController *)controller result:(void(^)(NSString *bResult))completion;
 
++ (void)emailShareWithSubject:(NSString *)subject messageBody:(NSString *)body recipients:(NSArray *)recipients fileData:(NSData *)data fileName:(NSString *)fileName controller:(UIViewController *)controller;
+
 // 短信分享
 - (void)messageShareWithMessage:(NSString *)message     // 短信内容
                      recipients:(NSArray *)recipients   // 短信接收者
