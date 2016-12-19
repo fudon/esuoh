@@ -24,7 +24,7 @@
 - (void)bbiAction
 {
     UIImage *image = IMAGENAMED(@"home_backImage");
-    FSShareView *shareView = [[FSShareView alloc] initWithFrame:[UIScreen mainScreen].bounds list:@[@(FSShareTypeWechat),@(FSShareTypeQQ),@(FSShareTypeWeibo),@(FSShareTypeEmail),@(FSShareTypeMessage)] controller:self title:@"Title" detail:@"Detail" url:@"https://www.baidu.com" thumbImage:[UIImage new] recipientsOfMail:nil recipientsOfMessage:@[@"15201201688"] fileData:UIImageJPEGRepresentation(image, 1.0) fileName:@"图片" fileType:@"image/jpeg" result:^(NSString *bResult) {
+    FSShareView *shareView = [[FSShareView alloc] initWithFrame:[UIScreen mainScreen].bounds list:@[@(FSShareTypeWechat),@(FSShareTypeQQ),@(FSShareTypeWeibo),@(FSShareTypeMessage)] controller:self title:@"Title" detail:@"Detail" url:@"https://www.baidu.com" thumbImage:[UIImage new] recipientsOfMail:nil recipientsOfMessage:@[@"15201201688"] fileData:UIImageJPEGRepresentation(image, 1.0) fileName:@"图片" fileType:@"image/jpeg" result:^(NSString *bResult) {
         [FuData showMessage:bResult];
     }];
     [self.navigationController.tabBarController.view addSubview:shareView];
@@ -32,7 +32,7 @@
 
 - (void)policyDesignViews
 {
-    UIBarButtonItem *bbi = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(bbiAction)];
+    UIBarButtonItem *bbi = [[UIBarButtonItem alloc] initWithTitle:@"我要推荐" style:UIBarButtonItemStylePlain target:self action:@selector(bbiAction)];
     bbi.tintColor = [UIColor whiteColor];
     self.navigationItem.rightBarButtonItem = bbi;
     
