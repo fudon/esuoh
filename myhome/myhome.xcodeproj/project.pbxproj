@@ -27,6 +27,7 @@
 		5C1881611E03D02100D55E0E /* FSZoneImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C18814C1E03D02100D55E0E /* FSZoneImageController.m */; };
 		5C1881621E03D02100D55E0E /* FSSeeImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C18814F1E03D02100D55E0E /* FSSeeImageCell.m */; };
 		5C1881631E03D02100D55E0E /* FSSeeImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C1881511E03D02100D55E0E /* FSSeeImageView.m */; };
+		5C23B75E1E07D2FA0068603A /* FSFutureAlertSendController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C23B75D1E07D2FA0068603A /* FSFutureAlertSendController.m */; };
 		5C5BB56E1E02741000349D82 /* FSLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5BB56D1E02741000349D82 /* FSLocation.m */; };
 		5C5BB5711E02762F00349D82 /* FSBaseEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5BB5701E02762F00349D82 /* FSBaseEntity.m */; };
 		5C68FE2D1DFEBA61003AA5F9 /* FSFutureAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C68FE2C1DFEBA61003AA5F9 /* FSFutureAlertController.m */; };
@@ -196,6 +197,8 @@
 		5C18814F1E03D02100D55E0E /* FSSeeImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSSeeImageCell.m; sourceTree = "<group>"; };
 		5C1881501E03D02100D55E0E /* FSSeeImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSSeeImageView.h; sourceTree = "<group>"; };
 		5C1881511E03D02100D55E0E /* FSSeeImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSSeeImageView.m; sourceTree = "<group>"; };
+		5C23B75C1E07D2FA0068603A /* FSFutureAlertSendController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSFutureAlertSendController.h; sourceTree = "<group>"; };
+		5C23B75D1E07D2FA0068603A /* FSFutureAlertSendController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSFutureAlertSendController.m; sourceTree = "<group>"; };
 		5C5BB56C1E02741000349D82 /* FSLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSLocation.h; sourceTree = "<group>"; };
 		5C5BB56D1E02741000349D82 /* FSLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSLocation.m; sourceTree = "<group>"; };
 		5C5BB56F1E02762F00349D82 /* FSBaseEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSBaseEntity.h; sourceTree = "<group>"; };
@@ -568,6 +571,8 @@
 				5C68FE2E1DFEBC55003AA5F9 /* FSNewFutureAlertController.h */,
 				5C68FE2F1DFEBC55003AA5F9 /* FSNewFutureAlertController.m */,
 				5C8312361E0164ED00A23B07 /* FSFutureAlertHead.h */,
+				5C23B75C1E07D2FA0068603A /* FSFutureAlertSendController.h */,
+				5C23B75D1E07D2FA0068603A /* FSFutureAlertSendController.m */,
 			);
 			path = FutureAlert;
 			sourceTree = "<group>";
@@ -1428,6 +1433,7 @@
 				71DC240B1DD2011B00BEB193 /* FSFinancesManagerController.m in Sources */,
 				71DC243A1DD2011B00BEB193 /* FIWebView.m in Sources */,
 				5CA360DF1DC8ADD800523FF5 /* ARToolController.m in Sources */,
+				5C23B75E1E07D2FA0068603A /* FSFutureAlertSendController.m in Sources */,
 				714F6ECB1DF8544800E96EED /* HAPriceController.m in Sources */,
 				5C1881531E03D02100D55E0E /* FSCountButton.m in Sources */,
 				71DC24131DD2011B00BEB193 /* SQLEntity.m in Sources */,

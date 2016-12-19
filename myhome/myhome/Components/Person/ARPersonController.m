@@ -66,7 +66,7 @@
     if (indexPath.row == 0) {
         [self showShareView];
     }else if (indexPath.row == 1){
-        [FSShareManager emailShareWithSubject:@"App Feedback" messageBody:@"MessageBody" recipients:@[@"1245102331@qq.com"] fileData:nil fileName:nil controller:self];
+        [FSShareManager emailShareWithSubject:@"App FB" messageBody:nil recipients:@[@"1245102331@qq.com"] fileData:nil fileName:nil fileType:nil controller:self];
     }else if (indexPath.row == 2){
         NSString *path = [[NSBundle mainBundle] pathForResource:@"ARAbout" ofType:@"html"];
         [FuData pushToViewControllerWithClass:@"FSHTMLController" navigationController:self.navigationController param:@{@"localUrlString":path,@"title":@"关于"} configBlock:nil];
@@ -78,8 +78,9 @@
 
 - (void)showShareView
 {
-    FSShareView *shareView = [[FSShareView alloc] initWithFrame:[UIScreen mainScreen].bounds list:@[@(FSShareTypeWechat),@(FSShareTypeQQ)] controller:self];
-    //FSShareView *shareView = [[FSShareView alloc] initWithFrame:[UIScreen mainScreen].bounds controller:self];
+    FSShareView *shareView = [[FSShareView alloc] initWithFrame:[UIScreen mainScreen].bounds list:@[@(FSShareTypeWechat),@(FSShareTypeQQ),@(FSShareTypeWeibo),@(FSShareTypeEmail),@(FSShareTypeMessage)] controller:self title:@"Title" detail:@"Detail" url:@"https://www.baidu.com" thumbImage:[UIImage new] recipientsOfMail:nil recipientsOfMessage:nil fileData:nil fileName:nil fileType:nil result:^(NSString *bResult) {
+    }];
+                              
     [self.navigationController.tabBarController.view addSubview:shareView];
 }
 

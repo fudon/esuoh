@@ -7,7 +7,7 @@
 //
 
 #import "HARewardPolicyController.h"
-#import "FSShareManager.h"
+#import "FSShareView.h"
 
 @interface HARewardPolicyController ()
 
@@ -23,9 +23,11 @@
 
 - (void)bbiAction
 {
-    [FSShareManager shareActionWithShareType:FSShareTypeWXStore title:@"抬头文字" description:@"描述文字" thumbImage:IMAGENAMED(@"home_backImage") url:@"https://www.baidu.com" controller:self result:^(NSString *bResult) {
+    UIImage *image = IMAGENAMED(@"home_backImage");
+    FSShareView *shareView = [[FSShareView alloc] initWithFrame:[UIScreen mainScreen].bounds list:@[@(FSShareTypeWechat),@(FSShareTypeQQ),@(FSShareTypeWeibo),@(FSShareTypeEmail),@(FSShareTypeMessage)] controller:self title:@"Title" detail:@"Detail" url:@"https://www.baidu.com" thumbImage:[UIImage new] recipientsOfMail:nil recipientsOfMessage:@[@"15201201688"] fileData:UIImageJPEGRepresentation(image, 1.0) fileName:@"图片" fileType:@"image/jpeg" result:^(NSString *bResult) {
         [FuData showMessage:bResult];
     }];
+    [self.navigationController.tabBarController.view addSubview:shareView];
 }
 
 - (void)policyDesignViews

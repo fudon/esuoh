@@ -29,15 +29,15 @@
 
 @implementation FSShareManager
 
-static FSShareManager *manager = nil;
+static FSShareManager *_manager = nil;
 + (instancetype)shareInstance
 {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        manager = [[FSShareManager alloc] init];
-        [manager setRegisterApps];
+        _manager = [[FSShareManager alloc] init];
+        [_manager setRegisterApps];
     });
-    return manager;
+    return _manager;
 }
 
 // 注册appid
@@ -52,152 +52,152 @@ static FSShareManager *manager = nil;
     _tencentOAuth = [[TencentOAuth alloc]initWithAppId:kTencentAppId andDelegate:self];
 }
 
-#pragma mark - 分享方法------
-+ (void)wt_shareWithContent:(FSShareEntity *)contentObj shareType:(FSShareType)shareType shareResult:(WTShareResultlBlock)shareResult
-{
-    FSShareManager * shareManager = [FSShareManager shareInstance];
-    shareManager.shareResultlBlock = shareResult;
-    
-    [self wt_shareWithContent:contentObj shareType:shareType];
-}
+//#pragma mark - 分享方法------
+//+ (void)wt_shareWithContent:(FSShareEntity *)contentObj shareType:(FSShareType)shareType shareResult:(WTShareResultlBlock)shareResult
+//{
+//    FSShareManager * shareManager = [FSShareManager shareInstance];
+//    shareManager.shareResultlBlock = shareResult;
+//    
+//    [self wt_shareWithContent:contentObj shareType:shareType];
+//}
+//
+//+ (void)wt_shareWithContent:(FSShareEntity *)contentObj shareType:(FSShareType)shareType
+//{
+//    [FSShareManager shareInstance];
+//    
+//    BOOL canStep = [self canSupportShare:shareType];
+//    if (!canStep) {
+//        return;
+//    }
+//    
+//    switch (shareType) {
+//        case FSShareTypeWeibo:
+//        {
+//            WBMessageObject *message = [WBMessageObject message];
+//            message.text = contentObj.sinaSummary;
+//            
+//            if(contentObj.bigImage){
+//                WBImageObject *webpage = [WBImageObject object];
+//                webpage.imageData =  UIImageJPEGRepresentation(contentObj.bigImage, 1.0f);
+//                
+//                message.imageObject = webpage;
+//            }
+//            
+//            WBSendMessageToWeiboRequest *request = [WBSendMessageToWeiboRequest requestWithMessage:message];
+//            
+//            [WeiboSDK sendRequest:request];
+//            break;
+//        }
+//        case FSShareTypeQQ:
+//        {
+//            NSString * shareTitle = [NSString string];
+//            shareTitle = contentObj.qqTitle ? contentObj.qqTitle : contentObj.title;
+//            
+//            //分享跳转URL
+//            NSString *urlt = contentObj.urlString;
+//            QQApiNewsObject * newsObj ;
+//            
+//            if (contentObj.urlImageString) {
+//                newsObj   = [QQApiNewsObject objectWithURL:[NSURL URLWithString:urlt] title:shareTitle description:contentObj.summary previewImageURL:[NSURL URLWithString:contentObj.urlImageString]];
+//            }else if(contentObj.thumbImage){
+//                // 如果分享的是图片的话 不能太大所以如果后台过来的的图片太大的话 可以调节如下的倍数
+//                NSData *imageData = UIImageJPEGRepresentation(contentObj.thumbImage, 1.0);
+//                newsObj = [QQApiNewsObject objectWithURL:[NSURL URLWithString:urlt] title:shareTitle description:contentObj.summary previewImageData:imageData];
+//            }
+//            
+//            SendMessageToQQReq *req = [[SendMessageToQQReq alloc] init];
+//            req.message = newsObj;
+//            req.type = ESENDMESSAGETOQQREQTYPE;
+//            //将内容分享到qq
+//            [QQApiInterface sendReq:req];
+//            break;
+//        }
+//        case FSShareTypeQQZone:
+//        {
+//            //分享跳转URL
+//            NSString *urlt = contentObj.urlString;
+//            
+//            QQApiNewsObject * newsObj ;
+//            if (contentObj.urlImageString) {
+//                newsObj   = [QQApiNewsObject objectWithURL:[NSURL URLWithString:urlt] title:contentObj.title description:contentObj.summary previewImageURL:[NSURL URLWithString:contentObj.urlImageString]];
+//            }else if(contentObj.thumbImage){
+//                
+//                NSData * imageData = UIImagePNGRepresentation(contentObj.thumbImage);
+//                
+//                newsObj = [QQApiNewsObject objectWithURL:[NSURL URLWithString:urlt] title:contentObj.title description:contentObj.summary previewImageData:imageData];
+//            }
+//            
+//            SendMessageToQQReq *req = [[SendMessageToQQReq alloc]init];
+//            req.message = newsObj;
+//            req.type = ESENDMESSAGETOQQREQTYPE;
+//            
+//            [QQApiInterface SendReqToQZone:req];            
+//            break;
+//        }
+//        case FSShareTypeWXFriends: // 微信朋友圈
+//        {
+//            WXMediaMessage * message = [WXMediaMessage message];
+//            message.title = contentObj.weixinPyqtitle.length >0 ? contentObj.weixinPyqtitle : contentObj.title;
+//            [message setThumbImage:contentObj.thumbImage];
+//            message.description = contentObj.summary;
+//            WXWebpageObject * ext = [WXWebpageObject object];
+//            ext.webpageUrl = contentObj.urlString;
+//            message.mediaObject = ext;
+//            SendMessageToWXReq * req = [[SendMessageToWXReq alloc]init];
+//            req.bText = NO;
+//            req.message = message;
+//            req.scene = WXSceneTimeline;
+//            [WXApi sendReq:req];
+//            
+//            
+//            break;
+//        }
+//        case FSShareTypeWechat:
+//        {
+//            WXMediaMessage * message = [WXMediaMessage message];
+//            message.title = contentObj.title;
+//            
+//            [message setThumbImage:contentObj.thumbImage];
+//            message.description = contentObj.summary;
+//            WXWebpageObject * ext = [WXWebpageObject object];
+//            ext.webpageUrl = contentObj.urlString;
+//            message.mediaObject = ext;
+//            
+//            SendMessageToWXReq *req = [[SendMessageToWXReq alloc]init];
+//            req.bText = NO;
+//            req.message = message;
+//            req.scene = WXSceneSession;
+//            [WXApi sendReq:req];
+//            
+//            break;
+//        }
+//        case FSShareTypeWXStore:
+//        {
+//            WXMediaMessage * message = [WXMediaMessage message];
+//            message.title = contentObj.title;
+//            
+//            [message setThumbImage:contentObj.thumbImage];
+//            message.description = contentObj.summary;
+//            WXWebpageObject * ext = [WXWebpageObject object];
+//            ext.webpageUrl = contentObj.urlString;
+//            message.mediaObject = ext;
+//            
+//            SendMessageToWXReq *req = [[SendMessageToWXReq alloc]init];
+//            req.bText = NO;
+//            req.message = message;
+//            req.scene = WXSceneFavorite;
+//            [WXApi sendReq:req];
+//            break;
+//        }
+//            
+//        default:
+//            break;
+//    }
+//}
 
-+ (void)wt_shareWithContent:(FSShareEntity *)contentObj shareType:(FSShareType)shareType
++ (void)shareActionWithShareType:(FSShareType)type title:(NSString *)title description:(NSString *)description thumbImage:(UIImage *)image url:(NSString *)url controller:(UIViewController *)controller result:(void(^)(NSString *bResult))completion
 {
-    [FSShareManager shareInstance];
-    
-    BOOL canStep = [self canSupportShare:shareType];
-    if (!canStep) {
-        return;
-    }
-    
-    switch (shareType) {
-        case FSShareTypeWeibo:
-        {
-            WBMessageObject *message = [WBMessageObject message];
-            message.text = contentObj.sinaSummary;
-            
-            if(contentObj.bigImage){
-                WBImageObject *webpage = [WBImageObject object];
-                webpage.imageData =  UIImageJPEGRepresentation(contentObj.bigImage, 1.0f);
-                
-                message.imageObject = webpage;
-            }
-            
-            WBSendMessageToWeiboRequest *request = [WBSendMessageToWeiboRequest requestWithMessage:message];
-            
-            [WeiboSDK sendRequest:request];
-            break;
-        }
-        case FSShareTypeQQ:
-        {
-            NSString * shareTitle = [NSString string];
-            shareTitle = contentObj.qqTitle ? contentObj.qqTitle : contentObj.title;
-            
-            //分享跳转URL
-            NSString *urlt = contentObj.urlString;
-            QQApiNewsObject * newsObj ;
-            
-            if (contentObj.urlImageString) {
-                newsObj   = [QQApiNewsObject objectWithURL:[NSURL URLWithString:urlt] title:shareTitle description:contentObj.summary previewImageURL:[NSURL URLWithString:contentObj.urlImageString]];
-            }else if(contentObj.thumbImage){
-                // 如果分享的是图片的话 不能太大所以如果后台过来的的图片太大的话 可以调节如下的倍数
-                NSData *imageData = UIImageJPEGRepresentation(contentObj.thumbImage, 1.0);
-                newsObj = [QQApiNewsObject objectWithURL:[NSURL URLWithString:urlt] title:shareTitle description:contentObj.summary previewImageData:imageData];
-            }
-            
-            SendMessageToQQReq *req = [[SendMessageToQQReq alloc] init];
-            req.message = newsObj;
-            req.type = ESENDMESSAGETOQQREQTYPE;
-            //将内容分享到qq
-            [QQApiInterface sendReq:req];
-            break;
-        }
-        case FSShareTypeQQZone:
-        {
-            //分享跳转URL
-            NSString *urlt = contentObj.urlString;
-            
-            QQApiNewsObject * newsObj ;
-            if (contentObj.urlImageString) {
-                newsObj   = [QQApiNewsObject objectWithURL:[NSURL URLWithString:urlt] title:contentObj.title description:contentObj.summary previewImageURL:[NSURL URLWithString:contentObj.urlImageString]];
-            }else if(contentObj.thumbImage){
-                
-                NSData * imageData = UIImagePNGRepresentation(contentObj.thumbImage);
-                
-                newsObj = [QQApiNewsObject objectWithURL:[NSURL URLWithString:urlt] title:contentObj.title description:contentObj.summary previewImageData:imageData];
-            }
-            
-            SendMessageToQQReq *req = [[SendMessageToQQReq alloc]init];
-            req.message = newsObj;
-            req.type = ESENDMESSAGETOQQREQTYPE;
-            
-            [QQApiInterface SendReqToQZone:req];            
-            break;
-        }
-        case FSShareTypeWXFriends: // 微信朋友圈
-        {
-            WXMediaMessage * message = [WXMediaMessage message];
-            message.title = contentObj.weixinPyqtitle.length >0 ? contentObj.weixinPyqtitle : contentObj.title;
-            [message setThumbImage:contentObj.thumbImage];
-            message.description = contentObj.summary;
-            WXWebpageObject * ext = [WXWebpageObject object];
-            ext.webpageUrl = contentObj.urlString;
-            message.mediaObject = ext;
-            SendMessageToWXReq * req = [[SendMessageToWXReq alloc]init];
-            req.bText = NO;
-            req.message = message;
-            req.scene = WXSceneTimeline;
-            [WXApi sendReq:req];
-            
-            
-            break;
-        }
-        case FSShareTypeWechat:
-        {
-            WXMediaMessage * message = [WXMediaMessage message];
-            message.title = contentObj.title;
-            
-            [message setThumbImage:contentObj.thumbImage];
-            message.description = contentObj.summary;
-            WXWebpageObject * ext = [WXWebpageObject object];
-            ext.webpageUrl = contentObj.urlString;
-            message.mediaObject = ext;
-            
-            SendMessageToWXReq *req = [[SendMessageToWXReq alloc]init];
-            req.bText = NO;
-            req.message = message;
-            req.scene = WXSceneSession;
-            [WXApi sendReq:req];
-            
-            break;
-        }
-        case FSShareTypeWXStore:
-        {
-            WXMediaMessage * message = [WXMediaMessage message];
-            message.title = contentObj.title;
-            
-            [message setThumbImage:contentObj.thumbImage];
-            message.description = contentObj.summary;
-            WXWebpageObject * ext = [WXWebpageObject object];
-            ext.webpageUrl = contentObj.urlString;
-            message.mediaObject = ext;
-            
-            SendMessageToWXReq *req = [[SendMessageToWXReq alloc]init];
-            req.bText = NO;
-            req.message = message;
-            req.scene = WXSceneFavorite;
-            [WXApi sendReq:req];
-            break;
-        }
-            
-        default:
-            break;
-    }
-}
-
-+ (void)shareActionWithShareType:(FSShareType)type title:(NSString *)title description:(NSString *)description  thumbImage:(UIImage *)image url:(NSString *)url controller:(UIViewController *)controller result:(void(^)(NSString *bResult))completion
-{
-    if (type == (FSShareTypeEmail | FSShareTypeMessage)) {
+    if (type == FSShareTypeEmail || type == FSShareTypeMessage) {
         return;
     }
     if (!FSValidateString(title)) {
@@ -237,7 +237,7 @@ static FSShareManager *manager = nil;
         }
         case FSShareTypeQQ:
         {
-            QQApiNewsObject * newsObj = [QQApiNewsObject objectWithURL:[NSURL URLWithString:url] title:title description:description previewImageData:UIImageJPEGRepresentation([FuData compressImage:image targetWidth:100], 1.0)];
+            QQApiNewsObject *newsObj = [QQApiNewsObject objectWithURL:[NSURL URLWithString:url] title:title description:description previewImageData:UIImageJPEGRepresentation([FuData compressImage:image targetWidth:100], 1.0)];
             SendMessageToQQReq *req = [[SendMessageToQQReq alloc] init];
             req.message = newsObj;
             req.type = ESENDMESSAGETOQQREQTYPE;
@@ -301,26 +301,49 @@ static FSShareManager *manager = nil;
             [WXApi sendReq:req];
             break;
         }
-            case FSShareTypeMessage:
-        {
-            [manager messageShareWithMessage:description recipients:nil controller:controller];
-        }
-            break;
         default:
             break;
     }
 }
 
-+ (void)emailShareWithSubject:(NSString *)subject messageBody:(NSString *)body recipients:(NSArray *)recipients fileData:(NSData *)data fileName:(NSString *)fileName controller:(UIViewController *)controller
++ (void)wxImageShareActionWithImageData:(UIImage *)image controller:(UIViewController *)controller result:(void(^)(NSString *bResult))completion
 {
+    if (![image isKindOfClass:NSClassFromString(@"UIImage")]) {
+        return;
+    }
+    
     FSShareManager *manager = [FSShareManager shareInstance];
-    [manager mailShareWithSubject:subject messageBody:body recipients:recipients fileData:data fileName:fileName controller:controller];
+    manager.callController = controller;
+    BOOL canStep = [self canSupportShare:FSShareTypeWechat];
+    if (!canStep) {
+        return;
+    }
+    WXMediaMessage *message = [WXMediaMessage message];
+    UIImage *thumbImage = [FuData compressImage:image width:MIN(image.size.width / 8, 80)];
+    message.thumbData = UIImageJPEGRepresentation(thumbImage, 1.0);
+    
+    WXImageObject *ext = [WXImageObject object];
+    ext.imageData = UIImageJPEGRepresentation(image, 1.0);
+    message.mediaObject = ext;
+    SendMessageToWXReq *req = [[SendMessageToWXReq alloc]init];
+    req.bText = NO;
+    req.message = message;
+    req.scene = WXSceneSession;
+    [WXApi sendReq:req];
 }
 
-+ (void)messageShareWithMessage:(NSString *)body recipients:(NSArray *)recipients fileData:(NSData *)data fileName:(NSString *)fileName controller:(UIViewController *)controller
++ (void)emailShareWithSubject:(NSString *)subject messageBody:(NSString *)body recipients:(NSArray *)recipients fileData:(NSData *)data fileName:(NSString *)fileName fileType:(NSString *)fileType controller:(UIViewController *)controller
 {
     FSShareManager *manager = [FSShareManager shareInstance];
-    [manager messageShareWithMessage:body recipients:recipients controller:controller];
+    [manager mailShareWithSubject:subject messageBody:body recipients:recipients fileData:data fileName:fileName fileType:fileType controller:controller];
+}
+
++ (void)messageShareWithMessage:(NSString *)message recipients:(NSArray *)recipients data:(NSData *)fileData fileName:(NSString *)fileName
+                       fileType:(NSString *)fileType
+                     controller:(UIViewController *)controller
+{
+    FSShareManager *manager = [FSShareManager shareInstance];
+    [manager messageShareWithMessage:message recipients:recipients data:fileData fileName:fileName fileType:fileType controller:controller];
 }
 
 + (BOOL)canSupportShare:(FSShareType)shareType
@@ -438,7 +461,7 @@ static FSShareManager *manager = nil;
     // type 0
     
     NSString *result = nil;
-    if (resp.errCode == WTShareWeiXinErrCodeSuccess) {
+    if (resp.errCode == FSShareWeiXinErrCodeSuccess) {
         result = @"分享微信成功";
     }else{
         result = @"取消微信分享";
@@ -484,9 +507,7 @@ static FSShareManager *manager = nil;
     
 }
 
-- (void)messageShareWithMessage:(NSString *)message     // 短信内容
-                     recipients:(NSArray *)recipients   // 短信接收者
-                     controller:(UIViewController *)controller
+- (void)messageShareWithMessage:(NSString *)message recipients:(NSArray *)recipients data:(NSData *)fileData fileName:(NSString *)fileName fileType:(NSString *)fileType controller:(UIViewController *)controller
 {
     if (![MFMessageComposeViewController canSendText]) {
         [FuData showMessage:@"设备不支持发送短信"];
@@ -497,9 +518,14 @@ static FSShareManager *manager = nil;
     if (recipients) {
         picker.recipients = recipients;
     }
-
     if (message) {
         picker.body = message;
+    }
+    if ([fileData isKindOfClass:[NSData class]]) {
+        if (!FSValidateString(fileName)) {
+            fileName = @((NSInteger)[[NSDate date] timeIntervalSince1970]).stringValue;
+        }
+        [picker addAttachmentData:fileData typeIdentifier:fileType filename:fileName];
     }
     if (picker) {
         [controller presentViewController:picker animated:YES completion:nil];
@@ -530,6 +556,7 @@ static FSShareManager *manager = nil;
                   recipients:(NSArray *)recipients  // 邮件接收者
                     fileData:(NSData *)fileData     // 附件，比如图片
                     fileName:(NSString *)fileName   // 文件名，包含扩展名,eg,account.sqlite
+                    fileType:(NSString *)fileType
                   controller:(UIViewController *)controller
 
 {
@@ -546,7 +573,7 @@ static FSShareManager *manager = nil;
         [picker setSubject:subject];
     }
     if (fileData) {
-        [picker addAttachmentData:fileData mimeType:@"" fileName:fileName?fileName:[[NSDate date] description]];
+        [picker addAttachmentData:fileData mimeType:fileType?fileType:@"" fileName:fileName?fileName:[[NSDate date] description]];
     }
     if (message) {
         [picker setMessageBody:message isHTML:NO];

@@ -19,11 +19,18 @@
 
 @interface FSShareView : UIView
 
-@property (nonatomic,strong) NSArray<NSNumber *>    *list;
-
-- (instancetype)initWithFrame:(CGRect)frame list:(NSArray<NSNumber *> *)list controller:(UIViewController *)controller;
-- (instancetype)initWithFrame:(CGRect)frame controller:(UIViewController *)callController;
-
-+ (void)shareActionWithShareType:(FSShareType)tag title:(NSString *)shareTitle description:(NSString *)shareDesc  thumbImage:(UIImage *)shareImage url:(NSString *)url controller:(UIViewController *)controller result:(void(^)(NSString *bResult))completion;
+/*
+    @param frame:全屏，最好是self.view.bounds或[UIScreen mainScreen].bounes
+    @param list:类型数组，需要哪些就传入哪些
+    @parma controller:视图控制器，弹出view
+    @param completion:分享结果回调
+ 
+    @param recipients:邮件或短信用，接收人
+    @param fileData:邮件或短信用，文件字节流
+    @param fileName:邮件或短信用，文件名
+ 
+    文件类型:@"image/jpeg"    @"text/txt"     @"text/doc"     @"file/pdf"
+ */
+- (instancetype)initWithFrame:(CGRect)frame list:(NSArray<NSNumber *> *)list controller:(UIViewController *)controller title:(NSString *)title detail:(NSString *)detail url:(NSString *)url thumbImage:(UIImage *)image recipientsOfMail:(NSArray<NSString *> *)recipientsOfMail recipientsOfMessage:(NSArray<NSString *> *)recipientsOfMessage fileData:(NSData *)fileData fileName:(NSString *)fileName fileType:(NSString *)fileType result:(void(^)(NSString *bResult))completion;
 
 @end
