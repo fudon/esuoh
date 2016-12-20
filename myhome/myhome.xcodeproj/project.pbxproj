@@ -60,6 +60,7 @@
 		5CB3A0351DCA04F400564280 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CB3A0341DCA04F400564280 /* CoreMedia.framework */; };
 		5CDBCDAF1DD057EA001CFC39 /* FSShareEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CDBCDAE1DD057EA001CFC39 /* FSShareEntity.m */; };
 		5CE70A651DF6CA2E001FA04B /* FSStoreManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CE70A641DF6CA2E001FA04B /* FSStoreManager.m */; };
+		5CF3DED01E08D13F005DFC6D /* FSOrderSystemController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF3DECF1E08D13F005DFC6D /* FSOrderSystemController.m */; };
 		5CF41B521E05448900944D18 /* FSAppDocumentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF41B511E05448900944D18 /* FSAppDocumentController.m */; };
 		5CF522421DFFC6EF0013D7CE /* FSRelayoutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF522411DFFC6EF0013D7CE /* FSRelayoutCell.m */; };
 		5CFE601A1DC75B9C003640A4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CFE60191DC75B9C003640A4 /* main.m */; };
@@ -261,6 +262,8 @@
 		5CDBCDAE1DD057EA001CFC39 /* FSShareEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSShareEntity.m; sourceTree = "<group>"; };
 		5CE70A631DF6CA2E001FA04B /* FSStoreManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSStoreManager.h; sourceTree = "<group>"; };
 		5CE70A641DF6CA2E001FA04B /* FSStoreManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSStoreManager.m; sourceTree = "<group>"; };
+		5CF3DECE1E08D13F005DFC6D /* FSOrderSystemController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSOrderSystemController.h; sourceTree = "<group>"; };
+		5CF3DECF1E08D13F005DFC6D /* FSOrderSystemController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSOrderSystemController.m; sourceTree = "<group>"; };
 		5CF41B501E05448900944D18 /* FSAppDocumentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSAppDocumentController.h; sourceTree = "<group>"; };
 		5CF41B511E05448900944D18 /* FSAppDocumentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSAppDocumentController.m; sourceTree = "<group>"; };
 		5CF522401DFFC6EF0013D7CE /* FSRelayoutCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSRelayoutCell.h; sourceTree = "<group>"; };
@@ -717,6 +720,16 @@
 			path = StoreManager;
 			sourceTree = "<group>";
 		};
+		5CF3DECD1E08D118005DFC6D /* OrderSystem */ = {
+			isa = PBXGroup;
+			children = (
+				5CF3DECE1E08D13F005DFC6D /* FSOrderSystemController.h */,
+				5CF3DECF1E08D13F005DFC6D /* FSOrderSystemController.m */,
+			);
+			name = OrderSystem;
+			path = Components/OrderSystem;
+			sourceTree = "<group>";
+		};
 		5CF41B4F1E05448900944D18 /* FSDocument */ = {
 			isa = PBXGroup;
 			children = (
@@ -751,6 +764,7 @@
 				71DC25E21DD3616C00BEB193 /* H5 */,
 				5CB39FE61DC9FCEB00564280 /* Thanks */,
 				5CFE61A11DC75C67003640A4 /* Components */,
+				5CF3DECD1E08D118005DFC6D /* OrderSystem */,
 				5CFE601B1DC75B9C003640A4 /* AppDelegate.h */,
 				5CFE601C1DC75B9C003640A4 /* AppDelegate.m */,
 				71474B681DCABB1C0063DA08 /* ARTabBarController.h */,
@@ -1405,6 +1419,7 @@
 				5C9337F91DCB447B0091D3D8 /* FSShareView.m in Sources */,
 				5CDBCDAF1DD057EA001CFC39 /* FSShareEntity.m in Sources */,
 				71DC240E1DD2011B00BEB193 /* FSFMListCell.m in Sources */,
+				5CF3DED01E08D13F005DFC6D /* FSOrderSystemController.m in Sources */,
 				71DC24221DD2011B00BEB193 /* UIView+Addition.m in Sources */,
 				71DC241C1DD2011B00BEB193 /* CYDatetime.m in Sources */,
 				71DC243D1DD2011B00BEB193 /* FSWebViewController.m in Sources */,
