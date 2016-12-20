@@ -24,9 +24,18 @@
     [self personDesignViews];
 }
 
+- (void)bbiAction
+{
+    [FuData pushToViewControllerWithClass:@"FSSetController" navigationController:self.navigationController param:nil configBlock:nil];
+}
+
 - (void)personDesignViews
 {
-    _titles = @[@"分享",@"反馈",@"关于",@"设置"];
+    _titles = @[@"分享",@"反馈",@"关于",@"网店"];
+    
+    UIBarButtonItem *bbi = [[UIBarButtonItem alloc] initWithTitle:@"设置" style:UIBarButtonItemStyleDone target:self action:@selector(bbiAction)];
+    bbi.tintColor = APPCOLOR;
+    self.navigationItem.rightBarButtonItem = bbi;
     
     UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, WIDTHFC, HEIGHTFC - 64) style:UITableViewStylePlain];
     tableView.dataSource = self;
@@ -71,8 +80,10 @@
         NSString *path = [[NSBundle mainBundle] pathForResource:@"ARAbout" ofType:@"html"];
         [FuData pushToViewControllerWithClass:@"FSHTMLController" navigationController:self.navigationController param:@{@"localUrlString":path,@"title":@"关于"} configBlock:nil];
     }else if (indexPath.row == 3){
-//        FSWebController *webController = [[FSWebController alloc] init];
-//        [self.navigationController pushViewController:webController animated:YES];
+        FSWebController *webController = [[FSWebController alloc] init];
+    //    webController.urlString = @"https://weidian.com/?userid=819510256";
+        webController.urlString = @"https://shop112384476.taobao.com";
+        [self.navigationController pushViewController:webController animated:YES];
     }
 }
 

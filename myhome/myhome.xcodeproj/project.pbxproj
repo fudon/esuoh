@@ -84,6 +84,7 @@
 		714F6ED71DFAF82B00E96EED /* HARewardPolicyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 714F6ED61DFAF82B00E96EED /* HARewardPolicyController.m */; };
 		7153BDC01DFD955D00C43F97 /* FSButtonsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7153BDBF1DFD955D00C43F97 /* FSButtonsView.m */; };
 		71A66E7B1DEF1250002C28B9 /* HAShopController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71A66E7A1DEF1250002C28B9 /* HAShopController.m */; };
+		71B316C91E0813A000FD031F /* FSSetController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71B316C81E0813A000FD031F /* FSSetController.m */; };
 		71DC24091DD2011B00BEB193 /* FSDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 71DC23131DD2011A00BEB193 /* FSDBManager.m */; };
 		71DC240A1DD2011B00BEB193 /* FSAccountDoorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71DC23161DD2011A00BEB193 /* FSAccountDoorController.m */; };
 		71DC240B1DD2011B00BEB193 /* FSFinancesManagerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71DC23181DD2011A00BEB193 /* FSFinancesManagerController.m */; };
@@ -306,6 +307,8 @@
 		7153BDBF1DFD955D00C43F97 /* FSButtonsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSButtonsView.m; sourceTree = "<group>"; };
 		71A66E791DEF1250002C28B9 /* HAShopController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HAShopController.h; sourceTree = "<group>"; };
 		71A66E7A1DEF1250002C28B9 /* HAShopController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HAShopController.m; sourceTree = "<group>"; };
+		71B316C71E0813A000FD031F /* FSSetController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSSetController.h; sourceTree = "<group>"; };
+		71B316C81E0813A000FD031F /* FSSetController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSSetController.m; sourceTree = "<group>"; };
 		71DC23121DD2011A00BEB193 /* FSDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSDBManager.h; sourceTree = "<group>"; };
 		71DC23131DD2011A00BEB193 /* FSDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSDBManager.m; sourceTree = "<group>"; };
 		71DC23151DD2011A00BEB193 /* FSAccountDoorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSAccountDoorController.h; sourceTree = "<group>"; };
@@ -682,6 +685,8 @@
 				5CA360DB1DC8ADCE00523FF5 /* ARPersonController.m */,
 				5C7C38DC1DD1D14600D68C3B /* ARAboutController.h */,
 				5C7C38DD1DD1D14600D68C3B /* ARAboutController.m */,
+				71B316C71E0813A000FD031F /* FSSetController.h */,
+				71B316C81E0813A000FD031F /* FSSetController.m */,
 			);
 			path = Person;
 			sourceTree = "<group>";
@@ -1433,6 +1438,7 @@
 				71DC240B1DD2011B00BEB193 /* FSFinancesManagerController.m in Sources */,
 				71DC243A1DD2011B00BEB193 /* FIWebView.m in Sources */,
 				5CA360DF1DC8ADD800523FF5 /* ARToolController.m in Sources */,
+				71B316C91E0813A000FD031F /* FSSetController.m in Sources */,
 				5C23B75E1E07D2FA0068603A /* FSFutureAlertSendController.m in Sources */,
 				714F6ECB1DF8544800E96EED /* HAPriceController.m in Sources */,
 				5C1881531E03D02100D55E0E /* FSCountButton.m in Sources */,
