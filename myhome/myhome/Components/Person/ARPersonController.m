@@ -81,8 +81,8 @@
         [FuData pushToViewControllerWithClass:@"FSHTMLController" navigationController:self.navigationController param:@{@"localUrlString":path,@"title":@"关于"} configBlock:nil];
     }else if (indexPath.row == 3){
         FSWebController *webController = [[FSWebController alloc] init];
-    //    webController.urlString = @"https://weidian.com/?userid=819510256";
-        webController.urlString = @"https://shop112384476.taobao.com";
+        webController.urlString = @"https://weidian.com/?userid=819510256";
+//        webController.urlString = @"https://shop112384476.taobao.com";
         [self.navigationController pushViewController:webController animated:YES];
     }
 }
