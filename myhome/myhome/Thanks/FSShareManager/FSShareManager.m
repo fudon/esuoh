@@ -222,7 +222,7 @@ static FSShareManager *_manager = nil;
     if ([WXApi isWXAppInstalled] && [WXApi isWXAppSupportApi]) {
         return YES;
     }
-    [FuData alertViewAtController:[FSShareManager shareInstance].callController title:@"未安装最新版微信" message:@"是否去下载最新版微信" cancelTitle:@"取消" handler:nil okTitle:@"下载" handler:^(UIAlertAction *action) {
+    [FuData alertViewWithTitle:@"未安装最新版微信" message:@"是否去下载最新版微信" cancelTitle:@"取消" handler:nil okTitle:@"下载" handler:^(UIAlertAction *action) {
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[WXApi getWXAppInstallUrl]]];
     } completion:nil];
     return NO;
@@ -233,7 +233,7 @@ static FSShareManager *_manager = nil;
     if ([WeiboSDK isCanShareInWeiboAPP]) {
         return YES;
     }
-    [FuData alertViewAtController:[FSShareManager shareInstance].callController title:@"未安装最新版微博" message:@"是否去下载最新版微博" cancelTitle:@"取消" handler:nil okTitle:@"下载" handler:^(UIAlertAction *action) {
+    [FuData alertViewWithTitle:@"未安装最新版微博" message:@"是否去下载最新版微博" cancelTitle:@"取消" handler:nil okTitle:@"下载" handler:^(UIAlertAction *action) {
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[WeiboSDK getWeiboAppInstallUrl]]];
     } completion:nil];
     return NO;
@@ -244,7 +244,7 @@ static FSShareManager *_manager = nil;
     if ([QQApiInterface isQQSupportApi]) {
         return YES;
     }
-    [FuData alertViewAtController:[FSShareManager shareInstance].callController title:@"未安装最新版QQ" message:@"是否去下载最新版QQ" cancelTitle:@"取消" handler:nil okTitle:@"下载" handler:^(UIAlertAction *action) {
+    [FuData alertViewWithTitle:@"未安装最新版QQ" message:@"是否去下载最新版QQ" cancelTitle:@"取消" handler:nil okTitle:@"下载" handler:^(UIAlertAction *action) {
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[QQApiInterface getQQInstallUrl]]];
     } completion:nil];
     return NO;

@@ -84,7 +84,7 @@
 
 - (void)bbiAction
 {
-    [FuData alertViewAtController:self title:@"想要什么小功能？" message:@"开发一些简单的有用的小工具" cancelTitle:@"再想想" handler:nil
+    [FuData alertViewWithTitle:@"想要什么小功能？" message:@"开发一些简单的有用的小工具" cancelTitle:@"再想想" handler:nil
     okTitle:@"有想法" handler:^(UIAlertAction *action) {
         
     } completion:nil];
@@ -95,7 +95,7 @@
     switch (type - TAGIMAGEVIEW) {
         case 0:
         {
-            [FuData actionSheetControllerInController:self title:@"选择操作方式" firstTitle:@"扫描二维码" firstHandler:^(UIAlertAction *action) {
+            [FuData actionSheetWithTitle:@"选择操作方式" firstTitle:@"扫描二维码" firstHandler:^(UIAlertAction *action) {
                 FSQRController *qrController = [[FSQRController alloc] init];
                 [self.navigationController pushViewController:qrController animated:YES];
             } secondTitle:@"生成二维码" secondHandler:^(UIAlertAction *action) {

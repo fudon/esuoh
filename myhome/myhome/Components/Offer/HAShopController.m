@@ -85,7 +85,7 @@ static NSString *const  collectionCellID = @"shopCollectionCell";
     if (cell.imageView) {
         CGFloat width = (self.view.bounds.size.width - 105) / 2;
         cell.imageView.frame = CGRectMake(0, 0, width, width);
-        [cell.imageView sd_setImageWithURL:[NSURL URLWithString:_dataSource[indexPath.row]] placeholderImage:image];
+        [cell.imageView sd_setImageWithURL:[NSURL URLWithString:_dataSource[indexPath.row]] placeholderImage:image completed:nil];
     }else{
         NSLog(@"WHY");
     }
