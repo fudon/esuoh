@@ -65,7 +65,7 @@
     [self.scrollView addSubview:textField];
     [textField addSubview:[FSViewManager seprateViewWithFrame:CGRectMake(0, textField.height - FS_LineThickness, textField.width, FS_LineThickness)]];
     
-    UIButton *queryButton = [FSViewManager buttonWithFrame:CGRectMake(10, textField.bottom + 20, WIDTHFC - 20, 44) title:@"点我查询" titleColor:[UIColor whiteColor] backColor:APPCOLOR fontInt:16 tag:TAGBUTTON target:self selector:@selector(buttonClick:)];
+    UIButton *queryButton = [FSViewManager buttonWithFrame:CGRectMake(10, textField.bottom + 20, WIDTHFC - 20, 44) title:@"点我查询" titleColor:[UIColor whiteColor] backColor:HAAPPCOLOR fontInt:16 tag:TAGBUTTON target:self selector:@selector(buttonClick:)];
     [self.scrollView addSubview:queryButton];
     
     CGFloat width = 80;
@@ -77,7 +77,7 @@
         UIButton *mainButton = [FSViewManager buttonWithFrame:CGRectMake(10 + (space + width) * x, queryButton.bottom + 40, width, width) title:nil titleColor:nil backColor:nil fontInt:0 tag:TAGBUTTON + x + 1 target:self selector:@selector(buttonClick:)];
         [self.scrollView addSubview:mainButton];
 
-        UILabel *label = [FSViewManager labelWithFrame:CGRectMake(width / 2 - (width - 40) / 2, 0, width - 40, width - 40) text:picTitles[x] textColor:[UIColor whiteColor] backColor:APPCOLOR font:FONTBOLD(15) textAlignment:NSTextAlignmentCenter];
+        UILabel *label = [FSViewManager labelWithFrame:CGRectMake(width / 2 - (width - 40) / 2, 0, width - 40, width - 40) text:picTitles[x] textColor:[UIColor whiteColor] backColor:HAAPPCOLOR font:FONTBOLD(15) textAlignment:NSTextAlignmentCenter];
         label.layer.masksToBounds = YES;
         label.layer.cornerRadius = label.height / 2;
         [mainButton addSubview:label];
@@ -89,7 +89,7 @@
     UILabel *flowLabel = [FSViewManager labelWithFrame:CGRectMake(10, queryButton.bottom + 40 + width + 20, WIDTHFC - 10, 50) text:@"流程六步走" textColor:FS_TextColor_Normal backColor:nil font:FONTFC(18) textAlignment:NSTextAlignmentLeft];
     [self.scrollView addSubview:flowLabel];
     
-    FSFlowView *flowView = [[FSFlowView alloc] initWithFrame:CGRectMake(0, flowLabel.bottom, WIDTHFC, WIDTHFC) titles:@[@"勘设",@"签约",@"装修",@"完成",@"保修",@"验收"] titleColor:[UIColor whiteColor] btnBackColor:APPCOLOR lineColor:APPCOLOR];
+    FSFlowView *flowView = [[FSFlowView alloc] initWithFrame:CGRectMake(0, flowLabel.bottom, WIDTHFC, WIDTHFC) titles:@[@"勘设",@"签约",@"装修",@"完成",@"保修",@"验收"] titleColor:[UIColor whiteColor] btnBackColor:HAAPPCOLOR lineColor:HAAPPCOLOR];
     [self.scrollView addSubview:flowView];
     [flowView setBtnClick:^(UIButton *bButton) {
         [FuData pushToViewControllerWithClass:@"HAFlowController" navigationController:this.navigationController param:@{@"type":@(bButton.tag)} configBlock:nil];

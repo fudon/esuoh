@@ -15,8 +15,11 @@
 #import "FSChineseCalendarController.h"
 #import "FSStoreManager.h"
 #import "FSFutureAlertController.h"
+#import "FSMoveLabel.h"
 
 @interface HAToolController ()
+
+@property (nonatomic,strong) FSMoveLabel    *moveLabel;
 
 @end
 
@@ -53,11 +56,21 @@
     NSArray *array = [FSFutureAlertController futureSevenDaysTODO];
     if (array.count) {
         dispatch_async(dispatch_get_main_queue(), ^{
-            NSString *message = [[NSString alloc] initWithFormat:@"未来一周内您有%@件待办事项",@(array.count)];
-            [FuData alertViewAtController:self title:@"提示" message:message cancelTitle:@"取消" handler:nil okTitle:@"查看" handler:^(UIAlertAction *action) {
-                [FuData pushToViewControllerWithClass:@"FSFutureAlertController" navigationController:self.navigationController param:nil configBlock:nil];
-            } completion:nil];
+            NSString *message = [[NSString alloc] initWithFormat:@"未来一周内您有%@件待办事项，点击「提醒」查看",@(array.count)];
+            if (!_moveLabel) {
+                _moveLabel = [[FSMoveLabel alloc] initWithFrame:CGRectMake(0, self.view.height - 44, WIDTHFC, 44)];
+                _moveLabel.backgroundColor = HAAPPCOLOR;
+                [self.view addSubview:_moveLabel];
+                WEAKSELF(this);
+                [_moveLabel setTapBlock:^(FSMoveLabel *bLabel) {
+                    [FuData pushToViewControllerWithClass:@"FSFutureAlertController" navigationController:this.navigationController param:nil configBlock:nil];
+                }];
+            }
+            _moveLabel.text = message;
         });
+    }else{
+        [_moveLabel removeFromSuperview];
+        _moveLabel = nil;
     }
 }
 
