@@ -33,8 +33,9 @@
         [self checkFutureAlerts];
     });
     
-    self.backTintColor = [UIColor whiteColor];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(bbiAction)];
+    UIBarButtonItem *bbi = [[UIBarButtonItem alloc] initWithTitle:@"反馈" style:UIBarButtonItemStyleDone target:self action:@selector(bbiAction)];
+    bbi.tintColor = APPCOLOR;
+    self.navigationItem.rightBarButtonItem = bbi;
     
     NSArray *array = @[@"二维码",@"设备信息",@"导航",@"计算器",@"提醒",@"目录"];
     NSArray *picArray = @[@"saoma_too",@"deviceInfo",@"navigation_web",@"counter_logo",@"counter_logo",@"counter_logo"];
@@ -58,7 +59,7 @@
         dispatch_async(dispatch_get_main_queue(), ^{
             NSString *message = [[NSString alloc] initWithFormat:@"未来一周内您有%@件待办事项，点击「提醒」查看",@(array.count)];
             if (!_moveLabel) {
-                _moveLabel = [[FSMoveLabel alloc] initWithFrame:CGRectMake(0, self.view.height - 44, WIDTHFC, 44)];
+                _moveLabel = [[FSMoveLabel alloc] initWithFrame:CGRectMake(0, self.view.height - 44 - 49, WIDTHFC, 44)];
                 _moveLabel.backgroundColor = HAAPPCOLOR;
                 [self.view addSubview:_moveLabel];
                 WEAKSELF(this);

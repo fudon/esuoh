@@ -21,8 +21,17 @@
     [self toolDesignViews];
 }
 
+- (void)bbiAction
+{
+    
+}
+
 - (void)toolDesignViews
 {
+    UIBarButtonItem *bbi = [[UIBarButtonItem alloc] initWithTitle:@"微店" style:UIBarButtonItemStyleDone target:self action:@selector(bbiAction)];
+    bbi.tintColor = APPCOLOR;
+    self.navigationItem.rightBarButtonItem = bbi;
+    
     FSButtonsView *buttons = [[FSButtonsView alloc] initWithFrame:CGRectMake(0, 64, self.view.width, 44) items:@[@"豪装",@"精装",@"简装"] normalColor:FS_TextColor_Normal selectedColor:APPCOLOR];
     [self.view addSubview:buttons];
     [buttons setClickBlock:^(FSButtonsView *bButtons, NSInteger bSelectedIndex) {

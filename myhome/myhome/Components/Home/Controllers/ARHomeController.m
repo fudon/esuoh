@@ -120,7 +120,7 @@
 
 - (void)rightBBIAction
 {
-    [FuData pushToViewControllerWithClass:@"HAToolController" navigationController:self.navigationController param:nil configBlock:nil];
+    [FuData showMessage:@"这里是一个下单系统,首页可以再抄点类似瓜子二手车页面的设计"];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
