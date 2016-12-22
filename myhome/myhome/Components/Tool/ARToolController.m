@@ -8,6 +8,7 @@
 
 #import "ARToolController.h"
 #import "FSButtonsView.h"
+#import "FSWebController.h"
 
 @interface ARToolController ()
 
@@ -23,7 +24,9 @@
 
 - (void)bbiAction
 {
-    
+    FSWebController *webController = [[FSWebController alloc] init];
+    webController.urlString = @"https://weidian.com/?userid=819510256";
+    [self.navigationController pushViewController:webController animated:YES];
 }
 
 - (void)toolDesignViews
