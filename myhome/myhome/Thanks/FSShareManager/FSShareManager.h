@@ -49,7 +49,7 @@ typedef void(^WTShareResultlBlock)(NSString * shareResult);
 + (void)shareActionWithShareType:(FSShareType)type title:(NSString *)title description:(NSString *)description  thumbImage:(UIImage *)image url:(NSString *)url controller:(UIViewController *)controller result:(void(^)(NSString *bResult))completion;
 
 // 微信分享图片
-+ (void)wxImageShareActionWithImageData:(UIImage *)image controller:(UIViewController *)controller result:(void(^)(NSString *bResult))completion;
++ (void)wxImageShareActionWithImage:(UIImage *)image controller:(UIViewController *)controller result:(void(^)(NSString *bResult))completion;
 
 // 邮件分享
 + (void)emailShareWithSubject:(NSString *)subject messageBody:(NSString *)body recipients:(NSArray *)recipients fileData:(NSData *)data fileName:(NSString *)fileName fileType:(NSString *)fileType controller:(UIViewController *)controller;

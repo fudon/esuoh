@@ -84,10 +84,9 @@
 
 - (void)bbiAction
 {
-    [FuData alertViewWithTitle:@"想要什么小功能？" message:@"开发一些简单的有用的小工具" cancelTitle:@"再想想" handler:nil
-    okTitle:@"有想法" handler:^(UIAlertAction *action) {
+    [FuData alertViewWithTitle:@"想要什么小功能?" message:@"开发一些简单有用的小工具" btnTitle:@"有想法" handler:^(UIAlertAction *action) {
         
-    } completion:nil];
+    } cancelTitle:@"再想想" handler:nil completion:nil];
 }
 
 - (void)actionForType:(NSInteger)type
