@@ -31,7 +31,7 @@
 
 - (void)personDesignViews
 {
-    _titles = @[@"分享",@"反馈",@"关于",@"网店"];
+    _titles = @[@"分享",@"反馈",@"关于"];
     
     UIBarButtonItem *bbi = [[UIBarButtonItem alloc] initWithTitle:@"设置" style:UIBarButtonItemStyleDone target:self action:@selector(bbiAction)];
     bbi.tintColor = APPCOLOR;
@@ -79,11 +79,6 @@
     }else if (indexPath.row == 2){
         NSString *path = [[NSBundle mainBundle] pathForResource:@"ARAbout" ofType:@"html"];
         [FuData pushToViewControllerWithClass:@"FSHTMLController" navigationController:self.navigationController param:@{@"localUrlString":path,@"title":@"关于"} configBlock:nil];
-    }else if (indexPath.row == 3){
-        FSWebController *webController = [[FSWebController alloc] init];
-        webController.urlString = @"https://weidian.com/?userid=819510256";
-//        webController.urlString = @"https://shop112384476.taobao.com";
-        [self.navigationController pushViewController:webController animated:YES];
     }
 }
 

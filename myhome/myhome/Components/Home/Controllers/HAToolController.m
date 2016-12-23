@@ -98,7 +98,7 @@
             [FuData actionSheetWithTitle:@"选择操作方式" firstTitle:@"扫描二维码" firstHandler:^(UIAlertAction *action) {
                 FSQRController *qrController = [[FSQRController alloc] init];
                 [self.navigationController pushViewController:qrController animated:YES];
-            } secondTitle:@"生成二维码" secondHandler:^(UIAlertAction *action) {
+            } secondTitle:@"生成二维码" handler:^(UIAlertAction *action) {
                 [FuData pushToViewControllerWithClass:@"FSMakeQRController" navigationController:self.navigationController param:nil configBlock:nil];
             } cancelHandler:nil];
         }
@@ -152,7 +152,20 @@
             break;
         case 4:
         {
-            [FuData pushToViewControllerWithClass:@"FSFutureAlertController" navigationController:self.navigationController param:nil configBlock:nil];
+            FSAccessController *access = [[FSAccessController alloc] init];
+            access.title = @"提醒";
+            access.datas = @[@{Picture_Name:@"a_4",Text_Name:@"待办提醒",Url_String:@"http://xw.qq.com"},
+                             @{Picture_Name:@"my_history",Text_Name:@"生日提醒",Url_String:@"http://3g.163.com"},
+                             ];
+            WEAKSELF(this);
+            access.selectBlock = ^ (FSAccessController *bController,NSIndexPath *bIndexPath){
+                NSArray *classArray = @[@"FSFutureAlertController",@"FSFutureAlertController"];
+                Class ControllerClass = NSClassFromString(classArray[bIndexPath.row % classArray.count]);
+                if (ControllerClass) {
+                    [this.navigationController pushViewController:[[ControllerClass alloc] init] animated:YES];
+                }
+            };
+            [self.navigationController pushViewController:access animated:YES];
         }
             break;
             case 5:
