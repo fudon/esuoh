@@ -49,6 +49,7 @@
     [self.scrollView addSubview:_headImageView];
     WEAKSELF(this);
     [_headImageView setBlock:^(FSWebImageView *bView, FSWebImageViewAction bType) {
+        [this.view endEditing:YES];
         [FuData pushToViewControllerWithClass:@"HARewardPolicyController" navigationController:this.navigationController param:nil configBlock:nil];
     }];
     UILabel *policyLabel = [FSViewManager labelWithFrame:CGRectMake(_headImageView.width - 80, _headImageView.height - 25, 70, 25) text:@"奖励政策" textColor:APPCOLOR backColor:nil font:FONTFC(12) textAlignment:NSTextAlignmentRight];
@@ -101,6 +102,7 @@
 
 - (void)buttonClick:(UIButton *)button
 {
+    [self.view endEditing:YES];
     if (button.tag == TAGBUTTON) {
         [FuData pushToViewControllerWithClass:@"HAPriceController" navigationController:self.navigationController param:nil configBlock:nil];
     }else{

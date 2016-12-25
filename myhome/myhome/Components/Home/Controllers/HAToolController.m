@@ -25,14 +25,18 @@
 
 @implementation HAToolController
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        [self checkFutureAlerts];
+    });
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];    
     self.title = @"小应用";
-    dispatch_async(dispatch_get_global_queue(0, 0), ^{
-        [self checkFutureAlerts];
-    });
-    
     UIBarButtonItem *bbi = [[UIBarButtonItem alloc] initWithTitle:@"反馈" style:UIBarButtonItemStyleDone target:self action:@selector(bbiAction)];
     bbi.tintColor = APPCOLOR;
     self.navigationItem.rightBarButtonItem = bbi;
