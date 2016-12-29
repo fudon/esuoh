@@ -31,7 +31,7 @@
 
 - (void)personDesignViews
 {
-    _titles = @[@"分享",@"反馈",@"关于"];
+    _titles = @[@"分享",@"反馈",@"关于",@"捐助"];
     
     UIBarButtonItem *bbi = [[UIBarButtonItem alloc] initWithTitle:@"设置" style:UIBarButtonItemStyleDone target:self action:@selector(bbiAction)];
     bbi.tintColor = APPCOLOR;
