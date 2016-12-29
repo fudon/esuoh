@@ -48,10 +48,14 @@
     whiteView.backgroundColor = [UIColor whiteColor];
     [self.scrollView addSubview:whiteView];
     
-    UILabel *label = [FSViewManager labelWithFrame:CGRectMake(10, 5, whiteView.width - 20, whiteView.height - 10) text:@"尊敬的用户:\n\t从即日起，我们将对用户的推荐活动给予奖励：\n\n\t推荐简装客户，奖励1000元/人；\n\t推荐精装客户，奖励2500元/人；\n\t推荐豪装客户，奖励5000元/人。\n\n\t奖金将在客户完成装修后兑付;同时被推荐的客户减免等额的费用。\n\t呼朋唤友，对我说【我要推荐】" textColor:[UIColor blackColor] backColor:[UIColor whiteColor] font:FONTFC(14) textAlignment:NSTextAlignmentLeft];
+    NSString *text = @"尊敬的用户:\n\t从即日起，我们将对用户的推荐活动给予奖励：\n\n\t推荐简装客户，奖励1000元/人；\n\t推荐精装客户，奖励2500元/人；\n\t推荐豪装客户，奖励5000元/人。\n\n\t奖金将在客户完成装修后兑付;同时被推荐的客户减免等额的费用。\n\n\t呼朋唤友，对我说[我要推荐]吧";
+    NSRange range = [text rangeOfString:@"我要推荐"];
+    NSAttributedString *attr = [FuData attributedStringFor:text colorRange:@[[NSValue valueWithRange:range]] color:APPCOLOR textRange:nil font:nil];
+    UILabel *label = [FSViewManager labelWithFrame:CGRectMake(10, 5, whiteView.width - 20, whiteView.height - 10) text:nil textColor:[UIColor blackColor] backColor:[UIColor whiteColor] font:FONTFC(14) textAlignment:NSTextAlignmentLeft];
     label.numberOfLines = 0;
-    [label sizeToFit];
-    label.frame = CGRectMake(10, 10, whiteView.width - 20,label.height);
+    CGFloat height = [FuData textHeight:text fontInt:14 labelWidth:whiteView.width - 20];
+    label.frame = CGRectMake(10, 10, whiteView.width - 20,height);
+    label.attributedText = attr;
     [whiteView addSubview:label];
     whiteView.height = label.height + 20;
 }

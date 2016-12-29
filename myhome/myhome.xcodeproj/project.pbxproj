@@ -161,6 +161,9 @@
 		71DC25E41DD3616C00BEB193 /* FSH5.html in Resources */ = {isa = PBXBuildFile; fileRef = 71DC25E31DD3616C00BEB193 /* FSH5.html */; };
 		71DC25E61DD3624D00BEB193 /* ARAbout.html in Resources */ = {isa = PBXBuildFile; fileRef = 71DC25E51DD3624D00BEB193 /* ARAbout.html */; };
 		71DC25E81DD3F98500BEB193 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71DC25E71DD3F98500BEB193 /* QuartzCore.framework */; };
+		71DEF3651E1545F4005B938A /* FSBirthdayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71DEF3641E1545F4005B938A /* FSBirthdayController.m */; };
+		71DEF3681E154987005B938A /* FSAllBirthdayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71DEF3671E154987005B938A /* FSAllBirthdayController.m */; };
+		71DEF36B1E154A4F005B938A /* FSAddBirthdayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71DEF36A1E154A4F005B938A /* FSAddBirthdayController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -455,6 +458,12 @@
 		71DC25E31DD3616C00BEB193 /* FSH5.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = FSH5.html; sourceTree = "<group>"; };
 		71DC25E51DD3624D00BEB193 /* ARAbout.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ARAbout.html; sourceTree = "<group>"; };
 		71DC25E71DD3F98500BEB193 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		71DEF3631E1545F4005B938A /* FSBirthdayController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSBirthdayController.h; sourceTree = "<group>"; };
+		71DEF3641E1545F4005B938A /* FSBirthdayController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSBirthdayController.m; sourceTree = "<group>"; };
+		71DEF3661E154987005B938A /* FSAllBirthdayController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSAllBirthdayController.h; sourceTree = "<group>"; };
+		71DEF3671E154987005B938A /* FSAllBirthdayController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSAllBirthdayController.m; sourceTree = "<group>"; };
+		71DEF3691E154A4F005B938A /* FSAddBirthdayController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSAddBirthdayController.h; sourceTree = "<group>"; };
+		71DEF36A1E154A4F005B938A /* FSAddBirthdayController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSAddBirthdayController.m; sourceTree = "<group>"; };
 		80481221648A5E66ECC9DA35 /* Pods-myhome.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myhome.debug.xcconfig"; path = "Pods/Target Support Files/Pods-myhome/Pods-myhome.debug.xcconfig"; sourceTree = "<group>"; };
 		AED98BB851B3E5659CC617B6 /* libPods-myhome.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-myhome.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -1045,6 +1054,7 @@
 		71DC23551DD2011A00BEB193 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				71DEF3621E1545D7005B938A /* Birthday */,
 				5CF41B4F1E05448900944D18 /* FSDocument */,
 				5C18812B1E03D02100D55E0E /* FSMoreImage */,
 				5C5BB56B1E02741000349D82 /* FSLocation */,
@@ -1229,6 +1239,19 @@
 			path = H5;
 			sourceTree = "<group>";
 		};
+		71DEF3621E1545D7005B938A /* Birthday */ = {
+			isa = PBXGroup;
+			children = (
+				71DEF3631E1545F4005B938A /* FSBirthdayController.h */,
+				71DEF3641E1545F4005B938A /* FSBirthdayController.m */,
+				71DEF3661E154987005B938A /* FSAllBirthdayController.h */,
+				71DEF3671E154987005B938A /* FSAllBirthdayController.m */,
+				71DEF3691E154A4F005B938A /* FSAddBirthdayController.h */,
+				71DEF36A1E154A4F005B938A /* FSAddBirthdayController.m */,
+			);
+			path = Birthday;
+			sourceTree = "<group>";
+		};
 		9A3BC884F3559120750F22E9 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1406,6 +1429,7 @@
 				71DC24191DD2011B00BEB193 /* FSCCMainView.m in Sources */,
 				5C1881611E03D02100D55E0E /* FSZoneImageController.m in Sources */,
 				5C18815F1E03D02100D55E0E /* FSMoreZoneImageCell.m in Sources */,
+				71DEF3681E154987005B938A /* FSAllBirthdayController.m in Sources */,
 				5C1881541E03D02100D55E0E /* FSImagePicker.m in Sources */,
 				71DC241A1DD2011B00BEB193 /* FSChineseCalendarController.m in Sources */,
 				71DC24751DD2011B00BEB193 /* FuData.m in Sources */,
@@ -1449,6 +1473,7 @@
 				5CF522421DFFC6EF0013D7CE /* FSRelayoutCell.m in Sources */,
 				71DC24361DD2011B00BEB193 /* FSDatePickerView.m in Sources */,
 				5CFE601D1DC75B9C003640A4 /* AppDelegate.m in Sources */,
+				71DEF36B1E154A4F005B938A /* FSAddBirthdayController.m in Sources */,
 				5C15E2891DF5140900BBBA5C /* FSLoanResultController.m in Sources */,
 				71DC240F1DD2011B00BEB193 /* FSFMListController.m in Sources */,
 				71DC24771DD2011B00BEB193 /* FuWeb.m in Sources */,
@@ -1458,6 +1483,7 @@
 				714F6ECE1DF854FF00E96EED /* HATypeController.m in Sources */,
 				71DC242E1DD2011B00BEB193 /* FSImageLabelView.m in Sources */,
 				71DC241B1DD2011B00BEB193 /* Datetime.m in Sources */,
+				71DEF3651E1545F4005B938A /* FSBirthdayController.m in Sources */,
 				71DC24261DD2011B00BEB193 /* FSCharTBController.m in Sources */,
 				71DC24171DD2011B00BEB193 /* FSCCDayView.m in Sources */,
 				71DC24341DD2011B00BEB193 /* FSWBView.m in Sources */,

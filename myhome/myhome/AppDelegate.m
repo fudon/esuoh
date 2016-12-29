@@ -20,7 +20,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     NSArray *array = @[@"ARHomeController",@"ARToolController",@"HAToolController",@"ARPersonController"];
-    NSArray *titles = @[@"首页",@"案例",@"小应用",@"我"];
+    NSArray *titles = @[@"首页",@"案例",@"应用",@"我"];
     NSArray *types = @[@(UITabBarSystemItemMostViewed),@(UITabBarSystemItemBookmarks),@(UITabBarSystemItemFavorites),@(UITabBarSystemItemContacts)];
     ARTabBarController *tbController = [[ARTabBarController alloc] initWithClasses:array titles:titles types:types selectedColor:APPCOLOR];
     self.window.rootViewController = tbController;    

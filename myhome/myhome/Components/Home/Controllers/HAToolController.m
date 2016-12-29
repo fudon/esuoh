@@ -36,7 +36,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];    
-    self.title = @"小应用";
+    self.title = @"小程序";
     UIBarButtonItem *bbi = [[UIBarButtonItem alloc] initWithTitle:@"反馈" style:UIBarButtonItemStyleDone target:self action:@selector(bbiAction)];
     bbi.tintColor = APPCOLOR;
     self.navigationItem.rightBarButtonItem = bbi;
@@ -163,7 +163,7 @@
                              ];
             WEAKSELF(this);
             access.selectBlock = ^ (FSAccessController *bController,NSIndexPath *bIndexPath){
-                NSArray *classArray = @[@"FSFutureAlertController",@"FSFutureAlertController"];
+                NSArray *classArray = @[@"FSFutureAlertController",@"FSBirthdayController"];
                 Class ControllerClass = NSClassFromString(classArray[bIndexPath.row % classArray.count]);
                 if (ControllerClass) {
                     [this.navigationController pushViewController:[[ControllerClass alloc] init] animated:YES];
