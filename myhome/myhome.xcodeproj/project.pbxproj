@@ -84,7 +84,6 @@
 		714F6ED41DFAF5D200E96EED /* HAFlowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 714F6ED31DFAF5D200E96EED /* HAFlowController.m */; };
 		714F6ED71DFAF82B00E96EED /* HARewardPolicyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 714F6ED61DFAF82B00E96EED /* HARewardPolicyController.m */; };
 		7152AD401E0D7661005A92FC /* FSQRResultController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7152AD3F1E0D7661005A92FC /* FSQRResultController.m */; };
-		7152AD451E0F8899005A92FC /* Huffman.c in Sources */ = {isa = PBXBuildFile; fileRef = 7152AD441E0F8899005A92FC /* Huffman.c */; };
 		7153BDC01DFD955D00C43F97 /* FSButtonsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7153BDBF1DFD955D00C43F97 /* FSButtonsView.m */; };
 		71A66E7B1DEF1250002C28B9 /* HAShopController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71A66E7A1DEF1250002C28B9 /* HAShopController.m */; };
 		71B316C91E0813A000FD031F /* FSSetController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71B316C81E0813A000FD031F /* FSSetController.m */; };
@@ -313,7 +312,6 @@
 		714F6ED61DFAF82B00E96EED /* HARewardPolicyController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HARewardPolicyController.m; sourceTree = "<group>"; };
 		7152AD3E1E0D7661005A92FC /* FSQRResultController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSQRResultController.h; sourceTree = "<group>"; };
 		7152AD3F1E0D7661005A92FC /* FSQRResultController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSQRResultController.m; sourceTree = "<group>"; };
-		7152AD441E0F8899005A92FC /* Huffman.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Huffman.c; sourceTree = "<group>"; };
 		7153BDBE1DFD955D00C43F97 /* FSButtonsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSButtonsView.h; sourceTree = "<group>"; };
 		7153BDBF1DFD955D00C43F97 /* FSButtonsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSButtonsView.m; sourceTree = "<group>"; };
 		71A66E791DEF1250002C28B9 /* HAShopController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HAShopController.h; sourceTree = "<group>"; };
@@ -876,14 +874,6 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		7152AD411E0F8691005A92FC /* Huffman */ = {
-			isa = PBXGroup;
-			children = (
-				7152AD441E0F8899005A92FC /* Huffman.c */,
-			);
-			path = Huffman;
-			sourceTree = "<group>";
-		};
 		71DC230E1DD2011A00BEB193 /* FS */ = {
 			isa = PBXGroup;
 			children = (
@@ -902,7 +892,6 @@
 		71DC230F1DD2011A00BEB193 /* 3rd */ = {
 			isa = PBXGroup;
 			children = (
-				7152AD411E0F8691005A92FC /* Huffman */,
 				71DC23101DD2011A00BEB193 /* Account */,
 				71DC23291DD2011A00BEB193 /* BaseModel */,
 				71DC232C1DD2011A00BEB193 /* ChineseCalendar */,
@@ -1454,7 +1443,6 @@
 				5C5BB56E1E02741000349D82 /* FSLocation.m in Sources */,
 				71DC24431DD2011B00BEB193 /* FSQRController.m in Sources */,
 				5CA360D91DC8ADC300523FF5 /* AROfferController.m in Sources */,
-				7152AD451E0F8899005A92FC /* Huffman.c in Sources */,
 				71DC241E1DD2011B00BEB193 /* ClipPictureController.m in Sources */,
 				71DC24301DD2011B00BEB193 /* FSSegmentControl.m in Sources */,
 				71DC242A1DD2011B00BEB193 /* UIView+ViewController.m in Sources */,
