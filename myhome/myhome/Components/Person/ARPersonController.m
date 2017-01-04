@@ -8,7 +8,6 @@
 
 #import "ARPersonController.h"
 #import "FSShareView.h"
-#import "FSWebController.h"
 
 @interface ARPersonController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -79,6 +78,8 @@
     }else if (indexPath.row == 2){
         NSString *path = [[NSBundle mainBundle] pathForResource:@"ARAbout" ofType:@"html"];
         [FuData pushToViewControllerWithClass:@"FSHTMLController" navigationController:self.navigationController param:@{@"localUrlString":path,@"title":@"关于"} configBlock:nil];
+    }else if (indexPath.row == 3){
+        [FuData pushToViewControllerWithClass:@"FSWebKitController" navigationController:self.navigationController param:@{@"title":@"浏览器",@"urlString":@"https://www.taobao.com"} configBlock:nil];
     }
 }
 
