@@ -87,6 +87,8 @@
 		7152AD401E0D7661005A92FC /* FSQRResultController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7152AD3F1E0D7661005A92FC /* FSQRResultController.m */; };
 		7153BDC01DFD955D00C43F97 /* FSButtonsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7153BDBF1DFD955D00C43F97 /* FSButtonsView.m */; };
 		717300281E1D2C4100B87826 /* FSWebKitController.m in Sources */ = {isa = PBXBuildFile; fileRef = 717300271E1D2C4100B87826 /* FSWebKitController.m */; };
+		7173002B1E1E896A00B87826 /* HAOrderSystemController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7173002A1E1E896A00B87826 /* HAOrderSystemController.m */; };
+		7173002E1E1E8FEB00B87826 /* FSInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7173002D1E1E8FEB00B87826 /* FSInputView.m */; };
 		71A66E7B1DEF1250002C28B9 /* HAShopController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71A66E7A1DEF1250002C28B9 /* HAShopController.m */; };
 		71B316C91E0813A000FD031F /* FSSetController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71B316C81E0813A000FD031F /* FSSetController.m */; };
 		71DC24091DD2011B00BEB193 /* FSDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 71DC23131DD2011A00BEB193 /* FSDBManager.m */; };
@@ -320,6 +322,10 @@
 		7153BDBF1DFD955D00C43F97 /* FSButtonsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSButtonsView.m; sourceTree = "<group>"; };
 		717300261E1D2C4100B87826 /* FSWebKitController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSWebKitController.h; sourceTree = "<group>"; };
 		717300271E1D2C4100B87826 /* FSWebKitController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSWebKitController.m; sourceTree = "<group>"; };
+		717300291E1E896A00B87826 /* HAOrderSystemController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HAOrderSystemController.h; sourceTree = "<group>"; };
+		7173002A1E1E896A00B87826 /* HAOrderSystemController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HAOrderSystemController.m; sourceTree = "<group>"; };
+		7173002C1E1E8FEB00B87826 /* FSInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSInputView.h; sourceTree = "<group>"; };
+		7173002D1E1E8FEB00B87826 /* FSInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSInputView.m; sourceTree = "<group>"; };
 		71A66E791DEF1250002C28B9 /* HAShopController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HAShopController.h; sourceTree = "<group>"; };
 		71A66E7A1DEF1250002C28B9 /* HAShopController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HAShopController.m; sourceTree = "<group>"; };
 		71B316C71E0813A000FD031F /* FSSetController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSSetController.h; sourceTree = "<group>"; };
@@ -854,6 +860,8 @@
 				714F6ED31DFAF5D200E96EED /* HAFlowController.m */,
 				714F6ED51DFAF82B00E96EED /* HARewardPolicyController.h */,
 				714F6ED61DFAF82B00E96EED /* HARewardPolicyController.m */,
+				717300291E1E896A00B87826 /* HAOrderSystemController.h */,
+				7173002A1E1E896A00B87826 /* HAOrderSystemController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -865,6 +873,8 @@
 				714F6EB71DF3BC2B00E96EED /* FSFlowView.m */,
 				714F6ECF1DF857BF00E96EED /* FSCyclicView.h */,
 				714F6ED01DF857BF00E96EED /* FSCyclicView.m */,
+				7173002C1E1E8FEB00B87826 /* FSInputView.h */,
+				7173002D1E1E8FEB00B87826 /* FSInputView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1422,6 +1432,7 @@
 				71DC24241DD2011B00BEB193 /* FSBaseController.m in Sources */,
 				5C7C38DE1DD1D14600D68C3B /* ARAboutController.m in Sources */,
 				71DC24351DD2011B00BEB193 /* FSWebImageView.m in Sources */,
+				7173002E1E1E8FEB00B87826 /* FSInputView.m in Sources */,
 				71DC244B1DD2011B00BEB193 /* FSTaxRateEntity.m in Sources */,
 				714F6EC81DF4395F00E96EED /* FSSameKindController.m in Sources */,
 				714F6EBF1DF3C87D00E96EED /* FSShopClassView.m in Sources */,
@@ -1509,6 +1520,7 @@
 				5C9337FA1DCB447B0091D3D8 /* FSTouchView.m in Sources */,
 				5C18815A1E03D02100D55E0E /* FSBeyondButton.m in Sources */,
 				71DC24291DD2011B00BEB193 /* FSNavigationController.m in Sources */,
+				7173002B1E1E896A00B87826 /* HAOrderSystemController.m in Sources */,
 				71DC240C1DD2011B00BEB193 /* FSFMAccountController.m in Sources */,
 				71DC24321DD2011B00BEB193 /* FSTapLabel.m in Sources */,
 				714F6EB91DF3BC2B00E96EED /* HACityController.m in Sources */,

@@ -40,7 +40,7 @@
     leftBBI.tintColor = [UIColor whiteColor];
     self.navigationItem.leftBarButtonItem = leftBBI;
     
-    UIBarButtonItem *rightBBI = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemOrganize target:self action:@selector(rightBBIAction)];
+    UIBarButtonItem *rightBBI = [[UIBarButtonItem alloc] initWithTitle:@"装修" style:UIBarButtonItemStyleDone target:self action:@selector(rightBBIAction)];
     rightBBI.tintColor = [UIColor whiteColor];
     self.navigationItem.rightBarButtonItem = rightBBI;
     
@@ -122,7 +122,7 @@
 
 - (void)rightBBIAction
 {
-    [FuData showMessage:@"这里是一个下单系统,首页可以再抄点类似瓜子二手车页面的设计"];
+    [FuData pushToViewControllerWithClass:@"HAOrderSystemController" navigationController:self.navigationController param:nil configBlock:nil];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section

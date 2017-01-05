@@ -26,7 +26,7 @@
 - (void)setDesignViews
 {
     WEAKSELF(this);
-    _cell = [FSViewManager tapCellWithText:@"清除缓存" textColor:FS_TextColor_Normal detailColor:APPCOLOR font:FONTFC(15) detailFont:FONTFC(14) block:^(FSTapCell *bCell) {
+    _cell = [FSViewManager tapCellWithText:@"清除缓存" textColor:FS_TextColor_Normal font:FONTFC(15) detailText:nil detailColor:APPCOLOR detailFont:FONTFC(14) block:^(FSTapCell *bCell) {
         [this showWaitView:YES];
         [FSCacheManager clearAllCache:^{
             [this showWaitView:NO];

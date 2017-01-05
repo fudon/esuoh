@@ -51,6 +51,7 @@
             CGRect frame = CGRectMake(x * self.frame.size.width, 0, self.frame.size.width, self.frame.size.height);
             UIImageView *imageView = [[UIImageView alloc] initWithFrame:frame];
             imageView.clipsToBounds = YES;
+            imageView.contentMode = UIViewContentModeScaleAspectFill;
             imageView.tag = TAGIMAGEVIEW + x;
             [_scrollView addSubview:imageView];
             imageView.frame = frame;
