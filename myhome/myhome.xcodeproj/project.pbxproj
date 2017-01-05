@@ -63,6 +63,7 @@
 		5CF3DED01E08D13F005DFC6D /* FSOrderSystemController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF3DECF1E08D13F005DFC6D /* FSOrderSystemController.m */; };
 		5CF41B521E05448900944D18 /* FSAppDocumentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF41B511E05448900944D18 /* FSAppDocumentController.m */; };
 		5CF522421DFFC6EF0013D7CE /* FSRelayoutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF522411DFFC6EF0013D7CE /* FSRelayoutCell.m */; };
+		5CFB3E2B1E1E5BAB00392B99 /* FSCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CFB3E2A1E1E5BAB00392B99 /* FSCache.m */; };
 		5CFE601A1DC75B9C003640A4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CFE60191DC75B9C003640A4 /* main.m */; };
 		5CFE601D1DC75B9C003640A4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CFE601C1DC75B9C003640A4 /* AppDelegate.m */; };
 		5CFE60231DC75B9C003640A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CFE60211DC75B9C003640A4 /* Main.storyboard */; };
@@ -273,6 +274,8 @@
 		5CF41B511E05448900944D18 /* FSAppDocumentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSAppDocumentController.m; sourceTree = "<group>"; };
 		5CF522401DFFC6EF0013D7CE /* FSRelayoutCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSRelayoutCell.h; sourceTree = "<group>"; };
 		5CF522411DFFC6EF0013D7CE /* FSRelayoutCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSRelayoutCell.m; sourceTree = "<group>"; };
+		5CFB3E291E1E5BAB00392B99 /* FSCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCache.h; sourceTree = "<group>"; };
+		5CFB3E2A1E1E5BAB00392B99 /* FSCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCache.m; sourceTree = "<group>"; };
 		5CFE60151DC75B9C003640A4 /* myhome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myhome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CFE60191DC75B9C003640A4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5CFE601B1DC75B9C003640A4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -1099,6 +1102,8 @@
 			children = (
 				71DC23661DD2011A00BEB193 /* FSCacheManager.h */,
 				71DC23671DD2011A00BEB193 /* FSCacheManager.m */,
+				5CFB3E291E1E5BAB00392B99 /* FSCache.h */,
+				5CFB3E2A1E1E5BAB00392B99 /* FSCache.m */,
 			);
 			path = FSCacheManager;
 			sourceTree = "<group>";
@@ -1474,6 +1479,7 @@
 				71DC242B1DD2011B00BEB193 /* FSCacheManager.m in Sources */,
 				5C1881571E03D02100D55E0E /* FSIPModel.m in Sources */,
 				71DC24311DD2011B00BEB193 /* FSTapCell.m in Sources */,
+				5CFB3E2B1E1E5BAB00392B99 /* FSCache.m in Sources */,
 				714F6ECE1DF854FF00E96EED /* HATypeController.m in Sources */,
 				71DC242E1DD2011B00BEB193 /* FSImageLabelView.m in Sources */,
 				71DC241B1DD2011B00BEB193 /* Datetime.m in Sources */,
