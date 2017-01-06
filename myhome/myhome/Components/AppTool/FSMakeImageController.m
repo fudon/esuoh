@@ -1,38 +1,38 @@
 //
-//  ARPersonController.m
+//  FSMakeImageController.m
 //  myhome
 //
-//  Created by fudon on 2016/11/1.
-//  Copyright © 2016年 fuhope. All rights reserved.
+//  Created by fudon on 2017/1/6.
+//  Copyright © 2017年 fuhope. All rights reserved.
 //
 
-#import "ARPersonController.h"
-#import "FSShareView.h"
+#import "FSMakeImageController.h"
 
-@interface ARPersonController ()<UITableViewDelegate,UITableViewDataSource>
+@interface FSMakeImageController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic,strong) NSArray    *titles;
 
 @end
 
-@implementation ARPersonController
+@implementation FSMakeImageController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"我";
-    [self personDesignViews];
+    self.title = @"制图";
+    [self miDesignViews];
 }
 
 - (void)bbiAction
 {
-    [FuData pushToViewControllerWithClass:@"FSSetController" navigationController:self.navigationController param:nil configBlock:nil];
+    NSString *str = @"启动页:{Default@2x.png:640*960;\nDefault-568h@2x.png:640*1136;\nDefault-414w-736h@3x.png:1242*2208;\nDefault-375w-667h@2x.png:750*1334;\n\nIcon:\nIcon-29@2x.png:58*58;\nIcon-29@3x.png:87*87;\nIcon-40@2x.png:80*80;\nIcon-40@3x.png:120*120;\nIcon-60@2x.png:120*120;\nIcon-60@3x.png:180*180;\n}";
+    [FuData alertViewWithTitle:@"参数信息" message:str btnTitle:@"确定" handler:nil];
 }
 
-- (void)personDesignViews
+- (void)miDesignViews
 {
-    _titles = @[@"分享",@"反馈",@"关于",@"捐助"];
+    _titles = @[@"制图",@"备用",@"备用",@"备用"];
     
-    UIBarButtonItem *bbi = [[UIBarButtonItem alloc] initWithTitle:@"设置" style:UIBarButtonItemStyleDone target:self action:@selector(bbiAction)];
+    UIBarButtonItem *bbi = [[UIBarButtonItem alloc] initWithTitle:@"备用" style:UIBarButtonItemStyleDone target:self action:@selector(bbiAction)];
     bbi.tintColor = APPCOLOR;
     self.navigationItem.rightBarButtonItem = bbi;
     
@@ -72,9 +72,9 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if (indexPath.row == 0) {
-        [self showShareView];
+        [FuData pushToViewControllerWithClass:@"FSMakeImageController" navigationController:self.navigationController param:nil configBlock:nil];
     }else if (indexPath.row == 1){
-        [FSShareManager emailShareWithSubject:@"App FB" messageBody:nil recipients:@[@"1245102331@qq.com"] fileData:nil fileName:nil fileType:nil controller:self];
+        
     }else if (indexPath.row == 2){
         NSString *path = [[NSBundle mainBundle] pathForResource:@"ARAbout" ofType:@"html"];
         [FuData pushToViewControllerWithClass:@"FSHTMLController" navigationController:self.navigationController param:@{@"localUrlString":path,@"title":@"关于"} configBlock:nil];
@@ -83,13 +83,6 @@
     }
 }
 
-- (void)showShareView
-{
-    FSShareView *shareView = [[FSShareView alloc] initWithFrame:[UIScreen mainScreen].bounds list:@[@(FSShareTypeWechat),@(FSShareTypeQQ),@(FSShareTypeWeibo),@(FSShareTypeEmail),@(FSShareTypeMessage)] controller:self title:@"Title" detail:@"Detail" url:@"https://www.baidu.com" thumbImage:[UIImage new] recipientsOfMail:nil recipientsOfMessage:nil fileData:nil fileName:nil fileType:nil result:^(NSString *bResult) {
-    }];
-                              
-    [self.navigationController.tabBarController.view addSubview:shareView];
-}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

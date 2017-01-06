@@ -28,6 +28,7 @@
 		5C1881621E03D02100D55E0E /* FSSeeImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C18814F1E03D02100D55E0E /* FSSeeImageCell.m */; };
 		5C1881631E03D02100D55E0E /* FSSeeImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C1881511E03D02100D55E0E /* FSSeeImageView.m */; };
 		5C23B75E1E07D2FA0068603A /* FSFutureAlertSendController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C23B75D1E07D2FA0068603A /* FSFutureAlertSendController.m */; };
+		5C5201EE1E1F8D610010DE87 /* FSAppToolController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5201ED1E1F8D610010DE87 /* FSAppToolController.m */; };
 		5C5BB56E1E02741000349D82 /* FSLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5BB56D1E02741000349D82 /* FSLocation.m */; };
 		5C5BB5711E02762F00349D82 /* FSBaseEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5BB5701E02762F00349D82 /* FSBaseEntity.m */; };
 		5C68FE2D1DFEBA61003AA5F9 /* FSFutureAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C68FE2C1DFEBA61003AA5F9 /* FSFutureAlertController.m */; };
@@ -64,6 +65,7 @@
 		5CF41B521E05448900944D18 /* FSAppDocumentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF41B511E05448900944D18 /* FSAppDocumentController.m */; };
 		5CF522421DFFC6EF0013D7CE /* FSRelayoutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF522411DFFC6EF0013D7CE /* FSRelayoutCell.m */; };
 		5CFB3E2B1E1E5BAB00392B99 /* FSCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CFB3E2A1E1E5BAB00392B99 /* FSCache.m */; };
+		5CFE3A301E1FA87D00C58FD2 /* FSMakeImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CFE3A2F1E1FA87D00C58FD2 /* FSMakeImageController.m */; };
 		5CFE601A1DC75B9C003640A4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CFE60191DC75B9C003640A4 /* main.m */; };
 		5CFE601D1DC75B9C003640A4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CFE601C1DC75B9C003640A4 /* AppDelegate.m */; };
 		5CFE60231DC75B9C003640A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CFE60211DC75B9C003640A4 /* Main.storyboard */; };
@@ -209,6 +211,8 @@
 		5C1881511E03D02100D55E0E /* FSSeeImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSSeeImageView.m; sourceTree = "<group>"; };
 		5C23B75C1E07D2FA0068603A /* FSFutureAlertSendController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSFutureAlertSendController.h; sourceTree = "<group>"; };
 		5C23B75D1E07D2FA0068603A /* FSFutureAlertSendController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSFutureAlertSendController.m; sourceTree = "<group>"; };
+		5C5201EC1E1F8D610010DE87 /* FSAppToolController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSAppToolController.h; sourceTree = "<group>"; };
+		5C5201ED1E1F8D610010DE87 /* FSAppToolController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSAppToolController.m; sourceTree = "<group>"; };
 		5C5BB56C1E02741000349D82 /* FSLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSLocation.h; sourceTree = "<group>"; };
 		5C5BB56D1E02741000349D82 /* FSLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSLocation.m; sourceTree = "<group>"; };
 		5C5BB56F1E02762F00349D82 /* FSBaseEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSBaseEntity.h; sourceTree = "<group>"; };
@@ -278,6 +282,8 @@
 		5CF522411DFFC6EF0013D7CE /* FSRelayoutCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSRelayoutCell.m; sourceTree = "<group>"; };
 		5CFB3E291E1E5BAB00392B99 /* FSCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCache.h; sourceTree = "<group>"; };
 		5CFB3E2A1E1E5BAB00392B99 /* FSCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCache.m; sourceTree = "<group>"; };
+		5CFE3A2E1E1FA87D00C58FD2 /* FSMakeImageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSMakeImageController.h; sourceTree = "<group>"; };
+		5CFE3A2F1E1FA87D00C58FD2 /* FSMakeImageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSMakeImageController.m; sourceTree = "<group>"; };
 		5CFE60151DC75B9C003640A4 /* myhome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myhome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CFE60191DC75B9C003640A4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5CFE601B1DC75B9C003640A4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -582,6 +588,17 @@
 			path = SeeImage;
 			sourceTree = "<group>";
 		};
+		5C5201EB1E1F8D3C0010DE87 /* AppTool */ = {
+			isa = PBXGroup;
+			children = (
+				5C5201EC1E1F8D610010DE87 /* FSAppToolController.h */,
+				5C5201ED1E1F8D610010DE87 /* FSAppToolController.m */,
+				5CFE3A2E1E1FA87D00C58FD2 /* FSMakeImageController.h */,
+				5CFE3A2F1E1FA87D00C58FD2 /* FSMakeImageController.m */,
+			);
+			path = AppTool;
+			sourceTree = "<group>";
+		};
 		5C5BB56B1E02741000349D82 /* FSLocation */ = {
 			isa = PBXGroup;
 			children = (
@@ -835,6 +852,7 @@
 		5CFE61A11DC75C67003640A4 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				5C5201EB1E1F8D3C0010DE87 /* AppTool */,
 				5CA360D01DC8AD4700523FF5 /* Home */,
 				5CA360D11DC8AD4700523FF5 /* Offer */,
 				5CA360D21DC8AD4700523FF5 /* Person */,
@@ -1425,6 +1443,7 @@
 				71DC243C1DD2011B00BEB193 /* FSWebController.m in Sources */,
 				714F6EB81DF3BC2B00E96EED /* ARHomeController.m in Sources */,
 				71DC244A1DD2011B00BEB193 /* FSTaxOfIncomeController.m in Sources */,
+				5CFE3A301E1FA87D00C58FD2 /* FSMakeImageController.m in Sources */,
 				5CE70A651DF6CA2E001FA04B /* FSStoreManager.m in Sources */,
 				5C68FE301DFEBC55003AA5F9 /* FSNewFutureAlertController.m in Sources */,
 				5CF41B521E05448900944D18 /* FSAppDocumentController.m in Sources */,
@@ -1513,6 +1532,7 @@
 				714F6ECB1DF8544800E96EED /* HAPriceController.m in Sources */,
 				5C1881531E03D02100D55E0E /* FSCountButton.m in Sources */,
 				71DC24131DD2011B00BEB193 /* SQLEntity.m in Sources */,
+				5C5201EE1E1F8D610010DE87 /* FSAppToolController.m in Sources */,
 				7153BDC01DFD955D00C43F97 /* FSButtonsView.m in Sources */,
 				5C18815E1E03D02100D55E0E /* FSMoreImageCell.m in Sources */,
 				5CFE601A1DC75B9C003640A4 /* main.m in Sources */,

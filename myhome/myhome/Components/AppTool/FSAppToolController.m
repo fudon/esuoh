@@ -1,38 +1,37 @@
 //
-//  ARPersonController.m
+//  FSAppToolController.m
 //  myhome
 //
-//  Created by fudon on 2016/11/1.
-//  Copyright © 2016年 fuhope. All rights reserved.
+//  Created by fudon on 2017/1/6.
+//  Copyright © 2017年 fuhope. All rights reserved.
 //
 
-#import "ARPersonController.h"
-#import "FSShareView.h"
+#import "FSAppToolController.h"
 
-@interface ARPersonController ()<UITableViewDelegate,UITableViewDataSource>
+@interface FSAppToolController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic,strong) NSArray    *titles;
 
 @end
 
-@implementation ARPersonController
+@implementation FSAppToolController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    self.title = @"我";
-    [self personDesignViews];
+    [self appToolDesignViews];
 }
 
 - (void)bbiAction
 {
-    [FuData pushToViewControllerWithClass:@"FSSetController" navigationController:self.navigationController param:nil configBlock:nil];
+
 }
 
-- (void)personDesignViews
+- (void)appToolDesignViews
 {
-    _titles = @[@"分享",@"反馈",@"关于",@"捐助"];
+    _titles = @[@"制图",@"备用",@"备用",@"备用"];
     
-    UIBarButtonItem *bbi = [[UIBarButtonItem alloc] initWithTitle:@"设置" style:UIBarButtonItemStyleDone target:self action:@selector(bbiAction)];
+    UIBarButtonItem *bbi = [[UIBarButtonItem alloc] initWithTitle:@"备用" style:UIBarButtonItemStyleDone target:self action:@selector(bbiAction)];
     bbi.tintColor = APPCOLOR;
     self.navigationItem.rightBarButtonItem = bbi;
     
@@ -72,23 +71,15 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if (indexPath.row == 0) {
-        [self showShareView];
+        [FuData pushToViewControllerWithClass:@"FSMakeImageController" navigationController:self.navigationController param:nil configBlock:nil];
     }else if (indexPath.row == 1){
-        [FSShareManager emailShareWithSubject:@"App FB" messageBody:nil recipients:@[@"1245102331@qq.com"] fileData:nil fileName:nil fileType:nil controller:self];
+
     }else if (indexPath.row == 2){
         NSString *path = [[NSBundle mainBundle] pathForResource:@"ARAbout" ofType:@"html"];
         [FuData pushToViewControllerWithClass:@"FSHTMLController" navigationController:self.navigationController param:@{@"localUrlString":path,@"title":@"关于"} configBlock:nil];
     }else if (indexPath.row == 3){
         [FuData pushToViewControllerWithClass:@"FSAppToolController" navigationController:self.navigationController param:nil configBlock:nil];
     }
-}
-
-- (void)showShareView
-{
-    FSShareView *shareView = [[FSShareView alloc] initWithFrame:[UIScreen mainScreen].bounds list:@[@(FSShareTypeWechat),@(FSShareTypeQQ),@(FSShareTypeWeibo),@(FSShareTypeEmail),@(FSShareTypeMessage)] controller:self title:@"Title" detail:@"Detail" url:@"https://www.baidu.com" thumbImage:[UIImage new] recipientsOfMail:nil recipientsOfMessage:nil fileData:nil fileName:nil fileType:nil result:^(NSString *bResult) {
-    }];
-                              
-    [self.navigationController.tabBarController.view addSubview:shareView];
 }
 
 - (void)didReceiveMemoryWarning {
