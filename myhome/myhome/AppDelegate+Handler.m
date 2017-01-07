@@ -7,12 +7,13 @@
 //
 
 #import "AppDelegate+Handler.h"
-#import "FuData.h"
+#import "FSMacro.h"
 #import "FSShareManager.h"
+#import "ARTabBarController.h"
 
 @implementation AppDelegate (Handler)
 
-- (void)accessibilityDecrementd
+- (void)handlerApplication:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [[NSNotificationCenter defaultCenter] addObserverForName:UIApplicationUserDidTakeScreenshotNotification
                                                       object:nil
@@ -28,6 +29,12 @@
                                                           
                                                       } cancelTitle:@"取消" handler:nil completion:nil];
                                                   }];
+    
+    NSArray *array = @[@"ARHomeController",@"ARToolController",@"HAToolController",@"ARPersonController"];
+    NSArray *titles = @[@"首页",@"案例",@"应用",@"我"];
+    NSArray *types = @[@(UITabBarSystemItemMostViewed),@(UITabBarSystemItemBookmarks),@(UITabBarSystemItemFavorites),@(UITabBarSystemItemContacts)];
+    ARTabBarController *tbController = [[ARTabBarController alloc] initWithClasses:array titles:titles types:types selectedColor:APPCOLOR];
+    self.window.rootViewController = tbController;
 }
 
 @end
