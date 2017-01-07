@@ -59,6 +59,7 @@
 		5CB3A0311DCA04C800564280 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CB3A0301DCA04C800564280 /* libsqlite3.tbd */; };
 		5CB3A0331DCA04D400564280 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CB3A0321DCA04D400564280 /* CoreVideo.framework */; };
 		5CB3A0351DCA04F400564280 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CB3A0341DCA04F400564280 /* CoreMedia.framework */; };
+		5CD810AF1E20C59C0030EE3A /* AppDelegate+Handler.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CD810AE1E20C59C0030EE3A /* AppDelegate+Handler.m */; };
 		5CDBCDAF1DD057EA001CFC39 /* FSShareEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CDBCDAE1DD057EA001CFC39 /* FSShareEntity.m */; };
 		5CE70A651DF6CA2E001FA04B /* FSStoreManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CE70A641DF6CA2E001FA04B /* FSStoreManager.m */; };
 		5CF3DED01E08D13F005DFC6D /* FSOrderSystemController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF3DECF1E08D13F005DFC6D /* FSOrderSystemController.m */; };
@@ -270,6 +271,8 @@
 		5CB3A0301DCA04C800564280 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		5CB3A0321DCA04D400564280 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		5CB3A0341DCA04F400564280 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		5CD810AD1E20C59C0030EE3A /* AppDelegate+Handler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Handler.h"; sourceTree = "<group>"; };
+		5CD810AE1E20C59C0030EE3A /* AppDelegate+Handler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Handler.m"; sourceTree = "<group>"; };
 		5CDBCDAD1DD057EA001CFC39 /* FSShareEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSShareEntity.h; sourceTree = "<group>"; };
 		5CDBCDAE1DD057EA001CFC39 /* FSShareEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSShareEntity.m; sourceTree = "<group>"; };
 		5CE70A631DF6CA2E001FA04B /* FSStoreManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSStoreManager.h; sourceTree = "<group>"; };
@@ -808,6 +811,8 @@
 				5CF3DECD1E08D118005DFC6D /* OrderSystem */,
 				5CFE601B1DC75B9C003640A4 /* AppDelegate.h */,
 				5CFE601C1DC75B9C003640A4 /* AppDelegate.m */,
+				5CD810AD1E20C59C0030EE3A /* AppDelegate+Handler.h */,
+				5CD810AE1E20C59C0030EE3A /* AppDelegate+Handler.m */,
 				71474B681DCABB1C0063DA08 /* ARTabBarController.h */,
 				71474B691DCABB1C0063DA08 /* ARTabBarController.m */,
 				5CFE60211DC75B9C003640A4 /* Main.storyboard */,
@@ -1516,6 +1521,7 @@
 				71DEF3651E1545F4005B938A /* FSBirthdayController.m in Sources */,
 				71DC24261DD2011B00BEB193 /* FSCharTBController.m in Sources */,
 				71DC24171DD2011B00BEB193 /* FSCCDayView.m in Sources */,
+				5CD810AF1E20C59C0030EE3A /* AppDelegate+Handler.m in Sources */,
 				71DC24341DD2011B00BEB193 /* FSWBView.m in Sources */,
 				714F6ED11DF857BF00E96EED /* FSCyclicView.m in Sources */,
 				71474B6A1DCABB1C0063DA08 /* ARTabBarController.m in Sources */,

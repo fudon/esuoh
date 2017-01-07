@@ -35,7 +35,14 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];    
+    [super viewDidLoad];
+    CGFloat rate = [FuData freeStoragePercentage];
+    if (rate < 0.3) {
+        [FuData alertViewWithTitle:@"手机内存不足" message:@"快去[设置-通用-储存空间与iCloud用量]里清除吧" btnTitle:@"确定" handler:^(UIAlertAction *action) {
+            [FuData showMessage:@"需要跳转到设置里"];
+        }];
+    }
+    
     self.title = @"小程序";
     UIBarButtonItem *bbi = [[UIBarButtonItem alloc] initWithTitle:@"反馈" style:UIBarButtonItemStyleDone target:self action:@selector(bbiAction)];
     bbi.tintColor = APPCOLOR;

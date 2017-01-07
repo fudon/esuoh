@@ -24,7 +24,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.title = @"我要装修";
+    self.title = @"金央";
     
     [self homeDeisgnViews];
 }
