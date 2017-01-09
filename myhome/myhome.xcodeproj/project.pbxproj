@@ -59,13 +59,13 @@
 		5CB3A0311DCA04C800564280 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CB3A0301DCA04C800564280 /* libsqlite3.tbd */; };
 		5CB3A0331DCA04D400564280 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CB3A0321DCA04D400564280 /* CoreVideo.framework */; };
 		5CB3A0351DCA04F400564280 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CB3A0341DCA04F400564280 /* CoreMedia.framework */; };
+		5CC24DC61E233A940037DC64 /* FSSave.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC24DC51E233A940037DC64 /* FSSave.m */; };
 		5CD810AF1E20C59C0030EE3A /* AppDelegate+Handler.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CD810AE1E20C59C0030EE3A /* AppDelegate+Handler.m */; };
 		5CDBCDAF1DD057EA001CFC39 /* FSShareEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CDBCDAE1DD057EA001CFC39 /* FSShareEntity.m */; };
 		5CE70A651DF6CA2E001FA04B /* FSStoreManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CE70A641DF6CA2E001FA04B /* FSStoreManager.m */; };
 		5CF3DED01E08D13F005DFC6D /* FSOrderSystemController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF3DECF1E08D13F005DFC6D /* FSOrderSystemController.m */; };
 		5CF41B521E05448900944D18 /* FSAppDocumentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF41B511E05448900944D18 /* FSAppDocumentController.m */; };
 		5CF522421DFFC6EF0013D7CE /* FSRelayoutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF522411DFFC6EF0013D7CE /* FSRelayoutCell.m */; };
-		5CFB3E2B1E1E5BAB00392B99 /* FSCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CFB3E2A1E1E5BAB00392B99 /* FSCache.m */; };
 		5CFE3A301E1FA87D00C58FD2 /* FSMakeImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CFE3A2F1E1FA87D00C58FD2 /* FSMakeImageController.m */; };
 		5CFE601A1DC75B9C003640A4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CFE60191DC75B9C003640A4 /* main.m */; };
 		5CFE601D1DC75B9C003640A4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CFE601C1DC75B9C003640A4 /* AppDelegate.m */; };
@@ -271,6 +271,8 @@
 		5CB3A0301DCA04C800564280 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		5CB3A0321DCA04D400564280 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		5CB3A0341DCA04F400564280 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		5CC24DC41E233A940037DC64 /* FSSave.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSSave.h; sourceTree = "<group>"; };
+		5CC24DC51E233A940037DC64 /* FSSave.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSSave.m; sourceTree = "<group>"; };
 		5CD810AD1E20C59C0030EE3A /* AppDelegate+Handler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Handler.h"; sourceTree = "<group>"; };
 		5CD810AE1E20C59C0030EE3A /* AppDelegate+Handler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Handler.m"; sourceTree = "<group>"; };
 		5CDBCDAD1DD057EA001CFC39 /* FSShareEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSShareEntity.h; sourceTree = "<group>"; };
@@ -283,8 +285,6 @@
 		5CF41B511E05448900944D18 /* FSAppDocumentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSAppDocumentController.m; sourceTree = "<group>"; };
 		5CF522401DFFC6EF0013D7CE /* FSRelayoutCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSRelayoutCell.h; sourceTree = "<group>"; };
 		5CF522411DFFC6EF0013D7CE /* FSRelayoutCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSRelayoutCell.m; sourceTree = "<group>"; };
-		5CFB3E291E1E5BAB00392B99 /* FSCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCache.h; sourceTree = "<group>"; };
-		5CFB3E2A1E1E5BAB00392B99 /* FSCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCache.m; sourceTree = "<group>"; };
 		5CFE3A2E1E1FA87D00C58FD2 /* FSMakeImageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSMakeImageController.h; sourceTree = "<group>"; };
 		5CFE3A2F1E1FA87D00C58FD2 /* FSMakeImageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSMakeImageController.m; sourceTree = "<group>"; };
 		5CFE60151DC75B9C003640A4 /* myhome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myhome.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1133,10 +1133,10 @@
 		71DC23651DD2011A00BEB193 /* FSCacheManager */ = {
 			isa = PBXGroup;
 			children = (
+				5CC24DC41E233A940037DC64 /* FSSave.h */,
+				5CC24DC51E233A940037DC64 /* FSSave.m */,
 				71DC23661DD2011A00BEB193 /* FSCacheManager.h */,
 				71DC23671DD2011A00BEB193 /* FSCacheManager.m */,
-				5CFB3E291E1E5BAB00392B99 /* FSCache.h */,
-				5CFB3E2A1E1E5BAB00392B99 /* FSCache.m */,
 			);
 			path = FSCacheManager;
 			sourceTree = "<group>";
@@ -1454,6 +1454,7 @@
 				5CF41B521E05448900944D18 /* FSAppDocumentController.m in Sources */,
 				5C68FE341DFEBFC5003AA5F9 /* PHTextView.m in Sources */,
 				71DC24241DD2011B00BEB193 /* FSBaseController.m in Sources */,
+				5CC24DC61E233A940037DC64 /* FSSave.m in Sources */,
 				5C7C38DE1DD1D14600D68C3B /* ARAboutController.m in Sources */,
 				71DC24351DD2011B00BEB193 /* FSWebImageView.m in Sources */,
 				7173002E1E1E8FEB00B87826 /* FSInputView.m in Sources */,
@@ -1514,7 +1515,6 @@
 				71DC242B1DD2011B00BEB193 /* FSCacheManager.m in Sources */,
 				5C1881571E03D02100D55E0E /* FSIPModel.m in Sources */,
 				71DC24311DD2011B00BEB193 /* FSTapCell.m in Sources */,
-				5CFB3E2B1E1E5BAB00392B99 /* FSCache.m in Sources */,
 				714F6ECE1DF854FF00E96EED /* HATypeController.m in Sources */,
 				71DC242E1DD2011B00BEB193 /* FSImageLabelView.m in Sources */,
 				71DC241B1DD2011B00BEB193 /* Datetime.m in Sources */,
