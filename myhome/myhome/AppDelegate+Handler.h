@@ -10,4 +10,6 @@
 
 @interface AppDelegate (Handler)
 
+- (void)handlerApplication:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions;
+
 @end

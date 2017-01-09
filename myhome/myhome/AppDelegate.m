@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 #import "ARTabBarController.h"
 #import "FSShareManager.h"
-#import "FSMacro.h"
+#import "AppDelegate+Handler.h"
 
 @interface AppDelegate ()
 
@@ -19,11 +19,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    NSArray *array = @[@"ARHomeController",@"ARToolController",@"HAToolController",@"ARPersonController"];
-    NSArray *titles = @[@"首页",@"案例",@"应用",@"我"];
-    NSArray *types = @[@(UITabBarSystemItemMostViewed),@(UITabBarSystemItemBookmarks),@(UITabBarSystemItemFavorites),@(UITabBarSystemItemContacts)];
-    ARTabBarController *tbController = [[ARTabBarController alloc] initWithClasses:array titles:titles types:types selectedColor:APPCOLOR];
-    self.window.rootViewController = tbController;    
+    [self handlerApplication:application didFinishLaunchingWithOptions:launchOptions];
     return YES;
 }
 
