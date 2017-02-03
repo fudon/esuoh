@@ -16,6 +16,7 @@
 #import "FSStoreManager.h"
 #import "FSFutureAlertController.h"
 #import "FSMoveLabel.h"
+#import "FSWSKController.h"
 
 @interface HAToolController ()
 
@@ -42,8 +43,8 @@
     bbi.tintColor = APPCOLOR;
     self.navigationItem.rightBarButtonItem = bbi;
     
-    NSArray *array = @[@"二维码",@"设备信息",@"导航",@"计算器",@"提醒",@"目录"];
-    NSArray *picArray = @[@"saoma_too",@"deviceInfo",@"navigation_web",@"counter_logo",@"counter_logo",@"counter_logo"];
+    NSArray *array = @[@"二维码",@"设备信息",@"导航",@"计算器",@"提醒",@"目录",@"五十K"];
+    NSArray *picArray = @[@"saoma_too",@"deviceInfo",@"navigation_web",@"counter_logo",@"counter_logo",@"counter_logo",@"counter_logo"];
     
     CGFloat width = (WIDTHFC - 100) / 4;
     WEAKSELF(this);
@@ -176,6 +177,12 @@
             case 5:
         {
             [FuData pushToViewControllerWithClass:@"FSAppDocumentController" navigationController:self.navigationController param:nil configBlock:nil];
+        }
+            break;
+            case 6:
+        {
+            FSWSKController *wsk = [[FSWSKController alloc] init];
+            [self.navigationController pushViewController:wsk animated:YES];
         }
             break;
         case 8:
