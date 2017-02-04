@@ -66,6 +66,8 @@
 		5CC24DC61E233A940037DC64 /* FSSave.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC24DC51E233A940037DC64 /* FSSave.m */; };
 		5CD810AF1E20C59C0030EE3A /* AppDelegate+Handler.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CD810AE1E20C59C0030EE3A /* AppDelegate+Handler.m */; };
 		5CDBCDAF1DD057EA001CFC39 /* FSShareEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CDBCDAE1DD057EA001CFC39 /* FSShareEntity.m */; };
+		5CE0376B1E45870500FD1DA6 /* FSSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CE037681E45870500FD1DA6 /* FSSearchController.m */; };
+		5CE0376C1E45870500FD1DA6 /* FSSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CE0376A1E45870500FD1DA6 /* FSSearchViewController.m */; };
 		5CE70A651DF6CA2E001FA04B /* FSStoreManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CE70A641DF6CA2E001FA04B /* FSStoreManager.m */; };
 		5CF3DED01E08D13F005DFC6D /* FSOrderSystemController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF3DECF1E08D13F005DFC6D /* FSOrderSystemController.m */; };
 		5CF41B521E05448900944D18 /* FSAppDocumentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF41B511E05448900944D18 /* FSAppDocumentController.m */; };
@@ -290,6 +292,10 @@
 		5CD810AE1E20C59C0030EE3A /* AppDelegate+Handler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Handler.m"; sourceTree = "<group>"; };
 		5CDBCDAD1DD057EA001CFC39 /* FSShareEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSShareEntity.h; sourceTree = "<group>"; };
 		5CDBCDAE1DD057EA001CFC39 /* FSShareEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSShareEntity.m; sourceTree = "<group>"; };
+		5CE037671E45870500FD1DA6 /* FSSearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSSearchController.h; sourceTree = "<group>"; };
+		5CE037681E45870500FD1DA6 /* FSSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSSearchController.m; sourceTree = "<group>"; };
+		5CE037691E45870500FD1DA6 /* FSSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSSearchViewController.h; sourceTree = "<group>"; };
+		5CE0376A1E45870500FD1DA6 /* FSSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSSearchViewController.m; sourceTree = "<group>"; };
 		5CE70A631DF6CA2E001FA04B /* FSStoreManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSStoreManager.h; sourceTree = "<group>"; };
 		5CE70A641DF6CA2E001FA04B /* FSStoreManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSStoreManager.m; sourceTree = "<group>"; };
 		5CF3DECE1E08D13F005DFC6D /* FSOrderSystemController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSOrderSystemController.h; sourceTree = "<group>"; };
@@ -793,6 +799,17 @@
 			path = Thanks;
 			sourceTree = "<group>";
 		};
+		5CE037661E45870500FD1DA6 /* FSSearch */ = {
+			isa = PBXGroup;
+			children = (
+				5CE037671E45870500FD1DA6 /* FSSearchController.h */,
+				5CE037681E45870500FD1DA6 /* FSSearchController.m */,
+				5CE037691E45870500FD1DA6 /* FSSearchViewController.h */,
+				5CE0376A1E45870500FD1DA6 /* FSSearchViewController.m */,
+			);
+			path = FSSearch;
+			sourceTree = "<group>";
+		};
 		5CE70A621DF6CA2E001FA04B /* StoreManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -1131,6 +1148,7 @@
 		71DC23551DD2011A00BEB193 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				5CE037661E45870500FD1DA6 /* FSSearch */,
 				7180F3641E44C17A00331DED /* WSK */,
 				5C10642E1E24EE5B0027314A /* FSGrid */,
 				5C1063FB1E24DAD00027314A /* FSPdf */,
@@ -1567,6 +1585,7 @@
 				71DC240F1DD2011B00BEB193 /* FSFMListController.m in Sources */,
 				5C1063FE1E24DAD00027314A /* FSPdf.m in Sources */,
 				71DC24771DD2011B00BEB193 /* FuWeb.m in Sources */,
+				5CE0376B1E45870500FD1DA6 /* FSSearchController.m in Sources */,
 				71DC242B1DD2011B00BEB193 /* FSCacheManager.m in Sources */,
 				5C1881571E03D02100D55E0E /* FSIPModel.m in Sources */,
 				71DC24311DD2011B00BEB193 /* FSTapCell.m in Sources */,
@@ -1592,6 +1611,7 @@
 				5C23B75E1E07D2FA0068603A /* FSFutureAlertSendController.m in Sources */,
 				714F6ECB1DF8544800E96EED /* HAPriceController.m in Sources */,
 				5C1881531E03D02100D55E0E /* FSCountButton.m in Sources */,
+				5CE0376C1E45870500FD1DA6 /* FSSearchViewController.m in Sources */,
 				71DC24131DD2011B00BEB193 /* SQLEntity.m in Sources */,
 				5C5201EE1E1F8D610010DE87 /* FSAppToolController.m in Sources */,
 				7153BDC01DFD955D00C43F97 /* FSButtonsView.m in Sources */,
