@@ -17,6 +17,7 @@
 #import "FSFutureAlertController.h"
 #import "FSMoveLabel.h"
 #import "FSWSKController.h"
+#import "BankNumberController.h"
 
 @interface HAToolController ()
 
@@ -43,8 +44,8 @@
     bbi.tintColor = APPCOLOR;
     self.navigationItem.rightBarButtonItem = bbi;
     
-    NSArray *array = @[@"二维码",@"设备信息",@"导航",@"计算器",@"提醒",@"目录",@"五十K"];
-    NSArray *picArray = @[@"saoma_too",@"deviceInfo",@"navigation_web",@"counter_logo",@"counter_logo",@"counter_logo",@"counter_logo"];
+    NSArray *array = @[@"二维码",@"设备信息",@"导航",@"计算器",@"提醒",@"目录",@"五十K",@"银行卡号"];
+    NSArray *picArray = @[@"saoma_too",@"deviceInfo",@"navigation_web",@"apps_counter",@"apps_alert",@"apps_write",@"apps_puke",@"apps_bank"];
     
     CGFloat width = (WIDTHFC - 100) / 4;
     WEAKSELF(this);
@@ -183,6 +184,12 @@
         {
             FSWSKController *wsk = [[FSWSKController alloc] init];
             [self.navigationController pushViewController:wsk animated:YES];
+        }
+            break;
+            case 7:
+        {
+            BankNumberController *bank = [[BankNumberController alloc] init];
+            [self.navigationController pushViewController:bank animated:YES];
         }
             break;
         case 8:
