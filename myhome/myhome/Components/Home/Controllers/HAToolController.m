@@ -18,6 +18,9 @@
 #import "FSMoveLabel.h"
 #import "FSWSKController.h"
 #import "BankNumberController.h"
+#import "TenWordsController.h"
+#import "HoldViewController.h"
+#import "myhome-Swift.h"
 
 @interface HAToolController ()
 
@@ -44,8 +47,8 @@
     bbi.tintColor = APPCOLOR;
     self.navigationItem.rightBarButtonItem = bbi;
     
-    NSArray *array = @[@"二维码",@"设备信息",@"导航",@"计算器",@"提醒",@"目录",@"五十K",@"银行卡号"];
-    NSArray *picArray = @[@"saoma_too",@"deviceInfo",@"navigation_web",@"apps_counter",@"apps_alert",@"apps_write",@"apps_puke",@"apps_bank"];
+    NSArray *array = @[@"二维码",@"设备信息",@"导航",@"计算器",@"提醒",@"目录",@"五十K",@"银行卡号",@"农历",@"十句话",@"定位"];
+    NSArray *picArray = @[@"saoma_too",@"deviceInfo",@"navigation_web",@"apps_counter",@"apps_alert",@"apps_write",@"apps_puke",@"apps_bank",@"apps_nongli",@"apps_tenword",@"apps_dingwei"];
     
     CGFloat width = (WIDTHFC - 100) / 4;
     WEAKSELF(this);
@@ -196,6 +199,24 @@
         {
             FSChineseCalendarController *ccController = [[FSChineseCalendarController alloc] init];
             [self.navigationController pushViewController:ccController animated:YES];
+        }
+            break;
+            case 9:
+        {
+            HoldViewController *hold = [[HoldViewController alloc] init];
+            hold.first = YES;
+            [self.navigationController pushViewController:hold animated:YES];
+            WEAKSELF(this);
+            [hold setBtnClickCallback:^{
+                TenWordsController *tenWords = [[TenWordsController alloc] init];
+                [this.navigationController pushViewController:tenWords animated:YES];
+            }];
+        }
+            break;
+            case 10:
+        {
+            LocationSwiftController *location = [[LocationSwiftController alloc] init];
+            [self.navigationController pushViewController:location animated:YES];
         }
             break;
         default:

@@ -102,6 +102,15 @@
 		7180F36A1E44C17A00331DED /* FSWSKController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7180F3681E44C17A00331DED /* FSWSKController.m */; };
 		7180F36F1E4A141200331DED /* BankNumberController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7180F36E1E4A141200331DED /* BankNumberController.m */; };
 		7180F3721E4A150B00331DED /* FSPublicData.m in Sources */ = {isa = PBXBuildFile; fileRef = 7180F3711E4A150B00331DED /* FSPublicData.m */; };
+		7180F3781E4A993F00331DED /* DetailWordsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7180F3751E4A993F00331DED /* DetailWordsController.m */; };
+		7180F3791E4A993F00331DED /* TenWordsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7180F3771E4A993F00331DED /* TenWordsController.m */; };
+		7180F37C1E4A9AAC00331DED /* HoldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7180F37B1E4A9AAC00331DED /* HoldViewController.m */; };
+		7180F3801E4A9DAA00331DED /* LocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7180F37F1E4A9DAA00331DED /* LocationController.m */; };
+		7180F3851E4A9EDC00331DED /* KeepLocationSwiftController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7180F3821E4A9EDC00331DED /* KeepLocationSwiftController.swift */; };
+		7180F3861E4A9EDC00331DED /* KeepLocationSwiftController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7180F3831E4A9EDC00331DED /* KeepLocationSwiftController.xib */; };
+		7180F3871E4A9EDC00331DED /* LocationSwiftController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7180F3841E4A9EDC00331DED /* LocationSwiftController.swift */; };
+		7180F3891E4AA17D00331DED /* FSHead.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7180F3881E4AA17D00331DED /* FSHead.swift */; };
+		7180F38C1E4AA1AD00331DED /* MapLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7180F38B1E4AA1AD00331DED /* MapLabel.m */; };
 		71A66E7B1DEF1250002C28B9 /* HAShopController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71A66E7A1DEF1250002C28B9 /* HAShopController.m */; };
 		71B316C91E0813A000FD031F /* FSSetController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71B316C81E0813A000FD031F /* FSSetController.m */; };
 		71DC24091DD2011B00BEB193 /* FSDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 71DC23131DD2011A00BEB193 /* FSDBManager.m */; };
@@ -364,6 +373,21 @@
 		7180F36E1E4A141200331DED /* BankNumberController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BankNumberController.m; sourceTree = "<group>"; };
 		7180F3701E4A150B00331DED /* FSPublicData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSPublicData.h; sourceTree = "<group>"; };
 		7180F3711E4A150B00331DED /* FSPublicData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSPublicData.m; sourceTree = "<group>"; };
+		7180F3741E4A993F00331DED /* DetailWordsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailWordsController.h; sourceTree = "<group>"; };
+		7180F3751E4A993F00331DED /* DetailWordsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailWordsController.m; sourceTree = "<group>"; };
+		7180F3761E4A993F00331DED /* TenWordsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TenWordsController.h; sourceTree = "<group>"; };
+		7180F3771E4A993F00331DED /* TenWordsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TenWordsController.m; sourceTree = "<group>"; };
+		7180F37A1E4A9AAC00331DED /* HoldViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HoldViewController.h; sourceTree = "<group>"; };
+		7180F37B1E4A9AAC00331DED /* HoldViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HoldViewController.m; sourceTree = "<group>"; };
+		7180F37E1E4A9DAA00331DED /* LocationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationController.h; sourceTree = "<group>"; };
+		7180F37F1E4A9DAA00331DED /* LocationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationController.m; sourceTree = "<group>"; };
+		7180F3811E4A9EDB00331DED /* myhome-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "myhome-Bridging-Header.h"; sourceTree = "<group>"; };
+		7180F3821E4A9EDC00331DED /* KeepLocationSwiftController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeepLocationSwiftController.swift; sourceTree = "<group>"; };
+		7180F3831E4A9EDC00331DED /* KeepLocationSwiftController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KeepLocationSwiftController.xib; sourceTree = "<group>"; };
+		7180F3841E4A9EDC00331DED /* LocationSwiftController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSwiftController.swift; sourceTree = "<group>"; };
+		7180F3881E4AA17D00331DED /* FSHead.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FSHead.swift; sourceTree = "<group>"; };
+		7180F38A1E4AA1AD00331DED /* MapLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapLabel.h; sourceTree = "<group>"; };
+		7180F38B1E4AA1AD00331DED /* MapLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapLabel.m; sourceTree = "<group>"; };
 		71A66E791DEF1250002C28B9 /* HAShopController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HAShopController.h; sourceTree = "<group>"; };
 		71A66E7A1DEF1250002C28B9 /* HAShopController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HAShopController.m; sourceTree = "<group>"; };
 		71B316C71E0813A000FD031F /* FSSetController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSSetController.h; sourceTree = "<group>"; };
@@ -988,6 +1012,10 @@
 		7180F36B1E4A141200331DED /* FSApps */ = {
 			isa = PBXGroup;
 			children = (
+				7180F37D1E4A9DAA00331DED /* Location */,
+				7180F37A1E4A9AAC00331DED /* HoldViewController.h */,
+				7180F37B1E4A9AAC00331DED /* HoldViewController.m */,
+				7180F3731E4A993F00331DED /* Tenword */,
 				7180F36C1E4A141200331DED /* Bank */,
 				7180F3701E4A150B00331DED /* FSPublicData.h */,
 				7180F3711E4A150B00331DED /* FSPublicData.m */,
@@ -1002,6 +1030,33 @@
 				7180F36E1E4A141200331DED /* BankNumberController.m */,
 			);
 			path = Bank;
+			sourceTree = "<group>";
+		};
+		7180F3731E4A993F00331DED /* Tenword */ = {
+			isa = PBXGroup;
+			children = (
+				7180F3741E4A993F00331DED /* DetailWordsController.h */,
+				7180F3751E4A993F00331DED /* DetailWordsController.m */,
+				7180F3761E4A993F00331DED /* TenWordsController.h */,
+				7180F3771E4A993F00331DED /* TenWordsController.m */,
+			);
+			path = Tenword;
+			sourceTree = "<group>";
+		};
+		7180F37D1E4A9DAA00331DED /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				7180F38A1E4AA1AD00331DED /* MapLabel.h */,
+				7180F38B1E4AA1AD00331DED /* MapLabel.m */,
+				7180F3881E4AA17D00331DED /* FSHead.swift */,
+				7180F3821E4A9EDC00331DED /* KeepLocationSwiftController.swift */,
+				7180F3831E4A9EDC00331DED /* KeepLocationSwiftController.xib */,
+				7180F3841E4A9EDC00331DED /* LocationSwiftController.swift */,
+				7180F37E1E4A9DAA00331DED /* LocationController.h */,
+				7180F37F1E4A9DAA00331DED /* LocationController.m */,
+				7180F3811E4A9EDB00331DED /* myhome-Bridging-Header.h */,
+			);
+			path = Location;
 			sourceTree = "<group>";
 		};
 		71DC230E1DD2011A00BEB193 /* FS */ = {
@@ -1424,6 +1479,7 @@
 					5CFE60141DC75B9C003640A4 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = BL86JR5S2K;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -1457,6 +1513,7 @@
 				5C9337FE1DCB447B0091D3D8 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				71DC24401DD2011B00BEB193 /* fsqr2.png in Resources */,
 				71DC24461DD2011B00BEB193 /* fsqrline.png in Resources */,
+				7180F3861E4A9EDC00331DED /* KeepLocationSwiftController.xib in Resources */,
 				5C9338001DCB447B0091D3D8 /* README.txt in Resources */,
 				71DC244C1DD2011B00BEB193 /* Note.txt in Resources */,
 				5CFE60251DC75B9C003640A4 /* Assets.xcassets in Resources */,
@@ -1537,7 +1594,9 @@
 				71DC24271DD2011B00BEB193 /* FSHardwareInfoController.m in Sources */,
 				71DC240D1DD2011B00BEB193 /* FSFMExpectController.m in Sources */,
 				71DC24151DD2011B00BEB193 /* ChineseCalendarView.m in Sources */,
+				7180F3781E4A993F00331DED /* DetailWordsController.m in Sources */,
 				71DC244D1DD2011B00BEB193 /* README.md in Sources */,
+				7180F3871E4A9EDC00331DED /* LocationSwiftController.swift in Sources */,
 				71DC24091DD2011B00BEB193 /* FSDBManager.m in Sources */,
 				5C18815B1E03D02100D55E0E /* FSButtonLabel.m in Sources */,
 				714F6ED41DFAF5D200E96EED /* HAFlowController.m in Sources */,
@@ -1557,12 +1616,15 @@
 				7173002E1E1E8FEB00B87826 /* FSInputView.m in Sources */,
 				71DC244B1DD2011B00BEB193 /* FSTaxRateEntity.m in Sources */,
 				714F6EC81DF4395F00E96EED /* FSSameKindController.m in Sources */,
+				7180F3851E4A9EDC00331DED /* KeepLocationSwiftController.swift in Sources */,
 				714F6EBF1DF3C87D00E96EED /* FSShopClassView.m in Sources */,
 				71DC24191DD2011B00BEB193 /* FSCCMainView.m in Sources */,
 				5C1881611E03D02100D55E0E /* FSZoneImageController.m in Sources */,
 				5C18815F1E03D02100D55E0E /* FSMoreZoneImageCell.m in Sources */,
 				71DEF3681E154987005B938A /* FSAllBirthdayController.m in Sources */,
 				5C1881541E03D02100D55E0E /* FSImagePicker.m in Sources */,
+				7180F37C1E4A9AAC00331DED /* HoldViewController.m in Sources */,
+				7180F38C1E4AA1AD00331DED /* MapLabel.m in Sources */,
 				71DC241A1DD2011B00BEB193 /* FSChineseCalendarController.m in Sources */,
 				71DC24751DD2011B00BEB193 /* FuData.m in Sources */,
 				71DC24161DD2011B00BEB193 /* ExhaustiveCalendar.m in Sources */,
@@ -1575,6 +1637,7 @@
 				5C9337F81DCB447B0091D3D8 /* FSShareManager.m in Sources */,
 				71DC24491DD2011B00BEB193 /* FSTaxDetailView.m in Sources */,
 				5C5BB5711E02762F00349D82 /* FSBaseEntity.m in Sources */,
+				7180F3791E4A993F00331DED /* TenWordsController.m in Sources */,
 				717300281E1D2C4100B87826 /* FSWebKitController.m in Sources */,
 				714F6ED71DFAF82B00E96EED /* HARewardPolicyController.m in Sources */,
 				5C1881561E03D02100D55E0E /* FSIPImageCell.m in Sources */,
@@ -1584,6 +1647,7 @@
 				714F6EC21DF3D3F100E96EED /* HAShopCollectionCell.m in Sources */,
 				71DC241D1DD2011B00BEB193 /* FSLunarCalendar.m in Sources */,
 				71DC24331DD2011B00BEB193 /* FSTapScrollView.m in Sources */,
+				7180F3891E4AA17D00331DED /* FSHead.swift in Sources */,
 				71DC24211DD2011B00BEB193 /* GTMBase64.m in Sources */,
 				5C5BB56E1E02741000349D82 /* FSLocation.m in Sources */,
 				71DC24431DD2011B00BEB193 /* FSQRController.m in Sources */,
@@ -1657,6 +1721,7 @@
 				714F6EB91DF3BC2B00E96EED /* HACityController.m in Sources */,
 				714F6EBB1DF3BC2B00E96EED /* FSFlowView.m in Sources */,
 				5C1881601E03D02100D55E0E /* FSPreviewPhotoController.m in Sources */,
+				7180F3801E4A9DAA00331DED /* LocationController.m in Sources */,
 				71DC243E1DD2011B00BEB193 /* FSMakeQRController.m in Sources */,
 				71DC24281DD2011B00BEB193 /* FSLeftItem.m in Sources */,
 				71DC24371DD2011B00BEB193 /* FSSelectController.m in Sources */,
@@ -1782,6 +1847,7 @@
 			baseConfigurationReference = 80481221648A5E66ECC9DA35 /* Pods-myhome.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = BL86JR5S2K;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/myhome",
@@ -1803,6 +1869,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.fuhope.myhome;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "../FS/Module/FSApps/Location/myhome-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -1811,6 +1880,7 @@
 			baseConfigurationReference = 6584AD39FD918E283A90C913 /* Pods-myhome.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = BL86JR5S2K;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/myhome",
@@ -1832,6 +1902,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.fuhope.myhome;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "../FS/Module/FSApps/Location/myhome-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
