@@ -11,6 +11,7 @@
 #import "HACityController.h"
 #import "FSFlowView.h"
 #import "FSWebImageView.h"
+#import "FSBirthdayController.h"
 
 @interface ARHomeController ()
 

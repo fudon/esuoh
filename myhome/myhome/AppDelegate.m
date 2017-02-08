@@ -10,6 +10,7 @@
 #import "ARTabBarController.h"
 #import "FSShareManager.h"
 #import "AppDelegate+Handler.h"
+#import "FSBirthdayController.h"
 
 @interface AppDelegate ()
 
@@ -41,12 +42,41 @@
 
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    if (application.applicationIconBadgeNumber) {
+        application.applicationIconBadgeNumber = 0;
+        [self homeHandleDatas];
+    }
 }
 
+- (void)homeHandleDatas
+{
+    NSArray *birthdays = [FSBirthdayController todayBirthdays];
+    if (birthdays.count) {
+        NSMutableString *title = [[NSMutableString alloc] initWithString:@"今天"];
+        for (NSArray *array in birthdays) {
+            [title appendFormat:@"%@、",array[0]];
+        }
+        [title deleteCharactersInRange:NSMakeRange(title.length - 1, 1)];
+        [title appendFormat:@"过生日"];
+        
+        NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+        [ud setObject:title forKey:@"SomeoneBirthday"];
+    }
+}
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification
+{
+    for (UILocalNotification *noti in [[UIApplication sharedApplication] scheduledLocalNotifications]) {
+        NSString *notiID = noti.userInfo[@"someKey"];
+        NSString *receiveNotiID = notification.userInfo[@"someKey"];
+        if ([notiID isEqualToString:receiveNotiID]) {
+            application.applicationIconBadgeNumber -= 1;
+        }
+    }
 }
 
 #pragma mark - 从别的应用回来
