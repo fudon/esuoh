@@ -10,7 +10,6 @@
 #import "ARTabBarController.h"
 #import "FSShareManager.h"
 #import "AppDelegate+Handler.h"
-#import "FSBirthdayController.h"
 
 @interface AppDelegate ()
 
@@ -42,26 +41,6 @@
 
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
-    if (application.applicationIconBadgeNumber) {
-        application.applicationIconBadgeNumber = 0;
-        [self homeHandleDatas];
-    }
-}
-
-- (void)homeHandleDatas
-{
-    NSArray *birthdays = [FSBirthdayController todayBirthdays];
-    if (birthdays.count) {
-        NSMutableString *title = [[NSMutableString alloc] initWithString:@"今天"];
-        for (NSArray *array in birthdays) {
-            [title appendFormat:@"%@、",array[0]];
-        }
-        [title deleteCharactersInRange:NSMakeRange(title.length - 1, 1)];
-        [title appendFormat:@"过生日"];
-        
-        NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
-        [ud setObject:title forKey:@"SomeoneBirthday"];
-    }
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {

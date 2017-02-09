@@ -21,12 +21,12 @@
 #import "TenWordsController.h"
 #import "HoldViewController.h"
 #import "myhome-Swift.h"
+#import "FSBirthdayController.h"
 
 @interface HAToolController ()
 
 @property (nonatomic,strong) FSMoveLabel    *moveLabel;
-@property (nonatomic,assign) BOOL           showFlag;
-@property (nonatomic,assign) BOOL           stopFlag;
+@property (nonatomic,assign) BOOL           birthday;
 
 @end
 
@@ -38,51 +38,42 @@
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
         [self checkFutureAlerts];
     });    
+    [self checkBirthday];
 }
 
-- (void)pushToBirthday:(NSString *)title
+- (void)checkBirthday
 {
-    WEAKSELF(this);
-    [FuData alertViewWithTitle:title message:@"快去看看吧" btnTitle:@"查看" handler:^(UIAlertAction *action) {
-        Class ControllerClass = NSClassFromString(@"FSBirthdayController");
-        if (ControllerClass) {
-            [this.navigationController pushViewController:[[ControllerClass alloc] init] animated:YES];
+    NSArray *birthdays = [FSBirthdayController todayBirthdays];
+    if (birthdays.count) {
+        NSMutableString *title = [[NSMutableString alloc] initWithString:@"今天"];
+        for (NSArray *array in birthdays) {
+            [title appendFormat:@"%@、",array[0]];
         }
-    } cancelTitle:@"取消" handler:nil completion:nil];
-    [self doSomethingRepeatedly];
-}
-
-- (void)doSomethingRepeatedly
-{
-    self.title = !_showFlag?@"有人过生日":@"小程序";
-    _showFlag = !_showFlag;
-    if (_stopFlag) {
-        self.title = @"小程序";
-        return;
+        [title deleteCharactersInRange:NSMakeRange(title.length - 1, 1)];
+        [title appendFormat:@"过生日"];
+        
+        if (!_birthday) {
+            _birthday = YES;
+            WEAKSELF(this);
+            [FuData alertViewWithTitle:title message:@"快去看看吧" btnTitle:@"查看" handler:^(UIAlertAction *action) {
+                Class ControllerClass = NSClassFromString(@"FSBirthdayController");
+                if (ControllerClass) {
+                    [this.navigationController pushViewController:[[ControllerClass alloc] init] animated:YES];
+                }
+            } cancelTitle:@"取消" handler:nil completion:nil];
+        }else{
+            [FuData showMessage:title];
+        }
     }
-    
-    __weak typeof(self) weakSelf = self;
-    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC));
-    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-        [weakSelf doSomethingRepeatedly];
-    });
-}
-
-- (void)stopFlash
-{
-    _stopFlag = YES;
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
-    NSString *title = [ud objectForKey:@"SomeoneBirthday"];
-    if (title.length) {
-        [self pushToBirthday:title];
+    UIApplication *application = [UIApplication sharedApplication];
+    if (application.applicationIconBadgeNumber) {
+        application.applicationIconBadgeNumber = 0;
     }
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(stopFlash) name:@"StopFlash" object:nil];
     
     self.title = @"小程序";
     UIBarButtonItem *bbi = [[UIBarButtonItem alloc] initWithTitle:@"反馈" style:UIBarButtonItemStyleDone target:self action:@selector(bbiAction)];
