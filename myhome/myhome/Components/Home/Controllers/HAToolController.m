@@ -22,6 +22,7 @@
 #import "HoldViewController.h"
 #import "myhome-Swift.h"
 #import "FSBirthdayController.h"
+#import "FSHTMLController.h"
 
 @interface HAToolController ()
 
@@ -80,8 +81,8 @@
     bbi.tintColor = APPCOLOR;
     self.navigationItem.rightBarButtonItem = bbi;
     
-    NSArray *array = @[@"二维码",@"设备信息",@"导航",@"计算器",@"提醒",@"目录",@"五十K",@"银行卡号",@"农历",@"十句话",@"定位"];
-    NSArray *picArray = @[@"saoma_too",@"deviceInfo",@"navigation_web",@"apps_counter",@"apps_alert",@"apps_write",@"apps_puke",@"apps_bank",@"apps_nongli",@"apps_tenword",@"apps_dingwei"];
+    NSArray *array = @[@"二维码",@"设备信息",@"导航",@"计算器",@"提醒",@"目录",@"五十K",@"银行卡号",@"农历",@"定位",@"十句话",@"知识"];
+    NSArray *picArray = @[@"saoma_too",@"deviceInfo",@"navigation_web",@"apps_counter",@"apps_alert",@"apps_write",@"apps_puke",@"apps_bank",@"apps_nongli",@"apps_dingwei",@"apps_tenword",@"apps_write"];
     
     CGFloat width = (WIDTHFC - 100) / 4;
     WEAKSELF(this);
@@ -236,20 +237,27 @@
             break;
             case 9:
         {
+            LocationSwiftController *location = [[LocationSwiftController alloc] init];
+            [self.navigationController pushViewController:location animated:YES];
+        }
+            break;
+            case 10:
+            case 11:
+        {
             HoldViewController *hold = [[HoldViewController alloc] init];
             hold.first = YES;
             [self.navigationController pushViewController:hold animated:YES];
             WEAKSELF(this);
             [hold setBtnClickCallback:^{
-                TenWordsController *tenWords = [[TenWordsController alloc] init];
-                [this.navigationController pushViewController:tenWords animated:YES];
+                if ((type - TAGIMAGEVIEW) == 10) {
+                    TenWordsController *tenWords = [[TenWordsController alloc] init];
+                    [this.navigationController pushViewController:tenWords animated:YES];
+                }else{
+                    FSHTMLController *webController = [[FSHTMLController alloc] init];
+                    webController.localUrlString = [[NSBundle mainBundle] pathForResource:@"fdd" ofType:@"pdf"];
+                    [this.navigationController pushViewController:webController animated:YES];
+                }
             }];
-        }
-            break;
-            case 10:
-        {
-            LocationSwiftController *location = [[LocationSwiftController alloc] init];
-            [self.navigationController pushViewController:location animated:YES];
         }
             break;
         default:

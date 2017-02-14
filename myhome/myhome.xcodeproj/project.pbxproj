@@ -111,6 +111,7 @@
 		7180F3871E4A9EDC00331DED /* LocationSwiftController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7180F3841E4A9EDC00331DED /* LocationSwiftController.swift */; };
 		7180F3891E4AA17D00331DED /* FSHead.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7180F3881E4AA17D00331DED /* FSHead.swift */; };
 		7180F38C1E4AA1AD00331DED /* MapLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7180F38B1E4AA1AD00331DED /* MapLabel.m */; };
+		7180F3971E53456B00331DED /* fdd.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7180F3961E53456B00331DED /* fdd.pdf */; };
 		71A66E7B1DEF1250002C28B9 /* HAShopController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71A66E7A1DEF1250002C28B9 /* HAShopController.m */; };
 		71B316C91E0813A000FD031F /* FSSetController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71B316C81E0813A000FD031F /* FSSetController.m */; };
 		71DC24091DD2011B00BEB193 /* FSDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 71DC23131DD2011A00BEB193 /* FSDBManager.m */; };
@@ -388,6 +389,7 @@
 		7180F3881E4AA17D00331DED /* FSHead.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FSHead.swift; sourceTree = "<group>"; };
 		7180F38A1E4AA1AD00331DED /* MapLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapLabel.h; sourceTree = "<group>"; };
 		7180F38B1E4AA1AD00331DED /* MapLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapLabel.m; sourceTree = "<group>"; };
+		7180F3961E53456B00331DED /* fdd.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = fdd.pdf; sourceTree = "<group>"; };
 		71A66E791DEF1250002C28B9 /* HAShopController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HAShopController.h; sourceTree = "<group>"; };
 		71A66E7A1DEF1250002C28B9 /* HAShopController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HAShopController.m; sourceTree = "<group>"; };
 		71B316C71E0813A000FD031F /* FSSetController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSSetController.h; sourceTree = "<group>"; };
@@ -1416,6 +1418,7 @@
 		71DC25E21DD3616C00BEB193 /* H5 */ = {
 			isa = PBXGroup;
 			children = (
+				7180F3961E53456B00331DED /* fdd.pdf */,
 				71DC25E51DD3624D00BEB193 /* ARAbout.html */,
 				71DC25E31DD3616C00BEB193 /* FSH5.html */,
 			);
@@ -1513,6 +1516,7 @@
 				5C9337FE1DCB447B0091D3D8 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				71DC24401DD2011B00BEB193 /* fsqr2.png in Resources */,
 				71DC24461DD2011B00BEB193 /* fsqrline.png in Resources */,
+				7180F3971E53456B00331DED /* fdd.pdf in Resources */,
 				7180F3861E4A9EDC00331DED /* KeepLocationSwiftController.xib in Resources */,
 				5C9338001DCB447B0091D3D8 /* README.txt in Resources */,
 				71DC244C1DD2011B00BEB193 /* Note.txt in Resources */,
