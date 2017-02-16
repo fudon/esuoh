@@ -60,6 +60,7 @@
         cell.textLabel.adjustsFontSizeToFitWidth = YES;
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
+    
     if (cell == self.frontCell) {
         cell.backgroundColor = [UIColor clearColor];
         cell.textLabel.textColor = [UIColor redColor];
@@ -67,7 +68,7 @@
         cell.backgroundColor = [UIColor whiteColor];
         cell.textLabel.textColor = FS_TextColor_Normal;
     }
-    cell.textLabel.text = @"电子产品";
+    cell.textLabel.text = [self.dataSource objectAtIndex:indexPath.row];
     return cell;
 }
 
