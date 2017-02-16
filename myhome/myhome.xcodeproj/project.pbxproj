@@ -57,6 +57,7 @@
 		5C9338001DCB447B0091D3D8 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5C9337F11DCB447B0091D3D8 /* README.txt */; };
 		5C9EDD9B1E55529900A07515 /* life.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5C9EDD9A1E55529900A07515 /* life.txt */; };
 		5C9EDDCC1E5582AC00A07515 /* FSPartListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C9EDDCB1E5582AC00A07515 /* FSPartListController.m */; };
+		5C9EDDD01E55A45800A07515 /* FSContactController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C9EDDCF1E55A45800A07515 /* FSContactController.m */; };
 		5CA360D91DC8ADC300523FF5 /* AROfferController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CA360D81DC8ADC300523FF5 /* AROfferController.m */; };
 		5CA360DC1DC8ADCE00523FF5 /* ARPersonController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CA360DB1DC8ADCE00523FF5 /* ARPersonController.m */; };
 		5CA360DF1DC8ADD800523FF5 /* ARToolController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CA360DE1DC8ADD800523FF5 /* ARToolController.m */; };
@@ -291,6 +292,8 @@
 		5C9EDD9A1E55529900A07515 /* life.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = life.txt; sourceTree = "<group>"; };
 		5C9EDDCA1E5582AC00A07515 /* FSPartListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSPartListController.h; sourceTree = "<group>"; };
 		5C9EDDCB1E5582AC00A07515 /* FSPartListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSPartListController.m; sourceTree = "<group>"; };
+		5C9EDDCE1E55A45800A07515 /* FSContactController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSContactController.h; sourceTree = "<group>"; };
+		5C9EDDCF1E55A45800A07515 /* FSContactController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSContactController.m; sourceTree = "<group>"; };
 		5CA360D71DC8ADC300523FF5 /* AROfferController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AROfferController.h; sourceTree = "<group>"; };
 		5CA360D81DC8ADC300523FF5 /* AROfferController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AROfferController.m; sourceTree = "<group>"; };
 		5CA360DA1DC8ADCE00523FF5 /* ARPersonController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARPersonController.h; sourceTree = "<group>"; };
@@ -792,6 +795,15 @@
 			path = FSList;
 			sourceTree = "<group>";
 		};
+		5C9EDDCD1E55A44D00A07515 /* FSContact */ = {
+			isa = PBXGroup;
+			children = (
+				5C9EDDCE1E55A45800A07515 /* FSContactController.h */,
+				5C9EDDCF1E55A45800A07515 /* FSContactController.m */,
+			);
+			path = FSContact;
+			sourceTree = "<group>";
+		};
 		5CA360D01DC8AD4700523FF5 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -1242,6 +1254,7 @@
 		71DC23551DD2011A00BEB193 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				5C9EDDCD1E55A44D00A07515 /* FSContact */,
 				5C9EDDC91E55822A00A07515 /* FSList */,
 				7180F36B1E4A141200331DED /* FSApps */,
 				5CE037661E45870500FD1DA6 /* FSSearch */,
@@ -1725,6 +1738,7 @@
 				71DC24131DD2011B00BEB193 /* SQLEntity.m in Sources */,
 				5C5201EE1E1F8D610010DE87 /* FSAppToolController.m in Sources */,
 				7153BDC01DFD955D00C43F97 /* FSButtonsView.m in Sources */,
+				5C9EDDD01E55A45800A07515 /* FSContactController.m in Sources */,
 				5C18815E1E03D02100D55E0E /* FSMoreImageCell.m in Sources */,
 				5CFE601A1DC75B9C003640A4 /* main.m in Sources */,
 				71DC24201DD2011B00BEB193 /* FlowCollector.m in Sources */,

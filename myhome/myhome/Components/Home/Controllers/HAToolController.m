@@ -141,12 +141,13 @@
     switch (type - TAGIMAGEVIEW) {
         case 0:
         {
-            [FuData actionSheetWithTitle:@"选择操作方式" firstTitle:@"扫描二维码" firstHandler:^(UIAlertAction *action) {
+            WEAKSELF(this);
+            [FuData actionSheet2WithTitle:@"操作方式" firstTitle:@"扫描二维码" style:UIAlertActionStyleDefault firstHandler:^(UIAlertAction *action) {
                 FSQRController *qrController = [[FSQRController alloc] init];
-                [self.navigationController pushViewController:qrController animated:YES];
-            } secondTitle:@"生成二维码" handler:^(UIAlertAction *action) {
+                [this.navigationController pushViewController:qrController animated:YES];
+            } secondTitle:@"生成二维码" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
                 [FuData pushToViewControllerWithClass:@"FSMakeQRController" navigationController:self.navigationController param:nil configBlock:nil];
-            } cancelHandler:nil];
+            } cancelHandler:nil completion:nil];
         }
             break;
         case 1:

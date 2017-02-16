@@ -25,7 +25,7 @@
 - (void)bbiAction
 {
     NSString *str = @"启动页:{Default@2x.png:640*960;\nDefault-568h@2x.png:640*1136;\nDefault-414w-736h@3x.png:1242*2208;\nDefault-375w-667h@2x.png:750*1334;\n\nIcon:\nIcon-29@2x.png:58*58;\nIcon-29@3x.png:87*87;\nIcon-40@2x.png:80*80;\nIcon-40@3x.png:120*120;\nIcon-60@2x.png:120*120;\nIcon-60@3x.png:180*180;\n}";
-    [FuData alertViewWithTitle:@"参数信息" message:str btnTitle:@"确定" handler:nil];
+    [FuData alertView1WithTitle:@"参数信息" message:str btnTitle:@"确定" handler:nil completion:nil];
 }
 
 - (void)miDesignViews
