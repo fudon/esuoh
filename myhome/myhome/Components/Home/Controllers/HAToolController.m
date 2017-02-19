@@ -18,7 +18,6 @@
 #import "FSMoveLabel.h"
 #import "FSWSKController.h"
 #import "BankNumberController.h"
-#import "TenWordsController.h"
 #import "HoldViewController.h"
 #import "myhome-Swift.h"
 #import "FSBirthdayController.h"
@@ -172,10 +171,11 @@
                              @{Picture_Name:@"my_history",Text_Name:@"贷款计算器",Url_String:@"http://3g.163.com"},
                              @{Picture_Name:@"tootoodingdan",Text_Name:@"个税计算器",Url_String:@"http://3g.163.com"},
                              @{Picture_Name:@"tootoodingdan",Text_Name:@"首付计算器",Url_String:@"http://3g.163.com"},
+                             @{Picture_Name:@"tootoodingdan",Text_Name:@"计算器",Url_String:@"http://3g.163.com"},
                              ];
             WEAKSELF(this);
             access.selectBlock = ^ (FSAccessController *bController,NSIndexPath *bIndexPath){
-                NSArray *classArray = @[@"FSAccountDoorController",@"FSLoanCounterController",@"FSTaxOfIncomeController",@"FSHouseLoanController"];
+                NSArray *classArray = @[@"FSAccountDoorController",@"FSLoanCounterController",@"FSTaxOfIncomeController",@"FSHouseLoanController",@"FSCalculatorController"];
                 Class ControllerClass = NSClassFromString(classArray[bIndexPath.row % classArray.count]);
                 if (ControllerClass) {
                     [this.navigationController pushViewController:[[ControllerClass alloc] init] animated:YES];
@@ -240,8 +240,7 @@
             WEAKSELF(this);
             [hold setBtnClickCallback:^{
                 if ((type - TAGIMAGEVIEW) == 10) {
-                    TenWordsController *tenWords = [[TenWordsController alloc] init];
-                    [this.navigationController pushViewController:tenWords animated:YES];
+
                 }else{
                     NSString *text = [[NSString alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"life" ofType:@"txt"] encoding:NSUTF8StringEncoding error:nil];
                     NSString *filePath = [FuData documentsPath:@"life.pdf"];
