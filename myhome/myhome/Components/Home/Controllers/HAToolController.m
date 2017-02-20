@@ -239,20 +239,34 @@
             [self.navigationController pushViewController:hold animated:YES];
             WEAKSELF(this);
             [hold setBtnClickCallback:^{
-                if ((type - TAGIMAGEVIEW) == 10) {
-
-                }else{
-                    NSString *text = [[NSString alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"life" ofType:@"txt"] encoding:NSUTF8StringEncoding error:nil];
-                    NSString *filePath = [FuData documentsPath:@"life.pdf"];
-                    if (text.length > 100) {
-                        NSString *path = [FSPdf pdfForString:text pdfName:@"life.pdf"];
-                        [FuData copyFile:path toPath:filePath];
+                FSAccessController *access = [[FSAccessController alloc] init];
+                access.title = @"学习";
+                access.datas = @[@{Picture_Name:@"a_4",Text_Name:@"感悟",Url_String:@"http://xw.qq.com"},
+                                 @{Picture_Name:@"my_history",Text_Name:@"数据",Url_String:@"http://3g.163.com"},
+                                 @{Picture_Name:@"my_history",Text_Name:@"备用",Url_String:@"http://3g.163.com"},
+                                 ];
+                access.selectBlock = ^ (FSAccessController *bController,NSIndexPath *bIndexPath){
+                    if (bIndexPath.row == 0) {
+                        NSString *text = [[NSString alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"life" ofType:@"txt"] encoding:NSUTF8StringEncoding error:nil];
+                        NSString *filePath = [FuData documentsPath:@"life.pdf"];
+                        if (text.length > 100) {
+                            NSString *path = [FSPdf pdfForString:text pdfName:@"life.pdf"];
+                            [FuData copyFile:path toPath:filePath];
+                        }
+    
+                        FSHTMLController *webController = [[FSHTMLController alloc] init];
+                        webController.localUrlString = filePath;
+                        [this.navigationController pushViewController:webController animated:YES];
+                        return;
                     }
                     
-                    FSHTMLController *webController = [[FSHTMLController alloc] init];
-                    webController.localUrlString = filePath;
-                    [this.navigationController pushViewController:webController animated:YES];
-                }
+                    NSArray *classArray = @[@"FSFutureAlertController",@"FSBirthdayController"];
+                    Class ControllerClass = NSClassFromString(classArray[bIndexPath.row % classArray.count]);
+                    if (ControllerClass) {
+                        [this.navigationController pushViewController:[[ControllerClass alloc] init] animated:YES];
+                    }
+                };
+                [this.navigationController pushViewController:access animated:YES];
             }];
         }
             break;
