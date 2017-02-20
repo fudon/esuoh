@@ -18,7 +18,6 @@
 #import "FSMoveLabel.h"
 #import "FSWSKController.h"
 #import "BankNumberController.h"
-#import "TenWordsController.h"
 #import "HoldViewController.h"
 #import "myhome-Swift.h"
 #import "FSBirthdayController.h"
@@ -172,10 +171,11 @@
                              @{Picture_Name:@"my_history",Text_Name:@"贷款计算器",Url_String:@"http://3g.163.com"},
                              @{Picture_Name:@"tootoodingdan",Text_Name:@"个税计算器",Url_String:@"http://3g.163.com"},
                              @{Picture_Name:@"tootoodingdan",Text_Name:@"首付计算器",Url_String:@"http://3g.163.com"},
+                             @{Picture_Name:@"tootoodingdan",Text_Name:@"计算器",Url_String:@"http://3g.163.com"},
                              ];
             WEAKSELF(this);
             access.selectBlock = ^ (FSAccessController *bController,NSIndexPath *bIndexPath){
-                NSArray *classArray = @[@"FSAccountDoorController",@"FSLoanCounterController",@"FSTaxOfIncomeController",@"FSHouseLoanController"];
+                NSArray *classArray = @[@"FSAccountDoorController",@"FSLoanCounterController",@"FSTaxOfIncomeController",@"FSHouseLoanController",@"FSCalculatorController"];
                 Class ControllerClass = NSClassFromString(classArray[bIndexPath.row % classArray.count]);
                 if (ControllerClass) {
                     [this.navigationController pushViewController:[[ControllerClass alloc] init] animated:YES];
@@ -239,21 +239,47 @@
             [self.navigationController pushViewController:hold animated:YES];
             WEAKSELF(this);
             [hold setBtnClickCallback:^{
-                if ((type - TAGIMAGEVIEW) == 10) {
-                    TenWordsController *tenWords = [[TenWordsController alloc] init];
-                    [this.navigationController pushViewController:tenWords animated:YES];
-                }else{
-                    NSString *text = [[NSString alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"life" ofType:@"txt"] encoding:NSUTF8StringEncoding error:nil];
-                    NSString *filePath = [FuData documentsPath:@"life.pdf"];
-                    if (text.length > 100) {
-                        NSString *path = [FSPdf pdfForString:text pdfName:@"life.pdf"];
+                FSAccessController *access = [[FSAccessController alloc] init];
+                access.title = @"学习";
+                access.datas = @[@{Picture_Name:@"a_4",Text_Name:@"感悟",Url_String:@"http://xw.qq.com"},
+                                 @{Picture_Name:@"my_history",Text_Name:@"数据",Url_String:@"http://3g.163.com"},
+                                 @{Picture_Name:@"my_history",Text_Name:@"备用",Url_String:@"http://3g.163.com"},
+                                 ];
+                access.selectBlock = ^ (FSAccessController *bController,NSIndexPath *bIndexPath){
+                    NSArray *paths = @[@"/Users/fudonfuchina/Desktop/data/life.txt",@"/Users/fudonfuchina/Desktop/data/pwd.txt"];
+                    NSArray *fileP = @[@"life.pdf",@"pwd.pdf"];
+                    NSString *content = [[NSString alloc] initWithContentsOfFile:paths[bIndexPath.row] encoding:NSUTF8StringEncoding error:nil];
+                    NSString *filePath = [FuData documentsPath:fileP[bIndexPath.row]];
+                    if (content.length > 10) {
+                        NSString *path = [FSPdf pdfForString:content pdfName:fileP[bIndexPath.row]];
                         [FuData copyFile:path toPath:filePath];
                     }
-                    
                     FSHTMLController *webController = [[FSHTMLController alloc] init];
                     webController.localUrlString = filePath;
+                    webController.title = fileP[bIndexPath.row];
                     [this.navigationController pushViewController:webController animated:YES];
-                }
+                    
+//                    if (bIndexPath.row == 0) {
+//                        NSString *text = [[NSString alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"life" ofType:@"txt"] encoding:NSUTF8StringEncoding error:nil];
+//                        NSString *filePath = [FuData documentsPath:@"life.pdf"];
+//                        if (text.length > 100) {
+//                            NSString *path = [FSPdf pdfForString:text pdfName:@"life.pdf"];
+//                            [FuData copyFile:path toPath:filePath];
+//                        }
+//    
+//                        FSHTMLController *webController = [[FSHTMLController alloc] init];
+//                        webController.localUrlString = filePath;
+//                        [this.navigationController pushViewController:webController animated:YES];
+//                        return;
+//                    }
+                    
+//                    NSArray *classArray = @[@"FSFutureAlertController",@"FSBirthdayController"];
+//                    Class ControllerClass = NSClassFromString(classArray[bIndexPath.row % classArray.count]);
+//                    if (ControllerClass) {
+//                        [this.navigationController pushViewController:[[ControllerClass alloc] init] animated:YES];
+//                    }
+                };
+                [this.navigationController pushViewController:access animated:YES];
             }];
         }
             break;
