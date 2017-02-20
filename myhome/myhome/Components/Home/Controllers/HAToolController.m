@@ -246,25 +246,38 @@
                                  @{Picture_Name:@"my_history",Text_Name:@"备用",Url_String:@"http://3g.163.com"},
                                  ];
                 access.selectBlock = ^ (FSAccessController *bController,NSIndexPath *bIndexPath){
-                    if (bIndexPath.row == 0) {
-                        NSString *text = [[NSString alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"life" ofType:@"txt"] encoding:NSUTF8StringEncoding error:nil];
-                        NSString *filePath = [FuData documentsPath:@"life.pdf"];
-                        if (text.length > 100) {
-                            NSString *path = [FSPdf pdfForString:text pdfName:@"life.pdf"];
-                            [FuData copyFile:path toPath:filePath];
-                        }
-    
-                        FSHTMLController *webController = [[FSHTMLController alloc] init];
-                        webController.localUrlString = filePath;
-                        [this.navigationController pushViewController:webController animated:YES];
-                        return;
+                    NSArray *paths = @[@"/Users/fudonfuchina/Desktop/data/life.txt",@"/Users/fudonfuchina/Desktop/data/pwd.txt"];
+                    NSArray *fileP = @[@"life.pdf",@"pwd.pdf"];
+                    NSString *content = [[NSString alloc] initWithContentsOfFile:paths[bIndexPath.row] encoding:NSUTF8StringEncoding error:nil];
+                    NSString *filePath = [FuData documentsPath:fileP[bIndexPath.row]];
+                    if (content.length > 10) {
+                        NSString *path = [FSPdf pdfForString:content pdfName:fileP[bIndexPath.row]];
+                        [FuData copyFile:path toPath:filePath];
                     }
+                    FSHTMLController *webController = [[FSHTMLController alloc] init];
+                    webController.localUrlString = filePath;
+                    webController.title = fileP[bIndexPath.row];
+                    [this.navigationController pushViewController:webController animated:YES];
                     
-                    NSArray *classArray = @[@"FSFutureAlertController",@"FSBirthdayController"];
-                    Class ControllerClass = NSClassFromString(classArray[bIndexPath.row % classArray.count]);
-                    if (ControllerClass) {
-                        [this.navigationController pushViewController:[[ControllerClass alloc] init] animated:YES];
-                    }
+//                    if (bIndexPath.row == 0) {
+//                        NSString *text = [[NSString alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"life" ofType:@"txt"] encoding:NSUTF8StringEncoding error:nil];
+//                        NSString *filePath = [FuData documentsPath:@"life.pdf"];
+//                        if (text.length > 100) {
+//                            NSString *path = [FSPdf pdfForString:text pdfName:@"life.pdf"];
+//                            [FuData copyFile:path toPath:filePath];
+//                        }
+//    
+//                        FSHTMLController *webController = [[FSHTMLController alloc] init];
+//                        webController.localUrlString = filePath;
+//                        [this.navigationController pushViewController:webController animated:YES];
+//                        return;
+//                    }
+                    
+//                    NSArray *classArray = @[@"FSFutureAlertController",@"FSBirthdayController"];
+//                    Class ControllerClass = NSClassFromString(classArray[bIndexPath.row % classArray.count]);
+//                    if (ControllerClass) {
+//                        [this.navigationController pushViewController:[[ControllerClass alloc] init] animated:YES];
+//                    }
                 };
                 [this.navigationController pushViewController:access animated:YES];
             }];
