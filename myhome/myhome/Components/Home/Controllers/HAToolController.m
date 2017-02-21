@@ -258,26 +258,12 @@
                     webController.localUrlString = filePath;
                     webController.title = fileP[bIndexPath.row];
                     [this.navigationController pushViewController:webController animated:YES];
-                    
-//                    if (bIndexPath.row == 0) {
-//                        NSString *text = [[NSString alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"life" ofType:@"txt"] encoding:NSUTF8StringEncoding error:nil];
-//                        NSString *filePath = [FuData documentsPath:@"life.pdf"];
-//                        if (text.length > 100) {
-//                            NSString *path = [FSPdf pdfForString:text pdfName:@"life.pdf"];
-//                            [FuData copyFile:path toPath:filePath];
-//                        }
-//    
-//                        FSHTMLController *webController = [[FSHTMLController alloc] init];
-//                        webController.localUrlString = filePath;
-//                        [this.navigationController pushViewController:webController animated:YES];
-//                        return;
-//                    }
-                    
-//                    NSArray *classArray = @[@"FSFutureAlertController",@"FSBirthdayController"];
-//                    Class ControllerClass = NSClassFromString(classArray[bIndexPath.row % classArray.count]);
-//                    if (ControllerClass) {
-//                        [this.navigationController pushViewController:[[ControllerClass alloc] init] animated:YES];
-//                    }
+                    if (bIndexPath.row == 1) {
+                        [webController setPopBlock:^(FSHTMLController *bVC) {
+                            [this.navigationController popToRootViewControllerAnimated:NO];
+                            this.navigationController.tabBarController.selectedIndex = 3;
+                        }];
+                    }
                 };
                 [this.navigationController pushViewController:access animated:YES];
             }];

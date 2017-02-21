@@ -8,10 +8,12 @@
 
 #import "ARPersonController.h"
 #import "FSShareView.h"
+#import "HoldViewController.h"
 
 @interface ARPersonController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic,strong) NSArray    *titles;
+@property (nonatomic,assign) NSInteger  counter;
 
 @end
 
@@ -30,7 +32,7 @@
 
 - (void)personDesignViews
 {
-    _titles = @[@"分享",@"反馈",@"关于",@"捐助"];
+    _titles = @[@"分享",@"反馈",@"关于",@"保留",@"保留"];
     
     UIBarButtonItem *bbi = [[UIBarButtonItem alloc] initWithTitle:@"设置" style:UIBarButtonItemStyleDone target:self action:@selector(bbiAction)];
     bbi.tintColor = APPCOLOR;
@@ -80,6 +82,19 @@
         [FuData pushToViewControllerWithClass:@"FSHTMLController" navigationController:self.navigationController param:@{@"localUrlString":path,@"title":@"关于"} configBlock:nil];
     }else if (indexPath.row == 3){
         [FuData pushToViewControllerWithClass:@"FSAppToolController" navigationController:self.navigationController param:nil configBlock:nil];
+    }else if (indexPath.row == 4){
+        _counter ++;
+        if (_counter == 3) {
+            _counter = 0;
+            
+            // 跳转
+            HoldViewController *hold = [[HoldViewController alloc] init];
+            hold.first = YES;
+            [self.navigationController pushViewController:hold animated:YES];
+            [hold setBtnClickCallback:^{
+                [FuData showMessage:@"会跳转"];
+            }];
+        }
     }
 }
 
