@@ -32,6 +32,8 @@
 		5C1881621E03D02100D55E0E /* FSSeeImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C18814F1E03D02100D55E0E /* FSSeeImageCell.m */; };
 		5C1881631E03D02100D55E0E /* FSSeeImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C1881511E03D02100D55E0E /* FSSeeImageView.m */; };
 		5C23B75E1E07D2FA0068603A /* FSFutureAlertSendController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C23B75D1E07D2FA0068603A /* FSFutureAlertSendController.m */; };
+		5C296FF21E5FFAB900FF6D1D /* FSLocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C296FF11E5FFAB900FF6D1D /* FSLocationController.m */; };
+		5C296FF51E5FFC7900FF6D1D /* FSKeepLocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C296FF41E5FFC7900FF6D1D /* FSKeepLocationController.m */; };
 		5C5201EE1E1F8D610010DE87 /* FSAppToolController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5201ED1E1F8D610010DE87 /* FSAppToolController.m */; };
 		5C5BB56E1E02741000349D82 /* FSLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5BB56D1E02741000349D82 /* FSLocation.m */; };
 		5C5BB5711E02762F00349D82 /* FSBaseEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5BB5701E02762F00349D82 /* FSBaseEntity.m */; };
@@ -240,6 +242,10 @@
 		5C1881511E03D02100D55E0E /* FSSeeImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSSeeImageView.m; sourceTree = "<group>"; };
 		5C23B75C1E07D2FA0068603A /* FSFutureAlertSendController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSFutureAlertSendController.h; sourceTree = "<group>"; };
 		5C23B75D1E07D2FA0068603A /* FSFutureAlertSendController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSFutureAlertSendController.m; sourceTree = "<group>"; };
+		5C296FF01E5FFAB900FF6D1D /* FSLocationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSLocationController.h; sourceTree = "<group>"; };
+		5C296FF11E5FFAB900FF6D1D /* FSLocationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSLocationController.m; sourceTree = "<group>"; };
+		5C296FF31E5FFC7900FF6D1D /* FSKeepLocationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSKeepLocationController.h; sourceTree = "<group>"; };
+		5C296FF41E5FFC7900FF6D1D /* FSKeepLocationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSKeepLocationController.m; sourceTree = "<group>"; };
 		5C5201EC1E1F8D610010DE87 /* FSAppToolController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSAppToolController.h; sourceTree = "<group>"; };
 		5C5201ED1E1F8D610010DE87 /* FSAppToolController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSAppToolController.m; sourceTree = "<group>"; };
 		5C5BB56C1E02741000349D82 /* FSLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSLocation.h; sourceTree = "<group>"; };
@@ -1065,6 +1071,10 @@
 				7180F3821E4A9EDC00331DED /* KeepLocationSwiftController.swift */,
 				7180F3831E4A9EDC00331DED /* KeepLocationSwiftController.xib */,
 				7180F3841E4A9EDC00331DED /* LocationSwiftController.swift */,
+				5C296FF01E5FFAB900FF6D1D /* FSLocationController.h */,
+				5C296FF11E5FFAB900FF6D1D /* FSLocationController.m */,
+				5C296FF31E5FFC7900FF6D1D /* FSKeepLocationController.h */,
+				5C296FF41E5FFC7900FF6D1D /* FSKeepLocationController.m */,
 				7180F37E1E4A9DAA00331DED /* LocationController.h */,
 				7180F37F1E4A9DAA00331DED /* LocationController.m */,
 				7180F3811E4A9EDB00331DED /* myhome-Bridging-Header.h */,
@@ -1611,6 +1621,7 @@
 				71DC24271DD2011B00BEB193 /* FSHardwareInfoController.m in Sources */,
 				71DC240D1DD2011B00BEB193 /* FSFMExpectController.m in Sources */,
 				71DC24151DD2011B00BEB193 /* ChineseCalendarView.m in Sources */,
+				5C296FF51E5FFC7900FF6D1D /* FSKeepLocationController.m in Sources */,
 				71DC244D1DD2011B00BEB193 /* README.md in Sources */,
 				7180F3871E4A9EDC00331DED /* LocationSwiftController.swift in Sources */,
 				71DC24091DD2011B00BEB193 /* FSDBManager.m in Sources */,
@@ -1669,6 +1680,7 @@
 				71DC24431DD2011B00BEB193 /* FSQRController.m in Sources */,
 				5CA360D91DC8ADC300523FF5 /* AROfferController.m in Sources */,
 				71DC241E1DD2011B00BEB193 /* ClipPictureController.m in Sources */,
+				5C296FF21E5FFAB900FF6D1D /* FSLocationController.m in Sources */,
 				71DC24301DD2011B00BEB193 /* FSSegmentControl.m in Sources */,
 				71DC242A1DD2011B00BEB193 /* UIView+ViewController.m in Sources */,
 				5C9337F91DCB447B0091D3D8 /* FSShareView.m in Sources */,

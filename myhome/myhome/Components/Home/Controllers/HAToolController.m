@@ -24,6 +24,7 @@
 #import "FSHTMLController.h"
 #import "FSPdf.h"
 #import "FSPartListController.h"
+#import "FSLocationController.h"
 
 @interface HAToolController ()
 
@@ -227,7 +228,7 @@
             break;
             case 9:
         {
-            LocationSwiftController *location = [[LocationSwiftController alloc] init];
+            FSLocationController *location = [[FSLocationController alloc] init];
             [self.navigationController pushViewController:location animated:YES];
         }
             break;
