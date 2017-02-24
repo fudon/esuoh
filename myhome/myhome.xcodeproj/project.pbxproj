@@ -108,10 +108,6 @@
 		7180F36F1E4A141200331DED /* BankNumberController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7180F36E1E4A141200331DED /* BankNumberController.m */; };
 		7180F3721E4A150B00331DED /* FSPublicData.m in Sources */ = {isa = PBXBuildFile; fileRef = 7180F3711E4A150B00331DED /* FSPublicData.m */; };
 		7180F37C1E4A9AAC00331DED /* HoldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7180F37B1E4A9AAC00331DED /* HoldViewController.m */; };
-		7180F3801E4A9DAA00331DED /* LocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7180F37F1E4A9DAA00331DED /* LocationController.m */; };
-		7180F3851E4A9EDC00331DED /* KeepLocationSwiftController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7180F3821E4A9EDC00331DED /* KeepLocationSwiftController.swift */; };
-		7180F3861E4A9EDC00331DED /* KeepLocationSwiftController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7180F3831E4A9EDC00331DED /* KeepLocationSwiftController.xib */; };
-		7180F3871E4A9EDC00331DED /* LocationSwiftController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7180F3841E4A9EDC00331DED /* LocationSwiftController.swift */; };
 		7180F3891E4AA17D00331DED /* FSHead.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7180F3881E4AA17D00331DED /* FSHead.swift */; };
 		7180F38C1E4AA1AD00331DED /* MapLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7180F38B1E4AA1AD00331DED /* MapLabel.m */; };
 		7180F39E1E59A9A500331DED /* FSCalculatorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7180F39C1E59A9A500331DED /* FSCalculatorController.m */; };
@@ -388,12 +384,7 @@
 		7180F3711E4A150B00331DED /* FSPublicData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSPublicData.m; sourceTree = "<group>"; };
 		7180F37A1E4A9AAC00331DED /* HoldViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HoldViewController.h; sourceTree = "<group>"; };
 		7180F37B1E4A9AAC00331DED /* HoldViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HoldViewController.m; sourceTree = "<group>"; };
-		7180F37E1E4A9DAA00331DED /* LocationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationController.h; sourceTree = "<group>"; };
-		7180F37F1E4A9DAA00331DED /* LocationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationController.m; sourceTree = "<group>"; };
 		7180F3811E4A9EDB00331DED /* myhome-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "myhome-Bridging-Header.h"; sourceTree = "<group>"; };
-		7180F3821E4A9EDC00331DED /* KeepLocationSwiftController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeepLocationSwiftController.swift; sourceTree = "<group>"; };
-		7180F3831E4A9EDC00331DED /* KeepLocationSwiftController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KeepLocationSwiftController.xib; sourceTree = "<group>"; };
-		7180F3841E4A9EDC00331DED /* LocationSwiftController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSwiftController.swift; sourceTree = "<group>"; };
 		7180F3881E4AA17D00331DED /* FSHead.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FSHead.swift; sourceTree = "<group>"; };
 		7180F38A1E4AA1AD00331DED /* MapLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapLabel.h; sourceTree = "<group>"; };
 		7180F38B1E4AA1AD00331DED /* MapLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapLabel.m; sourceTree = "<group>"; };
@@ -1068,15 +1059,10 @@
 				7180F38A1E4AA1AD00331DED /* MapLabel.h */,
 				7180F38B1E4AA1AD00331DED /* MapLabel.m */,
 				7180F3881E4AA17D00331DED /* FSHead.swift */,
-				7180F3821E4A9EDC00331DED /* KeepLocationSwiftController.swift */,
-				7180F3831E4A9EDC00331DED /* KeepLocationSwiftController.xib */,
-				7180F3841E4A9EDC00331DED /* LocationSwiftController.swift */,
 				5C296FF01E5FFAB900FF6D1D /* FSLocationController.h */,
 				5C296FF11E5FFAB900FF6D1D /* FSLocationController.m */,
 				5C296FF31E5FFC7900FF6D1D /* FSKeepLocationController.h */,
 				5C296FF41E5FFC7900FF6D1D /* FSKeepLocationController.m */,
-				7180F37E1E4A9DAA00331DED /* LocationController.h */,
-				7180F37F1E4A9DAA00331DED /* LocationController.m */,
 				7180F3811E4A9EDB00331DED /* myhome-Bridging-Header.h */,
 			);
 			path = Location;
@@ -1539,7 +1525,6 @@
 				5C9337FE1DCB447B0091D3D8 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				71DC24401DD2011B00BEB193 /* fsqr2.png in Resources */,
 				71DC24461DD2011B00BEB193 /* fsqrline.png in Resources */,
-				7180F3861E4A9EDC00331DED /* KeepLocationSwiftController.xib in Resources */,
 				5C9338001DCB447B0091D3D8 /* README.txt in Resources */,
 				71DC244C1DD2011B00BEB193 /* Note.txt in Resources */,
 				5CFE60251DC75B9C003640A4 /* Assets.xcassets in Resources */,
@@ -1623,7 +1608,6 @@
 				71DC24151DD2011B00BEB193 /* ChineseCalendarView.m in Sources */,
 				5C296FF51E5FFC7900FF6D1D /* FSKeepLocationController.m in Sources */,
 				71DC244D1DD2011B00BEB193 /* README.md in Sources */,
-				7180F3871E4A9EDC00331DED /* LocationSwiftController.swift in Sources */,
 				71DC24091DD2011B00BEB193 /* FSDBManager.m in Sources */,
 				5C18815B1E03D02100D55E0E /* FSButtonLabel.m in Sources */,
 				714F6ED41DFAF5D200E96EED /* HAFlowController.m in Sources */,
@@ -1644,7 +1628,6 @@
 				7173002E1E1E8FEB00B87826 /* FSInputView.m in Sources */,
 				71DC244B1DD2011B00BEB193 /* FSTaxRateEntity.m in Sources */,
 				714F6EC81DF4395F00E96EED /* FSSameKindController.m in Sources */,
-				7180F3851E4A9EDC00331DED /* KeepLocationSwiftController.swift in Sources */,
 				714F6EBF1DF3C87D00E96EED /* FSShopClassView.m in Sources */,
 				71DC24191DD2011B00BEB193 /* FSCCMainView.m in Sources */,
 				5C1881611E03D02100D55E0E /* FSZoneImageController.m in Sources */,
@@ -1751,7 +1734,6 @@
 				714F6EB91DF3BC2B00E96EED /* HACityController.m in Sources */,
 				714F6EBB1DF3BC2B00E96EED /* FSFlowView.m in Sources */,
 				5C1881601E03D02100D55E0E /* FSPreviewPhotoController.m in Sources */,
-				7180F3801E4A9DAA00331DED /* LocationController.m in Sources */,
 				71DC243E1DD2011B00BEB193 /* FSMakeQRController.m in Sources */,
 				71DC24281DD2011B00BEB193 /* FSLeftItem.m in Sources */,
 				71DC24371DD2011B00BEB193 /* FSSelectController.m in Sources */,
