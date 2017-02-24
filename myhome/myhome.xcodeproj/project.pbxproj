@@ -108,7 +108,6 @@
 		7180F36F1E4A141200331DED /* BankNumberController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7180F36E1E4A141200331DED /* BankNumberController.m */; };
 		7180F3721E4A150B00331DED /* FSPublicData.m in Sources */ = {isa = PBXBuildFile; fileRef = 7180F3711E4A150B00331DED /* FSPublicData.m */; };
 		7180F37C1E4A9AAC00331DED /* HoldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7180F37B1E4A9AAC00331DED /* HoldViewController.m */; };
-		7180F3891E4AA17D00331DED /* FSHead.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7180F3881E4AA17D00331DED /* FSHead.swift */; };
 		7180F38C1E4AA1AD00331DED /* MapLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7180F38B1E4AA1AD00331DED /* MapLabel.m */; };
 		7180F39E1E59A9A500331DED /* FSCalculatorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7180F39C1E59A9A500331DED /* FSCalculatorController.m */; };
 		71A66E7B1DEF1250002C28B9 /* HAShopController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71A66E7A1DEF1250002C28B9 /* HAShopController.m */; };
@@ -384,8 +383,6 @@
 		7180F3711E4A150B00331DED /* FSPublicData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSPublicData.m; sourceTree = "<group>"; };
 		7180F37A1E4A9AAC00331DED /* HoldViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HoldViewController.h; sourceTree = "<group>"; };
 		7180F37B1E4A9AAC00331DED /* HoldViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HoldViewController.m; sourceTree = "<group>"; };
-		7180F3811E4A9EDB00331DED /* myhome-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "myhome-Bridging-Header.h"; sourceTree = "<group>"; };
-		7180F3881E4AA17D00331DED /* FSHead.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FSHead.swift; sourceTree = "<group>"; };
 		7180F38A1E4AA1AD00331DED /* MapLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapLabel.h; sourceTree = "<group>"; };
 		7180F38B1E4AA1AD00331DED /* MapLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapLabel.m; sourceTree = "<group>"; };
 		7180F39B1E59A9A500331DED /* FSCalculatorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalculatorController.h; sourceTree = "<group>"; };
@@ -1058,12 +1055,10 @@
 			children = (
 				7180F38A1E4AA1AD00331DED /* MapLabel.h */,
 				7180F38B1E4AA1AD00331DED /* MapLabel.m */,
-				7180F3881E4AA17D00331DED /* FSHead.swift */,
 				5C296FF01E5FFAB900FF6D1D /* FSLocationController.h */,
 				5C296FF11E5FFAB900FF6D1D /* FSLocationController.m */,
 				5C296FF31E5FFC7900FF6D1D /* FSKeepLocationController.h */,
 				5C296FF41E5FFC7900FF6D1D /* FSKeepLocationController.m */,
-				7180F3811E4A9EDB00331DED /* myhome-Bridging-Header.h */,
 			);
 			path = Location;
 			sourceTree = "<group>";
@@ -1657,7 +1652,6 @@
 				714F6EC21DF3D3F100E96EED /* HAShopCollectionCell.m in Sources */,
 				71DC241D1DD2011B00BEB193 /* FSLunarCalendar.m in Sources */,
 				71DC24331DD2011B00BEB193 /* FSTapScrollView.m in Sources */,
-				7180F3891E4AA17D00331DED /* FSHead.swift in Sources */,
 				71DC24211DD2011B00BEB193 /* GTMBase64.m in Sources */,
 				5C5BB56E1E02741000349D82 /* FSLocation.m in Sources */,
 				71DC24431DD2011B00BEB193 /* FSQRController.m in Sources */,
