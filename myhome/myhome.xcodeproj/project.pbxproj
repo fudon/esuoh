@@ -57,7 +57,6 @@
 		5C9337FE1DCB447B0091D3D8 /* TencentOpenApi_IOS_Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5C9337EE1DCB447B0091D3D8 /* TencentOpenApi_IOS_Bundle.bundle */; };
 		5C9337FF1DCB447B0091D3D8 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C9337F01DCB447B0091D3D8 /* libWeChatSDK.a */; };
 		5C9338001DCB447B0091D3D8 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5C9337F11DCB447B0091D3D8 /* README.txt */; };
-		5C9EDD9B1E55529900A07515 /* life.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5C9EDD9A1E55529900A07515 /* life.txt */; };
 		5C9EDDCC1E5582AC00A07515 /* FSPartListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C9EDDCB1E5582AC00A07515 /* FSPartListController.m */; };
 		5C9EDDD01E55A45800A07515 /* FSContactController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C9EDDCF1E55A45800A07515 /* FSContactController.m */; };
 		5CA360D91DC8ADC300523FF5 /* AROfferController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CA360D81DC8ADC300523FF5 /* AROfferController.m */; };
@@ -289,7 +288,6 @@
 		5C9337F21DCB447B0091D3D8 /* WechatAuthSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WechatAuthSDK.h; sourceTree = "<group>"; };
 		5C9337F31DCB447B0091D3D8 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
 		5C9337F41DCB447B0091D3D8 /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
-		5C9EDD9A1E55529900A07515 /* life.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = life.txt; sourceTree = "<group>"; };
 		5C9EDDCA1E5582AC00A07515 /* FSPartListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSPartListController.h; sourceTree = "<group>"; };
 		5C9EDDCB1E5582AC00A07515 /* FSPartListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSPartListController.m; sourceTree = "<group>"; };
 		5C9EDDCE1E55A45800A07515 /* FSContactController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSContactController.h; sourceTree = "<group>"; };
@@ -1422,7 +1420,6 @@
 		71DC25E21DD3616C00BEB193 /* H5 */ = {
 			isa = PBXGroup;
 			children = (
-				5C9EDD9A1E55529900A07515 /* life.txt */,
 				71DC25E51DD3624D00BEB193 /* ARAbout.html */,
 				71DC25E31DD3616C00BEB193 /* FSH5.html */,
 			);
@@ -1525,7 +1522,6 @@
 				5CFE60251DC75B9C003640A4 /* Assets.xcassets in Resources */,
 				71DC24471DD2011B00BEB193 /* fsqrmsg.wav in Resources */,
 				5C18815D1E03D02100D55E0E /* fsip_unselected.png in Resources */,
-				5C9EDD9B1E55529900A07515 /* life.txt in Resources */,
 				5C1064361E24EE5B0027314A /* iconu@2x.png in Resources */,
 				71DC25E61DD3624D00BEB193 /* ARAbout.html in Resources */,
 				71DC24411DD2011B00BEB193 /* fsqr3.png in Resources */,
