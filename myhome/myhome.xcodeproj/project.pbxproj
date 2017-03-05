@@ -109,6 +109,7 @@
 		7180F38C1E4AA1AD00331DED /* MapLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7180F38B1E4AA1AD00331DED /* MapLabel.m */; };
 		7180F39E1E59A9A500331DED /* FSCalculatorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7180F39C1E59A9A500331DED /* FSCalculatorController.m */; };
 		7180F5511E61279B00331DED /* FSSafeData.m in Sources */ = {isa = PBXBuildFile; fileRef = 7180F5501E61279B00331DED /* FSSafeData.m */; };
+		7180F71E1E6BFC9500331DED /* FTHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7180F71D1E6BFC9500331DED /* FTHomeController.m */; };
 		71A66E7B1DEF1250002C28B9 /* HAShopController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71A66E7A1DEF1250002C28B9 /* HAShopController.m */; };
 		71B316C91E0813A000FD031F /* FSSetController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71B316C81E0813A000FD031F /* FSSetController.m */; };
 		71DC24091DD2011B00BEB193 /* FSDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 71DC23131DD2011A00BEB193 /* FSDBManager.m */; };
@@ -385,6 +386,8 @@
 		7180F39C1E59A9A500331DED /* FSCalculatorController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalculatorController.m; sourceTree = "<group>"; };
 		7180F54F1E61279B00331DED /* FSSafeData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSSafeData.h; path = ../../../../../Desktop/data/FSSafeData.h; sourceTree = "<group>"; };
 		7180F5501E61279B00331DED /* FSSafeData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSSafeData.m; path = ../../../../../Desktop/data/FSSafeData.m; sourceTree = "<group>"; };
+		7180F71C1E6BFC9500331DED /* FTHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTHomeController.h; sourceTree = "<group>"; };
+		7180F71D1E6BFC9500331DED /* FTHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTHomeController.m; sourceTree = "<group>"; };
 		71A66E791DEF1250002C28B9 /* HAShopController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HAShopController.h; sourceTree = "<group>"; };
 		71A66E7A1DEF1250002C28B9 /* HAShopController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HAShopController.m; sourceTree = "<group>"; };
 		71B316C71E0813A000FD031F /* FSSetController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSSetController.h; sourceTree = "<group>"; };
@@ -973,6 +976,8 @@
 			children = (
 				714F6EAF1DF3BC2B00E96EED /* ARHomeController.h */,
 				714F6EB01DF3BC2B00E96EED /* ARHomeController.m */,
+				7180F71C1E6BFC9500331DED /* FTHomeController.h */,
+				7180F71D1E6BFC9500331DED /* FTHomeController.m */,
 				714F6EB11DF3BC2B00E96EED /* HACityController.h */,
 				714F6EB21DF3BC2B00E96EED /* HACityController.m */,
 				714F6EB31DF3BC2B00E96EED /* HAToolController.h */,
@@ -1626,6 +1631,7 @@
 				71DEF3681E154987005B938A /* FSAllBirthdayController.m in Sources */,
 				5C1881541E03D02100D55E0E /* FSImagePicker.m in Sources */,
 				7180F37C1E4A9AAC00331DED /* HoldViewController.m in Sources */,
+				7180F71E1E6BFC9500331DED /* FTHomeController.m in Sources */,
 				7180F38C1E4AA1AD00331DED /* MapLabel.m in Sources */,
 				71DC241A1DD2011B00BEB193 /* FSChineseCalendarController.m in Sources */,
 				71DC24751DD2011B00BEB193 /* FuData.m in Sources */,

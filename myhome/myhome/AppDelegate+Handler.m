@@ -35,7 +35,7 @@
                                                       } cancelTitle:@"取消" handler:nil completion:nil];
                                                   }];
     
-    NSArray *array = @[@"ARHomeController",@"ARToolController",@"HAToolController",@"ARPersonController"];
+    NSArray *array = @[@"FTHomeController",@"ARToolController",@"HAToolController",@"ARPersonController"];
     NSArray *titles = @[@"首页",@"案例",@"应用",@"我"];
     NSArray *types = @[@(UITabBarSystemItemMostViewed),@(UITabBarSystemItemBookmarks),@(UITabBarSystemItemFavorites),@(UITabBarSystemItemContacts)];
     ARTabBarController *tbController = [[ARTabBarController alloc] initWithClasses:array titles:titles types:types selectedColor:APPCOLOR];
