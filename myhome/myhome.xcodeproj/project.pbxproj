@@ -73,6 +73,7 @@
 		5CE0376B1E45870500FD1DA6 /* FSSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CE037681E45870500FD1DA6 /* FSSearchController.m */; };
 		5CE0376C1E45870500FD1DA6 /* FSSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CE0376A1E45870500FD1DA6 /* FSSearchViewController.m */; };
 		5CE70A651DF6CA2E001FA04B /* FSStoreManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CE70A641DF6CA2E001FA04B /* FSStoreManager.m */; };
+		5CE7CDEE1E6FB4A400988C56 /* FSSafeData.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CE7CDED1E6FB4A400988C56 /* FSSafeData.m */; };
 		5CF3DED01E08D13F005DFC6D /* FSOrderSystemController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF3DECF1E08D13F005DFC6D /* FSOrderSystemController.m */; };
 		5CF41B521E05448900944D18 /* FSAppDocumentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF41B511E05448900944D18 /* FSAppDocumentController.m */; };
 		5CF522421DFFC6EF0013D7CE /* FSRelayoutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF522411DFFC6EF0013D7CE /* FSRelayoutCell.m */; };
@@ -108,7 +109,6 @@
 		7180F37C1E4A9AAC00331DED /* HoldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7180F37B1E4A9AAC00331DED /* HoldViewController.m */; };
 		7180F38C1E4AA1AD00331DED /* MapLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7180F38B1E4AA1AD00331DED /* MapLabel.m */; };
 		7180F39E1E59A9A500331DED /* FSCalculatorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7180F39C1E59A9A500331DED /* FSCalculatorController.m */; };
-		7180F5511E61279B00331DED /* FSSafeData.m in Sources */ = {isa = PBXBuildFile; fileRef = 7180F5501E61279B00331DED /* FSSafeData.m */; };
 		7180F71E1E6BFC9500331DED /* FTHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7180F71D1E6BFC9500331DED /* FTHomeController.m */; };
 		71A66E7B1DEF1250002C28B9 /* HAShopController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71A66E7A1DEF1250002C28B9 /* HAShopController.m */; };
 		71B316C91E0813A000FD031F /* FSSetController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71B316C81E0813A000FD031F /* FSSetController.m */; };
@@ -316,6 +316,8 @@
 		5CE0376A1E45870500FD1DA6 /* FSSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSSearchViewController.m; sourceTree = "<group>"; };
 		5CE70A631DF6CA2E001FA04B /* FSStoreManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSStoreManager.h; sourceTree = "<group>"; };
 		5CE70A641DF6CA2E001FA04B /* FSStoreManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSStoreManager.m; sourceTree = "<group>"; };
+		5CE7CDEC1E6FB4A400988C56 /* FSSafeData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSSafeData.h; sourceTree = "<group>"; };
+		5CE7CDED1E6FB4A400988C56 /* FSSafeData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSSafeData.m; sourceTree = "<group>"; };
 		5CF3DECE1E08D13F005DFC6D /* FSOrderSystemController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSOrderSystemController.h; sourceTree = "<group>"; };
 		5CF3DECF1E08D13F005DFC6D /* FSOrderSystemController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSOrderSystemController.m; sourceTree = "<group>"; };
 		5CF41B501E05448900944D18 /* FSAppDocumentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSAppDocumentController.h; sourceTree = "<group>"; };
@@ -384,8 +386,6 @@
 		7180F38B1E4AA1AD00331DED /* MapLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapLabel.m; sourceTree = "<group>"; };
 		7180F39B1E59A9A500331DED /* FSCalculatorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalculatorController.h; sourceTree = "<group>"; };
 		7180F39C1E59A9A500331DED /* FSCalculatorController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalculatorController.m; sourceTree = "<group>"; };
-		7180F54F1E61279B00331DED /* FSSafeData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSSafeData.h; path = ../../../../../Desktop/data/FSSafeData.h; sourceTree = "<group>"; };
-		7180F5501E61279B00331DED /* FSSafeData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSSafeData.m; path = ../../../../../Desktop/data/FSSafeData.m; sourceTree = "<group>"; };
 		7180F71C1E6BFC9500331DED /* FTHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTHomeController.h; sourceTree = "<group>"; };
 		7180F71D1E6BFC9500331DED /* FTHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTHomeController.m; sourceTree = "<group>"; };
 		71A66E791DEF1250002C28B9 /* HAShopController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HAShopController.h; sourceTree = "<group>"; };
@@ -1423,10 +1423,10 @@
 		71DC25E21DD3616C00BEB193 /* H5 */ = {
 			isa = PBXGroup;
 			children = (
-				7180F54F1E61279B00331DED /* FSSafeData.h */,
-				7180F5501E61279B00331DED /* FSSafeData.m */,
 				71DC25E51DD3624D00BEB193 /* ARAbout.html */,
 				71DC25E31DD3616C00BEB193 /* FSH5.html */,
+				5CE7CDEC1E6FB4A400988C56 /* FSSafeData.h */,
+				5CE7CDED1E6FB4A400988C56 /* FSSafeData.m */,
 			);
 			path = H5;
 			sourceTree = "<group>";
@@ -1734,7 +1734,7 @@
 				71DC24371DD2011B00BEB193 /* FSSelectController.m in Sources */,
 				7180F3691E44C17A00331DED /* FSWSKCell.m in Sources */,
 				71DC24251DD2011B00BEB193 /* FSBaseView.m in Sources */,
-				7180F5511E61279B00331DED /* FSSafeData.m in Sources */,
+				5CE7CDEE1E6FB4A400988C56 /* FSSafeData.m in Sources */,
 				71DC243B1DD2011B00BEB193 /* FSHTMLController.m in Sources */,
 				5C15E2881DF5140900BBBA5C /* FSLoanCounterController.m in Sources */,
 			);
