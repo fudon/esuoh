@@ -259,7 +259,7 @@
                     webController.title = fileP[bIndexPath.row];
                     [this.navigationController pushViewController:webController animated:YES];
                     if (bIndexPath.row == 1) {
-                        [webController setPopBlock:^(FSHTMLController *bVC) {
+                        [webController setPopBlock:^(FSBaseController *bVC) {
                             [this.navigationController popToRootViewControllerAnimated:NO];
                             this.navigationController.tabBarController.selectedIndex = 3;
                         }];

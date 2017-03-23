@@ -58,6 +58,7 @@
 		5C9337FE1DCB447B0091D3D8 /* TencentOpenApi_IOS_Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5C9337EE1DCB447B0091D3D8 /* TencentOpenApi_IOS_Bundle.bundle */; };
 		5C9337FF1DCB447B0091D3D8 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C9337F01DCB447B0091D3D8 /* libWeChatSDK.a */; };
 		5C9338001DCB447B0091D3D8 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5C9337F11DCB447B0091D3D8 /* README.txt */; };
+		5C9E554D1E83E45300141BC2 /* FSAPPTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C9E554C1E83E45300141BC2 /* FSAPPTool.m */; };
 		5C9EDDCC1E5582AC00A07515 /* FSPartListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C9EDDCB1E5582AC00A07515 /* FSPartListController.m */; };
 		5C9EDDD01E55A45800A07515 /* FSContactController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C9EDDCF1E55A45800A07515 /* FSContactController.m */; };
 		5CA360D91DC8ADC300523FF5 /* AROfferController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CA360D81DC8ADC300523FF5 /* AROfferController.m */; };
@@ -292,6 +293,8 @@
 		5C9337F21DCB447B0091D3D8 /* WechatAuthSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WechatAuthSDK.h; sourceTree = "<group>"; };
 		5C9337F31DCB447B0091D3D8 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
 		5C9337F41DCB447B0091D3D8 /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
+		5C9E554B1E83E45300141BC2 /* FSAPPTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSAPPTool.h; sourceTree = "<group>"; };
+		5C9E554C1E83E45300141BC2 /* FSAPPTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSAPPTool.m; sourceTree = "<group>"; };
 		5C9EDDCA1E5582AC00A07515 /* FSPartListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSPartListController.h; sourceTree = "<group>"; };
 		5C9EDDCB1E5582AC00A07515 /* FSPartListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSPartListController.m; sourceTree = "<group>"; };
 		5C9EDDCE1E55A45800A07515 /* FSContactController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSContactController.h; sourceTree = "<group>"; };
@@ -792,6 +795,15 @@
 			path = WeChatSDK_1.7.1;
 			sourceTree = "<group>";
 		};
+		5C9E554A1E83E44100141BC2 /* FSAPPTools */ = {
+			isa = PBXGroup;
+			children = (
+				5C9E554B1E83E45300141BC2 /* FSAPPTool.h */,
+				5C9E554C1E83E45300141BC2 /* FSAPPTool.m */,
+			);
+			path = FSAPPTools;
+			sourceTree = "<group>";
+		};
 		5C9EDDC91E55822A00A07515 /* FSList */ = {
 			isa = PBXGroup;
 			children = (
@@ -1245,6 +1257,7 @@
 		71DC23551DD2011A00BEB193 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				5C9E554A1E83E44100141BC2 /* FSAPPTools */,
 				5C436C351E767AF500F96353 /* FSAppRun */,
 				5C9EDDCD1E55A44D00A07515 /* FSContact */,
 				5C9EDDC91E55822A00A07515 /* FSList */,
@@ -1629,6 +1642,7 @@
 				5C68FE301DFEBC55003AA5F9 /* FSNewFutureAlertController.m in Sources */,
 				5CF41B521E05448900944D18 /* FSAppDocumentController.m in Sources */,
 				5C68FE341DFEBFC5003AA5F9 /* PHTextView.m in Sources */,
+				5C9E554D1E83E45300141BC2 /* FSAPPTool.m in Sources */,
 				71DC24241DD2011B00BEB193 /* FSBaseController.m in Sources */,
 				5CC24DC61E233A940037DC64 /* FSSave.m in Sources */,
 				5C7C38DE1DD1D14600D68C3B /* ARAboutController.m in Sources */,
