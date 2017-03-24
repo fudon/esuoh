@@ -74,6 +74,7 @@
 		5CDBCDAF1DD057EA001CFC39 /* FSShareEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CDBCDAE1DD057EA001CFC39 /* FSShareEntity.m */; };
 		5CE0376B1E45870500FD1DA6 /* FSSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CE037681E45870500FD1DA6 /* FSSearchController.m */; };
 		5CE0376C1E45870500FD1DA6 /* FSSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CE0376A1E45870500FD1DA6 /* FSSearchViewController.m */; };
+		5CE058521E84F65400A2BB1E /* ReadMe_About_AccountBook in Resources */ = {isa = PBXBuildFile; fileRef = 5CE058511E84F65400A2BB1E /* ReadMe_About_AccountBook */; };
 		5CE70A651DF6CA2E001FA04B /* FSStoreManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CE70A641DF6CA2E001FA04B /* FSStoreManager.m */; };
 		5CE7CDEE1E6FB4A400988C56 /* FSSafeData.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CE7CDED1E6FB4A400988C56 /* FSSafeData.m */; };
 		5CF3DED01E08D13F005DFC6D /* FSOrderSystemController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF3DECF1E08D13F005DFC6D /* FSOrderSystemController.m */; };
@@ -320,6 +321,7 @@
 		5CE037681E45870500FD1DA6 /* FSSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSSearchController.m; sourceTree = "<group>"; };
 		5CE037691E45870500FD1DA6 /* FSSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSSearchViewController.h; sourceTree = "<group>"; };
 		5CE0376A1E45870500FD1DA6 /* FSSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSSearchViewController.m; sourceTree = "<group>"; };
+		5CE058511E84F65400A2BB1E /* ReadMe_About_AccountBook */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe_About_AccountBook; sourceTree = "<group>"; };
 		5CE70A631DF6CA2E001FA04B /* FSStoreManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSStoreManager.h; sourceTree = "<group>"; };
 		5CE70A641DF6CA2E001FA04B /* FSStoreManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSStoreManager.m; sourceTree = "<group>"; };
 		5CE7CDEC1E6FB4A400988C56 /* FSSafeData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSSafeData.h; sourceTree = "<group>"; };
@@ -1138,6 +1140,7 @@
 		71DC23141DD2011A00BEB193 /* SQLManager */ = {
 			isa = PBXGroup;
 			children = (
+				5CE058511E84F65400A2BB1E /* ReadMe_About_AccountBook */,
 				71DC23151DD2011A00BEB193 /* FSAccountDoorController.h */,
 				71DC23161DD2011A00BEB193 /* FSAccountDoorController.m */,
 				71DC23171DD2011A00BEB193 /* FSFinancesManagerController.h */,
@@ -1553,6 +1556,7 @@
 				5CFE60251DC75B9C003640A4 /* Assets.xcassets in Resources */,
 				71DC24471DD2011B00BEB193 /* fsqrmsg.wav in Resources */,
 				5C18815D1E03D02100D55E0E /* fsip_unselected.png in Resources */,
+				5CE058521E84F65400A2BB1E /* ReadMe_About_AccountBook in Resources */,
 				5C1064361E24EE5B0027314A /* iconu@2x.png in Resources */,
 				71DC25E61DD3624D00BEB193 /* ARAbout.html in Resources */,
 				71DC24411DD2011B00BEB193 /* fsqr3.png in Resources */,
