@@ -39,6 +39,7 @@
 		5C48CA9E1E891DC400F9D4AF /* FAWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C48CA9D1E891DC400F9D4AF /* FAWindowController.m */; };
 		5C48CAA51E89214F00F9D4AF /* FSDBMaster.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C48CAA41E89214F00F9D4AF /* FSDBMaster.m */; };
 		5C48CAA81E89248F00F9D4AF /* FAAddController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C48CAA71E89248F00F9D4AF /* FAAddController.m */; };
+		5C48CAAB1E8927B800F9D4AF /* FATool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C48CAAA1E8927B800F9D4AF /* FATool.m */; };
 		5C5201EE1E1F8D610010DE87 /* FSAppToolController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5201ED1E1F8D610010DE87 /* FSAppToolController.m */; };
 		5C5BB56E1E02741000349D82 /* FSLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5BB56D1E02741000349D82 /* FSLocation.m */; };
 		5C5BB5711E02762F00349D82 /* FSBaseEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5BB5701E02762F00349D82 /* FSBaseEntity.m */; };
@@ -258,6 +259,8 @@
 		5C48CAA41E89214F00F9D4AF /* FSDBMaster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSDBMaster.m; sourceTree = "<group>"; };
 		5C48CAA61E89248F00F9D4AF /* FAAddController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAAddController.h; sourceTree = "<group>"; };
 		5C48CAA71E89248F00F9D4AF /* FAAddController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FAAddController.m; sourceTree = "<group>"; };
+		5C48CAA91E8927B800F9D4AF /* FATool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FATool.h; sourceTree = "<group>"; };
+		5C48CAAA1E8927B800F9D4AF /* FATool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FATool.m; sourceTree = "<group>"; };
 		5C5201EC1E1F8D610010DE87 /* FSAppToolController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSAppToolController.h; sourceTree = "<group>"; };
 		5C5201ED1E1F8D610010DE87 /* FSAppToolController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSAppToolController.m; sourceTree = "<group>"; };
 		5C5BB56C1E02741000349D82 /* FSLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSLocation.h; sourceTree = "<group>"; };
@@ -714,6 +717,8 @@
 			children = (
 				5C48CAA31E89214F00F9D4AF /* FSDBMaster.h */,
 				5C48CAA41E89214F00F9D4AF /* FSDBMaster.m */,
+				5C48CAA91E8927B800F9D4AF /* FATool.h */,
+				5C48CAAA1E8927B800F9D4AF /* FATool.m */,
 			);
 			path = FSDatabase;
 			sourceTree = "<group>";
@@ -1806,6 +1811,7 @@
 				7180F3691E44C17A00331DED /* FSWSKCell.m in Sources */,
 				71DC24251DD2011B00BEB193 /* FSBaseView.m in Sources */,
 				5CE7CDEE1E6FB4A400988C56 /* FSSafeData.m in Sources */,
+				5C48CAAB1E8927B800F9D4AF /* FATool.m in Sources */,
 				71DC243B1DD2011B00BEB193 /* FSHTMLController.m in Sources */,
 				5C48CAA81E89248F00F9D4AF /* FAAddController.m in Sources */,
 				5C15E2881DF5140900BBBA5C /* FSLoanCounterController.m in Sources */,
