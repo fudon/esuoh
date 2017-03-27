@@ -36,7 +36,8 @@
                                                   }];
     
     NSArray *array = @[@"FTHomeController",@"ARToolController",@"HAToolController",@"ARPersonController"];
-    NSArray *titles = @[@"首页",@"案例",@"应用",@"我"];
+//    NSArray *titles = @[@"首页",@"案例",@"应用",@"我"];
+    NSArray *titles = @[@"首页",@"",@"",@""];
     NSArray *types = @[@(UITabBarSystemItemMostViewed),@(UITabBarSystemItemBookmarks),@(UITabBarSystemItemFavorites),@(UITabBarSystemItemContacts)];
     ARTabBarController *tbController = [[ARTabBarController alloc] initWithClasses:array titles:titles types:types selectedColor:APPCOLOR];
     self.window.rootViewController = tbController;

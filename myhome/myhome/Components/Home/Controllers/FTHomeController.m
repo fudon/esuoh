@@ -7,6 +7,7 @@
 //
 
 #import "FTHomeController.h"
+#import "FAWindowController.h"
 
 @interface FTHomeController ()
 
@@ -17,13 +18,19 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.title = @"财科新闻";
     [self homeDesignViews];
 }
 
 - (void)homeDesignViews
 {
-    
+    UIBarButtonItem *bbi = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(bbiClick)];
+    self.navigationItem.rightBarButtonItem = bbi;
+}
+
+- (void)bbiClick
+{
+    FAWindowController *window = [[FAWindowController alloc] init];
+    [self.navigationController pushViewController:window animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
