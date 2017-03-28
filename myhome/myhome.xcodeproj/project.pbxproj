@@ -63,6 +63,12 @@
 		5C9337FE1DCB447B0091D3D8 /* TencentOpenApi_IOS_Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5C9337EE1DCB447B0091D3D8 /* TencentOpenApi_IOS_Bundle.bundle */; };
 		5C9337FF1DCB447B0091D3D8 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C9337F01DCB447B0091D3D8 /* libWeChatSDK.a */; };
 		5C9338001DCB447B0091D3D8 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5C9337F11DCB447B0091D3D8 /* README.txt */; };
+		5C96B6941E8A0F0C002C3A73 /* FADoorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C96B6891E8A0F0C002C3A73 /* FADoorController.m */; };
+		5C96B6951E8A0F0C002C3A73 /* FAListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C96B68B1E8A0F0C002C3A73 /* FAListController.m */; };
+		5C96B6961E8A0F0C002C3A73 /* FASelectCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C96B68D1E8A0F0C002C3A73 /* FASelectCell.m */; };
+		5C96B6971E8A0F0C002C3A73 /* FASelectController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C96B68F1E8A0F0C002C3A73 /* FASelectController.m */; };
+		5C96B6981E8A0F0C002C3A73 /* FATwoMinusController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C96B6911E8A0F0C002C3A73 /* FATwoMinusController.m */; };
+		5C96B6991E8A0F0C002C3A73 /* FSSQLEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C96B6931E8A0F0C002C3A73 /* FSSQLEntity.m */; };
 		5C9E554D1E83E45300141BC2 /* FSAPPTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C9E554C1E83E45300141BC2 /* FSAPPTool.m */; };
 		5C9EDDCC1E5582AC00A07515 /* FSPartListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C9EDDCB1E5582AC00A07515 /* FSPartListController.m */; };
 		5C9EDDD01E55A45800A07515 /* FSContactController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C9EDDCF1E55A45800A07515 /* FSContactController.m */; };
@@ -76,6 +82,7 @@
 		5CB3A0351DCA04F400564280 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CB3A0341DCA04F400564280 /* CoreMedia.framework */; };
 		5CC24DC61E233A940037DC64 /* FSSave.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC24DC51E233A940037DC64 /* FSSave.m */; };
 		5CD810AF1E20C59C0030EE3A /* AppDelegate+Handler.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CD810AE1E20C59C0030EE3A /* AppDelegate+Handler.m */; };
+		5CDBB19E1E8A579500818140 /* FASearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CDBB19D1E8A579500818140 /* FASearchController.m */; };
 		5CDBCDAF1DD057EA001CFC39 /* FSShareEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CDBCDAE1DD057EA001CFC39 /* FSShareEntity.m */; };
 		5CE0376B1E45870500FD1DA6 /* FSSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CE037681E45870500FD1DA6 /* FSSearchController.m */; };
 		5CE0376C1E45870500FD1DA6 /* FSSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CE0376A1E45870500FD1DA6 /* FSSearchViewController.m */; };
@@ -309,6 +316,18 @@
 		5C9337F21DCB447B0091D3D8 /* WechatAuthSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WechatAuthSDK.h; sourceTree = "<group>"; };
 		5C9337F31DCB447B0091D3D8 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
 		5C9337F41DCB447B0091D3D8 /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
+		5C96B6881E8A0F0C002C3A73 /* FADoorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FADoorController.h; sourceTree = "<group>"; };
+		5C96B6891E8A0F0C002C3A73 /* FADoorController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FADoorController.m; sourceTree = "<group>"; };
+		5C96B68A1E8A0F0C002C3A73 /* FAListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAListController.h; sourceTree = "<group>"; };
+		5C96B68B1E8A0F0C002C3A73 /* FAListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FAListController.m; sourceTree = "<group>"; };
+		5C96B68C1E8A0F0C002C3A73 /* FASelectCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FASelectCell.h; sourceTree = "<group>"; };
+		5C96B68D1E8A0F0C002C3A73 /* FASelectCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FASelectCell.m; sourceTree = "<group>"; };
+		5C96B68E1E8A0F0C002C3A73 /* FASelectController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FASelectController.h; sourceTree = "<group>"; };
+		5C96B68F1E8A0F0C002C3A73 /* FASelectController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FASelectController.m; sourceTree = "<group>"; };
+		5C96B6901E8A0F0C002C3A73 /* FATwoMinusController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FATwoMinusController.h; sourceTree = "<group>"; };
+		5C96B6911E8A0F0C002C3A73 /* FATwoMinusController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FATwoMinusController.m; sourceTree = "<group>"; };
+		5C96B6921E8A0F0C002C3A73 /* FSSQLEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSSQLEntity.h; sourceTree = "<group>"; };
+		5C96B6931E8A0F0C002C3A73 /* FSSQLEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSSQLEntity.m; sourceTree = "<group>"; };
 		5C9E554B1E83E45300141BC2 /* FSAPPTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSAPPTool.h; sourceTree = "<group>"; };
 		5C9E554C1E83E45300141BC2 /* FSAPPTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSAPPTool.m; sourceTree = "<group>"; };
 		5C9EDDCA1E5582AC00A07515 /* FSPartListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSPartListController.h; sourceTree = "<group>"; };
@@ -330,6 +349,8 @@
 		5CC24DC51E233A940037DC64 /* FSSave.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSSave.m; sourceTree = "<group>"; };
 		5CD810AD1E20C59C0030EE3A /* AppDelegate+Handler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Handler.h"; sourceTree = "<group>"; };
 		5CD810AE1E20C59C0030EE3A /* AppDelegate+Handler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Handler.m"; sourceTree = "<group>"; };
+		5CDBB19C1E8A579500818140 /* FASearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FASearchController.h; sourceTree = "<group>"; };
+		5CDBB19D1E8A579500818140 /* FASearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FASearchController.m; sourceTree = "<group>"; };
 		5CDBCDAD1DD057EA001CFC39 /* FSShareEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSShareEntity.h; sourceTree = "<group>"; };
 		5CDBCDAE1DD057EA001CFC39 /* FSShareEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSShareEntity.m; sourceTree = "<group>"; };
 		5CE037671E45870500FD1DA6 /* FSSearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSSearchController.h; sourceTree = "<group>"; };
@@ -702,12 +723,26 @@
 		5C48CA981E891D3000F9D4AF /* NewAccount */ = {
 			isa = PBXGroup;
 			children = (
+				5C96B6881E8A0F0C002C3A73 /* FADoorController.h */,
+				5C96B6891E8A0F0C002C3A73 /* FADoorController.m */,
+				5C96B68A1E8A0F0C002C3A73 /* FAListController.h */,
+				5C96B68B1E8A0F0C002C3A73 /* FAListController.m */,
+				5C96B68C1E8A0F0C002C3A73 /* FASelectCell.h */,
+				5C96B68D1E8A0F0C002C3A73 /* FASelectCell.m */,
+				5C96B68E1E8A0F0C002C3A73 /* FASelectController.h */,
+				5C96B68F1E8A0F0C002C3A73 /* FASelectController.m */,
+				5C96B6901E8A0F0C002C3A73 /* FATwoMinusController.h */,
+				5C96B6911E8A0F0C002C3A73 /* FATwoMinusController.m */,
+				5C96B6921E8A0F0C002C3A73 /* FSSQLEntity.h */,
+				5C96B6931E8A0F0C002C3A73 /* FSSQLEntity.m */,
 				5C48CA991E891D5500F9D4AF /* FSAccEntity.h */,
 				5C48CA9A1E891D5500F9D4AF /* FSAccEntity.m */,
 				5C48CA9C1E891DC400F9D4AF /* FAWindowController.h */,
 				5C48CA9D1E891DC400F9D4AF /* FAWindowController.m */,
 				5C48CAA61E89248F00F9D4AF /* FAAddController.h */,
 				5C48CAA71E89248F00F9D4AF /* FAAddController.m */,
+				5CDBB19C1E8A579500818140 /* FASearchController.h */,
+				5CDBB19D1E8A579500818140 /* FASearchController.m */,
 			);
 			path = NewAccount;
 			sourceTree = "<group>";
@@ -1699,11 +1734,13 @@
 				71DC244B1DD2011B00BEB193 /* FSTaxRateEntity.m in Sources */,
 				714F6EC81DF4395F00E96EED /* FSSameKindController.m in Sources */,
 				714F6EBF1DF3C87D00E96EED /* FSShopClassView.m in Sources */,
+				5C96B6941E8A0F0C002C3A73 /* FADoorController.m in Sources */,
 				71DC24191DD2011B00BEB193 /* FSCCMainView.m in Sources */,
 				5C1881611E03D02100D55E0E /* FSZoneImageController.m in Sources */,
 				5C18815F1E03D02100D55E0E /* FSMoreZoneImageCell.m in Sources */,
 				71DEF3681E154987005B938A /* FSAllBirthdayController.m in Sources */,
 				5C1881541E03D02100D55E0E /* FSImagePicker.m in Sources */,
+				5C96B6971E8A0F0C002C3A73 /* FASelectController.m in Sources */,
 				5C48CA9E1E891DC400F9D4AF /* FAWindowController.m in Sources */,
 				7180F37C1E4A9AAC00331DED /* HoldViewController.m in Sources */,
 				7180F71E1E6BFC9500331DED /* FTHomeController.m in Sources */,
@@ -1733,6 +1770,7 @@
 				5C5BB56E1E02741000349D82 /* FSLocation.m in Sources */,
 				71DC24431DD2011B00BEB193 /* FSQRController.m in Sources */,
 				5CA360D91DC8ADC300523FF5 /* AROfferController.m in Sources */,
+				5C96B6991E8A0F0C002C3A73 /* FSSQLEntity.m in Sources */,
 				71DC241E1DD2011B00BEB193 /* ClipPictureController.m in Sources */,
 				5C296FF21E5FFAB900FF6D1D /* FSLocationController.m in Sources */,
 				71DC24301DD2011B00BEB193 /* FSSegmentControl.m in Sources */,
@@ -1748,8 +1786,10 @@
 				71A66E7B1DEF1250002C28B9 /* HAShopController.m in Sources */,
 				5C1064341E24EE5B0027314A /* FSGridCell.m in Sources */,
 				71DC24481DD2011B00BEB193 /* FSAddTaxModelController.m in Sources */,
+				5C96B6951E8A0F0C002C3A73 /* FAListController.m in Sources */,
 				71DC24381DD2011B00BEB193 /* FSSelectSectionController.m in Sources */,
 				71DC24111DD2011B00BEB193 /* FSFMSelectController.m in Sources */,
+				5C96B6981E8A0F0C002C3A73 /* FATwoMinusController.m in Sources */,
 				5CF522421DFFC6EF0013D7CE /* FSRelayoutCell.m in Sources */,
 				71DC24361DD2011B00BEB193 /* FSDatePickerView.m in Sources */,
 				5CFE601D1DC75B9C003640A4 /* AppDelegate.m in Sources */,
@@ -1778,6 +1818,7 @@
 				5C1881621E03D02100D55E0E /* FSSeeImageCell.m in Sources */,
 				714F6EC51DF4393400E96EED /* FSAccessController.m in Sources */,
 				5C1881551E03D02100D55E0E /* FSImagePickerController.m in Sources */,
+				5CDBB19E1E8A579500818140 /* FASearchController.m in Sources */,
 				71DC240B1DD2011B00BEB193 /* FSFinancesManagerController.m in Sources */,
 				71DC243A1DD2011B00BEB193 /* FIWebView.m in Sources */,
 				5CA360DF1DC8ADD800523FF5 /* ARToolController.m in Sources */,
@@ -1811,6 +1852,7 @@
 				7180F3691E44C17A00331DED /* FSWSKCell.m in Sources */,
 				71DC24251DD2011B00BEB193 /* FSBaseView.m in Sources */,
 				5CE7CDEE1E6FB4A400988C56 /* FSSafeData.m in Sources */,
+				5C96B6961E8A0F0C002C3A73 /* FASelectCell.m in Sources */,
 				5C48CAAB1E8927B800F9D4AF /* FATool.m in Sources */,
 				71DC243B1DD2011B00BEB193 /* FSHTMLController.m in Sources */,
 				5C48CAA81E89248F00F9D4AF /* FAAddController.m in Sources */,
