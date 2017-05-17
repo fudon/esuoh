@@ -7,7 +7,6 @@
 //
 
 #import "FTHomeController.h"
-#import "FAWindowController.h"
 
 @interface FTHomeController ()
 
@@ -29,8 +28,8 @@
 
 - (void)bbiClick
 {
-    FAWindowController *window = [[FAWindowController alloc] init];
-    [self.navigationController pushViewController:window animated:YES];
+//    FAWindowController *window = [[FAWindowController alloc] init];
+//    [self.navigationController pushViewController:window animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
