@@ -69,6 +69,9 @@
 		5CA11EF01ECC408F00246C7C /* FSFMUpdateController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CA11EEE1ECC408F00246C7C /* FSFMUpdateController.m */; };
 		5CA11EF41ECC40EC00246C7C /* GZSHalfView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CA11EF31ECC40EC00246C7C /* GZSHalfView.m */; };
 		5CA11EF71ECC410800246C7C /* FSLocationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CA11EF61ECC410800246C7C /* FSLocationCell.m */; };
+		5CA11EFF1ECC466800246C7C /* FSDBMaster.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CA11EFA1ECC466800246C7C /* FSDBMaster.m */; };
+		5CA11F001ECC466800246C7C /* FSDBTestEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CA11EFC1ECC466800246C7C /* FSDBTestEntity.m */; };
+		5CA11F011ECC466800246C7C /* FSDBTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CA11EFE1ECC466800246C7C /* FSDBTool.m */; };
 		5CA360D91DC8ADC300523FF5 /* AROfferController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CA360D81DC8ADC300523FF5 /* AROfferController.m */; };
 		5CA360DC1DC8ADCE00523FF5 /* ARPersonController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CA360DB1DC8ADCE00523FF5 /* ARPersonController.m */; };
 		5CA360DF1DC8ADD800523FF5 /* ARToolController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CA360DE1DC8ADD800523FF5 /* ARToolController.m */; };
@@ -325,6 +328,12 @@
 		5CA11EF31ECC40EC00246C7C /* GZSHalfView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GZSHalfView.m; sourceTree = "<group>"; };
 		5CA11EF51ECC410800246C7C /* FSLocationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSLocationCell.h; sourceTree = "<group>"; };
 		5CA11EF61ECC410800246C7C /* FSLocationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSLocationCell.m; sourceTree = "<group>"; };
+		5CA11EF91ECC466800246C7C /* FSDBMaster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSDBMaster.h; sourceTree = "<group>"; };
+		5CA11EFA1ECC466800246C7C /* FSDBMaster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSDBMaster.m; sourceTree = "<group>"; };
+		5CA11EFB1ECC466800246C7C /* FSDBTestEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSDBTestEntity.h; sourceTree = "<group>"; };
+		5CA11EFC1ECC466800246C7C /* FSDBTestEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSDBTestEntity.m; sourceTree = "<group>"; };
+		5CA11EFD1ECC466800246C7C /* FSDBTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSDBTool.h; sourceTree = "<group>"; };
+		5CA11EFE1ECC466800246C7C /* FSDBTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSDBTool.m; sourceTree = "<group>"; };
 		5CA360D71DC8ADC300523FF5 /* AROfferController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AROfferController.h; sourceTree = "<group>"; };
 		5CA360D81DC8ADC300523FF5 /* AROfferController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AROfferController.m; sourceTree = "<group>"; };
 		5CA360DA1DC8ADCE00523FF5 /* ARPersonController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARPersonController.h; sourceTree = "<group>"; };
@@ -892,6 +901,19 @@
 			path = HalfView;
 			sourceTree = "<group>";
 		};
+		5CA11EF81ECC466800246C7C /* FSDBMaster */ = {
+			isa = PBXGroup;
+			children = (
+				5CA11EF91ECC466800246C7C /* FSDBMaster.h */,
+				5CA11EFA1ECC466800246C7C /* FSDBMaster.m */,
+				5CA11EFB1ECC466800246C7C /* FSDBTestEntity.h */,
+				5CA11EFC1ECC466800246C7C /* FSDBTestEntity.m */,
+				5CA11EFD1ECC466800246C7C /* FSDBTool.h */,
+				5CA11EFE1ECC466800246C7C /* FSDBTool.m */,
+			);
+			path = FSDBMaster;
+			sourceTree = "<group>";
+		};
 		5CA360D01DC8AD4700523FF5 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -1206,6 +1228,7 @@
 		71DC230F1DD2011A00BEB193 /* 3rd */ = {
 			isa = PBXGroup;
 			children = (
+				5CA11EF81ECC466800246C7C /* FSDBMaster */,
 				71DC23101DD2011A00BEB193 /* Account */,
 				71DC23291DD2011A00BEB193 /* BaseModel */,
 				71DC232C1DD2011A00BEB193 /* ChineseCalendar */,
@@ -1792,6 +1815,7 @@
 				71DC24361DD2011B00BEB193 /* FSDatePickerView.m in Sources */,
 				5CFE601D1DC75B9C003640A4 /* AppDelegate.m in Sources */,
 				71DEF36B1E154A4F005B938A /* FSAddBirthdayController.m in Sources */,
+				5CA11F011ECC466800246C7C /* FSDBTool.m in Sources */,
 				5C15E2891DF5140900BBBA5C /* FSLoanResultController.m in Sources */,
 				5C1063FE1E24DAD00027314A /* FSPdf.m in Sources */,
 				71DC24771DD2011B00BEB193 /* FuWeb.m in Sources */,
@@ -1820,6 +1844,7 @@
 				5C1881551E03D02100D55E0E /* FSImagePickerController.m in Sources */,
 				5CDBB19E1E8A579500818140 /* FASearchController.m in Sources */,
 				71DC243A1DD2011B00BEB193 /* FIWebView.m in Sources */,
+				5CA11F001ECC466800246C7C /* FSDBTestEntity.m in Sources */,
 				5CA360DF1DC8ADD800523FF5 /* ARToolController.m in Sources */,
 				71B316C91E0813A000FD031F /* FSSetController.m in Sources */,
 				5C23B75E1E07D2FA0068603A /* FSFutureAlertSendController.m in Sources */,
@@ -1850,6 +1875,7 @@
 				71DC24251DD2011B00BEB193 /* FSBaseView.m in Sources */,
 				5CE7CDEE1E6FB4A400988C56 /* FSSafeData.m in Sources */,
 				71DC243B1DD2011B00BEB193 /* FSHTMLController.m in Sources */,
+				5CA11EFF1ECC466800246C7C /* FSDBMaster.m in Sources */,
 				5C15E2881DF5140900BBBA5C /* FSLoanCounterController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
