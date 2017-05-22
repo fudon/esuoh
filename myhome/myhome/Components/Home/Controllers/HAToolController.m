@@ -99,25 +99,26 @@
 
 - (void)checkFutureAlerts
 {
-    NSArray *array = [FSFutureAlertController futureSevenDaysTODO];
-    if (array.count) {
-        dispatch_async(dispatch_get_main_queue(), ^{
-            NSString *message = [[NSString alloc] initWithFormat:@"未来一周内您有%@件待办事项，点击「提醒」查看",@(array.count)];
-            if (!_moveLabel) {
-                _moveLabel = [[FSMoveLabel alloc] initWithFrame:CGRectMake(0, self.view.height - 44 - 49, WIDTHFC, 44)];
-                _moveLabel.backgroundColor = HAAPPCOLOR;
-                [self.view addSubview:_moveLabel];
-                WEAKSELF(this);
-                [_moveLabel setTapBlock:^(FSMoveLabel *bLabel) {
-                    [FuData pushToViewControllerWithClass:@"FSFutureAlertController" navigationController:this.navigationController param:nil configBlock:nil];
-                }];
-            }
-            _moveLabel.text = message;
-        });
-    }else{
-        [_moveLabel removeFromSuperview];
-        _moveLabel = nil;
-    }
+    [FSFutureAlertController futureSevenDaysTODO:^(NSInteger bCount) {
+        if (bCount) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                NSString *message = [[NSString alloc] initWithFormat:@"未来一周内您有%@件待办事项，点击「提醒」查看",@(bCount)];
+                if (!_moveLabel) {
+                    _moveLabel = [[FSMoveLabel alloc] initWithFrame:CGRectMake(0, self.view.height - 44 - 49, WIDTHFC, 44)];
+                    _moveLabel.backgroundColor = HAAPPCOLOR;
+                    [self.view addSubview:_moveLabel];
+                    WEAKSELF(this);
+                    [_moveLabel setTapBlock:^(FSMoveLabel *bLabel) {
+                        [FuData pushToViewControllerWithClass:@"FSFutureAlertController" navigationController:this.navigationController param:nil configBlock:nil];
+                    }];
+                }
+                _moveLabel.text = message;
+            });
+        }else{
+            [_moveLabel removeFromSuperview];
+            _moveLabel = nil;
+        }
+    }];
 }
 
 - (void)qiniuAction
@@ -172,10 +173,11 @@
                              @{Picture_Name:@"tootoodingdan",Text_Name:@"个税计算器",Url_String:@"http://3g.163.com"},
                              @{Picture_Name:@"tootoodingdan",Text_Name:@"首付计算器",Url_String:@"http://3g.163.com"},
                              @{Picture_Name:@"tootoodingdan",Text_Name:@"计算器",Url_String:@"http://3g.163.com"},
+                             @{Picture_Name:@"tootoodingdan",Text_Name:@"新账本",Url_String:@"http://3g.163.com"},
                              ];
             WEAKSELF(this);
             access.selectBlock = ^ (FSAccessController *bController,NSIndexPath *bIndexPath){
-                NSArray *classArray = @[@"FSAccountDoorController",@"FSLoanCounterController",@"FSTaxOfIncomeController",@"FSHouseLoanController",@"FSCalculatorController"];
+                NSArray *classArray = @[@"FSAccountDoorController",@"FSLoanCounterController",@"FSTaxOfIncomeController",@"FSHouseLoanController",@"FSCalculatorController",@"FSAccountsController"];
                 Class ControllerClass = NSClassFromString(classArray[bIndexPath.row % classArray.count]);
                 if (ControllerClass) {
                     [this.navigationController pushViewController:[[ControllerClass alloc] init] animated:YES];
