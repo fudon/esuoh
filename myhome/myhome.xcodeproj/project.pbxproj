@@ -44,7 +44,6 @@
 		5C65FA101ED28B8E0030D043 /* FSABOverviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C65FA001ED28B8E0030D043 /* FSABOverviewController.m */; };
 		5C65FA111ED28B8E0030D043 /* FSABTwominusController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C65FA021ED28B8E0030D043 /* FSABTwominusController.m */; };
 		5C65FA121ED28B8E0030D043 /* FSABUpdateController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C65FA041ED28B8E0030D043 /* FSABUpdateController.m */; };
-		5C65FA131ED28B8E0030D043 /* FSAccModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C65FA061ED28B8E0030D043 /* FSAccModel.m */; };
 		5C65FA141ED28B8E0030D043 /* FSAccountListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C65FA081ED28B8E0030D043 /* FSAccountListController.m */; };
 		5C65FA151ED28B8E0030D043 /* FSAccountsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C65FA0A1ED28B8E0030D043 /* FSAccountsController.m */; };
 		5C65FA161ED28B8E0030D043 /* FSAddAccountController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C65FA0C1ED28B8E0030D043 /* FSAddAccountController.m */; };
@@ -89,6 +88,8 @@
 		5CA360D91DC8ADC300523FF5 /* AROfferController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CA360D81DC8ADC300523FF5 /* AROfferController.m */; };
 		5CA360DC1DC8ADCE00523FF5 /* ARPersonController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CA360DB1DC8ADCE00523FF5 /* ARPersonController.m */; };
 		5CA360DF1DC8ADD800523FF5 /* ARToolController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CA360DE1DC8ADD800523FF5 /* ARToolController.m */; };
+		5CA3F8521ED3E5D700B44891 /* FSABModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CA3F84F1ED3E5D700B44891 /* FSABModel.m */; };
+		5CA3F8531ED3E5D700B44891 /* FSABTrackController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CA3F8511ED3E5D700B44891 /* FSABTrackController.m */; };
 		5CB3A02D1DCA044600564280 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CB3A02C1DCA044600564280 /* libc++.tbd */; };
 		5CB3A02F1DCA049500564280 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CB3A02E1DCA049500564280 /* AVFoundation.framework */; };
 		5CB3A0311DCA04C800564280 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CB3A0301DCA04C800564280 /* libsqlite3.tbd */; };
@@ -289,8 +290,6 @@
 		5C65FA021ED28B8E0030D043 /* FSABTwominusController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSABTwominusController.m; sourceTree = "<group>"; };
 		5C65FA031ED28B8E0030D043 /* FSABUpdateController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSABUpdateController.h; sourceTree = "<group>"; };
 		5C65FA041ED28B8E0030D043 /* FSABUpdateController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSABUpdateController.m; sourceTree = "<group>"; };
-		5C65FA051ED28B8E0030D043 /* FSAccModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSAccModel.h; sourceTree = "<group>"; };
-		5C65FA061ED28B8E0030D043 /* FSAccModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSAccModel.m; sourceTree = "<group>"; };
 		5C65FA071ED28B8E0030D043 /* FSAccountListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSAccountListController.h; sourceTree = "<group>"; };
 		5C65FA081ED28B8E0030D043 /* FSAccountListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSAccountListController.m; sourceTree = "<group>"; };
 		5C65FA091ED28B8E0030D043 /* FSAccountsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSAccountsController.h; sourceTree = "<group>"; };
@@ -381,6 +380,10 @@
 		5CA360DB1DC8ADCE00523FF5 /* ARPersonController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARPersonController.m; sourceTree = "<group>"; };
 		5CA360DD1DC8ADD800523FF5 /* ARToolController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARToolController.h; sourceTree = "<group>"; };
 		5CA360DE1DC8ADD800523FF5 /* ARToolController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARToolController.m; sourceTree = "<group>"; };
+		5CA3F84E1ED3E5D700B44891 /* FSABModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSABModel.h; sourceTree = "<group>"; };
+		5CA3F84F1ED3E5D700B44891 /* FSABModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSABModel.m; sourceTree = "<group>"; };
+		5CA3F8501ED3E5D700B44891 /* FSABTrackController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSABTrackController.h; sourceTree = "<group>"; };
+		5CA3F8511ED3E5D700B44891 /* FSABTrackController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSABTrackController.m; sourceTree = "<group>"; };
 		5CB3A02C1DCA044600564280 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		5CB3A02E1DCA049500564280 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		5CB3A0301DCA04C800564280 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
@@ -815,8 +818,6 @@
 				5C65FA021ED28B8E0030D043 /* FSABTwominusController.m */,
 				5C65FA031ED28B8E0030D043 /* FSABUpdateController.h */,
 				5C65FA041ED28B8E0030D043 /* FSABUpdateController.m */,
-				5C65FA051ED28B8E0030D043 /* FSAccModel.h */,
-				5C65FA061ED28B8E0030D043 /* FSAccModel.m */,
 				5C65FA071ED28B8E0030D043 /* FSAccountListController.h */,
 				5C65FA081ED28B8E0030D043 /* FSAccountListController.m */,
 				5C65FA091ED28B8E0030D043 /* FSAccountsController.h */,
@@ -827,6 +828,10 @@
 				5C65FA211ED2C30C0030D043 /* FSABSearchController.m */,
 				5C65FA261ED2EACC0030D043 /* FSABTrackModel.h */,
 				5C65FA271ED2EACC0030D043 /* FSABTrackModel.m */,
+				5CA3F84E1ED3E5D700B44891 /* FSABModel.h */,
+				5CA3F84F1ED3E5D700B44891 /* FSABModel.m */,
+				5CA3F8501ED3E5D700B44891 /* FSABTrackController.h */,
+				5CA3F8511ED3E5D700B44891 /* FSABTrackController.m */,
 			);
 			path = FSAccountBook;
 			sourceTree = "<group>";
@@ -1863,7 +1868,6 @@
 				5CD382601E95F800005AD21D /* FSSearchViewController.m in Sources */,
 				5C65FA1C1ED28F210030D043 /* FSBankModel.m in Sources */,
 				5CA360D91DC8ADC300523FF5 /* AROfferController.m in Sources */,
-				5C65FA131ED28B8E0030D043 /* FSAccModel.m in Sources */,
 				5C96B6991E8A0F0C002C3A73 /* FSSQLEntity.m in Sources */,
 				71DC241E1DD2011B00BEB193 /* ClipPictureController.m in Sources */,
 				5C296FF21E5FFAB900FF6D1D /* FSLocationController.m in Sources */,
@@ -1941,6 +1945,7 @@
 				7173002B1E1E896A00B87826 /* HAOrderSystemController.m in Sources */,
 				5CD382591E95F800005AD21D /* FSAccNameController.m in Sources */,
 				71DC24321DD2011B00BEB193 /* FSTapLabel.m in Sources */,
+				5CA3F8531ED3E5D700B44891 /* FSABTrackController.m in Sources */,
 				714F6EB91DF3BC2B00E96EED /* HACityController.m in Sources */,
 				714F6EBB1DF3BC2B00E96EED /* FSFlowView.m in Sources */,
 				5C1881601E03D02100D55E0E /* FSPreviewPhotoController.m in Sources */,
@@ -1949,6 +1954,7 @@
 				71DC24281DD2011B00BEB193 /* FSLeftItem.m in Sources */,
 				71DC24371DD2011B00BEB193 /* FSSelectController.m in Sources */,
 				7180F3691E44C17A00331DED /* FSWSKCell.m in Sources */,
+				5CA3F8521ED3E5D700B44891 /* FSABModel.m in Sources */,
 				71DC24251DD2011B00BEB193 /* FSBaseView.m in Sources */,
 				5CE7CDEE1E6FB4A400988C56 /* FSSafeData.m in Sources */,
 				5C65FA161ED28B8E0030D043 /* FSAddAccountController.m in Sources */,
