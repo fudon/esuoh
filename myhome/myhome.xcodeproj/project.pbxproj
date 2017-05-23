@@ -90,6 +90,7 @@
 		5CA360DF1DC8ADD800523FF5 /* ARToolController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CA360DE1DC8ADD800523FF5 /* ARToolController.m */; };
 		5CA3F8521ED3E5D700B44891 /* FSABModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CA3F84F1ED3E5D700B44891 /* FSABModel.m */; };
 		5CA3F8531ED3E5D700B44891 /* FSABTrackController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CA3F8511ED3E5D700B44891 /* FSABTrackController.m */; };
+		5CA3F8561ED3F08A00B44891 /* FSABBirthModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CA3F8551ED3F08A00B44891 /* FSABBirthModel.m */; };
 		5CB3A02D1DCA044600564280 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CB3A02C1DCA044600564280 /* libc++.tbd */; };
 		5CB3A02F1DCA049500564280 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CB3A02E1DCA049500564280 /* AVFoundation.framework */; };
 		5CB3A0311DCA04C800564280 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CB3A0301DCA04C800564280 /* libsqlite3.tbd */; };
@@ -384,6 +385,8 @@
 		5CA3F84F1ED3E5D700B44891 /* FSABModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSABModel.m; sourceTree = "<group>"; };
 		5CA3F8501ED3E5D700B44891 /* FSABTrackController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSABTrackController.h; sourceTree = "<group>"; };
 		5CA3F8511ED3E5D700B44891 /* FSABTrackController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSABTrackController.m; sourceTree = "<group>"; };
+		5CA3F8541ED3F08A00B44891 /* FSABBirthModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSABBirthModel.h; sourceTree = "<group>"; };
+		5CA3F8551ED3F08A00B44891 /* FSABBirthModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSABBirthModel.m; sourceTree = "<group>"; };
 		5CB3A02C1DCA044600564280 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		5CB3A02E1DCA049500564280 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		5CB3A0301DCA04C800564280 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
@@ -1631,6 +1634,8 @@
 			children = (
 				71DEF3631E1545F4005B938A /* FSBirthdayController.h */,
 				71DEF3641E1545F4005B938A /* FSBirthdayController.m */,
+				5CA3F8541ED3F08A00B44891 /* FSABBirthModel.h */,
+				5CA3F8551ED3F08A00B44891 /* FSABBirthModel.m */,
 				71DEF3661E154987005B938A /* FSAllBirthdayController.h */,
 				71DEF3671E154987005B938A /* FSAllBirthdayController.m */,
 				71DEF3691E154A4F005B938A /* FSAddBirthdayController.h */,
@@ -1895,6 +1900,7 @@
 				71DEF36B1E154A4F005B938A /* FSAddBirthdayController.m in Sources */,
 				5CA11F011ECC466800246C7C /* FSDBTool.m in Sources */,
 				5C15E2891DF5140900BBBA5C /* FSLoanResultController.m in Sources */,
+				5CA3F8561ED3F08A00B44891 /* FSABBirthModel.m in Sources */,
 				5C1063FE1E24DAD00027314A /* FSPdf.m in Sources */,
 				71DC24771DD2011B00BEB193 /* FuWeb.m in Sources */,
 				5CE0376B1E45870500FD1DA6 /* FSSearchController.m in Sources */,
