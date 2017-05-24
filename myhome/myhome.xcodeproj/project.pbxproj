@@ -34,6 +34,7 @@
 		5C296FF21E5FFAB900FF6D1D /* FSLocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C296FF11E5FFAB900FF6D1D /* FSLocationController.m */; };
 		5C296FF51E5FFC7900FF6D1D /* FSKeepLocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C296FF41E5FFC7900FF6D1D /* FSKeepLocationController.m */; };
 		5C436C381E767BAF00F96353 /* FSAppRunState.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C436C371E767BAF00F96353 /* FSAppRunState.m */; };
+		5C49B5321ED55895007C51E7 /* FSABTrackCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C49B5311ED55895007C51E7 /* FSABTrackCell.m */; };
 		5C5201EE1E1F8D610010DE87 /* FSAppToolController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5201ED1E1F8D610010DE87 /* FSAppToolController.m */; };
 		5C5BB56E1E02741000349D82 /* FSLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5BB56D1E02741000349D82 /* FSLocation.m */; };
 		5C5BB5711E02762F00349D82 /* FSBaseEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5BB5701E02762F00349D82 /* FSBaseEntity.m */; };
@@ -271,6 +272,8 @@
 		5C296FF41E5FFC7900FF6D1D /* FSKeepLocationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSKeepLocationController.m; sourceTree = "<group>"; };
 		5C436C361E767BAF00F96353 /* FSAppRunState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSAppRunState.h; sourceTree = "<group>"; };
 		5C436C371E767BAF00F96353 /* FSAppRunState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSAppRunState.m; sourceTree = "<group>"; };
+		5C49B5301ED55895007C51E7 /* FSABTrackCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSABTrackCell.h; sourceTree = "<group>"; };
+		5C49B5311ED55895007C51E7 /* FSABTrackCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSABTrackCell.m; sourceTree = "<group>"; };
 		5C5201EC1E1F8D610010DE87 /* FSAppToolController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSAppToolController.h; sourceTree = "<group>"; };
 		5C5201ED1E1F8D610010DE87 /* FSAppToolController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSAppToolController.m; sourceTree = "<group>"; };
 		5C5BB56C1E02741000349D82 /* FSLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSLocation.h; sourceTree = "<group>"; };
@@ -835,6 +838,8 @@
 				5CA3F84F1ED3E5D700B44891 /* FSABModel.m */,
 				5CA3F8501ED3E5D700B44891 /* FSABTrackController.h */,
 				5CA3F8511ED3E5D700B44891 /* FSABTrackController.m */,
+				5C49B5301ED55895007C51E7 /* FSABTrackCell.h */,
+				5C49B5311ED55895007C51E7 /* FSABTrackCell.m */,
 			);
 			path = FSAccountBook;
 			sourceTree = "<group>";
@@ -1850,6 +1855,7 @@
 				71DC242F1DD2011B00BEB193 /* FSMoveLabel.m in Sources */,
 				5CA360DC1DC8ADCE00523FF5 /* ARPersonController.m in Sources */,
 				5CE5B2381E8B560F00D86908 /* FSFMExpectController.m in Sources */,
+				5C49B5321ED55895007C51E7 /* FSABTrackCell.m in Sources */,
 				7180F36F1E4A141200331DED /* BankNumberController.m in Sources */,
 				5C9337F81DCB447B0091D3D8 /* FSShareManager.m in Sources */,
 				71DC24491DD2011B00BEB193 /* FSTaxDetailView.m in Sources */,
