@@ -33,6 +33,9 @@
 @end
 
 @implementation HAToolController
+{
+    NSTimeInterval _checkBirthTime;
+}
 
 - (void)viewDidAppear:(BOOL)animated
 {
@@ -45,6 +48,12 @@
 
 - (void)checkBirthday
 {
+    NSTimeInterval check = [[NSDate date] timeIntervalSince1970];
+    if (check - _checkBirthTime < 60) {
+        return;
+    }
+    _checkBirthTime = check;
+    
     NSArray *birthdays = [FSBirthdayController todayBirthdays];
     if (birthdays.count) {
         NSMutableString *title = [[NSMutableString alloc] initWithString:@"今天"];
