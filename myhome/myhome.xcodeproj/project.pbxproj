@@ -81,6 +81,8 @@
 		5C9EDDD01E55A45800A07515 /* FSContactController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C9EDDCF1E55A45800A07515 /* FSContactController.m */; };
 		5C9EE5911ED7F5E800BC3515 /* FSSafeContactController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C9EE5901ED7F5E800BC3515 /* FSSafeContactController.m */; };
 		5C9EE5941ED7F83500BC3515 /* FSContactDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C9EE5931ED7F83500BC3515 /* FSContactDetailController.m */; };
+		5C9EE5971ED838BD00BC3515 /* FSAddTrackController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C9EE5961ED838BD00BC3515 /* FSAddTrackController.m */; };
+		5C9EE59E1ED83CF700BC3515 /* FSLabelTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C9EE59D1ED83CF700BC3515 /* FSLabelTextField.m */; };
 		5CA11EEF1ECC408F00246C7C /* FSAccountRecordController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CA11EEC1ECC408F00246C7C /* FSAccountRecordController.m */; };
 		5CA11EF01ECC408F00246C7C /* FSFMUpdateController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CA11EEE1ECC408F00246C7C /* FSFMUpdateController.m */; };
 		5CA11EF41ECC40EC00246C7C /* GZSHalfView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CA11EF31ECC40EC00246C7C /* GZSHalfView.m */; };
@@ -370,6 +372,10 @@
 		5C9EE5901ED7F5E800BC3515 /* FSSafeContactController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSSafeContactController.m; sourceTree = "<group>"; };
 		5C9EE5921ED7F83500BC3515 /* FSContactDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSContactDetailController.h; sourceTree = "<group>"; };
 		5C9EE5931ED7F83500BC3515 /* FSContactDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSContactDetailController.m; sourceTree = "<group>"; };
+		5C9EE5951ED838BD00BC3515 /* FSAddTrackController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSAddTrackController.h; sourceTree = "<group>"; };
+		5C9EE5961ED838BD00BC3515 /* FSAddTrackController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSAddTrackController.m; sourceTree = "<group>"; };
+		5C9EE59C1ED83CF700BC3515 /* FSLabelTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSLabelTextField.h; sourceTree = "<group>"; };
+		5C9EE59D1ED83CF700BC3515 /* FSLabelTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSLabelTextField.m; sourceTree = "<group>"; };
 		5CA11EEB1ECC408F00246C7C /* FSAccountRecordController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSAccountRecordController.h; sourceTree = "<group>"; };
 		5CA11EEC1ECC408F00246C7C /* FSAccountRecordController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSAccountRecordController.m; sourceTree = "<group>"; };
 		5CA11EED1ECC408F00246C7C /* FSFMUpdateController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSFMUpdateController.h; sourceTree = "<group>"; };
@@ -846,6 +852,8 @@
 				5CA3F8511ED3E5D700B44891 /* FSABTrackController.m */,
 				5C49B5301ED55895007C51E7 /* FSABTrackCell.h */,
 				5C49B5311ED55895007C51E7 /* FSABTrackCell.m */,
+				5C9EE5951ED838BD00BC3515 /* FSAddTrackController.h */,
+				5C9EE5961ED838BD00BC3515 /* FSAddTrackController.m */,
 			);
 			path = FSAccountBook;
 			sourceTree = "<group>";
@@ -972,6 +980,15 @@
 				5C9EE5931ED7F83500BC3515 /* FSContactDetailController.m */,
 			);
 			path = FSContact;
+			sourceTree = "<group>";
+		};
+		5C9EE5981ED83BAA00BC3515 /* LabelTF */ = {
+			isa = PBXGroup;
+			children = (
+				5C9EE59C1ED83CF700BC3515 /* FSLabelTextField.h */,
+				5C9EE59D1ED83CF700BC3515 /* FSLabelTextField.m */,
+			);
+			path = LabelTF;
 			sourceTree = "<group>";
 		};
 		5CA11EF11ECC40EC00246C7C /* HalfView */ = {
@@ -1443,6 +1460,7 @@
 		71DC23551DD2011A00BEB193 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				5C9EE5981ED83BAA00BC3515 /* LabelTF */,
 				5CA11EF11ECC40EC00246C7C /* HalfView */,
 				5C9E554A1E83E44100141BC2 /* FSAPPTools */,
 				5C436C351E767AF500F96353 /* FSAppRun */,
@@ -1838,6 +1856,7 @@
 				71DC24241DD2011B00BEB193 /* FSBaseController.m in Sources */,
 				5CC24DC61E233A940037DC64 /* FSSave.m in Sources */,
 				5C7C38DE1DD1D14600D68C3B /* ARAboutController.m in Sources */,
+				5C9EE5971ED838BD00BC3515 /* FSAddTrackController.m in Sources */,
 				7180F39E1E59A9A500331DED /* FSCalculatorController.m in Sources */,
 				71DC24351DD2011B00BEB193 /* FSWebImageView.m in Sources */,
 				5CA11EF71ECC410800246C7C /* FSLocationCell.m in Sources */,
@@ -1901,6 +1920,7 @@
 				5C9337F91DCB447B0091D3D8 /* FSShareView.m in Sources */,
 				5CDBCDAF1DD057EA001CFC39 /* FSShareEntity.m in Sources */,
 				5CF3DED01E08D13F005DFC6D /* FSOrderSystemController.m in Sources */,
+				5C9EE59E1ED83CF700BC3515 /* FSLabelTextField.m in Sources */,
 				71DC24221DD2011B00BEB193 /* UIView+Addition.m in Sources */,
 				71DC241C1DD2011B00BEB193 /* CYDatetime.m in Sources */,
 				71DC243D1DD2011B00BEB193 /* FSWebViewController.m in Sources */,
