@@ -79,6 +79,8 @@
 		5C9E554D1E83E45300141BC2 /* FSAPPTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C9E554C1E83E45300141BC2 /* FSAPPTool.m */; };
 		5C9EDDCC1E5582AC00A07515 /* FSPartListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C9EDDCB1E5582AC00A07515 /* FSPartListController.m */; };
 		5C9EDDD01E55A45800A07515 /* FSContactController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C9EDDCF1E55A45800A07515 /* FSContactController.m */; };
+		5C9EE5911ED7F5E800BC3515 /* FSSafeContactController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C9EE5901ED7F5E800BC3515 /* FSSafeContactController.m */; };
+		5C9EE5941ED7F83500BC3515 /* FSContactDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C9EE5931ED7F83500BC3515 /* FSContactDetailController.m */; };
 		5CA11EEF1ECC408F00246C7C /* FSAccountRecordController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CA11EEC1ECC408F00246C7C /* FSAccountRecordController.m */; };
 		5CA11EF01ECC408F00246C7C /* FSFMUpdateController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CA11EEE1ECC408F00246C7C /* FSFMUpdateController.m */; };
 		5CA11EF41ECC40EC00246C7C /* GZSHalfView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CA11EF31ECC40EC00246C7C /* GZSHalfView.m */; };
@@ -364,6 +366,10 @@
 		5C9EDDCB1E5582AC00A07515 /* FSPartListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSPartListController.m; sourceTree = "<group>"; };
 		5C9EDDCE1E55A45800A07515 /* FSContactController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSContactController.h; sourceTree = "<group>"; };
 		5C9EDDCF1E55A45800A07515 /* FSContactController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSContactController.m; sourceTree = "<group>"; };
+		5C9EE58F1ED7F5E800BC3515 /* FSSafeContactController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSSafeContactController.h; sourceTree = "<group>"; };
+		5C9EE5901ED7F5E800BC3515 /* FSSafeContactController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSSafeContactController.m; sourceTree = "<group>"; };
+		5C9EE5921ED7F83500BC3515 /* FSContactDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSContactDetailController.h; sourceTree = "<group>"; };
+		5C9EE5931ED7F83500BC3515 /* FSContactDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSContactDetailController.m; sourceTree = "<group>"; };
 		5CA11EEB1ECC408F00246C7C /* FSAccountRecordController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSAccountRecordController.h; sourceTree = "<group>"; };
 		5CA11EEC1ECC408F00246C7C /* FSAccountRecordController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSAccountRecordController.m; sourceTree = "<group>"; };
 		5CA11EED1ECC408F00246C7C /* FSFMUpdateController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSFMUpdateController.h; sourceTree = "<group>"; };
@@ -960,6 +966,10 @@
 			children = (
 				5C9EDDCE1E55A45800A07515 /* FSContactController.h */,
 				5C9EDDCF1E55A45800A07515 /* FSContactController.m */,
+				5C9EE58F1ED7F5E800BC3515 /* FSSafeContactController.h */,
+				5C9EE5901ED7F5E800BC3515 /* FSSafeContactController.m */,
+				5C9EE5921ED7F83500BC3515 /* FSContactDetailController.h */,
+				5C9EE5931ED7F83500BC3515 /* FSContactDetailController.m */,
 			);
 			path = FSContact;
 			sourceTree = "<group>";
@@ -1842,6 +1852,7 @@
 				71DEF3681E154987005B938A /* FSAllBirthdayController.m in Sources */,
 				5C1881541E03D02100D55E0E /* FSImagePicker.m in Sources */,
 				5C96B6971E8A0F0C002C3A73 /* FASelectController.m in Sources */,
+				5C9EE5941ED7F83500BC3515 /* FSContactDetailController.m in Sources */,
 				7180F37C1E4A9AAC00331DED /* HoldViewController.m in Sources */,
 				5CD3825B1E95F800005AD21D /* FSFinancesManagerController.m in Sources */,
 				7180F71E1E6BFC9500331DED /* FTHomeController.m in Sources */,
@@ -1920,6 +1931,7 @@
 				71DEF3651E1545F4005B938A /* FSBirthdayController.m in Sources */,
 				71DC24261DD2011B00BEB193 /* FSCharTBController.m in Sources */,
 				5CD3825C1E95F800005AD21D /* FSFMAccountController.m in Sources */,
+				5C9EE5911ED7F5E800BC3515 /* FSSafeContactController.m in Sources */,
 				5CD382641E95F847005AD21D /* FATool.m in Sources */,
 				5CA11EF01ECC408F00246C7C /* FSFMUpdateController.m in Sources */,
 				71DC24171DD2011B00BEB193 /* FSCCDayView.m in Sources */,
