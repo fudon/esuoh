@@ -91,7 +91,7 @@
     bbi.tintColor = APPCOLOR;
     self.navigationItem.rightBarButtonItem = bbi;
     
-    NSArray *array = @[@"二维码",@"设备信息",@"导航",@"计算器",@"提醒",@"目录",@"五十K",@"银行卡号",@"农历",@"定位",@"十句话",@"知识"];
+    NSArray *array = @[@"二维码",@"设备信息",@"导航",@"计算器",@"提醒",@"目录",@"五十K",@"号码",@"农历",@"定位",@"十句话",@"知识"];
     NSArray *picArray = @[@"saoma_too",@"deviceInfo",@"navigation_web",@"apps_counter",@"apps_alert",@"apps_write",@"apps_puke",@"apps_bank",@"apps_nongli",@"apps_dingwei",@"apps_tenword",@"apps_write"];
     
     CGFloat width = (WIDTHFC - 100) / 4;
