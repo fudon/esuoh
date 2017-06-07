@@ -14,6 +14,14 @@
 		5C1064361E24EE5B0027314A /* iconu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C1064331E24EE5B0027314A /* iconu@2x.png */; };
 		5C15E2881DF5140900BBBA5C /* FSLoanCounterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C15E2851DF5140900BBBA5C /* FSLoanCounterController.m */; };
 		5C15E2891DF5140900BBBA5C /* FSLoanResultController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C15E2871DF5140900BBBA5C /* FSLoanResultController.m */; };
+		5C15F0DD1EE7A8AB00FDE3B5 /* AESCipher.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C15F0D11EE7A8AB00FDE3B5 /* AESCipher.m */; };
+		5C15F0DE1EE7A8AB00FDE3B5 /* KRAes.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C15F0D31EE7A8AB00FDE3B5 /* KRAes.m */; };
+		5C15F0DF1EE7A8AB00FDE3B5 /* RSA.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C15F0D51EE7A8AB00FDE3B5 /* RSA.m */; };
+		5C15F0E01EE7A8AB00FDE3B5 /* FSCryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C15F0D71EE7A8AB00FDE3B5 /* FSCryptor.m */; };
+		5C15F0E11EE7A8AB00FDE3B5 /* cert.csr in Resources */ = {isa = PBXBuildFile; fileRef = 5C15F0D91EE7A8AB00FDE3B5 /* cert.csr */; };
+		5C15F0E21EE7A8AB00FDE3B5 /* rsa_private_key.pem in Resources */ = {isa = PBXBuildFile; fileRef = 5C15F0DA1EE7A8AB00FDE3B5 /* rsa_private_key.pem */; };
+		5C15F0E31EE7A8AB00FDE3B5 /* rsa_public_key.der in Resources */ = {isa = PBXBuildFile; fileRef = 5C15F0DB1EE7A8AB00FDE3B5 /* rsa_public_key.der */; };
+		5C15F0E41EE7A8AB00FDE3B5 /* rsa_public_key.pem in Resources */ = {isa = PBXBuildFile; fileRef = 5C15F0DC1EE7A8AB00FDE3B5 /* rsa_public_key.pem */; };
 		5C1881521E03D02100D55E0E /* FSAllImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C18812D1E03D02100D55E0E /* FSAllImageController.m */; };
 		5C1881531E03D02100D55E0E /* FSCountButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C18812F1E03D02100D55E0E /* FSCountButton.m */; };
 		5C1881541E03D02100D55E0E /* FSImagePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C1881311E03D02100D55E0E /* FSImagePicker.m */; };
@@ -237,6 +245,18 @@
 		5C15E2851DF5140900BBBA5C /* FSLoanCounterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSLoanCounterController.m; sourceTree = "<group>"; };
 		5C15E2861DF5140900BBBA5C /* FSLoanResultController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSLoanResultController.h; sourceTree = "<group>"; };
 		5C15E2871DF5140900BBBA5C /* FSLoanResultController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSLoanResultController.m; sourceTree = "<group>"; };
+		5C15F0D01EE7A8AB00FDE3B5 /* AESCipher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AESCipher.h; sourceTree = "<group>"; };
+		5C15F0D11EE7A8AB00FDE3B5 /* AESCipher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AESCipher.m; sourceTree = "<group>"; };
+		5C15F0D21EE7A8AB00FDE3B5 /* KRAes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KRAes.h; sourceTree = "<group>"; };
+		5C15F0D31EE7A8AB00FDE3B5 /* KRAes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KRAes.m; sourceTree = "<group>"; };
+		5C15F0D41EE7A8AB00FDE3B5 /* RSA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSA.h; sourceTree = "<group>"; };
+		5C15F0D51EE7A8AB00FDE3B5 /* RSA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSA.m; sourceTree = "<group>"; };
+		5C15F0D61EE7A8AB00FDE3B5 /* FSCryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCryptor.h; sourceTree = "<group>"; };
+		5C15F0D71EE7A8AB00FDE3B5 /* FSCryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCryptor.m; sourceTree = "<group>"; };
+		5C15F0D91EE7A8AB00FDE3B5 /* cert.csr */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cert.csr; sourceTree = "<group>"; };
+		5C15F0DA1EE7A8AB00FDE3B5 /* rsa_private_key.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rsa_private_key.pem; sourceTree = "<group>"; };
+		5C15F0DB1EE7A8AB00FDE3B5 /* rsa_public_key.der */ = {isa = PBXFileReference; lastKnownFileType = file; path = rsa_public_key.der; sourceTree = "<group>"; };
+		5C15F0DC1EE7A8AB00FDE3B5 /* rsa_public_key.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rsa_public_key.pem; sourceTree = "<group>"; };
 		5C18812C1E03D02100D55E0E /* FSAllImageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSAllImageController.h; sourceTree = "<group>"; };
 		5C18812D1E03D02100D55E0E /* FSAllImageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSAllImageController.m; sourceTree = "<group>"; };
 		5C18812E1E03D02100D55E0E /* FSCountButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCountButton.h; sourceTree = "<group>"; };
@@ -707,6 +727,41 @@
 				7180F39C1E59A9A500331DED /* FSCalculatorController.m */,
 			);
 			path = LoanCounter;
+			sourceTree = "<group>";
+		};
+		5C15F0CE1EE7A8AB00FDE3B5 /* RSA */ = {
+			isa = PBXGroup;
+			children = (
+				5C15F0CF1EE7A8AB00FDE3B5 /* 3rd */,
+				5C15F0D61EE7A8AB00FDE3B5 /* FSCryptor.h */,
+				5C15F0D71EE7A8AB00FDE3B5 /* FSCryptor.m */,
+				5C15F0D81EE7A8AB00FDE3B5 /* keys */,
+			);
+			path = RSA;
+			sourceTree = "<group>";
+		};
+		5C15F0CF1EE7A8AB00FDE3B5 /* 3rd */ = {
+			isa = PBXGroup;
+			children = (
+				5C15F0D01EE7A8AB00FDE3B5 /* AESCipher.h */,
+				5C15F0D11EE7A8AB00FDE3B5 /* AESCipher.m */,
+				5C15F0D21EE7A8AB00FDE3B5 /* KRAes.h */,
+				5C15F0D31EE7A8AB00FDE3B5 /* KRAes.m */,
+				5C15F0D41EE7A8AB00FDE3B5 /* RSA.h */,
+				5C15F0D51EE7A8AB00FDE3B5 /* RSA.m */,
+			);
+			path = 3rd;
+			sourceTree = "<group>";
+		};
+		5C15F0D81EE7A8AB00FDE3B5 /* keys */ = {
+			isa = PBXGroup;
+			children = (
+				5C15F0D91EE7A8AB00FDE3B5 /* cert.csr */,
+				5C15F0DA1EE7A8AB00FDE3B5 /* rsa_private_key.pem */,
+				5C15F0DB1EE7A8AB00FDE3B5 /* rsa_public_key.der */,
+				5C15F0DC1EE7A8AB00FDE3B5 /* rsa_public_key.pem */,
+			);
+			path = keys;
 			sourceTree = "<group>";
 		};
 		5C18812B1E03D02100D55E0E /* FSMoreImage */ = {
@@ -1333,6 +1388,7 @@
 		71DC230F1DD2011A00BEB193 /* 3rd */ = {
 			isa = PBXGroup;
 			children = (
+				5C15F0CE1EE7A8AB00FDE3B5 /* RSA */,
 				5C65F9F81ED28B8E0030D043 /* FSAccountBook */,
 				5CA11EF81ECC466800246C7C /* FSDBMaster */,
 				71DC23101DD2011A00BEB193 /* Account */,
@@ -1750,12 +1806,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				71DC25E41DD3616C00BEB193 /* FSH5.html in Resources */,
+				5C15F0E41EE7A8AB00FDE3B5 /* rsa_public_key.pem in Resources */,
 				5CFE60281DC75B9C003640A4 /* LaunchScreen.storyboard in Resources */,
 				5C18815C1E03D02100D55E0E /* fsip_selected.png in Resources */,
 				5C9337FE1DCB447B0091D3D8 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				71DC24401DD2011B00BEB193 /* fsqr2.png in Resources */,
 				71DC24461DD2011B00BEB193 /* fsqrline.png in Resources */,
 				5C9338001DCB447B0091D3D8 /* README.txt in Resources */,
+				5C15F0E31EE7A8AB00FDE3B5 /* rsa_public_key.der in Resources */,
 				71DC244C1DD2011B00BEB193 /* Note.txt in Resources */,
 				5CFE60251DC75B9C003640A4 /* Assets.xcassets in Resources */,
 				71DC24471DD2011B00BEB193 /* fsqrmsg.wav in Resources */,
@@ -1767,6 +1825,8 @@
 				71DC24421DD2011B00BEB193 /* fsqr4.png in Resources */,
 				71DC24451DD2011B00BEB193 /* fsqrlighton.png in Resources */,
 				71DC243F1DD2011B00BEB193 /* fsqr1.png in Resources */,
+				5C15F0E11EE7A8AB00FDE3B5 /* cert.csr in Resources */,
+				5C15F0E21EE7A8AB00FDE3B5 /* rsa_private_key.pem in Resources */,
 				5CFE60231DC75B9C003640A4 /* Main.storyboard in Resources */,
 				5C9337FC1DCB447B0091D3D8 /* WeiboSDK.bundle in Resources */,
 				71DC24441DD2011B00BEB193 /* fsqrlightoff.png in Resources */,
@@ -1829,11 +1889,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				71DC24391DD2011B00BEB193 /* FSViewManager.m in Sources */,
+				5C15F0E01EE7A8AB00FDE3B5 /* FSCryptor.m in Sources */,
 				5CD382611E95F800005AD21D /* SQLModel.m in Sources */,
 				5C68FE2D1DFEBA61003AA5F9 /* FSFutureAlertController.m in Sources */,
 				71DC241F1DD2011B00BEB193 /* fishhook.c in Sources */,
 				7152AD401E0D7661005A92FC /* FSQRResultController.m in Sources */,
 				71DC24271DD2011B00BEB193 /* FSHardwareInfoController.m in Sources */,
+				5C15F0DF1EE7A8AB00FDE3B5 /* RSA.m in Sources */,
 				71DC24151DD2011B00BEB193 /* ChineseCalendarView.m in Sources */,
 				5C296FF51E5FFC7900FF6D1D /* FSKeepLocationController.m in Sources */,
 				71DC244D1DD2011B00BEB193 /* README.md in Sources */,
@@ -1856,6 +1918,7 @@
 				71DC24241DD2011B00BEB193 /* FSBaseController.m in Sources */,
 				5CC24DC61E233A940037DC64 /* FSSave.m in Sources */,
 				5C7C38DE1DD1D14600D68C3B /* ARAboutController.m in Sources */,
+				5C15F0DD1EE7A8AB00FDE3B5 /* AESCipher.m in Sources */,
 				5C9EE5971ED838BD00BC3515 /* FSAddTrackController.m in Sources */,
 				7180F39E1E59A9A500331DED /* FSCalculatorController.m in Sources */,
 				71DC24351DD2011B00BEB193 /* FSWebImageView.m in Sources */,
@@ -1984,6 +2047,7 @@
 				5C9337FA1DCB447B0091D3D8 /* FSTouchView.m in Sources */,
 				7180F36A1E44C17A00331DED /* FSWSKController.m in Sources */,
 				5C1064351E24EE5B0027314A /* FSGridController.m in Sources */,
+				5C15F0DE1EE7A8AB00FDE3B5 /* KRAes.m in Sources */,
 				5C18815A1E03D02100D55E0E /* FSBeyondButton.m in Sources */,
 				71DC24291DD2011B00BEB193 /* FSNavigationController.m in Sources */,
 				7173002B1E1E896A00B87826 /* HAOrderSystemController.m in Sources */,
