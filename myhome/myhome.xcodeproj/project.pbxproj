@@ -97,7 +97,6 @@
 		5CA11EF41ECC40EC00246C7C /* GZSHalfView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CA11EF31ECC40EC00246C7C /* GZSHalfView.m */; };
 		5CA11EF71ECC410800246C7C /* FSLocationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CA11EF61ECC410800246C7C /* FSLocationCell.m */; };
 		5CA11EFF1ECC466800246C7C /* FSDBMaster.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CA11EFA1ECC466800246C7C /* FSDBMaster.m */; };
-		5CA11F001ECC466800246C7C /* FSDBTestEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CA11EFC1ECC466800246C7C /* FSDBTestEntity.m */; };
 		5CA11F011ECC466800246C7C /* FSDBTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CA11EFE1ECC466800246C7C /* FSDBTool.m */; };
 		5CA360D91DC8ADC300523FF5 /* AROfferController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CA360D81DC8ADC300523FF5 /* AROfferController.m */; };
 		5CA360DC1DC8ADCE00523FF5 /* ARPersonController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CA360DB1DC8ADCE00523FF5 /* ARPersonController.m */; };
@@ -409,8 +408,6 @@
 		5CA11EF61ECC410800246C7C /* FSLocationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSLocationCell.m; sourceTree = "<group>"; };
 		5CA11EF91ECC466800246C7C /* FSDBMaster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSDBMaster.h; sourceTree = "<group>"; };
 		5CA11EFA1ECC466800246C7C /* FSDBMaster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSDBMaster.m; sourceTree = "<group>"; };
-		5CA11EFB1ECC466800246C7C /* FSDBTestEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSDBTestEntity.h; sourceTree = "<group>"; };
-		5CA11EFC1ECC466800246C7C /* FSDBTestEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSDBTestEntity.m; sourceTree = "<group>"; };
 		5CA11EFD1ECC466800246C7C /* FSDBTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSDBTool.h; sourceTree = "<group>"; };
 		5CA11EFE1ECC466800246C7C /* FSDBTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSDBTool.m; sourceTree = "<group>"; };
 		5CA360D71DC8ADC300523FF5 /* AROfferController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AROfferController.h; sourceTree = "<group>"; };
@@ -1072,8 +1069,6 @@
 			children = (
 				5CA11EF91ECC466800246C7C /* FSDBMaster.h */,
 				5CA11EFA1ECC466800246C7C /* FSDBMaster.m */,
-				5CA11EFB1ECC466800246C7C /* FSDBTestEntity.h */,
-				5CA11EFC1ECC466800246C7C /* FSDBTestEntity.m */,
 				5CA11EFD1ECC466800246C7C /* FSDBTool.h */,
 				5CA11EFE1ECC466800246C7C /* FSDBTool.m */,
 			);
@@ -2044,7 +2039,6 @@
 				5C1881551E03D02100D55E0E /* FSImagePickerController.m in Sources */,
 				5C65FA1B1ED28F210030D043 /* FSAddBankController.m in Sources */,
 				71DC243A1DD2011B00BEB193 /* FIWebView.m in Sources */,
-				5CA11F001ECC466800246C7C /* FSDBTestEntity.m in Sources */,
 				5CA360DF1DC8ADD800523FF5 /* ARToolController.m in Sources */,
 				71B316C91E0813A000FD031F /* FSSetController.m in Sources */,
 				714F6ECB1DF8544800E96EED /* HAPriceController.m in Sources */,
