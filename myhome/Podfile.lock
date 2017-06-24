@@ -14,9 +14,10 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - FSKit (0.1.4)
   - HappyDNS (0.3.10)
   - MJRefresh (3.1.12)
-  - Qiniu (7.1.4):
+  - Qiniu (7.1.5):
     - AFNetworking (~> 3)
     - HappyDNS (~> 0.3)
   - SDWebImage (3.8.2):
@@ -24,17 +25,19 @@ PODS:
   - SDWebImage/Core (3.8.2)
 
 DEPENDENCIES:
+  - FSKit
   - MJRefresh (~> 3.1.12)
   - Qiniu (~> 7.1)
   - SDWebImage (~> 3.8.2)
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  FSKit: 89f6cc1d2e64df3b2254a8313c00a8c5e3fcf69a
   HappyDNS: 06a9fed2796663fd87626dbf02552933265bf059
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
-  Qiniu: a4c962782035ee25b9da3e195181d8c384bb75be
+  Qiniu: 77a3dba411556a383d72d17e842345a9d4c83252
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
 
-PODFILE CHECKSUM: e1b879073e6ef22cb86f62175a5a10443d4101a6
+PODFILE CHECKSUM: 0f26e33c8febd40923f2e52953165f464ed93fcc
 
-COCOAPODS: 1.0.1
+COCOAPODS: 1.2.1
