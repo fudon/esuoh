@@ -210,7 +210,6 @@
 		71DC244B1DD2011B00BEB193 /* FSTaxRateEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 71DC23A61DD2011B00BEB193 /* FSTaxRateEntity.m */; };
 		71DC244C1DD2011B00BEB193 /* Note.txt in Resources */ = {isa = PBXBuildFile; fileRef = 71DC23A71DD2011B00BEB193 /* Note.txt */; };
 		71DC244D1DD2011B00BEB193 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 71DC23A81DD2011B00BEB193 /* README.md */; };
-		71DC24751DD2011B00BEB193 /* FuData.m in Sources */ = {isa = PBXBuildFile; fileRef = 71DC24041DD2011B00BEB193 /* FuData.m */; };
 		71DC24771DD2011B00BEB193 /* FuWeb.m in Sources */ = {isa = PBXBuildFile; fileRef = 71DC24081DD2011B00BEB193 /* FuWeb.m */; };
 		71DC25E41DD3616C00BEB193 /* FSH5.html in Resources */ = {isa = PBXBuildFile; fileRef = 71DC25E31DD3616C00BEB193 /* FSH5.html */; };
 		71DC25E61DD3624D00BEB193 /* ARAbout.html in Resources */ = {isa = PBXBuildFile; fileRef = 71DC25E51DD3624D00BEB193 /* ARAbout.html */; };
@@ -608,8 +607,6 @@
 		71DC23A71DD2011B00BEB193 /* Note.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Note.txt; sourceTree = "<group>"; };
 		71DC23A81DD2011B00BEB193 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		71DC24021DD2011B00BEB193 /* FSWebUrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSWebUrl.h; sourceTree = "<group>"; };
-		71DC24031DD2011B00BEB193 /* FuData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FuData.h; sourceTree = "<group>"; };
-		71DC24041DD2011B00BEB193 /* FuData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FuData.m; sourceTree = "<group>"; };
 		71DC24071DD2011B00BEB193 /* FuWeb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FuWeb.h; sourceTree = "<group>"; };
 		71DC24081DD2011B00BEB193 /* FuWeb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FuWeb.m; sourceTree = "<group>"; };
 		71DC25E31DD3616C00BEB193 /* FSH5.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = FSH5.html; sourceTree = "<group>"; };
@@ -1622,8 +1619,6 @@
 			isa = PBXGroup;
 			children = (
 				71DC24021DD2011B00BEB193 /* FSWebUrl.h */,
-				71DC24031DD2011B00BEB193 /* FuData.h */,
-				71DC24041DD2011B00BEB193 /* FuData.m */,
 				71DC24071DD2011B00BEB193 /* FuWeb.h */,
 				71DC24081DD2011B00BEB193 /* FuWeb.m */,
 			);
@@ -1861,7 +1856,6 @@
 				7180F71E1E6BFC9500331DED /* FTHomeController.m in Sources */,
 				7180F38C1E4AA1AD00331DED /* MapLabel.m in Sources */,
 				71DC241A1DD2011B00BEB193 /* FSChineseCalendarController.m in Sources */,
-				71DC24751DD2011B00BEB193 /* FuData.m in Sources */,
 				71DC24161DD2011B00BEB193 /* ExhaustiveCalendar.m in Sources */,
 				5C8B78221EF4DB3900B553D6 /* FSAddTrackController.m in Sources */,
 				5CA11EF41ECC40EC00246C7C /* GZSHalfView.m in Sources */,
